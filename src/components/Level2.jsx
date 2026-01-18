@@ -1,5 +1,5 @@
 // 1. Add the function definition at the top
-export function Floor2({ getColor, onHover }) {   
+export function Level2({ getColor, onHover }) {   
     return (   
     
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 546.96 436.26">

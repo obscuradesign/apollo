@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Floor1 } from "./Floor1";
-import { Floor2 } from "./Floor2"; 
-import { Floor3 } from "./Floor3"; 
+import { Level1 } from "./Level1";
+import { Level2 } from "./Level2"; 
+import { Level3 } from "./Level3"; 
 import ROOM_SCHEDULES from "../data/roomSchedule_LIVE.json";
 import SI_SCHEDULES from "../data/siSchedule.json";
 import "../App.css";
@@ -214,9 +214,9 @@ export function BuildingMap() {
             transition: "transform 0.2s ease-out", 
             ...activeTransform 
         }}>
-          {currentFloor === 1 && <Floor1 getColor={getColorProp} onHover={handleRoomHover} />}
-          {currentFloor === 2 && <Floor2 getColor={getColorProp} onHover={handleRoomHover} />}
-          {currentFloor === 3 && <Floor3 getColor={getColorProp} onHover={handleRoomHover} />}
+          {currentFloor === 1 && <Level1 getColor={getColorProp} onHover={handleRoomHover} />}
+          {currentFloor === 2 && <Level2 getColor={getColorProp} onHover={handleRoomHover} />}
+          {currentFloor === 3 && <Level3 getColor={getColorProp} onHover={handleRoomHover} />}
         </div>
       </div>
 

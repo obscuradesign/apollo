@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Floor1 } from "./floor1";
-import { Floor2 } from "./floor2"; 
-import { Floor3 } from "./floor3"; 
+import { Floor1 } from "./Floor1";
+import { Floor2 } from "./Floor2"; 
+import { Floor3 } from "./Floor3"; 
 import ROOM_SCHEDULES from "../data/roomSchedule_LIVE.json";
 import SI_SCHEDULES from "../data/siSchedule.json";
 import "../App.css";

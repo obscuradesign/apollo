@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  background-color: #f3f4f6; /* Light gray background for contrast */
+  background-color: #f3f4f6;
   color: #1f2937;
 }
 
@@ -13,22 +13,65 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem; 
 }
 
-/* --- THE PILL SWITCHER --- */
-.floor-switcher {
+/* --- MAP CARD (The Container) --- */
+.map-card {
+  width: 100%;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  
+  /* Layout Logic */
+  position: relative; /* Anchor for absolute children */
   display: flex;
-  background-color: #e5e7eb; /* Track color */
-  padding: 4px;
-  border-radius: 9999px; /* Pill shape */
-  box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+  justify-content: center;
+  align-items: center;
+  min-height: 500px; /* Force height so map has space */
+  overflow: hidden; /* Clips the map if it slides too far */
 }
 
+/* --- OVERLAY CONTROLS (Top & Bottom) --- */
+.floor-switcher {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20; /* High z-index ensures it's clickable */
+  
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 4px;
+  border-radius: 9999px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+.legend-container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+
+  display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap; /* ADDED to prevent text breaking */
+  justify-content: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 8px 16px;
+  border-radius: 9999px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+/* --- BUTTONS & DOTS --- */
 .floor-btn {
   border: none;
   background: transparent;
-  padding: 8px 24px;
+  padding: 6px 20px;
   font-size: 0.9rem;
   font-weight: 600;
   color: #6b7280;
@@ -42,58 +85,33 @@ body {
 }
 
 .floor-btn.active {
-  background-color: white;
+  background-color: #f3f4f6;
   color: #000;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
-
-/* --- THE MAP AREA --- */
-.map-card {
-  width: 100%;
-  background: white;
-  border-radius: 16px;
-  padding: 20px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 400px; /* Prevents layout shift during load */
-}
-
-/* --- THE LEGEND --- */
-.legend-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  background: white;
-  padding: 12px 24px;
-  border-radius: 12px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
 }
 
 .legend-item {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.85rem;
-  font-weight: 500;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
   color: #4b5563;
 }
 
 .color-dot {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   border: 1px solid rgba(0,0,0,0.1);
 }
 
-/* Debug Controls (Optional styling) */
+/* --- DEBUG PANEL (Outside Map) --- */
 .debug-panel {
-  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
   padding: 10px;
-  border-top: 1px solid #e5e7eb;
-  text-align: center;
-  font-size: 0.8rem;
-  color: #6b7280;
 }

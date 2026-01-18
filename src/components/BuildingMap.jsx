@@ -30,21 +30,19 @@ const getCurrentStatus = () => {
   return { day, time: `${hours}:${minutes}` };
 };
 
-// --- NEW: THE TOOLTIP COMPONENT ---
 const RoomTooltip = ({ info, position }) => {
   if (!info) return null;
-
   return (
     <div style={{
       position: "fixed",
-      left: position.x + 15, // Offset so it doesn't block the cursor
+      left: position.x + 15, 
       top: position.y + 15,
       backgroundColor: "white",
       padding: "12px",
       borderRadius: "8px",
-      boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.2)",
+      boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1)",
       zIndex: 100,
-      pointerEvents: "none", // Let clicks pass through
+      pointerEvents: "none",
       minWidth: "200px",
       border: "1px solid #e5e7eb"
     }}>
@@ -58,7 +56,7 @@ const RoomTooltip = ({ info, position }) => {
             {info.activeEvent.courseName}
           </div>
           <div style={{ fontSize: "0.8rem", color: "#6b7280" }}>
-            👤 {info.activeEvent.professor}
+            👨‍🏫 {info.activeEvent.professor}
           </div>
           <div style={{ fontSize: "0.8rem", color: "#6b7280", marginTop: "4px" }}>
             🕒 {info.activeEvent.start} - {info.activeEvent.end}
@@ -66,7 +64,7 @@ const RoomTooltip = ({ info, position }) => {
         </>
       ) : (
         <div style={{ fontSize: "0.8rem", color: "#9ca3af", fontStyle: "italic" }}>
-          Currently Empty
+          {info.isStudyRoom ? "Status Untrackable: Click to Check" : "Currently Empty"}
         </div>
       )}
     </div>
@@ -78,8 +76,7 @@ const Legend = () => (
     <div className="legend-item"><div className="color-dot" style={{ backgroundColor: COLORS.OCCUPIED }}></div><span>Class</span></div>
     <div className="legend-item"><div className="color-dot" style={{ backgroundColor: COLORS.SI_SESSION }}></div><span>SI Session</span></div>
     <div className="legend-item"><div className="color-dot" style={{ backgroundColor: COLORS.STUDY_ROOM }}></div><span>Study Room</span></div>
-    <div className="legend-item"><div className="color-dot" style={{ backgroundColor: COLORS.LOCKED }}></div><span>Empty/Locked</span></div>
-    <div className="legend-item"><div className="color-dot" style={{ backgroundColor: COLORS.OFFLINE }}></div><span>Staff / Office</span></div>
+    <div className="legend-item"><div className="color-dot" style={{ backgroundColor: COLORS.LOCKED }}></div><span>Empty</span></div>
   </div>
 );
 
@@ -98,7 +95,7 @@ export function BuildingMap() {
       setSimulationState(getCurrentStatus());
       interval = setInterval(() => {
         setSimulationState(getCurrentStatus());
-      }, 60000); // Update every minute
+      }, 60000);
     }
     return () => clearInterval(interval);
   }, [isLive]);
@@ -130,7 +127,6 @@ export function BuildingMap() {
 
   // --- LOGIC ---
   const getRoomStatus = (roomId) => {
-    // 1. CHECK SI (Gold)
     const siData = SI_SCHEDULES[roomId];
     if (siData && siData.events) {
       const activeSI = siData.events.find(event => {
@@ -143,8 +139,14 @@ export function BuildingMap() {
       }
     }
 
-    // 2. CHECK CLASS (Red)
-    const roomData = ROOM_SCHEDULES[roomId];
+    let roomData = ROOM_SCHEDULES[roomId];
+
+    // --- FIX: Force Study Rooms (107b, 107c, 107d) to always be Blue ---
+    if (["room-107b", "room-107c", "room-107d"].includes(roomId)) {
+        if (!roomData) roomData = { label: "Study Room" };
+        roomData = { ...roomData, type: "STUDY_ROOM" };
+    }
+
     if (!roomData) return null;
 
     let activeEvent = null;
@@ -175,7 +177,8 @@ export function BuildingMap() {
     if (status && status.roomData) {
       setHoveredRoom({
         roomLabel: status.roomData.label,
-        activeEvent: status.activeEvent
+        activeEvent: status.activeEvent,
+        isStudyRoom: status.roomData.type === "STUDY_ROOM"
       });
     }
   };
@@ -185,57 +188,70 @@ export function BuildingMap() {
     return status ? status.color : COLORS.OFFLINE;
   };
 
+  // NEW: Handle clicks on Study Rooms to open booking site
+  const handleRoomClick = (roomId) => {
+    if (["room-107b", "room-107c", "room-107d"].includes(roomId)) {
+      window.open("https://smc.mywconline.com/schedule/calendar?scheduleid=sc6933704f3873d", "_blank");
+    }
+  };
+
   const activeTransform = {
     transform: `translate(${FLOOR_OFFSETS[currentFloor].x}px, ${FLOOR_OFFSETS[currentFloor].y}px)`
   };
 
   return (
     <div className="dashboard-container">
-      {/* Header / Switcher */}
-      <div className="floor-switcher">
-        {[1, 2, 3].map((floorNum) => (
-          <button 
-            key={floorNum}
-            onClick={() => setCurrentFloor(floorNum)} 
-            className={`floor-btn ${currentFloor === floorNum ? "active" : ""}`}
-          >
-            Floor {floorNum}
-          </button>
-        ))}
-      </div>
+      
+      {/* Map Card */}
+      <div className="map-card">
+        
+        {/* OVERLAY: Floor Switcher */}
+        <div className="floor-switcher">
+          {[1, 2, 3].map((floorNum) => (
+            <button 
+              key={floorNum}
+              onClick={() => setCurrentFloor(floorNum)} 
+              className={`floor-btn ${currentFloor === floorNum ? "active" : ""}`}
+            >
+              Floor {floorNum}
+            </button>
+          ))}
+        </div>
 
-      {/* Map Area */}
-      <div className="map-card" style={{ overflow: "hidden", position: "relative" }}>
+        {/* MAP CONTENT */}
         <div style={{ 
-            width: "100%", 
+            width: "100%",  
+            height: "100%", 
             display: "flex", 
             justifyContent: "center", 
             alignItems: "center",
             transition: "transform 0.2s ease-out", 
+            zIndex: 1, 
             ...activeTransform 
         }}>
-          {currentFloor === 1 && <Level1 getColor={getColorProp} onHover={handleRoomHover} />}
+          {currentFloor === 1 && <Level1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
           {currentFloor === 2 && <Level2 getColor={getColorProp} onHover={handleRoomHover} />}
           {currentFloor === 3 && <Level3 getColor={getColorProp} onHover={handleRoomHover} />}
         </div>
+
+        {/* OVERLAY: Legend */}
+        <Legend />
       </div>
 
       <RoomTooltip info={hoveredRoom} position={mousePos} />
-      <Legend />
 
-      {/* --- NEW DEBUG PANEL --- */}
+      {/* DEBUG PANEL (Outside Map) */}
       <div className="debug-panel">
         
         {/* Status Badge */}
-        <div style={{ marginBottom: "15px", display: "flex", justifyContent: "center", alignItems: "center", gap: "10px" }}>
+        <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "10px" }}>
           <span style={{ 
             fontSize: "0.75rem", padding: "4px 8px", borderRadius: "99px", fontWeight: "bold",
             backgroundColor: isLive ? "#dcfce7" : "#fee2e2", 
             color: isLive ? "#166534" : "#991b1b"
           }}>
-            {isLive ? "🟢 LIVE DATA" : "🔴 TIME MACHINE"}
+            {isLive ? "🔴 LIVE DATA" : "🕰️ TIME MACHINE"} 
           </span>
-          {/* Reset Button */}
           {!isLive && (
             <button onClick={returnToLive} style={{ fontSize: "0.75rem", padding: "4px 8px", cursor: "pointer" }}>
               Return to Live
@@ -245,8 +261,6 @@ export function BuildingMap() {
 
         {/* Controls */}
         <div style={{ display: "flex", justifyContent: "center", gap: "10px", alignItems: "center" }}>
-          
-          {/* Day Selector */}
           <select 
             value={simulationState.day} 
             onChange={handleDayChange}
@@ -255,7 +269,6 @@ export function BuildingMap() {
             {DAYS.map(d => <option key={d} value={d}>{d}</option>)}
           </select>
 
-          {/* Time Selector */}
           <input 
             type="time" 
             value={simulationState.time} 

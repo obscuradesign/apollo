@@ -1,0 +1,254 @@
+{
+  "room-203": {
+    "type": "CLASSROOM",
+    "label": "MSB 203",
+    "events": [
+      {
+        "day": "Tue",
+        "start": "12:00",
+        "end": "13:00",
+        "title": "SI Session",
+        "courseName": "SI: ANATOMY 1",
+        "professor": "Leader: Brandon (Grant)",
+        "status": "SI_SESSION"
+      }
+    ]
+  },
+  "room-202": {
+    "type": "CLASSROOM",
+    "label": "MSB 202",
+    "events": [
+      {
+        "day": "Thu",
+        "start": "14:00",
+        "end": "15:00",
+        "title": "SI Session",
+        "courseName": "SI: ANATOMY 1",
+        "professor": "Leader: Brandon (Grant)",
+        "status": "SI_SESSION"
+      }
+    ]
+  },
+  "room-209": {
+    "type": "CLASSROOM",
+    "label": "MSB 209",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "17:00",
+        "end": "18:00",
+        "title": "SI Session",
+        "courseName": "SI: ANATOMY 1",
+        "professor": "Leader: Raian (Williams)",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Wed",
+        "start": "17:00",
+        "end": "18:00",
+        "title": "SI Session",
+        "courseName": "SI: ANATOMY 1",
+        "professor": "Leader: Raian (Williams)",
+        "status": "SI_SESSION"
+      }
+    ]
+  },
+  "room-208": {
+    "type": "CLASSROOM",
+    "label": "MSB 208",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "23:00",
+        "end": "12:00",
+        "title": "SI Session",
+        "courseName": "SI: Chem 10",
+        "professor": "Leader: Luna (Villarama)",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Thu",
+        "start": "16:00",
+        "end": "17:00",
+        "title": "SI Session",
+        "courseName": "SI: Chem 10",
+        "professor": "Leader: Luna (Villarama)",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Tue",
+        "start": "23:35",
+        "end": "12:35",
+        "title": "SI Session",
+        "courseName": "SI: Math 7",
+        "professor": "Leader: Eunchul (Soleymani)",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Thu",
+        "start": "23:35",
+        "end": "12:35",
+        "title": "SI Session",
+        "courseName": "SI: Math 7",
+        "professor": "Leader: Eunchul (Soleymani)",
+        "status": "SI_SESSION"
+      }
+    ]
+  },
+  "room-310": {
+    "type": "CLASSROOM",
+    "label": "MSB 310",
+    "events": [
+      {
+        "day": "Tue",
+        "start": "23:30",
+        "end": "12:30",
+        "title": "SI Session",
+        "courseName": "SI: Chem 11",
+        "professor": "Leader: Bryan (Hunter)",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Thu",
+        "start": "23:30",
+        "end": "12:30",
+        "title": "SI Session",
+        "courseName": "SI: Chem 11",
+        "professor": "Leader: Bryan (Hunter)",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Tue",
+        "start": "18:00",
+        "end": "19:00",
+        "title": "SI Session",
+        "courseName": "SI: Chem 19",
+        "professor": "Leader: Alina (Kurtoic)",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Thu",
+        "start": "18:00",
+        "end": "19:00",
+        "title": "SI Session",
+        "courseName": "SI: Chem 19",
+        "professor": "Leader: Alina (Kurtoic)",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Tue",
+        "start": "08:15",
+        "end": "09:15",
+        "title": "SI Session",
+        "courseName": "SI: MATH 2",
+        "professor": "Leader: Kimberly (Quevedo)",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Thu",
+        "start": "08:15",
+        "end": "09:15",
+        "title": "SI Session",
+        "courseName": "SI: MATH 2",
+        "professor": "Leader: Kimberly (Quevedo)",
+        "status": "SI_SESSION"
+      }
+    ]
+  },
+  "room-206": {
+    "type": "CLASSROOM",
+    "label": "MSB 206",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "12:30",
+        "end": "13:30",
+        "title": "SI Session",
+        "courseName": "SI: MATH 2",
+        "professor": "Leader: Spencer (Rodas)",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Fri",
+        "start": "10:30",
+        "end": "11:30",
+        "title": "SI Session",
+        "courseName": "SI: MATH 8",
+        "professor": "Leader: Wendy (Lai)",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Fri",
+        "start": "23:30",
+        "end": "12:30",
+        "title": "SI Session",
+        "courseName": "SI: MATH 8",
+        "professor": "Leader: Wendy (Lai)",
+        "status": "SI_SESSION"
+      }
+    ]
+  },
+  "room-101": {
+    "type": "CLASSROOM",
+    "label": "MSB 101",
+    "events": [
+      {
+        "day": "Thu",
+        "start": "23:15",
+        "end": "12:15",
+        "title": "SI Session",
+        "courseName": "SI: MATH 2",
+        "professor": "Leader: Spencer (Rodas)",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Tue",
+        "start": "23:00",
+        "end": "12:00",
+        "title": "SI Session",
+        "courseName": "SI: PHYSCS 22",
+        "professor": "Leader: Jaxon (Strohmaier)",
+        "status": "SI_SESSION"
+      }
+    ]
+  },
+  "room-210": {
+    "type": "CLASSROOM",
+    "label": "MSB 210",
+    "events": [
+      {
+        "day": "Tue",
+        "start": "23:30",
+        "end": "12:30",
+        "title": "SI Session",
+        "courseName": "SI: MATH 8",
+        "professor": "Leader: Luis (Konya)",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Thu",
+        "start": "23:30",
+        "end": "12:30",
+        "title": "SI Session",
+        "courseName": "SI: MATH 8",
+        "professor": "Leader: Luis (Konya)",
+        "status": "SI_SESSION"
+      }
+    ]
+  },
+  "room-309": {
+    "type": "CLASSROOM",
+    "label": "MSB 309",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "13:00",
+        "end": "14:00",
+        "title": "SI Session",
+        "courseName": "SI: PHYSCS 22",
+        "professor": "Leader: Jaxon (Strohmaier)",
+        "status": "SI_SESSION"
+      }
+    ]
+  }
+}

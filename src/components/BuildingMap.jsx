@@ -14,6 +14,7 @@ const COLORS = {
   OFFLINE: "#3b3b3c"      
 };
 
+// Manual offsets (x,y) to visually center each floor's unique SVG shape within the viewport
 const FLOOR_OFFSETS = {
   1: { x: 0, y: 0 },
   2: { x: -20, y: 0 },
@@ -90,6 +91,9 @@ export function BuildingMap() {
   const [hoveredRoom, setHoveredRoom] = useState(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
+  // Live Mode: Syncs with system clock every 60s.
+  // Simulation Mode: Pauses the interval and uses user-selected state.
+
   // Live Clock
   useEffect(() => {
     let interval;
@@ -127,7 +131,8 @@ export function BuildingMap() {
     setSimulationState(getCurrentStatus());
   };
 
-  // --- LOGIC ---
+  // Logic: SI Sessions take visual priority over regular classes.
+  // Priority Check: SI_SESSION -> STUDY_ROOM -> OCCUPIED -> OFFLINE
   const getRoomStatus = (roomId) => {
     const siData = SI_SCHEDULES[roomId];
     if (siData && siData.events) {

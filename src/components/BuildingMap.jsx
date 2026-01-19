@@ -131,6 +131,33 @@ export function BuildingMap() {
     setSimulationState(getCurrentStatus());
   };
 
+  const handleTimeKeyDown = (e) => {
+    if (e.key === "ArrowUp" || e.key === "ArrowDown") {
+      e.preventDefault(); // Stop the native input behavior
+
+      // Parse current time
+      const [hours, minutes] = simulationState.time.split(":").map(Number);
+      
+      // Create a date object to handle the math (rollovers, etc.)
+      const date = new Date();
+      date.setHours(hours);
+      date.setMinutes(minutes);
+
+      // Determine increment (ArrowUp = +1 min, ArrowDown = -1 min)
+      // You can change '1' to '15' if you want 15-minute steps for easier scheduling
+      const delta = e.key === "ArrowUp" ? 1 : -1;
+      date.setMinutes(date.getMinutes() + delta);
+
+      // Format back to HH:MM
+      const newHours = String(date.getHours()).padStart(2, "0");
+      const newMinutes = String(date.getMinutes()).padStart(2, "0");
+
+      // Update state and ensure we enter simulation mode
+      setIsLive(false);
+      setSimulationState((prev) => ({ ...prev, time: `${newHours}:${newMinutes}` }));
+    }
+  };
+
   // Logic: SI Sessions take visual priority over regular classes.
   // Priority Check: SI_SESSION -> STUDY_ROOM -> OCCUPIED -> OFFLINE
   const getRoomStatus = (roomId) => {
@@ -311,6 +338,7 @@ export function BuildingMap() {
             type="time" 
             value={simulationState.time} 
             onChange={handleTimeChange}
+            onKeyDown={handleTimeKeyDown}
             style={{ padding: "7px", borderRadius: "6px", border: "1px solid #ccc" }}
           />
         </div>

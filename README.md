@@ -113,7 +113,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 👨‍💻 Contact
 
-**Kevin Isaac Davidson** Portfolio: [kevindavidson.work](https://kevindavidson.work)  
+**Kevin Davidson** Portfolio: [kevindavidson.work](https://kevindavidson.work)  
 Project Link: [https://github.com/obscuradesign/apollo](https://github.com/obscuradesign/apollo)
 
 <p align="center">

@@ -194,7 +194,7 @@ export function BuildingMap() {
       );
     }
   };
-  
+
   const getColorProp = (roomId) => {
     const status = getRoomStatus(roomId);
     return status ? status.color : COLORS.OFFLINE;
@@ -207,6 +207,21 @@ export function BuildingMap() {
   return (
     <div className="dashboard-container">
       
+      {/* --- NEW: Header with Inline Back Button --- */}
+      <div className="header-row">
+        <a 
+          href="https://kevindavidson.work" 
+          className="back-btn" 
+          aria-label="Back to Portfolio"
+        >
+          {/* Simple SVG Left Arrow */}
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+        </a>
+        <h3 className="page-title">To Main Site</h3>
+      </div>
+
       {/* Map Card */}
       <div className="map-card">
         

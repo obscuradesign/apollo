@@ -1,3 +1,51 @@
+/* --- HEADER ROW (Title + Back Button) --- */
+.header-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 4px; /* Align visually with map rounded corners */
+  margin-bottom: 4px; /* Small gap before the map starts */
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 50%; /* Perfect Circle */
+  color: #4b5563;
+  text-decoration: none;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+  background: #f9fafb;
+  color: #111827;
+  transform: translateX(-2px); /* Subtle slide effect */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.page-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+  letter-spacing: -0.025em;
+}
+
+/* Mobile tweak for header */
+@media (max-width: 600px) {
+  .page-title {
+    font-size: 1.1rem;
+  }
+}
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;

@@ -10,6 +10,9 @@ function App() {
       
       {/* This renders your entire map project */}
       <BuildingMap />
+
+      {/* Vercel Analytics integration */}
+      <Analytics />
       
     </div>
   );

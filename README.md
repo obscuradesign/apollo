@@ -1,70 +1,122 @@
-# Getting Started with Create React App
+<div align="center">
+  <br />
+  <h1>Apollo</h1>
+  <h3>The Santa Monica College Math & Science Building Map</h3>
+  <p>
+    <strong>Find empty classrooms, track live lectures, and locate SI Sessions in real-time.</strong>
+  </p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <p>
+    <a href="https://apollo.kevindavidson.work"><strong>View Live Demo »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/obscuradesign/apollo/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/obscuradesign/apollo/issues">Request Feature</a>
+  </p>
 
-## Available Scripts
+  <br />
 
-In the project directory, you can run:
+  ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+  ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+  ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
+</div>
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📖 About The Project
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Apollo** is an interactive, real-time visualization of the Math & Science Building at Santa Monica College. 
 
-### `npm test`
+Finding an empty room to study in or locating a specific SI (Supplemental Instruction) session can be frustrating. Apollo solves this by scraping the official schedule and visualizing it on a dynamic, 3-level interactive map.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 🌟 Key Features
 
-### `npm run build`
+* **🔴 Live Class Tracking:** Rooms turn **Red** when a class is currently in session.
+* **🟡 SI Integration:** Rooms turn **Gold** for Supplemental Instruction sessions (automatically overriding regular class data).
+* **🔵 Study Rooms:** Dedicated study rooms are highlighted **Blue** with direct booking links.
+* **🕰️ Time Machine:** Need to plan for later? Use the "Time Machine" debug panel to jump to any day or time in the future.
+* **🏗️ Interactive SVGs:** Custom-designed, floor-by-floor vector maps for Levels 1, 2, and 3.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## ⚙️ Architecture
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Apollo runs on a hybrid architecture combining a React frontend with a Python-powered data pipeline.
 
-### `npm run eject`
+### The Stack
+* **Frontend:** React.js (bootstrapped with CRA)
+* **Visualization:** Interactive SVGs with CSS transitions
+* **Data Pipeline:** Python (`requests`, `BeautifulSoup`)
+* **Deployment:** Vercel
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Data Flow
+1.  **Harvesting:** Two local Python scripts (`smc_harvester.py` and `si_harvester.py`) scrape the official SMC Schedule of Classes (Oracle APEX) and the SI page of the SMC website.
+2.  **Processing:** The scripts parse thousands of HTML rows, filtering specifically for the "MS" (Math/Science) building and normalizing time formats.
+3.  **Static Generation:** The data is compiled into optimized JSON files (`roomSchedule_LIVE.json` and `siSchedule.json`).
+4.  **Runtime Rendering:** The React frontend reads this static data, compares it against the user's system clock (or "Time Machine" state), and updates the SVG fill colors in real-time.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🚀 Getting Started
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To get a local copy up and running, follow these steps.
 
-## Learn More
+### Prerequisites
+* Node.js & npm
+* Python 3.x (for data updates)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Installation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1.  **Clone the repo**
+    ```sh
+    git clone [https://github.com/obscuradesign/apollo.git](https://github.com/obscuradesign/apollo.git)
+    ```
+2.  **Install NPM packages**
+    ```sh
+    npm install
+    ```
+3.  **Run the App**
+    ```sh
+    npm start
+    ```
+    The map will open at `http://localhost:3000`.
 
-### Code Splitting
+### Updating the Schedule Data
+To fetch the latest class schedules:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1.  **Run the Class Harvester**
+    ```sh
+    python3 smc_harvester.py
+    ```
+2.  **Run the SI Harvester**
+    ```sh
+    python3 si_harvester.py
+    ```
+    *This will update the files in `src/data/`, which the React app consumes immediately.*
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🗺️ Roadmap
 
-### Making a Progressive Web App
+- [ ] **Mobile Optimization:** Replace hover tooltips with a touch-friendly bottom sheet.
+- [ ] **Data Automation:** Implement GitHub Actions to run the Python scrapers automatically every new session (4 times a year).
+- [ ] **Search:** Add a search bar to quickly locate professors or specific room numbers.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 🛡️ License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Distributed under the MIT License. See `LICENSE` for more information.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 👨‍💻 Contact
 
-### `npm run build` fails to minify
+**Kevin Isaac Davidson** Portfolio: [kevindavidson.work](https://kevindavidson.work)  
+Project Link: [https://github.com/obscuradesign/apollo](https://github.com/obscuradesign/apollo)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="center">
+  <br>
+  Built with ❤️ for the students of SMC.
+</p>

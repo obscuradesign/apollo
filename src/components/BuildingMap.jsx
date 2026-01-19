@@ -186,10 +186,15 @@ export function BuildingMap() {
 
   const handleRoomClick = (roomId) => {
     if (["room-107b", "room-107c", "room-107d"].includes(roomId)) {
-      window.open("https://smc.mywconline.com/schedule/calendar?scheduleid=sc6933704f3873d", "_blank");
+      // ADD 'noopener,noreferrer' as the third argument
+      window.open(
+        "https://smc.mywconline.com/schedule/calendar?scheduleid=sc6933704f3873d", 
+        "_blank", 
+        "noopener,noreferrer"
+      );
     }
   };
-
+  
   const getColorProp = (roomId) => {
     const status = getRoomStatus(roomId);
     return status ? status.color : COLORS.OFFLINE;

@@ -237,6 +237,8 @@ export function BuildingMap() {
              justifyContent: "center",
              alignItems: "center",
              transition: "transform 0.2s ease-out",
+             paddingTop: "50px",
+             //paddingBottom: "50px",
              ...activeTransform 
           }}>
              {currentFloor === 1 && <Level1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}

@@ -113,7 +113,7 @@ export function Level1({ getColor, onHover, onClick }) {
         {/* --- STUDY ROOMS (Static) --- */}
         <path id="room-107b" fill={getColor("room-107b")} d="m92.29 93.64 5.74 8.92 6.82-4.48 2.68-1.83.88-.58-5.68-8.7z" onMouseEnter={() => onHover("room-107b", true)} onMouseLeave={() => onHover("room-107b", false)} onClick={() => onClick("room-107b")} style={{ cursor: "pointer" }}/>
         <path id="room-107c" fill={getColor("room-107c")} d="m114 79.77-10.43 6.66 5.68 8.7.88-.58 2.47-1.52 7.09-4.59z" onMouseEnter={() => onHover("room-107c", true)} onMouseLeave={() => onHover("room-107c", false)} onClick={() => onClick("room-107c")} style={{ cursor: "pointer" }}/>
-        <path id="room-107d" fill={getColor("room-107d")} d="m114.84 79.23 5.69 8.66 7.87-5.09 2.59-1.62-5.73-8.61z" onMouseEnter={() => onHover("room-107d", true)} onMouseLeave={() => onHover("room-107d", false)} onClick={() => onClick("room-107dg")} style={{ cursor: "pointer" }}/>
+        <path id="room-107d" fill={getColor("room-107d")} d="m114.84 79.23 5.69 8.66 7.87-5.09 2.59-1.62-5.73-8.61z" onMouseEnter={() => onHover("room-107d", true)} onMouseLeave={() => onHover("room-107d", false)} onClick={() => onClick("room-107d")} style={{ cursor: "pointer" }}/>
       </g>
     </g>
     <g id="New_Background" data-name="New Background">

@@ -99,7 +99,7 @@ To fetch the latest class schedules:
 
 ## 🗺️ Roadmap
 
-- [ ] **Basic Mobile Functionality** Currently, the SVG does not render on mobile. Fix this major bug to enable mobile viewing.
+- [x] **Basic Mobile Functionality** Currently, the SVG does not render on mobile. Fix this major bug to enable mobile viewing.
 - [ ] **Mobile Optimization:** Replace hover tooltips with a touch-friendly bottom sheet.
 - [ ] **Data Automation:** Implement GitHub Actions to run the Python scrapers automatically every new session (4 times a year).
 - [ ] **Search:** Add a search bar to quickly locate professors or specific room numbers.

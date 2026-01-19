@@ -237,7 +237,7 @@ export function BuildingMap() {
              justifyContent: "center",
              alignItems: "center",
              transition: "transform 0.2s ease-out",
-             paddingTop: "50px",
+             paddingTop: "30px",
              //paddingBottom: "50px",
              ...activeTransform 
           }}>

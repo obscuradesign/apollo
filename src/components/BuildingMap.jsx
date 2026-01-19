@@ -64,7 +64,7 @@ const RoomTooltip = ({ info, position }) => {
         </>
       ) : (
         <div style={{ fontSize: "0.8rem", color: "#9ca3af", fontStyle: "italic" }}>
-          {info.isStudyRoom ? "Status Untrackable: Click to Check" : "Currently Empty"}
+          {info.isStudyRoom ? "Open for Study (Click to Book)" : "Currently Empty"}
         </div>
       )}
     </div>
@@ -76,9 +76,11 @@ const Legend = () => (
     <div className="legend-item"><div className="color-dot" style={{ backgroundColor: COLORS.OCCUPIED }}></div><span>Class</span></div>
     <div className="legend-item"><div className="color-dot" style={{ backgroundColor: COLORS.SI_SESSION }}></div><span>SI Session</span></div>
     <div className="legend-item"><div className="color-dot" style={{ backgroundColor: COLORS.STUDY_ROOM }}></div><span>Study Room</span></div>
-    <div className="legend-item"><div className="color-dot" style={{ backgroundColor: COLORS.LOCKED }}></div><span>Empty</span></div>
+    <div className="legend-item"><div className="color-dot" style={{ backgroundColor: COLORS.LOCKED }}></div><span>Empty/Locked</span></div>
+    <div className="legend-item"><div className="color-dot" style={{ backgroundColor: COLORS.OFFLINE }}></div><span>Staff/Office</span></div>
   </div>
 );
+
 
 export function BuildingMap() {
   const [currentFloor, setCurrentFloor] = useState(1);
@@ -141,7 +143,6 @@ export function BuildingMap() {
 
     let roomData = ROOM_SCHEDULES[roomId];
 
-    // --- FIX: Force Study Rooms (107b, 107c, 107d) to always be Blue ---
     if (["room-107b", "room-107c", "room-107d"].includes(roomId)) {
         if (!roomData) roomData = { label: "Study Room" };
         roomData = { ...roomData, type: "STUDY_ROOM" };
@@ -183,16 +184,15 @@ export function BuildingMap() {
     }
   };
 
-  const getColorProp = (roomId) => {
-    const status = getRoomStatus(roomId);
-    return status ? status.color : COLORS.OFFLINE;
-  };
-
-  // NEW: Handle clicks on Study Rooms to open booking site
   const handleRoomClick = (roomId) => {
     if (["room-107b", "room-107c", "room-107d"].includes(roomId)) {
       window.open("https://smc.mywconline.com/schedule/calendar?scheduleid=sc6933704f3873d", "_blank");
     }
+  };
+
+  const getColorProp = (roomId) => {
+    const status = getRoomStatus(roomId);
+    return status ? status.color : COLORS.OFFLINE;
   };
 
   const activeTransform = {
@@ -220,18 +220,29 @@ export function BuildingMap() {
 
         {/* MAP CONTENT */}
         <div style={{ 
-            width: "100%",  
+            flex: 1, 
+            width: "100%",
             height: "100%", 
             display: "flex", 
             justifyContent: "center", 
             alignItems: "center",
-            transition: "transform 0.2s ease-out", 
             zIndex: 1, 
-            ...activeTransform 
+            overflow: "hidden"
         }}>
-          {currentFloor === 1 && <Level1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
-          {currentFloor === 2 && <Level2 getColor={getColorProp} onHover={handleRoomHover} />}
-          {currentFloor === 3 && <Level3 getColor={getColorProp} onHover={handleRoomHover} />}
+          {/* Inner Wrapper for Alignment (This moves) */}
+          <div style={{
+             width: "100%",
+             height: "100%",
+             display: "flex",
+             justifyContent: "center",
+             alignItems: "center",
+             transition: "transform 0.2s ease-out",
+             ...activeTransform 
+          }}>
+             {currentFloor === 1 && <Level1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+             {currentFloor === 2 && <Level2 getColor={getColorProp} onHover={handleRoomHover} />}
+             {currentFloor === 3 && <Level3 getColor={getColorProp} onHover={handleRoomHover} />}
+          </div>
         </div>
 
         {/* OVERLAY: Legend */}

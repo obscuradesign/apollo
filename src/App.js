@@ -1,6 +1,7 @@
 // src/App.js
 import React from 'react';
 import { BuildingMap } from './components/BuildingMap';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   return (

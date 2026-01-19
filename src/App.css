@@ -27,9 +27,15 @@ body {
   position: relative; /* Anchor for absolute children */
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   min-height: 500px; /* Force height so map has space */
   overflow: hidden; /* Clips the map if it slides too far */
+}
+
+.map-card svg {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 /* --- OVERLAY CONTROLS (Top & Bottom) --- */

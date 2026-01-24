@@ -1,17 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Level1 } from "./Level1";
-import { Level2 } from "./Level2"; 
-import { Level3 } from "./Level3"; 
+import { Level2 } from "./Level2";
+import { Level3 } from "./Level3";
+import { motion, AnimatePresence } from "framer-motion";
 import ROOM_SCHEDULES from "../data/roomSchedule_LIVE.json";
 import SI_SCHEDULES from "../data/siSchedule.json";
 import "../App.css";
 
 const COLORS = {
-  LOCKED: "#9CA3AF",      
-  OCCUPIED: "#EF4444",    
-  SI_SESSION: "#EAB308",  
-  STUDY_ROOM: "#3B82F6",  
-  OFFLINE: "#3b3b3c"      
+  LOCKED: "#9CA3AF",
+  OCCUPIED: "#EF4444",
+  SI_SESSION: "#EAB308",
+  STUDY_ROOM: "#3B82F6",
+  OFFLINE: "#3b3b3c"
 };
 
 // Manual offsets (x,y) to visually center each floor's unique SVG shape within the viewport
@@ -34,19 +35,25 @@ const getCurrentStatus = () => {
 const RoomTooltip = ({ info, position }) => {
   if (!info) return null;
   return (
-    <div style={{
-      position: "fixed",
-      left: position.x + 15, 
-      top: position.y + 15,
-      backgroundColor: "white",
-      padding: "12px",
-      borderRadius: "8px",
-      boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1)",
-      zIndex: 100,
-      pointerEvents: "none",
-      minWidth: "200px",
-      border: "1px solid #e5e7eb"
-    }}>
+    <motion.div
+      initial={{ opacity: 0, scale: 0.8, y: 10 }}
+      animate={{ opacity: 1, scale: 1, y: 0 }}
+      exit={{ opacity: 0, scale: 0.8 }}
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+      style={{
+        position: "fixed",
+        left: position.x + 15,
+        top: position.y + 15,
+        backgroundColor: "white",
+        padding: "12px",
+        borderRadius: "8px",
+        boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1)",
+        zIndex: 100,
+        pointerEvents: "none",
+        minWidth: "200px",
+        border: "1px solid #e5e7eb"
+      }}
+    >
       <h3 style={{ margin: "0 0 4px 0", fontSize: "1rem", color: "#111827" }}>{info.roomLabel}</h3>
       {info.activeEvent ? (
         <>
@@ -68,18 +75,23 @@ const RoomTooltip = ({ info, position }) => {
           {info.isStudyRoom ? "Open for Study (Click to Book)" : "Currently Empty"}
         </div>
       )}
-    </div>
+    </motion.div>
   );
 };
 
 const Legend = () => (
-  <div className="legend-container">
+  <motion.div
+    className="legend-container"
+    initial={{ opacity: 0, y: 20, x: "-50%" }}
+    animate={{ opacity: 1, y: 0, x: "-50%" }}
+    transition={{ delay: 0.5, duration: 0.5 }}
+  >
     <div className="legend-item"><div className="color-dot" style={{ backgroundColor: COLORS.OCCUPIED }}></div><span>Class</span></div>
     <div className="legend-item"><div className="color-dot" style={{ backgroundColor: COLORS.SI_SESSION }}></div><span>SI Session</span></div>
     <div className="legend-item"><div className="color-dot" style={{ backgroundColor: COLORS.STUDY_ROOM }}></div><span>Study Room</span></div>
     <div className="legend-item"><div className="color-dot" style={{ backgroundColor: COLORS.LOCKED }}></div><span>Empty/Locked</span></div>
     <div className="legend-item"><div className="color-dot" style={{ backgroundColor: COLORS.OFFLINE }}></div><span>Staff/Office</span></div>
-  </div>
+  </motion.div>
 );
 
 
@@ -87,7 +99,7 @@ export function BuildingMap() {
   const [currentFloor, setCurrentFloor] = useState(1);
   const [simulationState, setSimulationState] = useState(getCurrentStatus());
   const [isLive, setIsLive] = useState(true);
-  
+
   const [hoveredRoom, setHoveredRoom] = useState(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
@@ -108,11 +120,19 @@ export function BuildingMap() {
 
   // Mouse Tracking
   useEffect(() => {
+    let frame;
     const handleMouseMove = (e) => {
-      setMousePos({ x: e.clientX, y: e.clientY });
+      if (frame) return;
+      frame = requestAnimationFrame(() => {
+        setMousePos({ x: e.clientX, y: e.clientY });
+        frame = null;
+      });
     };
     window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      if (frame) cancelAnimationFrame(frame);
+    }
   }, []);
 
   // --- CONTROLS ---
@@ -137,7 +157,7 @@ export function BuildingMap() {
 
       // Parse current time
       const [hours, minutes] = simulationState.time.split(":").map(Number);
-      
+
       // Create a date object to handle the math (rollovers, etc.)
       const date = new Date();
       date.setHours(hours);
@@ -160,13 +180,13 @@ export function BuildingMap() {
 
   // Logic: SI Sessions take visual priority over regular classes.
   // Priority Check: SI_SESSION -> STUDY_ROOM -> OCCUPIED -> OFFLINE
-  const getRoomStatus = (roomId) => {
+  const getRoomStatus = useCallback((roomId) => {
     const siData = SI_SCHEDULES[roomId];
     if (siData && siData.events) {
       const activeSI = siData.events.find(event => {
-        return event.day === simulationState.day && 
-               simulationState.time >= event.start && 
-               simulationState.time < event.end;
+        return event.day === simulationState.day &&
+          simulationState.time >= event.start &&
+          simulationState.time < event.end;
       });
       if (activeSI) {
         return { color: COLORS.SI_SESSION, activeEvent: activeSI, roomData: siData };
@@ -176,8 +196,8 @@ export function BuildingMap() {
     let roomData = ROOM_SCHEDULES[roomId];
 
     if (["room-107b", "room-107c", "room-107d"].includes(roomId)) {
-        if (!roomData) roomData = { label: "Study Room" };
-        roomData = { ...roomData, type: "STUDY_ROOM" };
+      if (!roomData) roomData = { label: "Study Room" };
+      roomData = { ...roomData, type: "STUDY_ROOM" };
     }
 
     if (!roomData) return null;
@@ -186,20 +206,20 @@ export function BuildingMap() {
     let color = COLORS.LOCKED;
 
     if (roomData.type === "STUDY_ROOM") {
-        color = COLORS.STUDY_ROOM;
+      color = COLORS.STUDY_ROOM;
     } else if (roomData.events) {
       activeEvent = roomData.events.find(event => {
-        return event.day === simulationState.day && 
-               simulationState.time >= event.start && 
-               simulationState.time < event.end;
+        return event.day === simulationState.day &&
+          simulationState.time >= event.start &&
+          simulationState.time < event.end;
       });
       if (activeEvent) color = COLORS[activeEvent.status];
     } else {
-        color = COLORS.OFFLINE;
+      color = COLORS.OFFLINE;
     }
 
     return { color, activeEvent, roomData };
-  };
+  }, [simulationState.day, simulationState.time]);
 
   const handleRoomHover = (roomId, isHovering) => {
     if (!isHovering) {
@@ -220,30 +240,40 @@ export function BuildingMap() {
     if (["room-107b", "room-107c", "room-107d"].includes(roomId)) {
       // ADD 'noopener,noreferrer' as the third argument
       window.open(
-        "https://smc.mywconline.com/schedule/calendar?scheduleid=sc6933704f3873d", 
-        "_blank", 
+        "https://smc.mywconline.com/schedule/calendar?scheduleid=sc6933704f3873d",
+        "_blank",
         "noopener,noreferrer"
       );
     }
   };
 
-  const getColorProp = (roomId) => {
+  const getColorProp = useCallback((roomId) => {
     const status = getRoomStatus(roomId);
     return status ? status.color : COLORS.OFFLINE;
-  };
+  }, [getRoomStatus]);
 
   const activeTransform = {
     transform: `translate(${FLOOR_OFFSETS[currentFloor].x}px, ${FLOOR_OFFSETS[currentFloor].y}px)`
   };
 
   return (
-    <div className="dashboard-container">
-      
+    <motion.div
+      className="dashboard-container"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+    >
+
       {/* --- NEW: Header with Inline Back Button --- */}
-      <div className="header-row">
-        <a 
-          href="https://kevindavidson.work" 
-          className="back-btn" 
+      <motion.div
+        className="header-row"
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.2 }}
+      >
+        <a
+          href="https://kevindavidson.work"
+          className="back-btn"
           aria-label="Back to Portfolio"
         >
           {/* Simple SVG Left Arrow */}
@@ -252,70 +282,90 @@ export function BuildingMap() {
           </svg>
         </a>
         <h3 className="page-title">To Main Site</h3>
-      </div>
+      </motion.div>
 
       {/* Map Card */}
-      <div className="map-card">
-        
+      <motion.div
+        className="map-card"
+        initial={{ scale: 0.95, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ delay: 0.3, duration: 0.5 }}
+      >
+
         {/* OVERLAY: Floor Switcher */}
         <div className="floor-switcher">
           {[1, 2, 3].map((floorNum) => (
-            <button 
+            <motion.button
               key={floorNum}
-              onClick={() => setCurrentFloor(floorNum)} 
+              onClick={() => setCurrentFloor(floorNum)}
               className={`floor-btn ${currentFloor === floorNum ? "active" : ""}`}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
               Floor {floorNum}
-            </button>
+            </motion.button>
           ))}
         </div>
 
         {/* MAP CONTENT */}
-        <div style={{ 
-            flex: 1, 
-            width: "100%",
-            height: "100%", 
-            display: "flex", 
-            justifyContent: "center", 
-            alignItems: "center",
-            zIndex: 1, 
-            overflow: "hidden"
+        <div style={{
+          flex: 1,
+          width: "100%",
+          height: "100%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          zIndex: 1,
+          overflow: "hidden"
         }}>
-          {/* Inner Wrapper for Alignment (This moves) */}
-          <div style={{
-             width: "100%",
-             height: "100%",
-             display: "flex",
-             justifyContent: "center",
-             alignItems: "center",
-             transition: "transform 0.2s ease-out",
-             paddingTop: "30px",
-             //paddingBottom: "50px",
-             ...activeTransform 
-          }}>
-             {currentFloor === 1 && <Level1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
-             {currentFloor === 2 && <Level2 getColor={getColorProp} onHover={handleRoomHover} />}
-             {currentFloor === 3 && <Level3 getColor={getColorProp} onHover={handleRoomHover} />}
-          </div>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentFloor}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              transition={{ duration: 0.3 }}
+              style={{
+                width: "100%",
+                height: "100%",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                paddingTop: "30px",
+                ...activeTransform
+              }}
+            >
+              {currentFloor === 1 && <Level1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+              {currentFloor === 2 && <Level2 getColor={getColorProp} onHover={handleRoomHover} />}
+              {currentFloor === 3 && <Level3 getColor={getColorProp} onHover={handleRoomHover} />}
+            </motion.div>
+          </AnimatePresence>
         </div>
 
         {/* OVERLAY: Legend */}
         <Legend />
-      </div>
+      </motion.div>
 
-      <RoomTooltip info={hoveredRoom} position={mousePos} />
+      <AnimatePresence>
+        {hoveredRoom && <RoomTooltip info={hoveredRoom} position={mousePos} />}
+      </AnimatePresence>
 
       {/* DEBUG PANEL (Outside Map) */}
-      <div className="debug-panel">
-        
+      <motion.div
+        className="debug-panel"
+        initial={{ y: 20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.6 }}
+      >
+
         {/* Status Badge */}
         <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "10px" }}>
-          <span style={{ 
+          <span style={{
             fontSize: "0.75rem", padding: "4px 8px", borderRadius: "99px", fontWeight: "bold",
-            backgroundColor: isLive ? "#dcfce7" : "#fee2e2", 
+            backgroundColor: isLive ? "#dcfce7" : "#fee2e2",
             color: isLive ? "#166534" : "#991b1b"
           }}>
-            {isLive ? "🔴 LIVE DATA" : "🕰️ TIME MACHINE"} 
+            {isLive ? "🔴 LIVE DATA" : "🕰️ TIME MACHINE"}
           </span>
           {!isLive && (
             <button onClick={returnToLive} style={{ fontSize: "0.75rem", padding: "4px 8px", cursor: "pointer" }}>
@@ -326,23 +376,23 @@ export function BuildingMap() {
 
         {/* Controls */}
         <div style={{ display: "flex", justifyContent: "center", gap: "10px", alignItems: "center" }}>
-          <select 
-            value={simulationState.day} 
+          <select
+            value={simulationState.day}
             onChange={handleDayChange}
             style={{ padding: "8px", borderRadius: "6px", border: "1px solid #ccc" }}
           >
             {DAYS.map(d => <option key={d} value={d}>{d}</option>)}
           </select>
 
-          <input 
-            type="time" 
-            value={simulationState.time} 
+          <input
+            type="time"
+            value={simulationState.time}
             onChange={handleTimeChange}
             onKeyDown={handleTimeKeyDown}
             style={{ padding: "7px", borderRadius: "6px", border: "1px solid #ccc" }}
           />
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }

@@ -95,7 +95,7 @@ const Legend = () => (
 );
 
 
-export function BuildingMap() {
+export function BuildingMap({ darkMode, setDarkMode }) {
   const [currentFloor, setCurrentFloor] = useState(1);
   const [simulationState, setSimulationState] = useState(getCurrentStatus());
   const [isLive, setIsLive] = useState(true);
@@ -391,6 +391,23 @@ export function BuildingMap() {
             onKeyDown={handleTimeKeyDown}
             style={{ padding: "7px", borderRadius: "6px", border: "1px solid #ccc" }}
           />
+
+          {/* DARK MODE TOGGLE */}
+          <button
+            onClick={() => setDarkMode(!darkMode)}
+            style={{
+              background: "none",
+              border: "none",
+              cursor: "pointer",
+              fontSize: "1.2rem",
+              padding: "4px",
+              marginLeft: "10px",
+              transition: "transform 0.2s"
+            }}
+            title={darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+          >
+            {darkMode ? "☀️" : "🌙"}
+          </button>
         </div>
       </motion.div>
     </motion.div>

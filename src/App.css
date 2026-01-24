@@ -1,11 +1,30 @@
+/* --- VARIABLES & THEME --- */
+:root {
+  --bg-app: #f3f4f6;
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --bg-header: #ffffff;
+  --border-color: #e5e7eb;
+}
+
+.dark-mode {
+  --bg-app: #121212;
+  --text-primary: #f9fafb;
+  --text-secondary: #9ca3af;
+  --bg-header: #1f2937;
+  --border-color: #374151;
+}
+
 /* --- HEADER ROW (Title + Back Button) --- */
 .header-row {
   width: 100%;
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 0 4px; /* Align visually with map rounded corners */
-  margin-bottom: 4px; /* Small gap before the map starts */
+  padding: 0 4px;
+  /* Align visually with map rounded corners */
+  margin-bottom: 4px;
+  /* Small gap before the map starts */
 }
 
 .back-btn {
@@ -14,26 +33,28 @@
   justify-content: center;
   width: 30px;
   height: 30px;
-  background: white;
-  border-radius: 50%; /* Perfect Circle */
-  color: #4b5563;
+  background: var(--bg-header);
+  border-radius: 50%;
+  /* Perfect Circle */
+  color: var(--text-secondary);
   text-decoration: none;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease;
 }
 
 .back-btn:hover {
-  background: #f9fafb;
-  color: #111827;
-  transform: translateX(-2px); /* Subtle slide effect */
+  background: var(--bg-app);
+  color: var(--text-primary);
+  transform: translateX(-2px);
+  /* Subtle slide effect */
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 .page-title {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #111827;
+  color: var(--text-primary);
   margin: 0;
   letter-spacing: -0.025em;
 }
@@ -49,8 +70,9 @@
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  background-color: #f3f4f6;
-  color: #1f2937;
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .dashboard-container {
@@ -61,7 +83,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem; 
+  gap: 1rem;
 }
 
 /* --- MAP CARD (The Container) --- */
@@ -70,14 +92,17 @@ body {
   background: white;
   border-radius: 16px;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  
+
   /* Layout Logic */
-  position: relative; /* Anchor for absolute children */
+  position: relative;
+  /* Anchor for absolute children */
   display: flex;
   justify-content: center;
   align-items: stretch;
-  min-height: 500px; /* Force height so map has space */
-  overflow: hidden; /* Clips the map if it slides too far */
+  min-height: 500px;
+  /* Force height so map has space */
+  overflow: hidden;
+  /* Clips the map if it slides too far */
 }
 
 .map-card svg {
@@ -93,8 +118,9 @@ body {
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 20; /* High z-index ensures it's clickable */
-  
+  z-index: 20;
+  /* High z-index ensures it's clickable */
+
   display: flex;
   flex-wrap: nowrap;
   white-space: nowrap;
@@ -105,10 +131,12 @@ body {
   border: 1px solid #e5e7eb;
 
   /* FIX: Prevents clipping on small screens */
-  max-width: 95%; 
-  overflow-x: auto; 
-  -webkit-overflow-scrolling: touch; /* Smooth scroll on iOS */
-  scrollbar-width: none; /* Hide scrollbar for cleaner look */
+  max-width: 95%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  /* Smooth scroll on iOS */
+  scrollbar-width: none;
+  /* Hide scrollbar for cleaner look */
 }
 
 .legend-container::-webkit-scrollbar {
@@ -126,7 +154,8 @@ body {
 
   display: flex;
   flex-wrap: wrap;
-  white-space: nowrap; /* ADDED to prevent text breaking */
+  white-space: nowrap;
+  /* ADDED to prevent text breaking */
   justify-content: center;
   gap: 8px 16px;
   background: rgba(255, 255, 255, 0.95);
@@ -173,7 +202,7 @@ body {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  border: 1px solid rgba(0,0,0,0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* --- DEBUG PANEL (Outside Map) --- */
@@ -189,12 +218,16 @@ body {
 /* --- MOBILE OPTIMIZATIONS --- */
 @media (max-width: 600px) {
   .map-card {
-    min-height: 350px; /* Reduce height on mobile to remove whitespace */
-    align-items: flex-start; /* Push map up slightly */
-    padding-bottom: 60px; /* Create natural space for the floor switcher */
+    min-height: 350px;
+    /* Reduce height on mobile to remove whitespace */
+    align-items: flex-start;
+    /* Push map up slightly */
+    padding-bottom: 60px;
+    /* Create natural space for the floor switcher */
   }
-  
+
   .floor-switcher {
-    top: 15px; /* Move it up a bit on small screens */
+    top: 15px;
+    /* Move it up a bit on small screens */
   }
 }

@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import ROOM_SCHEDULES from "../data/roomSchedule_LIVE.json";
 import SI_SCHEDULES from "../data/siSchedule.json";
 import "../App.css";
+import { SearchModal } from "./SearchModal";
 
 const COLORS = {
   LOCKED: "#9CA3AF",
@@ -102,6 +103,25 @@ export function BuildingMap({ darkMode, setDarkMode }) {
 
   const [hoveredRoom, setHoveredRoom] = useState(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
+  // NEW: Search Modal State
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [highlightedRoom, setHighlightedRoom] = useState(null);
+
+  // Navigation from Search
+  const handleNavigate = (roomId) => {
+    setIsSearchOpen(false);
+    setHighlightedRoom(roomId);
+
+    // Auto-switch floor logic
+    const roomNum = roomId.replace("room-", "");
+    if (roomNum.startsWith("1")) setCurrentFloor(1);
+    if (roomNum.startsWith("2")) setCurrentFloor(2);
+    if (roomNum.startsWith("3")) setCurrentFloor(3);
+
+    // Auto-clear highlight after 3 seconds
+    setTimeout(() => setHighlightedRoom(null), 3000);
+  };
 
   // Live Mode: Syncs with system clock every 60s.
   // Simulation Mode: Pauses the interval and uses user-selected state.
@@ -248,9 +268,15 @@ export function BuildingMap({ darkMode, setDarkMode }) {
   };
 
   const getColorProp = useCallback((roomId) => {
+    // 1. Search Highlight
+    if (highlightedRoom) {
+      return highlightedRoom === roomId ? "#22c55e" : "rgba(200, 200, 200, 0.1)";
+    }
+
+    // 2. Otherwise return standard status color
     const status = getRoomStatus(roomId);
     return status ? status.color : COLORS.OFFLINE;
-  }, [getRoomStatus]);
+  }, [getRoomStatus, highlightedRoom]);
 
   const activeTransform = {
     transform: `translate(${FLOOR_OFFSETS[currentFloor].x}px, ${FLOOR_OFFSETS[currentFloor].y}px)`
@@ -282,6 +308,8 @@ export function BuildingMap({ darkMode, setDarkMode }) {
           </svg>
         </a>
         <h3 className="page-title">To Main Site</h3>
+
+
       </motion.div>
 
       {/* Map Card */}
@@ -291,6 +319,32 @@ export function BuildingMap({ darkMode, setDarkMode }) {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.5 }}
       >
+        <AnimatePresence>
+          {isSearchOpen && (
+            <SearchModal onClose={() => setIsSearchOpen(false)} onNavigate={handleNavigate} />
+          )}
+        </AnimatePresence>
+
+        {/* TOP RIGHT: Spotlight Search Trigger (Inside Map Card) */}
+        <div style={{ position: "absolute", top: "20px", right: "20px", zIndex: 20 }}>
+          <button
+            onClick={() => setIsSearchOpen(true)}
+            style={{
+              padding: "8px 16px",
+              borderRadius: "99px",
+              border: "1px solid #e5e7eb", // Fixed light gray border
+              background: "#ffffff", // Fixed white background
+              color: "#374151", // Fixed dark gray text
+              boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+              cursor: "pointer",
+              display: "flex", alignItems: "center", gap: "6px",
+              transition: "all 0.2s",
+              fontSize: "0.9rem"
+            }}
+          >
+            🔍 Search
+          </button>
+        </div>
 
         {/* OVERLAY: Floor Switcher */}
         <div className="floor-switcher">

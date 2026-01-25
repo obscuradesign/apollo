@@ -258,12 +258,16 @@ export function BuildingMap({ darkMode, setDarkMode }) {
 
   const handleRoomClick = (roomId) => {
     if (["room-107b", "room-107c", "room-107d"].includes(roomId)) {
-      // ADD 'noopener,noreferrer' as the third argument
-      window.open(
-        "https://smc.mywconline.com/schedule/calendar?scheduleid=sc6933704f3873d",
-        "_blank",
-        "noopener,noreferrer"
+      const confirmed = window.confirm(
+        "This will open the SMC study room booking site in a new tab. Continue?"
       );
+      if (confirmed) {
+        window.open(
+          "https://smc.mywconline.com/schedule/calendar?scheduleid=sc6933704f3873d",
+          "_blank",
+          "noopener,noreferrer"
+        );
+      }
     }
   };
 

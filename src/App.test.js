@@ -1,8 +1,9 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders Apollo map application', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  // Check that the floor switcher buttons render (core UI element)
+  const floorButton = screen.getByText(/Floor 1/i);
+  expect(floorButton).toBeInTheDocument();
 });

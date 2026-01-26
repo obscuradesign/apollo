@@ -5,14 +5,23 @@ import SI_SCHEDULES from "../data/siSchedule.json";
 
 export const SearchModal = ({ onClose, onNavigate }) => {
     const [query, setQuery] = useState("");
+    const [debouncedQuery, setDebouncedQuery] = useState("");
     const [results, setResults] = useState([]);
 
+    // Debounce the query input (150ms)
     useEffect(() => {
-        if (!query) {
+        const timer = setTimeout(() => {
+            setDebouncedQuery(query);
+        }, 150);
+        return () => clearTimeout(timer);
+    }, [query]);
+
+    useEffect(() => {
+        if (!debouncedQuery) {
             setResults([]);
             return;
         }
-        const lowerQ = query.toLowerCase();
+        const lowerQ = debouncedQuery.toLowerCase();
         const hits = [];
 
         // 1. Search SI
@@ -87,7 +96,7 @@ export const SearchModal = ({ onClose, onNavigate }) => {
         });
 
         setResults(hits.slice(0, 20)); // Limit results
-    }, [query]);
+    }, [debouncedQuery]);
 
     return (
         <motion.div
@@ -123,7 +132,7 @@ export const SearchModal = ({ onClose, onNavigate }) => {
                         type="text"
                         placeholder="Search classes, rooms, professors..."
                         value={query}
-                        onChange={e => setQuery(e.target.value)}
+                        onChange={e => setQuery(e.target.value.slice(0, 200))}
                         style={{
                             flex: 1, padding: "10px", fontSize: "1rem",
                             borderRadius: "8px", border: "1px solid #4b5563",

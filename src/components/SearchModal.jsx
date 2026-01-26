@@ -132,7 +132,7 @@ export const SearchModal = ({ onClose, onNavigate }) => {
                         type="text"
                         placeholder="Search classes, rooms, professors..."
                         value={query}
-                        onChange={e => setQuery(e.target.value.slice(0, 200))}
+                        onChange={e => setQuery(e.target.value.slice(0, 100))}
                         style={{
                             flex: 1, padding: "10px", fontSize: "1rem",
                             borderRadius: "8px", border: "1px solid #4b5563",

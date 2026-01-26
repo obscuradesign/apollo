@@ -24,6 +24,12 @@
 
 ---
 
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/0d367390-4142-4fa9-be62-8ad58e29a884" alt="Apollo v2.0 Preview" width="800">
+</div>
+
+--- 
+
 ## 📖 About The Project
 
 **Apollo** is an interactive, real-time visualization of the Math & Science Building at Santa Monica College. 
@@ -32,11 +38,13 @@ Finding an empty room to study in or locating a specific SI (Supplemental Instru
 
 ### 🌟 Key Features
 
+* **🔍 Global Search:** Instantly locate professors, specific classes (e.g., "Math 7"), or room numbers.
+* **🌙 Persistent Dark Mode:** Full dark-theme support that persists across browser sessions.
 * **🔴 Live Class Tracking:** Rooms turn **Red** when a class is currently in session.
 * **🟡 SI Integration:** Rooms turn **Gold** for Supplemental Instruction sessions (automatically overriding regular class data).
 * **🔵 Study Rooms:** Dedicated study rooms are highlighted **Blue** with direct booking links.
-* **🕰️ Time Machine:** Need to plan for later? Use the "Time Machine" debug panel to jump to any day or time in the future.
-* **🏗️ Interactive SVGs:** Custom-designed, floor-by-floor vector maps for Levels 1, 2, and 3.
+* **🏗️ Google Maps-style UI:** An immersive Overlay layout where controls float over the interactive map for maximum screen real estate.
+* **🕰️ Time Machine:** Need to plan for later? Use the Time Machine debug panel to jump to any day or time in the future.
 
 ---
 
@@ -70,7 +78,7 @@ To get a local copy up and running, follow these steps.
 
 1.  **Clone the repo**
     ```sh
-    git clone [https://github.com/obscuradesign/apollo.git](https://github.com/obscuradesign/apollo.git)
+    git clone https://github.com/obscuradesign/apollo.git
     ```
 2.  **Install NPM packages**
     ```sh
@@ -100,9 +108,12 @@ To fetch the latest class schedules:
 ## 🗺️ Roadmap
 
 - [x] **Basic Mobile Functionality** Currently, the SVG does not render on mobile. Fix this major bug to enable mobile viewing.
+- [x] **Search:** Add a search bar to quickly locate professors or specific room numbers.\
+- [x] **Dark Mode:** Add a dark mode toggle to the app.
+- [x] **Confirmation Popup:** Add a confirmation popup before being redirected to study room booking link.
 - [ ] **Mobile Optimization:** Replace hover tooltips with a touch-friendly bottom sheet.
 - [ ] **Data Automation:** Implement GitHub Actions to run the Python scrapers automatically every new session (4 times a year).
-- [ ] **Search:** Add a search bar to quickly locate professors or specific room numbers.
+
 
 ---
 

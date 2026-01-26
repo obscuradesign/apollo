@@ -150,7 +150,7 @@ body {
   transform: translateX(-50%);
   z-index: 20;
   width: 90%;
-  max-width: 500px;
+  max-width: 550px;
 
   display: flex;
   flex-wrap: wrap;

@@ -99,7 +99,7 @@ def scrape_smc_live():
 
         print("📅 Selecting Semester...")
         term_select = Select(driver.find_element(By.ID, SEMESTER_DROPDOWN_ID))
-        term_select.select_by_index(0) 
+        term_select.select_by_index(1) 
         time.sleep(2)
 
         for subject in TARGET_SUBJECTS:

@@ -1,1587 +1,3459 @@
 {
-  "room-117": {
-    "type": "CLASSROOM",
-    "label": "MSB 117",
-    "events": [
-      {
-        "day": "Thu",
-        "start": "12:00",
-        "end": "15:00",
-        "title": "ANTHRO 5",
-        "courseName": "Biological Anthropology with Lab",
-        "professor": "HARADON C M",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Tue",
-        "start": "12:00",
-        "end": "15:00",
-        "title": "ANTHRO 5",
-        "courseName": "Biological Anthropology with Lab",
-        "professor": "HARADON C M",
-        "status": "OCCUPIED"
-      }
-    ]
-  },
   "room-320": {
     "type": "CLASSROOM",
-    "label": "MSB 320",
+    "label": "MSB 320\ue55f",
     "events": [
       {
+        "day": "Thu",
+        "start": "09:30",
+        "end": "10:50",
+        "title": "ANTHRO 1",
+        "courseName": "Biological Anthropology",
+        "professor": "BREWSTER C P",
+        "status": "OCCUPIED"
+      },
+      {
         "day": "Mon",
-        "start": "17:30",
-        "end": "21:45",
+        "start": "08:00",
+        "end": "11:05",
+        "title": "ASTRON 1",
+        "courseName": "Stellar Astronomy",
+        "professor": "SALAMA A H",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "18:45",
+        "end": "21:50",
+        "title": "ASTRON 3",
+        "courseName": "Stellar Astronomy with Laboratory",
+        "professor": "BALM S P",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "18:45",
+        "end": "21:50",
+        "title": "ASTRON 3",
+        "courseName": "Stellar Astronomy with Laboratory",
+        "professor": "BALM S P",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "18:45",
+        "end": "21:50",
+        "title": "ASTRON 3",
+        "courseName": "Stellar Astronomy with Laboratory",
+        "professor": "FERRARO N",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "18:45",
+        "end": "21:50",
+        "title": "ASTRON 3",
+        "courseName": "Stellar Astronomy with Laboratory",
+        "professor": "FERRARO N",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "12:45",
+        "end": "15:50",
+        "title": "ASTRON 4",
+        "courseName": "Planetary Astronomy with Laboratory",
+        "professor": "SCHWARTZ M J",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "18:45",
+        "end": "21:50",
         "title": "ASTRON 4",
         "courseName": "Planetary Astronomy with Laboratory",
         "professor": "MELCHOR D A",
         "status": "OCCUPIED"
       },
       {
-        "day": "Wed",
-        "start": "17:30",
-        "end": "21:45",
+        "day": "Tue",
+        "start": "18:45",
+        "end": "21:50",
         "title": "ASTRON 4",
         "courseName": "Planetary Astronomy with Laboratory",
         "professor": "MELCHOR D A",
-        "status": "OCCUPIED"
-      }
-    ]
-  },
-  "room-219": {
-    "type": "CLASSROOM",
-    "label": "MSB 219",
-    "events": [
-      {
-        "day": "Thu",
-        "start": "09:00",
-        "end": "12:20",
-        "title": "ANATMY 1",
-        "courseName": "General Human Anatomy",
-        "professor": "WISSMANN P B",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Mon",
-        "start": "09:00",
-        "end": "12:20",
-        "title": "ANATMY 1",
-        "courseName": "General Human Anatomy",
-        "professor": "WISSMANN P B",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Tue",
-        "start": "09:00",
-        "end": "12:20",
-        "title": "ANATMY 1",
-        "courseName": "General Human Anatomy",
-        "professor": "WISSMANN P B",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Wed",
-        "start": "09:00",
-        "end": "12:20",
-        "title": "ANATMY 1",
-        "courseName": "General Human Anatomy",
-        "professor": "WISSMANN P B",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Fri",
-        "start": "09:00",
-        "end": "12:20",
-        "title": "ANATMY 1",
-        "courseName": "General Human Anatomy",
-        "professor": "WISSMANN P B",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Mon",
-        "start": "13:00",
-        "end": "17:15",
-        "title": "ANATMY 1",
-        "courseName": "General Human Anatomy",
-        "professor": "LE M K",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Wed",
-        "start": "13:00",
-        "end": "17:15",
-        "title": "ANATMY 1",
-        "courseName": "General Human Anatomy",
-        "professor": "LE M K",
-        "status": "OCCUPIED"
-      }
-    ]
-  },
-  "room-217": {
-    "type": "CLASSROOM",
-    "label": "MSB 217",
-    "events": [
-      {
-        "day": "Thu",
-        "start": "12:30",
-        "end": "16:45",
-        "title": "ANATMY 1",
-        "courseName": "General Human Anatomy",
-        "professor": "KANJANAPANGKA J",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Tue",
-        "start": "12:30",
-        "end": "16:45",
-        "title": "ANATMY 1",
-        "courseName": "General Human Anatomy",
-        "professor": "KANJANAPANGKA J",
-        "status": "OCCUPIED"
-      }
-    ]
-  },
-  "room-214": {
-    "type": "CLASSROOM",
-    "label": "MSB 214",
-    "events": [
-      {
-        "day": "Thu",
-        "start": "10:00",
-        "end": "12:05",
-        "title": "BIOL 2",
-        "courseName": "Human Biology",
-        "professor": "WILLIAMS R R",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Tue",
-        "start": "10:00",
-        "end": "12:05",
-        "title": "BIOL 2",
-        "courseName": "Human Biology",
-        "professor": "WILLIAMS R R",
-        "status": "OCCUPIED"
-      }
-    ]
-  },
-  "room-311": {
-    "type": "CLASSROOM",
-    "label": "MSB 311",
-    "events": [
-      {
-        "day": "Thu",
-        "start": "09:30",
-        "end": "14:40",
-        "title": "CHEM 11",
-        "courseName": "General Chemistry I",
-        "professor": "SCHMIDT E",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Tue",
-        "start": "09:30",
-        "end": "14:40",
-        "title": "CHEM 11",
-        "courseName": "General Chemistry I",
-        "professor": "SCHMIDT E",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Fri",
-        "start": "09:30",
-        "end": "14:40",
-        "title": "CHEM 11",
-        "courseName": "General Chemistry I",
-        "professor": "SCHMIDT E",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Thu",
-        "start": "09:30",
-        "end": "14:40",
-        "title": "CHEM 11",
-        "courseName": "General Chemistry I",
-        "professor": "PECORELLI T A",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Tue",
-        "start": "09:30",
-        "end": "14:40",
-        "title": "CHEM 11",
-        "courseName": "General Chemistry I",
-        "professor": "PECORELLI T A",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Fri",
-        "start": "09:30",
-        "end": "14:40",
-        "title": "CHEM 11",
-        "courseName": "General Chemistry I",
-        "professor": "PECORELLI T A",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Mon",
-        "start": "12:00",
-        "end": "17:25",
-        "title": "CHEM 19",
-        "courseName": "Fundamentals of General, Organic, and Biological Chemistry",
-        "professor": "KURTOIC S",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Wed",
-        "start": "12:00",
-        "end": "17:25",
-        "title": "CHEM 19",
-        "courseName": "Fundamentals of General, Organic, and Biological Chemistry",
-        "professor": "KURTOIC S",
-        "status": "OCCUPIED"
-      }
-    ]
-  },
-  "room-317": {
-    "type": "CLASSROOM",
-    "label": "MSB 317",
-    "events": [
-      {
-        "day": "Wed",
-        "start": "09:00",
-        "end": "13:10",
-        "title": "GEOL 4",
-        "courseName": "Physical Geology with Lab",
-        "professor": "COLLINS L E",
-        "status": "OCCUPIED"
-      }
-    ]
-  },
-  "room-203": {
-    "type": "CLASSROOM",
-    "label": "MSB 203",
-    "events": [
-      {
-        "day": "Thu",
-        "start": "08:00",
-        "end": "10:10",
-        "title": "STAT C1000",
-        "courseName": "Introduction to Statistics",
-        "professor": "SIMHAN S V",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Mon",
-        "start": "08:00",
-        "end": "10:10",
-        "title": "STAT C1000",
-        "courseName": "Introduction to Statistics",
-        "professor": "SIMHAN S V",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Tue",
-        "start": "08:00",
-        "end": "10:10",
-        "title": "STAT C1000",
-        "courseName": "Introduction to Statistics",
-        "professor": "SIMHAN S V",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Wed",
-        "start": "08:00",
-        "end": "10:10",
-        "title": "STAT C1000",
-        "courseName": "Introduction to Statistics",
-        "professor": "SIMHAN S V",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Fri",
-        "start": "08:00",
-        "end": "10:10",
-        "title": "STAT C1000",
-        "courseName": "Introduction to Statistics",
-        "professor": "SIMHAN S V",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Thu",
-        "start": "18:30",
-        "end": "21:30",
-        "title": "STAT C1000",
-        "courseName": "Introduction to Statistics",
-        "professor": "YANKEY K A",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Mon",
-        "start": "18:30",
-        "end": "21:30",
-        "title": "STAT C1000",
-        "courseName": "Introduction to Statistics",
-        "professor": "YANKEY K A",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Tue",
-        "start": "18:30",
-        "end": "21:30",
-        "title": "STAT C1000",
-        "courseName": "Introduction to Statistics",
-        "professor": "YANKEY K A",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Wed",
-        "start": "18:30",
-        "end": "21:30",
-        "title": "STAT C1000",
-        "courseName": "Introduction to Statistics",
-        "professor": "YANKEY K A",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Thu",
-        "start": "12:45",
-        "end": "15:35",
-        "title": "MATH 2",
-        "courseName": "Precalculus",
-        "professor": "HUANG C Y",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Mon",
-        "start": "12:45",
-        "end": "15:35",
-        "title": "MATH 2",
-        "courseName": "Precalculus",
-        "professor": "HUANG C Y",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Tue",
-        "start": "12:45",
-        "end": "15:35",
-        "title": "MATH 2",
-        "courseName": "Precalculus",
-        "professor": "HUANG C Y",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Wed",
-        "start": "12:45",
-        "end": "15:35",
-        "title": "MATH 2",
-        "courseName": "Precalculus",
-        "professor": "HUANG C Y",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Fri",
-        "start": "12:45",
-        "end": "15:35",
-        "title": "MATH 2",
-        "courseName": "Precalculus",
-        "professor": "HUANG C Y",
-        "status": "OCCUPIED"
-      }
-    ]
-  },
-  "room-211": {
-    "type": "CLASSROOM",
-    "label": "MSB 211",
-    "events": [
-      {
-        "day": "Thu",
-        "start": "11:00",
-        "end": "13:10",
-        "title": "STAT C1000",
-        "courseName": "Introduction to Statistics",
-        "professor": "HE F Y",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Mon",
-        "start": "11:00",
-        "end": "13:10",
-        "title": "STAT C1000",
-        "courseName": "Introduction to Statistics",
-        "professor": "HE F Y",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Tue",
-        "start": "11:00",
-        "end": "13:10",
-        "title": "STAT C1000",
-        "courseName": "Introduction to Statistics",
-        "professor": "HE F Y",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Wed",
-        "start": "11:00",
-        "end": "13:10",
-        "title": "STAT C1000",
-        "courseName": "Introduction to Statistics",
-        "professor": "HE F Y",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Fri",
-        "start": "11:00",
-        "end": "13:10",
-        "title": "STAT C1000",
-        "courseName": "Introduction to Statistics",
-        "professor": "HE F Y",
-        "status": "OCCUPIED"
-      }
-    ]
-  },
-  "room-302": {
-    "type": "CLASSROOM",
-    "label": "MSB 302",
-    "events": [
-      {
-        "day": "Thu",
-        "start": "10:15",
-        "end": "12:25",
-        "title": "STAT C1000",
-        "courseName": "Introduction to Statistics",
-        "professor": "BAYSSA B T",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Mon",
-        "start": "10:15",
-        "end": "12:25",
-        "title": "STAT C1000",
-        "courseName": "Introduction to Statistics",
-        "professor": "BAYSSA B T",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Tue",
-        "start": "10:15",
-        "end": "12:25",
-        "title": "STAT C1000",
-        "courseName": "Introduction to Statistics",
-        "professor": "BAYSSA B T",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Wed",
-        "start": "10:15",
-        "end": "12:25",
-        "title": "STAT C1000",
-        "courseName": "Introduction to Statistics",
-        "professor": "BAYSSA B T",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Fri",
-        "start": "10:15",
-        "end": "12:25",
-        "title": "STAT C1000",
-        "courseName": "Introduction to Statistics",
-        "professor": "BAYSSA B T",
-        "status": "OCCUPIED"
-      }
-    ]
-  },
-  "room-201": {
-    "type": "CLASSROOM",
-    "label": "MSB 201",
-    "events": [
-      {
-        "day": "Thu",
-        "start": "08:00",
-        "end": "10:10",
-        "title": "STAT C1000 AND",
-        "courseName": "Introduction to Statistics",
-        "professor": "DABAGH SA M",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Mon",
-        "start": "08:00",
-        "end": "10:10",
-        "title": "STAT C1000 AND",
-        "courseName": "Introduction to Statistics",
-        "professor": "DABAGH SA M",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Tue",
-        "start": "08:00",
-        "end": "10:10",
-        "title": "STAT C1000 AND",
-        "courseName": "Introduction to Statistics",
-        "professor": "DABAGH SA M",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Wed",
-        "start": "08:00",
-        "end": "10:10",
-        "title": "STAT C1000 AND",
-        "courseName": "Introduction to Statistics",
-        "professor": "DABAGH SA M",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Fri",
-        "start": "08:00",
-        "end": "10:10",
-        "title": "STAT C1000 AND",
-        "courseName": "Introduction to Statistics",
-        "professor": "DABAGH SA M",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Thu",
-        "start": "10:20",
-        "end": "11:35",
-        "title": "MATH 54C",
-        "courseName": "Concurrent Support for Elementary Statistics",
-        "professor": "DABAGH SA M",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Mon",
-        "start": "10:20",
-        "end": "11:35",
-        "title": "MATH 54C",
-        "courseName": "Concurrent Support for Elementary Statistics",
-        "professor": "DABAGH SA M",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Tue",
-        "start": "10:20",
-        "end": "11:35",
-        "title": "MATH 54C",
-        "courseName": "Concurrent Support for Elementary Statistics",
-        "professor": "DABAGH SA M",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Wed",
-        "start": "10:20",
-        "end": "11:35",
-        "title": "MATH 54C",
-        "courseName": "Concurrent Support for Elementary Statistics",
-        "professor": "DABAGH SA M",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Thu",
-        "start": "12:30",
-        "end": "15:20",
-        "title": "MATH 2",
-        "courseName": "Precalculus",
-        "professor": "RAMSEY E D",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Mon",
-        "start": "12:30",
-        "end": "15:20",
-        "title": "MATH 2",
-        "courseName": "Precalculus",
-        "professor": "RAMSEY E D",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Tue",
-        "start": "12:30",
-        "end": "15:20",
-        "title": "MATH 2",
-        "courseName": "Precalculus",
-        "professor": "RAMSEY E D",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Wed",
-        "start": "12:30",
-        "end": "15:20",
-        "title": "MATH 2",
-        "courseName": "Precalculus",
-        "professor": "RAMSEY E D",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Fri",
-        "start": "12:30",
-        "end": "15:20",
-        "title": "MATH 2",
-        "courseName": "Precalculus",
-        "professor": "RAMSEY E D",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Thu",
-        "start": "18:30",
-        "end": "22:00",
-        "title": "MATH 7",
-        "courseName": "Calculus 1",
-        "professor": "SARKSSIAN H",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Mon",
-        "start": "18:30",
-        "end": "22:00",
-        "title": "MATH 7",
-        "courseName": "Calculus 1",
-        "professor": "SARKSSIAN H",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Tue",
-        "start": "18:30",
-        "end": "22:00",
-        "title": "MATH 7",
-        "courseName": "Calculus 1",
-        "professor": "SARKSSIAN H",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Wed",
-        "start": "18:30",
-        "end": "22:00",
-        "title": "MATH 7",
-        "courseName": "Calculus 1",
-        "professor": "SARKSSIAN H",
-        "status": "OCCUPIED"
-      }
-    ]
-  },
-  "room-202": {
-    "type": "CLASSROOM",
-    "label": "MSB 202",
-    "events": [
-      {
-        "day": "Thu",
-        "start": "10:15",
-        "end": "12:25",
-        "title": "STAT C1000 AND",
-        "courseName": "Introduction to Statistics",
-        "professor": "DEAN C R",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Mon",
-        "start": "10:15",
-        "end": "12:25",
-        "title": "STAT C1000 AND",
-        "courseName": "Introduction to Statistics",
-        "professor": "DEAN C R",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Tue",
-        "start": "10:15",
-        "end": "12:25",
-        "title": "STAT C1000 AND",
-        "courseName": "Introduction to Statistics",
-        "professor": "DEAN C R",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Wed",
-        "start": "10:15",
-        "end": "12:25",
-        "title": "STAT C1000 AND",
-        "courseName": "Introduction to Statistics",
-        "professor": "DEAN C R",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Fri",
-        "start": "10:15",
-        "end": "12:25",
-        "title": "STAT C1000 AND",
-        "courseName": "Introduction to Statistics",
-        "professor": "DEAN C R",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Thu",
-        "start": "12:35",
-        "end": "13:50",
-        "title": "MATH 54C",
-        "courseName": "Concurrent Support for Elementary Statistics",
-        "professor": "DEAN C R",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Mon",
-        "start": "12:35",
-        "end": "13:50",
-        "title": "MATH 54C",
-        "courseName": "Concurrent Support for Elementary Statistics",
-        "professor": "DEAN C R",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Tue",
-        "start": "12:35",
-        "end": "13:50",
-        "title": "MATH 54C",
-        "courseName": "Concurrent Support for Elementary Statistics",
-        "professor": "DEAN C R",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Wed",
-        "start": "12:35",
-        "end": "13:50",
-        "title": "MATH 54C",
-        "courseName": "Concurrent Support for Elementary Statistics",
-        "professor": "DEAN C R",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Thu",
-        "start": "18:30",
-        "end": "22:00",
-        "title": "MATH 8",
-        "courseName": "Calculus 2",
-        "professor": "ASKARIAN S N",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Mon",
-        "start": "18:30",
-        "end": "22:00",
-        "title": "MATH 8",
-        "courseName": "Calculus 2",
-        "professor": "ASKARIAN S N",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Tue",
-        "start": "18:30",
-        "end": "22:00",
-        "title": "MATH 8",
-        "courseName": "Calculus 2",
-        "professor": "ASKARIAN S N",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Wed",
-        "start": "18:30",
-        "end": "22:00",
-        "title": "MATH 8",
-        "courseName": "Calculus 2",
-        "professor": "ASKARIAN S N",
-        "status": "OCCUPIED"
-      }
-    ]
-  },
-  "room-205": {
-    "type": "CLASSROOM",
-    "label": "MSB 205",
-    "events": [
-      {
-        "day": "Thu",
-        "start": "09:30",
-        "end": "12:20",
-        "title": "MATH 2 AND",
-        "courseName": "Precalculus",
-        "professor": "HARJUNO T",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Mon",
-        "start": "09:30",
-        "end": "12:20",
-        "title": "MATH 2 AND",
-        "courseName": "Precalculus",
-        "professor": "HARJUNO T",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Tue",
-        "start": "09:30",
-        "end": "12:20",
-        "title": "MATH 2 AND",
-        "courseName": "Precalculus",
-        "professor": "HARJUNO T",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Wed",
-        "start": "09:30",
-        "end": "12:20",
-        "title": "MATH 2 AND",
-        "courseName": "Precalculus",
-        "professor": "HARJUNO T",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Fri",
-        "start": "09:30",
-        "end": "12:20",
-        "title": "MATH 2 AND",
-        "courseName": "Precalculus",
-        "professor": "HARJUNO T",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Thu",
-        "start": "12:30",
-        "end": "14:35",
-        "title": "MATH 2C",
-        "courseName": "Concurrent Support for Precalculus",
-        "professor": "HARJUNO T",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Mon",
-        "start": "12:30",
-        "end": "14:35",
-        "title": "MATH 2C",
-        "courseName": "Concurrent Support for Precalculus",
-        "professor": "HARJUNO T",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Tue",
-        "start": "12:30",
-        "end": "14:35",
-        "title": "MATH 2C",
-        "courseName": "Concurrent Support for Precalculus",
-        "professor": "HARJUNO T",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Wed",
-        "start": "12:30",
-        "end": "14:35",
-        "title": "MATH 2C",
-        "courseName": "Concurrent Support for Precalculus",
-        "professor": "HARJUNO T",
-        "status": "OCCUPIED"
-      }
-    ]
-  },
-  "room-212": {
-    "type": "CLASSROOM",
-    "label": "MSB 212",
-    "events": [
-      {
-        "day": "Thu",
-        "start": "11:00",
-        "end": "13:10",
-        "title": "MATH 6 AND",
-        "courseName": "Modern Mathematical Methods for STEM Majors",
-        "professor": "GHARAMANIANS J",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Mon",
-        "start": "11:00",
-        "end": "13:10",
-        "title": "MATH 6 AND",
-        "courseName": "Modern Mathematical Methods for STEM Majors",
-        "professor": "GHARAMANIANS J",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Tue",
-        "start": "11:00",
-        "end": "13:10",
-        "title": "MATH 6 AND",
-        "courseName": "Modern Mathematical Methods for STEM Majors",
-        "professor": "GHARAMANIANS J",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Wed",
-        "start": "11:00",
-        "end": "13:10",
-        "title": "MATH 6 AND",
-        "courseName": "Modern Mathematical Methods for STEM Majors",
-        "professor": "GHARAMANIANS J",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Fri",
-        "start": "11:00",
-        "end": "13:10",
-        "title": "MATH 6 AND",
-        "courseName": "Modern Mathematical Methods for STEM Majors",
-        "professor": "GHARAMANIANS J",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Thu",
-        "start": "13:20",
-        "end": "14:35",
-        "title": "MATH 6C",
-        "courseName": "Concurrent Support for Modern Mathematical Methods For STEM Majors",
-        "professor": "GHARAMANIANS J",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Mon",
-        "start": "13:20",
-        "end": "14:35",
-        "title": "MATH 6C",
-        "courseName": "Concurrent Support for Modern Mathematical Methods For STEM Majors",
-        "professor": "GHARAMANIANS J",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Tue",
-        "start": "13:20",
-        "end": "14:35",
-        "title": "MATH 6C",
-        "courseName": "Concurrent Support for Modern Mathematical Methods For STEM Majors",
-        "professor": "GHARAMANIANS J",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Wed",
-        "start": "13:20",
-        "end": "14:35",
-        "title": "MATH 6C",
-        "courseName": "Concurrent Support for Modern Mathematical Methods For STEM Majors",
-        "professor": "GHARAMANIANS J",
-        "status": "OCCUPIED"
-      }
-    ]
-  },
-  "room-209": {
-    "type": "CLASSROOM",
-    "label": "MSB 209",
-    "events": [
-      {
-        "day": "Thu",
-        "start": "09:00",
-        "end": "11:50",
-        "title": "MATH 7",
-        "courseName": "Calculus 1",
-        "professor": "KONYA W",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Mon",
-        "start": "09:00",
-        "end": "11:50",
-        "title": "MATH 7",
-        "courseName": "Calculus 1",
-        "professor": "KONYA W",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Tue",
-        "start": "09:00",
-        "end": "11:50",
-        "title": "MATH 7",
-        "courseName": "Calculus 1",
-        "professor": "KONYA W",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Wed",
-        "start": "09:00",
-        "end": "11:50",
-        "title": "MATH 7",
-        "courseName": "Calculus 1",
-        "professor": "KONYA W",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Fri",
-        "start": "09:00",
-        "end": "11:50",
-        "title": "MATH 7",
-        "courseName": "Calculus 1",
-        "professor": "KONYA W",
-        "status": "OCCUPIED"
-      }
-    ]
-  },
-  "room-101": {
-    "type": "CLASSROOM",
-    "label": "MSB 101",
-    "events": [
-      {
-        "day": "Thu",
-        "start": "08:00",
-        "end": "10:50",
-        "title": "MATH 7 AND",
-        "courseName": "Calculus 1",
-        "professor": "HERICHI H",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Mon",
-        "start": "08:00",
-        "end": "10:50",
-        "title": "MATH 7 AND",
-        "courseName": "Calculus 1",
-        "professor": "HERICHI H",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Tue",
-        "start": "08:00",
-        "end": "10:50",
-        "title": "MATH 7 AND",
-        "courseName": "Calculus 1",
-        "professor": "HERICHI H",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Wed",
-        "start": "08:00",
-        "end": "10:50",
-        "title": "MATH 7 AND",
-        "courseName": "Calculus 1",
-        "professor": "HERICHI H",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Fri",
-        "start": "08:00",
-        "end": "10:50",
-        "title": "MATH 7 AND",
-        "courseName": "Calculus 1",
-        "professor": "HERICHI H",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Thu",
-        "start": "11:00",
-        "end": "12:15",
-        "title": "MATH 7C",
-        "courseName": "Concurrent Support for Calculus 1",
-        "professor": "HERICHI H",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Mon",
-        "start": "11:00",
-        "end": "12:15",
-        "title": "MATH 7C",
-        "courseName": "Concurrent Support for Calculus 1",
-        "professor": "HERICHI H",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Tue",
-        "start": "11:00",
-        "end": "12:15",
-        "title": "MATH 7C",
-        "courseName": "Concurrent Support for Calculus 1",
-        "professor": "HERICHI H",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Wed",
-        "start": "11:00",
-        "end": "12:15",
-        "title": "MATH 7C",
-        "courseName": "Concurrent Support for Calculus 1",
-        "professor": "HERICHI H",
-        "status": "OCCUPIED"
-      }
-    ]
-  },
-  "room-206": {
-    "type": "CLASSROOM",
-    "label": "MSB 206",
-    "events": [
-      {
-        "day": "Thu",
-        "start": "12:00",
-        "end": "14:50",
-        "title": "MATH 7 AND",
-        "courseName": "Calculus 1",
-        "professor": "SOLEYMANI S",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Mon",
-        "start": "12:00",
-        "end": "14:50",
-        "title": "MATH 7 AND",
-        "courseName": "Calculus 1",
-        "professor": "SOLEYMANI S",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Tue",
-        "start": "12:00",
-        "end": "14:50",
-        "title": "MATH 7 AND",
-        "courseName": "Calculus 1",
-        "professor": "SOLEYMANI S",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Wed",
-        "start": "12:00",
-        "end": "14:50",
-        "title": "MATH 7 AND",
-        "courseName": "Calculus 1",
-        "professor": "SOLEYMANI S",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Fri",
-        "start": "12:00",
-        "end": "14:50",
-        "title": "MATH 7 AND",
-        "courseName": "Calculus 1",
-        "professor": "SOLEYMANI S",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Thu",
-        "start": "15:00",
-        "end": "16:15",
-        "title": "MATH 7C",
-        "courseName": "Concurrent Support for Calculus 1",
-        "professor": "SOLEYMANI S",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Mon",
-        "start": "15:00",
-        "end": "16:15",
-        "title": "MATH 7C",
-        "courseName": "Concurrent Support for Calculus 1",
-        "professor": "SOLEYMANI S",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Tue",
-        "start": "15:00",
-        "end": "16:15",
-        "title": "MATH 7C",
-        "courseName": "Concurrent Support for Calculus 1",
-        "professor": "SOLEYMANI S",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Wed",
-        "start": "15:00",
-        "end": "16:15",
-        "title": "MATH 7C",
-        "courseName": "Concurrent Support for Calculus 1",
-        "professor": "SOLEYMANI S",
-        "status": "OCCUPIED"
-      }
-    ]
-  },
-  "room-301": {
-    "type": "CLASSROOM",
-    "label": "MSB 301",
-    "events": [
-      {
-        "day": "Thu",
-        "start": "11:00",
-        "end": "13:50",
-        "title": "MATH 7 AND",
-        "courseName": "Calculus 1",
-        "professor": "BASKAUSKAS V A",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Mon",
-        "start": "11:00",
-        "end": "13:50",
-        "title": "MATH 7 AND",
-        "courseName": "Calculus 1",
-        "professor": "BASKAUSKAS V A",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Tue",
-        "start": "11:00",
-        "end": "13:50",
-        "title": "MATH 7 AND",
-        "courseName": "Calculus 1",
-        "professor": "BASKAUSKAS V A",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Wed",
-        "start": "11:00",
-        "end": "13:50",
-        "title": "MATH 7 AND",
-        "courseName": "Calculus 1",
-        "professor": "BASKAUSKAS V A",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Fri",
-        "start": "11:00",
-        "end": "13:50",
-        "title": "MATH 7 AND",
-        "courseName": "Calculus 1",
-        "professor": "BASKAUSKAS V A",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Thu",
-        "start": "14:00",
-        "end": "15:05",
-        "title": "MATH 7C",
-        "courseName": "Concurrent Support for Calculus 1",
-        "professor": "BASKAUSKAS V A",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Mon",
-        "start": "14:00",
-        "end": "15:05",
-        "title": "MATH 7C",
-        "courseName": "Concurrent Support for Calculus 1",
-        "professor": "BASKAUSKAS V A",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Tue",
-        "start": "14:00",
-        "end": "15:05",
-        "title": "MATH 7C",
-        "courseName": "Concurrent Support for Calculus 1",
-        "professor": "BASKAUSKAS V A",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Wed",
-        "start": "14:00",
-        "end": "15:05",
-        "title": "MATH 7C",
-        "courseName": "Concurrent Support for Calculus 1",
-        "professor": "BASKAUSKAS V A",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Fri",
-        "start": "14:00",
-        "end": "15:05",
-        "title": "MATH 7C",
-        "courseName": "Concurrent Support for Calculus 1",
-        "professor": "BASKAUSKAS V A",
-        "status": "OCCUPIED"
-      }
-    ]
-  },
-  "room-210": {
-    "type": "CLASSROOM",
-    "label": "MSB 210",
-    "events": [
-      {
-        "day": "Thu",
-        "start": "11:00",
-        "end": "13:50",
-        "title": "MATH 8",
-        "courseName": "Calculus 2",
-        "professor": "SMITH S P",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Mon",
-        "start": "11:00",
-        "end": "13:50",
-        "title": "MATH 8",
-        "courseName": "Calculus 2",
-        "professor": "SMITH S P",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Tue",
-        "start": "11:00",
-        "end": "13:50",
-        "title": "MATH 8",
-        "courseName": "Calculus 2",
-        "professor": "SMITH S P",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Wed",
-        "start": "11:00",
-        "end": "13:50",
-        "title": "MATH 8",
-        "courseName": "Calculus 2",
-        "professor": "SMITH S P",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Fri",
-        "start": "11:00",
-        "end": "13:50",
-        "title": "MATH 8",
-        "courseName": "Calculus 2",
-        "professor": "SMITH S P",
-        "status": "OCCUPIED"
-      }
-    ]
-  },
-  "room-207": {
-    "type": "CLASSROOM",
-    "label": "MSB 207",
-    "events": [
-      {
-        "day": "Thu",
-        "start": "10:15",
-        "end": "13:05",
-        "title": "MATH 11",
-        "courseName": "Multivariable Calculus",
-        "professor": "RODAS B G",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Mon",
-        "start": "10:15",
-        "end": "13:05",
-        "title": "MATH 11",
-        "courseName": "Multivariable Calculus",
-        "professor": "RODAS B G",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Tue",
-        "start": "10:15",
-        "end": "13:05",
-        "title": "MATH 11",
-        "courseName": "Multivariable Calculus",
-        "professor": "RODAS B G",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Wed",
-        "start": "10:15",
-        "end": "13:05",
-        "title": "MATH 11",
-        "courseName": "Multivariable Calculus",
-        "professor": "RODAS B G",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Fri",
-        "start": "10:15",
-        "end": "13:05",
-        "title": "MATH 11",
-        "courseName": "Multivariable Calculus",
-        "professor": "RODAS B G",
-        "status": "OCCUPIED"
-      }
-    ]
-  },
-  "room-307": {
-    "type": "CLASSROOM",
-    "label": "MSB 307",
-    "events": [
-      {
-        "day": "Thu",
-        "start": "08:00",
-        "end": "10:05",
-        "title": "MATH 15",
-        "courseName": "Ordinary Differential Equations",
-        "professor": "LIN B",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Mon",
-        "start": "08:00",
-        "end": "10:05",
-        "title": "MATH 15",
-        "courseName": "Ordinary Differential Equations",
-        "professor": "LIN B",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Tue",
-        "start": "08:00",
-        "end": "10:05",
-        "title": "MATH 15",
-        "courseName": "Ordinary Differential Equations",
-        "professor": "LIN B",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Wed",
-        "start": "08:00",
-        "end": "10:05",
-        "title": "MATH 15",
-        "courseName": "Ordinary Differential Equations",
-        "professor": "LIN B",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Thu",
-        "start": "10:30",
-        "end": "13:20",
-        "title": "MATH 28",
-        "courseName": "Calculus 1 for Business and Social Science",
-        "professor": "LUI-MARTINEZ KR D",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Mon",
-        "start": "10:30",
-        "end": "13:20",
-        "title": "MATH 28",
-        "courseName": "Calculus 1 for Business and Social Science",
-        "professor": "LUI-MARTINEZ KR D",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Tue",
-        "start": "10:30",
-        "end": "13:20",
-        "title": "MATH 28",
-        "courseName": "Calculus 1 for Business and Social Science",
-        "professor": "LUI-MARTINEZ KR D",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Wed",
-        "start": "10:30",
-        "end": "13:20",
-        "title": "MATH 28",
-        "courseName": "Calculus 1 for Business and Social Science",
-        "professor": "LUI-MARTINEZ KR D",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Fri",
-        "start": "10:30",
-        "end": "13:20",
-        "title": "MATH 28",
-        "courseName": "Calculus 1 for Business and Social Science",
-        "professor": "LUI-MARTINEZ KR D",
         "status": "OCCUPIED"
       }
     ]
   },
   "room-208": {
     "type": "CLASSROOM",
-    "label": "MSB 208",
+    "label": "MSB 208\ue55f",
     "events": [
       {
-        "day": "Thu",
-        "start": "11:00",
-        "end": "13:05",
-        "title": "MATH 21 AND",
-        "courseName": "Finite Mathematics",
-        "professor": "ENGLAND A M",
+        "day": "Wed",
+        "start": "11:15",
+        "end": "12:35",
+        "title": "ANTHRO 1",
+        "courseName": "Biological Anthropology",
+        "professor": "HARADON C M",
         "status": "OCCUPIED"
       },
       {
         "day": "Mon",
-        "start": "11:00",
-        "end": "13:05",
-        "title": "MATH 21 AND",
-        "courseName": "Finite Mathematics",
-        "professor": "ENGLAND A M",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Tue",
-        "start": "11:00",
-        "end": "13:05",
-        "title": "MATH 21 AND",
-        "courseName": "Finite Mathematics",
-        "professor": "ENGLAND A M",
+        "start": "14:15",
+        "end": "15:35",
+        "title": "ANTHRO 1",
+        "courseName": "Biological Anthropology",
+        "professor": "DENMAN J F",
         "status": "OCCUPIED"
       },
       {
         "day": "Wed",
-        "start": "11:00",
-        "end": "13:05",
-        "title": "MATH 21 AND",
-        "courseName": "Finite Mathematics",
-        "professor": "ENGLAND A M",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Thu",
-        "start": "13:15",
-        "end": "14:05",
-        "title": "MATH 21C",
-        "courseName": "Concurrent Support for Finite Mathematics",
-        "professor": "ENGLAND A M",
+        "start": "14:15",
+        "end": "15:35",
+        "title": "ANTHRO 1",
+        "courseName": "Biological Anthropology",
+        "professor": "DENMAN J F",
         "status": "OCCUPIED"
       },
       {
         "day": "Mon",
-        "start": "13:15",
-        "end": "14:05",
-        "title": "MATH 21C",
-        "courseName": "Concurrent Support for Finite Mathematics",
-        "professor": "ENGLAND A M",
+        "start": "08:00",
+        "end": "10:05",
+        "title": "STAT C1000 AND",
+        "courseName": "Introduction to Statistics",
+        "professor": "MUSSELMAN M J",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "08:00",
+        "end": "10:05",
+        "title": "STAT C1000 AND",
+        "courseName": "Introduction to Statistics",
+        "professor": "MUSSELMAN M J",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "10:15",
+        "end": "11:05",
+        "title": "MATH 54C",
+        "courseName": "Concurrent Support for Elementary Statistics",
+        "professor": "MUSSELMAN M J",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "10:15",
+        "end": "11:05",
+        "title": "MATH 54C",
+        "courseName": "Concurrent Support for Elementary Statistics",
+        "professor": "MUSSELMAN M J",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "08:00",
+        "end": "10:05",
+        "title": "STAT C1000 AND",
+        "courseName": "Introduction to Statistics",
+        "professor": "KIM J J",
         "status": "OCCUPIED"
       },
       {
         "day": "Tue",
-        "start": "13:15",
+        "start": "08:00",
+        "end": "10:05",
+        "title": "STAT C1000 AND",
+        "courseName": "Introduction to Statistics",
+        "professor": "KIM J J",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "10:15",
+        "end": "11:05",
+        "title": "MATH 54C",
+        "courseName": "Concurrent Support for Elementary Statistics",
+        "professor": "KIM J J",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "10:15",
+        "end": "11:05",
+        "title": "MATH 54C",
+        "courseName": "Concurrent Support for Elementary Statistics",
+        "professor": "KIM J J",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "12:45",
+        "end": "15:10",
+        "title": "MATH 7",
+        "courseName": "Calculus 1",
+        "professor": "WANG J D",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "12:45",
+        "end": "15:10",
+        "title": "MATH 7",
+        "courseName": "Calculus 1",
+        "professor": "WANG J D",
+        "status": "OCCUPIED"
+      }
+    ]
+  },
+  "room-117": {
+    "type": "CLASSROOM",
+    "label": "MSB 117\ue55f",
+    "events": [
+      {
+        "day": "Tue",
+        "start": "12:45",
         "end": "14:05",
+        "title": "ANTHRO 1",
+        "courseName": "Biological Anthropology",
+        "professor": "RASHIDI J S",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "09:30",
+        "end": "12:35",
+        "title": "ANTHRO 5",
+        "courseName": "Biological Anthropology with Lab",
+        "professor": "BREWSTER C P",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "09:30",
+        "end": "12:35",
+        "title": "ANTHRO 5",
+        "courseName": "Biological Anthropology with Lab",
+        "professor": "HARADON C M",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "12:45",
+        "end": "15:50",
+        "title": "ANTHRO 5",
+        "courseName": "Biological Anthropology with Lab",
+        "professor": "BREWSTER C P",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "12:45",
+        "end": "15:50",
+        "title": "ANTHRO 5",
+        "courseName": "Biological Anthropology with Lab",
+        "professor": "HARADON C M",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "14:15",
+        "end": "17:20",
+        "title": "ANTHRO 5",
+        "courseName": "Biological Anthropology with Lab",
+        "professor": "RASHIDI J S",
+        "status": "OCCUPIED"
+      }
+    ]
+  },
+  "room-301": {
+    "type": "CLASSROOM",
+    "label": "MSB 301\ue55f",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "09:30",
+        "end": "10:50",
+        "title": "ANTHRO 2",
+        "courseName": "Cultural Anthropology",
+        "professor": "DENMAN J F",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "09:30",
+        "end": "10:50",
+        "title": "ANTHRO 2",
+        "courseName": "Cultural Anthropology",
+        "professor": "DENMAN J F",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "11:15",
+        "end": "12:35",
+        "title": "ANTHRO 2",
+        "courseName": "Cultural Anthropology",
+        "professor": "DENMAN J F",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "11:15",
+        "end": "12:35",
+        "title": "ANTHRO 2",
+        "courseName": "Cultural Anthropology",
+        "professor": "DENMAN J F",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "11:15",
+        "end": "12:35",
+        "title": "ANTHRO 7",
+        "courseName": "Introduction to Linguistic Anthropology",
+        "professor": "GREBLER G",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "18:45",
+        "end": "21:50",
+        "title": "ASTRON 1",
+        "courseName": "Stellar Astronomy",
+        "professor": "MELCHOR D A",
+        "status": "OCCUPIED"
+      }
+    ]
+  },
+  "room-119": {
+    "type": "CLASSROOM",
+    "label": "MSB 119\ue55f",
+    "events": [
+      {
+        "day": "Wed",
+        "start": "09:30",
+        "end": "10:50",
+        "title": "ANTHRO 3",
+        "courseName": "World Archaeology",
+        "professor": "LEWIS B S",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "11:15",
+        "end": "12:35",
+        "title": "ANTHRO 4",
+        "courseName": "Methods of Archaeology",
+        "professor": "LEWIS B S",
+        "status": "OCCUPIED"
+      }
+    ]
+  },
+  "room-219": {
+    "type": "CLASSROOM",
+    "label": "MSB 219\ue55f",
+    "events": [
+      {
+        "day": "Wed",
+        "start": "07:45",
+        "end": "10:50",
+        "title": "ANATMY 1",
+        "courseName": "General Human Anatomy",
+        "professor": "HUTCHINSON S C",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "08:00",
+        "end": "11:05",
+        "title": "ANATMY 1",
+        "courseName": "General Human Anatomy",
+        "professor": "WISSMANN P B",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "08:00",
+        "end": "11:05",
+        "title": "ANATMY 1",
+        "courseName": "General Human Anatomy",
+        "professor": "WISSMANN P B",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "11:15",
+        "end": "14:20",
+        "title": "ANATMY 1",
+        "courseName": "General Human Anatomy",
+        "professor": "HUTCHINSON S C",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "14:45",
+        "end": "17:50",
+        "title": "ANATMY 1",
+        "courseName": "General Human Anatomy",
+        "professor": "FICKBOHM D J",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "14:45",
+        "end": "17:50",
+        "title": "ANATMY 1",
+        "courseName": "General Human Anatomy",
+        "professor": "FICKBOHM D J",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "15:15",
+        "end": "18:20",
+        "title": "ANATMY 1",
+        "courseName": "General Human Anatomy",
+        "professor": "WAUGH A",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "15:15",
+        "end": "18:20",
+        "title": "ANATMY 1",
+        "courseName": "General Human Anatomy",
+        "professor": "WAUGH A",
+        "status": "OCCUPIED"
+      }
+    ]
+  },
+  "room-217": {
+    "type": "CLASSROOM",
+    "label": "MSB 217\ue55f",
+    "events": [
+      {
+        "day": "Thu",
+        "start": "08:00",
+        "end": "11:05",
+        "title": "ANATMY 1",
+        "courseName": "General Human Anatomy",
+        "professor": "VALLE A M",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "11:15",
+        "end": "14:20",
+        "title": "ANATMY 1",
+        "courseName": "General Human Anatomy",
+        "professor": "GRANT C",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "11:15",
+        "end": "14:20",
+        "title": "ANATMY 1",
+        "courseName": "General Human Anatomy",
+        "professor": "GRANT C",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "12:45",
+        "end": "15:50",
+        "title": "ANATMY 1",
+        "courseName": "General Human Anatomy",
+        "professor": "WILLIAMS R R",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "12:45",
+        "end": "15:50",
+        "title": "ANATMY 1",
+        "courseName": "General Human Anatomy",
+        "professor": "WILLIAMS R R",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "18:45",
+        "end": "21:50",
+        "title": "ANATMY 1",
+        "courseName": "General Human Anatomy",
+        "professor": "ROBERTS A C",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "18:45",
+        "end": "21:50",
+        "title": "ANATMY 1",
+        "courseName": "General Human Anatomy",
+        "professor": "ROBERTS A C",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "19:00",
+        "end": "22:05",
+        "title": "ANATMY 1",
+        "courseName": "General Human Anatomy",
+        "professor": "LE M K",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "19:00",
+        "end": "22:05",
+        "title": "ANATMY 1",
+        "courseName": "General Human Anatomy",
+        "professor": "LE M K",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "14:45",
+        "end": "17:50",
+        "title": "ANATMY 2",
+        "courseName": "Advanced Human Anatomy",
+        "professor": "GRANT C",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "14:45",
+        "end": "17:50",
+        "title": "ANATMY 2",
+        "courseName": "Advanced Human Anatomy",
+        "professor": "GRANT C",
+        "status": "OCCUPIED"
+      }
+    ]
+  },
+  "room-214": {
+    "type": "CLASSROOM",
+    "label": "MSB 214\ue55f",
+    "events": [
+      {
+        "day": "Thu",
+        "start": "12:00",
+        "end": "14:05",
+        "title": "BIOL 2",
+        "courseName": "Human Biology",
+        "professor": "WAUGH A",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "12:00",
+        "end": "14:05",
+        "title": "BIOL 2",
+        "courseName": "Human Biology",
+        "professor": "WAUGH A",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "09:00",
+        "end": "11:05",
+        "title": "BIOL 30",
+        "courseName": "Fundamentals of Biotechnology 1",
+        "professor": "CHEN T T",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "09:00",
+        "end": "11:05",
+        "title": "BIOL 30",
+        "courseName": "Fundamentals of Biotechnology 1",
+        "professor": "CHEN T T",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "11:15",
+        "end": "12:35",
+        "title": "NUTR 1",
+        "courseName": "Introduction to Nutrition Science",
+        "professor": "ORTEGA Y",
+        "status": "OCCUPIED"
+      }
+    ]
+  },
+  "room-216": {
+    "type": "CLASSROOM",
+    "label": "MSB 216\ue55f",
+    "events": [
+      {
+        "day": "Fri",
+        "start": "09:00",
+        "end": "12:05",
+        "title": "BIOL 22",
+        "courseName": "Genetics and Molecular Biology",
+        "professor": "BOBER M A",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "12:45",
+        "end": "15:50",
+        "title": "BIOL 22",
+        "courseName": "Genetics and Molecular Biology",
+        "professor": "ANDERSEN M K",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "12:45",
+        "end": "15:50",
+        "title": "BIOL 22",
+        "courseName": "Genetics and Molecular Biology",
+        "professor": "ANDERSEN M K",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "08:00",
+        "end": "11:05",
+        "title": "BIOL 32",
+        "courseName": "Cell Culture Methods & Techniques",
+        "professor": "CAVASSANI K A",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "08:00",
+        "end": "11:05",
+        "title": "BIOL 32",
+        "courseName": "Cell Culture Methods & Techniques",
+        "professor": "CAVASSANI K A",
+        "status": "OCCUPIED"
+      }
+    ]
+  },
+  "room-311": {
+    "type": "CLASSROOM",
+    "label": "MSB 311\ue55f",
+    "events": [
+      {
+        "day": "Thu",
+        "start": "12:45",
+        "end": "15:00",
+        "title": "CHEM 19",
+        "courseName": "Fundamentals of General, Organic, and Biological Chemistry",
+        "professor": "MBONING O L",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "12:45",
+        "end": "15:00",
+        "title": "CHEM 19",
+        "courseName": "Fundamentals of General, Organic, and Biological Chemistry",
+        "professor": "MBONING O L",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "15:15",
+        "end": "17:30",
+        "title": "CHEM 19",
+        "courseName": "Fundamentals of General, Organic, and Biological Chemistry",
+        "professor": "KURTOIC S",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "15:15",
+        "end": "17:30",
+        "title": "CHEM 19",
+        "courseName": "Fundamentals of General, Organic, and Biological Chemistry",
+        "professor": "KURTOIC S",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "17:45",
+        "end": "20:00",
+        "title": "CHEM 19",
+        "courseName": "Fundamentals of General, Organic, and Biological Chemistry",
+        "professor": "COULTER C E",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "17:45",
+        "end": "20:00",
+        "title": "CHEM 19",
+        "courseName": "Fundamentals of General, Organic, and Biological Chemistry",
+        "professor": "COULTER C E",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "08:30",
+        "end": "11:00",
+        "title": "CHEM 21",
+        "courseName": "Organic Chemistry I",
+        "professor": "BAKER S I",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "08:30",
+        "end": "11:00",
+        "title": "CHEM 21",
+        "courseName": "Organic Chemistry I",
+        "professor": "BAKER S I",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "13:30",
+        "end": "16:00",
+        "title": "CHEM 21",
+        "courseName": "Organic Chemistry I",
+        "professor": "DONG T A",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "13:30",
+        "end": "16:00",
+        "title": "CHEM 21",
+        "courseName": "Organic Chemistry I",
+        "professor": "DONG T A",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "08:30",
+        "end": "11:00",
+        "title": "CHEM 22",
+        "courseName": "Organic Chemistry II",
+        "professor": "ANDERSON JAMEY L",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "08:30",
+        "end": "11:00",
+        "title": "CHEM 22",
+        "courseName": "Organic Chemistry II",
+        "professor": "ANDERSON JAMEY L",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "11:15",
+        "end": "12:35",
+        "title": "ENGR 12",
+        "courseName": "Statics",
+        "professor": "KIM L",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "11:15",
+        "end": "12:35",
+        "title": "ENGR 12",
+        "courseName": "Statics",
+        "professor": "KIM L",
+        "status": "OCCUPIED"
+      }
+    ]
+  },
+  "room-313": {
+    "type": "CLASSROOM",
+    "label": "MSB 313\ue55f",
+    "events": [
+      {
+        "day": "Tue",
+        "start": "13:00",
+        "end": "17:00",
+        "title": "CHEM 21",
+        "courseName": "Organic Chemistry I",
+        "professor": "BAKER S I",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "13:00",
+        "end": "17:00",
+        "title": "CHEM 21",
+        "courseName": "Organic Chemistry I",
+        "professor": "BAKER S I",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "08:45",
+        "end": "12:45",
+        "title": "CHEM 21",
+        "courseName": "Organic Chemistry I",
+        "professor": "DONG T A",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "08:45",
+        "end": "12:45",
+        "title": "CHEM 21",
+        "courseName": "Organic Chemistry I",
+        "professor": "DONG T A",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "13:00",
+        "end": "18:05",
+        "title": "CHEM 24",
+        "courseName": "Organic Chemistry II Laboratory",
+        "professor": "ANDERSON JAMEY L",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "13:00",
+        "end": "18:05",
+        "title": "CHEM 24",
+        "courseName": "Organic Chemistry II Laboratory",
+        "professor": "ANDERSON JAMEY L",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Fri",
+        "start": "09:00",
+        "end": "13:05",
+        "title": "SCI 10",
+        "courseName": "Principles and Practice of Scientific Research",
+        "professor": "DONG T A",
+        "status": "OCCUPIED"
+      }
+    ]
+  },
+  "room-310": {
+    "type": "CLASSROOM",
+    "label": "MSB 310\ue55f",
+    "events": [
+      {
+        "day": "Thu",
+        "start": "09:30",
+        "end": "10:50",
+        "title": "GEOG 2",
+        "courseName": "Introduction to Human Geography",
+        "professor": "MORRIS P S",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "09:30",
+        "end": "10:50",
+        "title": "GEOG 2",
+        "courseName": "Introduction to Human Geography",
+        "professor": "MORRIS P S",
+        "status": "OCCUPIED"
+      }
+    ]
+  },
+  "room-116": {
+    "type": "CLASSROOM",
+    "label": "MSB 116\ue55f",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "09:30",
+        "end": "10:50",
+        "title": "GEOG 3",
+        "courseName": "Weather and Climate",
+        "professor": "O'KEEFE R",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "12:45",
+        "end": "15:50",
+        "title": "GEOG 5",
+        "courseName": "Physical Geography with Lab",
+        "professor": "FRITSCHLE J",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "09:30",
+        "end": "12:35",
+        "title": "GEOG 5",
+        "courseName": "Physical Geography with Lab",
+        "professor": "MUNOZ A",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "09:30",
+        "end": "10:50",
+        "title": "GEOG 11",
+        "courseName": "World Geography: Introduction to Global Studies",
+        "professor": "MORRIS P S",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "09:30",
+        "end": "10:50",
+        "title": "GLOBAL 11",
+        "courseName": "World Geography: Introduction to Global Studies",
+        "professor": "MORRIS P S",
+        "status": "OCCUPIED"
+      }
+    ]
+  },
+  "room-113": {
+    "type": "CLASSROOM",
+    "label": "MSB 113\ue55f",
+    "events": [
+      {
+        "day": "Tue",
+        "start": "08:00",
+        "end": "11:05",
+        "title": "GEOG 5",
+        "courseName": "Physical Geography with Lab",
+        "professor": "LIU J",
+        "status": "OCCUPIED"
+      }
+    ]
+  },
+  "room-317": {
+    "type": "CLASSROOM",
+    "label": "MSB 317\ue55f",
+    "events": [
+      {
+        "day": "Thu",
+        "start": "08:00",
+        "end": "09:20",
+        "title": "GEOG 9",
+        "courseName": "Climate Change",
+        "professor": "COLLINS L E",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "09:30",
+        "end": "10:50",
+        "title": "GEOL 1",
+        "courseName": "Physical Geology without Lab",
+        "professor": "HALL J M",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "17:35",
+        "end": "18:55",
+        "title": "GEOL 1",
+        "courseName": "Physical Geology without Lab",
+        "professor": "GRIPPO A",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "11:00",
+        "end": "14:05",
+        "title": "GEOL 4",
+        "courseName": "Physical Geology with Lab",
+        "professor": "HALL J M",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "14:15",
+        "end": "17:20",
+        "title": "GEOL 5",
+        "courseName": "Historical Geology with Lab",
+        "professor": "GRIPPO A",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "11:15",
+        "end": "14:20",
+        "title": "GEOL 6",
+        "courseName": "Environmental Geology with Lab",
+        "professor": "MELENDEZ C",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "08:00",
+        "end": "09:20",
+        "title": "GEOL 9",
+        "courseName": "Climate Change",
+        "professor": "COLLINS L E",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "09:30",
+        "end": "12:35",
+        "title": "GEOL 32",
+        "courseName": "Introduction to Physical Oceanography with Lab",
+        "professor": "COLLINS L E",
+        "status": "OCCUPIED"
+      }
+    ]
+  },
+  "room-212": {
+    "type": "CLASSROOM",
+    "label": "MSB 212\ue55f",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "07:45",
+        "end": "09:50",
+        "title": "STAT C1000",
+        "courseName": "Introduction to Statistics",
+        "professor": "FOSTER M",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "07:45",
+        "end": "09:50",
+        "title": "STAT C1000",
+        "courseName": "Introduction to Statistics",
+        "professor": "FOSTER M",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "08:00",
+        "end": "10:05",
+        "title": "STAT C1000 AND",
+        "courseName": "Introduction to Statistics",
+        "professor": "FOSTER M",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "08:00",
+        "end": "10:05",
+        "title": "STAT C1000 AND",
+        "courseName": "Introduction to Statistics",
+        "professor": "FOSTER M",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "10:15",
+        "end": "11:05",
+        "title": "MATH 54C",
+        "courseName": "Concurrent Support for Elementary Statistics",
+        "professor": "FOSTER M",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "10:15",
+        "end": "11:05",
+        "title": "MATH 54C",
+        "courseName": "Concurrent Support for Elementary Statistics",
+        "professor": "FOSTER M",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "10:00",
+        "end": "12:25",
+        "title": "MATH 7",
+        "courseName": "Calculus 1",
+        "professor": "FOSTER M",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "10:00",
+        "end": "12:25",
+        "title": "MATH 7",
+        "courseName": "Calculus 1",
+        "professor": "FOSTER M",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "16:00",
+        "end": "18:25",
+        "title": "MATH 7",
+        "courseName": "Calculus 1",
+        "professor": "MARDIROSIAN R",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "16:00",
+        "end": "18:25",
+        "title": "MATH 7",
+        "courseName": "Calculus 1",
+        "professor": "MARDIROSIAN R",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "12:45",
+        "end": "13:50",
+        "title": "MATH 7 AND",
+        "courseName": "Calculus 1",
+        "professor": "SOLEYMANI S",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "12:45",
+        "end": "13:50",
+        "title": "MATH 7 AND",
+        "courseName": "Calculus 1",
+        "professor": "SOLEYMANI S",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "12:45",
+        "end": "13:50",
+        "title": "MATH 7 AND",
+        "courseName": "Calculus 1",
+        "professor": "SOLEYMANI S",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "12:45",
+        "end": "13:50",
+        "title": "MATH 7 AND",
+        "courseName": "Calculus 1",
+        "professor": "SOLEYMANI S",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "14:00",
+        "end": "14:50",
+        "title": "MATH 7C",
+        "courseName": "Concurrent Support for Calculus 1",
+        "professor": "SOLEYMANI S",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "14:00",
+        "end": "14:50",
+        "title": "MATH 7C",
+        "courseName": "Concurrent Support for Calculus 1",
+        "professor": "SOLEYMANI S",
+        "status": "OCCUPIED"
+      }
+    ]
+  },
+  "room-201": {
+    "type": "CLASSROOM",
+    "label": "MSB 201\ue55f",
+    "events": [
+      {
+        "day": "Thu",
+        "start": "09:00",
+        "end": "11:05",
+        "title": "STAT C1000",
+        "courseName": "Introduction to Statistics",
+        "professor": "VENDLINSKI T P",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "09:00",
+        "end": "11:05",
+        "title": "STAT C1000",
+        "courseName": "Introduction to Statistics",
+        "professor": "VENDLINSKI T P",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Fri",
+        "start": "08:00",
+        "end": "12:05",
+        "title": "STAT C1000",
+        "courseName": "Introduction to Statistics",
+        "professor": "XIE M C",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "12:45",
+        "end": "14:50",
+        "title": "STAT C1000 AND",
+        "courseName": "Introduction to Statistics",
+        "professor": "PACHAS-FLORES W",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "12:45",
+        "end": "14:50",
+        "title": "STAT C1000 AND",
+        "courseName": "Introduction to Statistics",
+        "professor": "PACHAS-FLORES W",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "15:00",
+        "end": "15:50",
+        "title": "MATH 54C",
+        "courseName": "Concurrent Support for Elementary Statistics",
+        "professor": "PACHAS-FLORES W",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "15:00",
+        "end": "15:50",
+        "title": "MATH 54C",
+        "courseName": "Concurrent Support for Elementary Statistics",
+        "professor": "PACHAS-FLORES W",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "07:00",
+        "end": "08:05",
+        "title": "MATH 2 AND",
+        "courseName": "Precalculus",
+        "professor": "QUEVEDO J M",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "07:00",
+        "end": "08:05",
+        "title": "MATH 2 AND",
+        "courseName": "Precalculus",
+        "professor": "QUEVEDO J M",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "07:00",
+        "end": "08:05",
+        "title": "MATH 2 AND",
+        "courseName": "Precalculus",
+        "professor": "QUEVEDO J M",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "07:00",
+        "end": "08:05",
+        "title": "MATH 2 AND",
+        "courseName": "Precalculus",
+        "professor": "QUEVEDO J M",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "08:15",
+        "end": "09:35",
+        "title": "MATH 2C",
+        "courseName": "Concurrent Support for Precalculus",
+        "professor": "QUEVEDO J M",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "08:15",
+        "end": "09:35",
+        "title": "MATH 2C",
+        "courseName": "Concurrent Support for Precalculus",
+        "professor": "QUEVEDO J M",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "19:35",
+        "end": "22:00",
+        "title": "MATH 8",
+        "courseName": "Calculus 2",
+        "professor": "ASKARIAN S N",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "19:35",
+        "end": "22:00",
+        "title": "MATH 8",
+        "courseName": "Calculus 2",
+        "professor": "ASKARIAN S N",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "12:45",
+        "end": "14:05",
+        "title": "MATH 13",
+        "courseName": "Linear Algebra",
+        "professor": "OUELLETTE K R",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "12:45",
+        "end": "14:05",
+        "title": "MATH 13",
+        "courseName": "Linear Algebra",
+        "professor": "OUELLETTE K R",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "19:35",
+        "end": "20:55",
+        "title": "MATH 13",
+        "courseName": "Linear Algebra",
+        "professor": "ASKARIAN S N",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "19:35",
+        "end": "20:55",
+        "title": "MATH 13",
+        "courseName": "Linear Algebra",
+        "professor": "ASKARIAN S N",
+        "status": "OCCUPIED"
+      }
+    ]
+  },
+  "room-211": {
+    "type": "CLASSROOM",
+    "label": "MSB 211\ue55f",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "15:00",
+        "end": "17:05",
+        "title": "STAT C1000",
+        "courseName": "Introduction to Statistics",
+        "professor": "MARTINEZ M G",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "15:00",
+        "end": "17:05",
+        "title": "STAT C1000",
+        "courseName": "Introduction to Statistics",
+        "professor": "MARTINEZ M G",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "17:15",
+        "end": "19:20",
+        "title": "STAT C1000",
+        "courseName": "Introduction to Statistics",
+        "professor": "MARTINEZ M G",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "17:15",
+        "end": "19:20",
+        "title": "STAT C1000",
+        "courseName": "Introduction to Statistics",
+        "professor": "MARTINEZ M G",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "08:00",
+        "end": "10:05",
+        "title": "MATH 4 AND",
+        "courseName": "College Algebra for STEM Majors",
+        "professor": "PHUNG Q T",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "08:00",
+        "end": "10:05",
+        "title": "MATH 4 AND",
+        "courseName": "College Algebra for STEM Majors",
+        "professor": "PHUNG Q T",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "10:15",
+        "end": "11:05",
+        "title": "MATH 4C",
+        "courseName": "Concurrent Support for College Algebra for STEM Majors",
+        "professor": "PHUNG Q T",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "10:15",
+        "end": "11:05",
+        "title": "MATH 4C",
+        "courseName": "Concurrent Support for College Algebra for STEM Majors",
+        "professor": "PHUNG Q T",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "12:45",
+        "end": "15:10",
+        "title": "MATH 7 AND",
+        "courseName": "Calculus 1",
+        "professor": "HANCOCK M D",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "12:45",
+        "end": "15:10",
+        "title": "MATH 7 AND",
+        "courseName": "Calculus 1",
+        "professor": "HANCOCK M D",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "15:20",
+        "end": "16:10",
+        "title": "MATH 7C",
+        "courseName": "Concurrent Support for Calculus 1",
+        "professor": "HANCOCK M D",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "15:20",
+        "end": "16:10",
+        "title": "MATH 7C",
+        "courseName": "Concurrent Support for Calculus 1",
+        "professor": "HANCOCK M D",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "12:45",
+        "end": "14:05",
+        "title": "MATH 13",
+        "courseName": "Linear Algebra",
+        "professor": "OUELLETTE K R",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "12:45",
+        "end": "14:05",
+        "title": "MATH 13",
+        "courseName": "Linear Algebra",
+        "professor": "OUELLETTE K R",
+        "status": "OCCUPIED"
+      }
+    ]
+  },
+  "room-206": {
+    "type": "CLASSROOM",
+    "label": "MSB 206\ue55f",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "15:30",
+        "end": "17:35",
+        "title": "STAT C1000",
+        "courseName": "Introduction to Statistics",
+        "professor": "HE F Y",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "15:30",
+        "end": "17:35",
+        "title": "STAT C1000",
+        "courseName": "Introduction to Statistics",
+        "professor": "HE F Y",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "18:00",
+        "end": "20:05",
+        "title": "STAT C1000",
+        "courseName": "Introduction to Statistics",
+        "professor": "HE F Y",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "18:00",
+        "end": "20:05",
+        "title": "STAT C1000",
+        "courseName": "Introduction to Statistics",
+        "professor": "HE F Y",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "09:30",
+        "end": "10:35",
+        "title": "MATH 2 AND",
+        "courseName": "Precalculus",
+        "professor": "MIANO I A",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "09:30",
+        "end": "10:35",
+        "title": "MATH 2 AND",
+        "courseName": "Precalculus",
+        "professor": "MIANO I A",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "09:30",
+        "end": "10:35",
+        "title": "MATH 2 AND",
+        "courseName": "Precalculus",
+        "professor": "MIANO I A",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "09:30",
+        "end": "10:35",
+        "title": "MATH 2 AND",
+        "courseName": "Precalculus",
+        "professor": "MIANO I A",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "10:45",
+        "end": "12:05",
+        "title": "MATH 2C",
+        "courseName": "Concurrent Support for Precalculus",
+        "professor": "MIANO I A",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "10:45",
+        "end": "12:05",
+        "title": "MATH 2C",
+        "courseName": "Concurrent Support for Precalculus",
+        "professor": "MIANO I A",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "12:45",
+        "end": "15:10",
+        "title": "MATH 8",
+        "courseName": "Calculus 2",
+        "professor": "KAMIN G",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "12:45",
+        "end": "15:10",
+        "title": "MATH 8",
+        "courseName": "Calculus 2",
+        "professor": "KAMIN G",
+        "status": "OCCUPIED"
+      }
+    ]
+  },
+  "room-306": {
+    "type": "CLASSROOM",
+    "label": "MSB 306\ue55f",
+    "events": [
+      {
+        "day": "Thu",
+        "start": "19:35",
+        "end": "21:40",
+        "title": "STAT C1000",
+        "courseName": "Introduction to Statistics",
+        "professor": "MARDIROSIAN R",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "19:35",
+        "end": "21:40",
+        "title": "STAT C1000",
+        "courseName": "Introduction to Statistics",
+        "professor": "MARDIROSIAN R",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "10:00",
+        "end": "11:05",
+        "title": "MATH 2 AND",
+        "courseName": "Precalculus",
+        "professor": "LEE P H",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "10:00",
+        "end": "11:05",
+        "title": "MATH 2 AND",
+        "courseName": "Precalculus",
+        "professor": "LEE P H",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "10:00",
+        "end": "11:05",
+        "title": "MATH 2 AND",
+        "courseName": "Precalculus",
+        "professor": "LEE P H",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "10:00",
+        "end": "11:05",
+        "title": "MATH 2 AND",
+        "courseName": "Precalculus",
+        "professor": "LEE P H",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "11:15",
+        "end": "12:35",
+        "title": "MATH 2C",
+        "courseName": "Concurrent Support for Precalculus",
+        "professor": "LEE P H",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "11:15",
+        "end": "12:35",
+        "title": "MATH 2C",
+        "courseName": "Concurrent Support for Precalculus",
+        "professor": "LEE P H",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "16:30",
+        "end": "17:35",
+        "title": "MATH 2 AND",
+        "courseName": "Precalculus",
+        "professor": "CHAN H J",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "16:30",
+        "end": "17:35",
+        "title": "MATH 2 AND",
+        "courseName": "Precalculus",
+        "professor": "CHAN H J",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "16:30",
+        "end": "17:35",
+        "title": "MATH 2 AND",
+        "courseName": "Precalculus",
+        "professor": "CHAN H J",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "16:30",
+        "end": "17:35",
+        "title": "MATH 2 AND",
+        "courseName": "Precalculus",
+        "professor": "CHAN H J",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "17:45",
+        "end": "19:05",
+        "title": "MATH 2C",
+        "courseName": "Concurrent Support for Precalculus",
+        "professor": "CHAN H J",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "17:45",
+        "end": "19:05",
+        "title": "MATH 2C",
+        "courseName": "Concurrent Support for Precalculus",
+        "professor": "CHAN H J",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "12:45",
+        "end": "15:10",
+        "title": "MATH 7 AND",
+        "courseName": "Calculus 1",
+        "professor": "JAHANGARD E",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "12:45",
+        "end": "15:10",
+        "title": "MATH 7 AND",
+        "courseName": "Calculus 1",
+        "professor": "JAHANGARD E",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "15:20",
+        "end": "16:10",
+        "title": "MATH 7C",
+        "courseName": "Concurrent Support for Calculus 1",
+        "professor": "JAHANGARD E",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "15:20",
+        "end": "16:10",
+        "title": "MATH 7C",
+        "courseName": "Concurrent Support for Calculus 1",
+        "professor": "JAHANGARD E",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "12:45",
+        "end": "15:10",
+        "title": "MATH 8",
+        "courseName": "Calculus 2",
+        "professor": "KONYA W",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "12:45",
+        "end": "15:10",
+        "title": "MATH 8",
+        "courseName": "Calculus 2",
+        "professor": "KONYA W",
+        "status": "OCCUPIED"
+      }
+    ]
+  },
+  "room-102": {
+    "type": "CLASSROOM",
+    "label": "MSB 102\ue55f",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "10:35",
+        "end": "12:40",
+        "title": "STAT C1000 AND",
+        "courseName": "Introduction to Statistics",
+        "professor": "SIMO A L",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "10:35",
+        "end": "12:40",
+        "title": "STAT C1000 AND",
+        "courseName": "Introduction to Statistics",
+        "professor": "SIMO A L",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "12:50",
+        "end": "13:40",
+        "title": "MATH 54C",
+        "courseName": "Concurrent Support for Elementary Statistics",
+        "professor": "SIMO A L",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "12:50",
+        "end": "13:40",
+        "title": "MATH 54C",
+        "courseName": "Concurrent Support for Elementary Statistics",
+        "professor": "SIMO A L",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "12:45",
+        "end": "14:50",
+        "title": "STAT C1000 AND",
+        "courseName": "Introduction to Statistics",
+        "professor": "SIMO A L",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "12:45",
+        "end": "14:50",
+        "title": "STAT C1000 AND",
+        "courseName": "Introduction to Statistics",
+        "professor": "SIMO A L",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "15:00",
+        "end": "15:50",
+        "title": "MATH 54C",
+        "courseName": "Concurrent Support for Elementary Statistics",
+        "professor": "SIMO A L",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "15:00",
+        "end": "15:50",
+        "title": "MATH 54C",
+        "courseName": "Concurrent Support for Elementary Statistics",
+        "professor": "SIMO A L",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "19:30",
+        "end": "20:35",
+        "title": "MATH 2 AND",
+        "courseName": "Precalculus",
+        "professor": "MUSSELMAN M J",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "19:30",
+        "end": "20:35",
+        "title": "MATH 2 AND",
+        "courseName": "Precalculus",
+        "professor": "MUSSELMAN M J",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "19:30",
+        "end": "20:35",
+        "title": "MATH 2 AND",
+        "courseName": "Precalculus",
+        "professor": "MUSSELMAN M J",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "19:30",
+        "end": "20:35",
+        "title": "MATH 2 AND",
+        "courseName": "Precalculus",
+        "professor": "MUSSELMAN M J",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "20:45",
+        "end": "21:25",
+        "title": "MATH 2C",
+        "courseName": "Concurrent Support for Precalculus",
+        "professor": "MUSSELMAN M J",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "20:45",
+        "end": "21:25",
+        "title": "MATH 2C",
+        "courseName": "Concurrent Support for Precalculus",
+        "professor": "MUSSELMAN M J",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "20:45",
+        "end": "21:25",
+        "title": "MATH 2C",
+        "courseName": "Concurrent Support for Precalculus",
+        "professor": "MUSSELMAN M J",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "20:45",
+        "end": "21:25",
+        "title": "MATH 2C",
+        "courseName": "Concurrent Support for Precalculus",
+        "professor": "MUSSELMAN M J",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "14:00",
+        "end": "15:20",
+        "title": "MATH 21",
+        "courseName": "Finite Mathematics",
+        "professor": "SIMO A L",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "14:00",
+        "end": "15:20",
+        "title": "MATH 21",
+        "courseName": "Finite Mathematics",
+        "professor": "SIMO A L",
+        "status": "OCCUPIED"
+      }
+    ]
+  },
+  "room-207": {
+    "type": "CLASSROOM",
+    "label": "MSB 207\ue55f",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "10:00",
+        "end": "12:25",
+        "title": "MATH 2",
+        "courseName": "Precalculus",
+        "professor": "WANG J D",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "10:00",
+        "end": "12:25",
+        "title": "MATH 2",
+        "courseName": "Precalculus",
+        "professor": "WANG J D",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "16:00",
+        "end": "18:25",
+        "title": "MATH 2",
+        "courseName": "Precalculus",
+        "professor": "JIANG J",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "16:00",
+        "end": "18:25",
+        "title": "MATH 2",
+        "courseName": "Precalculus",
+        "professor": "JIANG J",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "14:15",
+        "end": "15:35",
+        "title": "MATH 3",
+        "courseName": "Trigonometry with Applications",
+        "professor": "JIANG J",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "14:15",
+        "end": "15:35",
+        "title": "MATH 3",
+        "courseName": "Trigonometry with Applications",
+        "professor": "JIANG J",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "08:00",
+        "end": "10:25",
+        "title": "MATH 8",
+        "courseName": "Calculus 2",
+        "professor": "BENE A J",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "18:30",
+        "end": "19:50",
+        "title": "SMM 4",
+        "courseName": "Sustainable Materials Management and Zero Waste in Business",
+        "professor": "SASU S",
+        "status": "OCCUPIED"
+      }
+    ]
+  },
+  "room-202": {
+    "type": "CLASSROOM",
+    "label": "MSB 202\ue55f",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "12:45",
+        "end": "15:10",
+        "title": "MATH 2",
+        "courseName": "Precalculus",
+        "professor": "WANG J D",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "12:45",
+        "end": "15:10",
+        "title": "MATH 2",
+        "courseName": "Precalculus",
+        "professor": "WANG J D",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "09:30",
+        "end": "11:35",
+        "title": "MATH 6 AND",
+        "courseName": "Modern Mathematical Methods for STEM Majors",
+        "professor": "LOPEZ J E",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "09:30",
+        "end": "11:35",
+        "title": "MATH 6 AND",
+        "courseName": "Modern Mathematical Methods for STEM Majors",
+        "professor": "LOPEZ J E",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "11:45",
+        "end": "12:35",
+        "title": "MATH 6C",
+        "courseName": "Concurrent Support for Modern Mathematical Methods For STEM Majors",
+        "professor": "LOPEZ J E",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "11:45",
+        "end": "12:35",
+        "title": "MATH 6C",
+        "courseName": "Concurrent Support for Modern Mathematical Methods For STEM Majors",
+        "professor": "LOPEZ J E",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "12:45",
+        "end": "14:50",
+        "title": "MATH 6 AND",
+        "courseName": "Modern Mathematical Methods for STEM Majors",
+        "professor": "LOPEZ J E",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "12:45",
+        "end": "14:50",
+        "title": "MATH 6 AND",
+        "courseName": "Modern Mathematical Methods for STEM Majors",
+        "professor": "LOPEZ J E",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "15:00",
+        "end": "15:50",
+        "title": "MATH 6C",
+        "courseName": "Concurrent Support for Modern Mathematical Methods For STEM Majors",
+        "professor": "LOPEZ J E",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "15:00",
+        "end": "15:50",
+        "title": "MATH 6C",
+        "courseName": "Concurrent Support for Modern Mathematical Methods For STEM Majors",
+        "professor": "LOPEZ J E",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "17:00",
+        "end": "18:20",
+        "title": "MATH 15",
+        "courseName": "Ordinary Differential Equations",
+        "professor": "PACHAS-FLORES W",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "17:00",
+        "end": "18:20",
+        "title": "MATH 15",
+        "courseName": "Ordinary Differential Equations",
+        "professor": "PACHAS-FLORES W",
+        "status": "OCCUPIED"
+      }
+    ]
+  },
+  "room-308": {
+    "type": "CLASSROOM",
+    "label": "MSB 308\ue55f",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "08:00",
+        "end": "10:25",
+        "title": "MATH 2",
+        "courseName": "Precalculus",
+        "professor": "LOPEZ MA",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "08:00",
+        "end": "10:25",
+        "title": "MATH 2",
+        "courseName": "Precalculus",
+        "professor": "LOPEZ MA",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "12:45",
+        "end": "13:55",
+        "title": "MATH 6 AND",
+        "courseName": "Modern Mathematical Methods for STEM Majors",
+        "professor": "RICHARDSON A",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "12:45",
+        "end": "13:55",
+        "title": "MATH 6 AND",
+        "courseName": "Modern Mathematical Methods for STEM Majors",
+        "professor": "RICHARDSON A",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "12:45",
+        "end": "13:55",
+        "title": "MATH 6 AND",
+        "courseName": "Modern Mathematical Methods for STEM Majors",
+        "professor": "RICHARDSON A",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "14:05",
+        "end": "14:40",
+        "title": "MATH 6C",
+        "courseName": "Concurrent Support for Modern Mathematical Methods For STEM Majors",
+        "professor": "RICHARDSON A",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "14:05",
+        "end": "14:40",
+        "title": "MATH 6C",
+        "courseName": "Concurrent Support for Modern Mathematical Methods For STEM Majors",
+        "professor": "RICHARDSON A",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "14:05",
+        "end": "14:40",
+        "title": "MATH 6C",
+        "courseName": "Concurrent Support for Modern Mathematical Methods For STEM Majors",
+        "professor": "RICHARDSON A",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "08:00",
+        "end": "10:25",
+        "title": "MATH 7 AND",
+        "courseName": "Calculus 1",
+        "professor": "GHARAMANIANS J",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "08:00",
+        "end": "10:25",
+        "title": "MATH 7 AND",
+        "courseName": "Calculus 1",
+        "professor": "GHARAMANIANS J",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "10:35",
+        "end": "11:25",
+        "title": "MATH 7C",
+        "courseName": "Concurrent Support for Calculus 1",
+        "professor": "GHARAMANIANS J",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "10:35",
+        "end": "11:25",
+        "title": "MATH 7C",
+        "courseName": "Concurrent Support for Calculus 1",
+        "professor": "GHARAMANIANS J",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "15:00",
+        "end": "16:30",
+        "title": "MATH 7 AND",
+        "courseName": "Calculus 1",
+        "professor": "RICHARDSON A",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "15:00",
+        "end": "16:30",
+        "title": "MATH 7 AND",
+        "courseName": "Calculus 1",
+        "professor": "RICHARDSON A",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "15:00",
+        "end": "16:30",
+        "title": "MATH 7 AND",
+        "courseName": "Calculus 1",
+        "professor": "RICHARDSON A",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "16:40",
+        "end": "17:20",
+        "title": "MATH 7C",
+        "courseName": "Concurrent Support for Calculus 1",
+        "professor": "RICHARDSON A",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "16:40",
+        "end": "17:20",
+        "title": "MATH 7C",
+        "courseName": "Concurrent Support for Calculus 1",
+        "professor": "RICHARDSON A",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "16:40",
+        "end": "17:20",
+        "title": "MATH 7C",
+        "courseName": "Concurrent Support for Calculus 1",
+        "professor": "RICHARDSON A",
+        "status": "OCCUPIED"
+      }
+    ]
+  },
+  "room-203": {
+    "type": "CLASSROOM",
+    "label": "MSB 203\ue55f",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "11:30",
+        "end": "13:55",
+        "title": "MATH 2",
+        "courseName": "Precalculus",
+        "professor": "LOPEZ MA",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "11:30",
+        "end": "13:55",
+        "title": "MATH 2",
+        "courseName": "Precalculus",
+        "professor": "LOPEZ MA",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "10:15",
+        "end": "11:20",
+        "title": "MATH 7",
+        "courseName": "Calculus 1",
+        "professor": "SOLEYMANI S",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "10:15",
+        "end": "11:20",
+        "title": "MATH 7",
+        "courseName": "Calculus 1",
+        "professor": "SOLEYMANI S",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "10:15",
+        "end": "11:20",
+        "title": "MATH 7",
+        "courseName": "Calculus 1",
+        "professor": "SOLEYMANI S",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "10:15",
+        "end": "11:20",
+        "title": "MATH 7",
+        "courseName": "Calculus 1",
+        "professor": "SOLEYMANI S",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "09:00",
+        "end": "10:05",
+        "title": "MATH 8",
+        "courseName": "Calculus 2",
+        "professor": "SOLEYMANI S",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "09:00",
+        "end": "10:05",
+        "title": "MATH 8",
+        "courseName": "Calculus 2",
+        "professor": "SOLEYMANI S",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "09:00",
+        "end": "10:05",
+        "title": "MATH 8",
+        "courseName": "Calculus 2",
+        "professor": "SOLEYMANI S",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "09:00",
+        "end": "10:05",
+        "title": "MATH 8",
+        "courseName": "Calculus 2",
+        "professor": "SOLEYMANI S",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "14:15",
+        "end": "15:35",
+        "title": "MATH 13",
+        "courseName": "Linear Algebra",
+        "professor": "ASADYAN A",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "14:15",
+        "end": "15:35",
+        "title": "MATH 13",
+        "courseName": "Linear Algebra",
+        "professor": "ASADYAN A",
+        "status": "OCCUPIED"
+      }
+    ]
+  },
+  "room-210": {
+    "type": "CLASSROOM",
+    "label": "MSB 210\ue55f",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "17:00",
+        "end": "19:25",
+        "title": "MATH 2",
+        "courseName": "Precalculus",
+        "professor": "RAMSEY E D",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "17:00",
+        "end": "19:25",
+        "title": "MATH 2",
+        "courseName": "Precalculus",
+        "professor": "RAMSEY E D",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "11:15",
+        "end": "13:40",
+        "title": "MATH 7",
+        "courseName": "Calculus 1",
+        "professor": "BENE A J",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "19:35",
+        "end": "22:00",
+        "title": "MATH 7",
+        "courseName": "Calculus 1",
+        "professor": "MAN S",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "19:35",
+        "end": "22:00",
+        "title": "MATH 7",
+        "courseName": "Calculus 1",
+        "professor": "MAN S",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "14:15",
+        "end": "16:40",
+        "title": "MATH 8",
+        "courseName": "Calculus 2",
+        "professor": "SMITH S P",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "14:15",
+        "end": "16:40",
+        "title": "MATH 8",
+        "courseName": "Calculus 2",
+        "professor": "SMITH S P",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "08:00",
+        "end": "10:25",
+        "title": "MATH 11",
+        "courseName": "Multivariable Calculus",
+        "professor": "BENE A J",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "12:45",
+        "end": "15:10",
+        "title": "MATH 28",
+        "courseName": "Calculus 1 for Business and Social Science",
+        "professor": "KAMIN G",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "12:45",
+        "end": "15:10",
+        "title": "MATH 28",
+        "courseName": "Calculus 1 for Business and Social Science",
+        "professor": "KAMIN G",
+        "status": "OCCUPIED"
+      }
+    ]
+  },
+  "room-309": {
+    "type": "CLASSROOM",
+    "label": "MSB 309\ue55f",
+    "events": [
+      {
+        "day": "Thu",
+        "start": "07:45",
+        "end": "08:50",
+        "title": "MATH 2 AND",
+        "courseName": "Precalculus",
+        "professor": "ROSS K R",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "07:45",
+        "end": "08:50",
+        "title": "MATH 2 AND",
+        "courseName": "Precalculus",
+        "professor": "ROSS K R",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "07:45",
+        "end": "08:50",
+        "title": "MATH 2 AND",
+        "courseName": "Precalculus",
+        "professor": "ROSS K R",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "07:45",
+        "end": "08:50",
+        "title": "MATH 2 AND",
+        "courseName": "Precalculus",
+        "professor": "ROSS K R",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "09:00",
+        "end": "10:20",
+        "title": "MATH 2C",
+        "courseName": "Concurrent Support for Precalculus",
+        "professor": "ROSS K R",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "09:00",
+        "end": "10:20",
+        "title": "MATH 2C",
+        "courseName": "Concurrent Support for Precalculus",
+        "professor": "ROSS K R",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "09:30",
+        "end": "10:50",
+        "title": "MATH 21",
+        "courseName": "Finite Mathematics",
+        "professor": "ROSS K R",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "09:30",
+        "end": "10:50",
+        "title": "MATH 21",
+        "courseName": "Finite Mathematics",
+        "professor": "ROSS K R",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "11:15",
+        "end": "12:35",
+        "title": "MATH 21 AND",
+        "courseName": "Finite Mathematics",
+        "professor": "ROSS K R",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "11:15",
+        "end": "12:35",
+        "title": "MATH 21 AND",
+        "courseName": "Finite Mathematics",
+        "professor": "ROSS K R",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "12:45",
+        "end": "13:35",
         "title": "MATH 21C",
         "courseName": "Concurrent Support for Finite Mathematics",
-        "professor": "ENGLAND A M",
+        "professor": "ROSS K R",
+        "status": "OCCUPIED"
+      }
+    ]
+  },
+  "room-205": {
+    "type": "CLASSROOM",
+    "label": "MSB 205\ue55f",
+    "events": [
+      {
+        "day": "Thu",
+        "start": "08:00",
+        "end": "09:05",
+        "title": "MATH 2 AND",
+        "courseName": "Precalculus",
+        "professor": "LONDON J S",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "08:00",
+        "end": "09:05",
+        "title": "MATH 2 AND",
+        "courseName": "Precalculus",
+        "professor": "LONDON J S",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "08:00",
+        "end": "09:05",
+        "title": "MATH 2 AND",
+        "courseName": "Precalculus",
+        "professor": "LONDON J S",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "08:00",
+        "end": "09:05",
+        "title": "MATH 2 AND",
+        "courseName": "Precalculus",
+        "professor": "LONDON J S",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "09:15",
+        "end": "10:35",
+        "title": "MATH 2C",
+        "courseName": "Concurrent Support for Precalculus",
+        "professor": "LONDON J S",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "09:15",
+        "end": "10:35",
+        "title": "MATH 2C",
+        "courseName": "Concurrent Support for Precalculus",
+        "professor": "LONDON J S",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "12:45",
+        "end": "15:10",
+        "title": "MATH 7",
+        "courseName": "Calculus 1",
+        "professor": "LAI I",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "12:45",
+        "end": "15:10",
+        "title": "MATH 7",
+        "courseName": "Calculus 1",
+        "professor": "LAI I",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "12:45",
+        "end": "15:10",
+        "title": "MATH 11",
+        "courseName": "Multivariable Calculus",
+        "professor": "LAI I",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "12:45",
+        "end": "15:10",
+        "title": "MATH 11",
+        "courseName": "Multivariable Calculus",
+        "professor": "LAI I",
+        "status": "OCCUPIED"
+      }
+    ]
+  },
+  "room-305": {
+    "type": "CLASSROOM",
+    "label": "MSB 305\ue55f",
+    "events": [
+      {
+        "day": "Thu",
+        "start": "10:00",
+        "end": "11:05",
+        "title": "MATH 2 AND",
+        "courseName": "Precalculus",
+        "professor": "QUEVEDO J M",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "10:00",
+        "end": "11:05",
+        "title": "MATH 2 AND",
+        "courseName": "Precalculus",
+        "professor": "QUEVEDO J M",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "10:00",
+        "end": "11:05",
+        "title": "MATH 2 AND",
+        "courseName": "Precalculus",
+        "professor": "QUEVEDO J M",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "10:00",
+        "end": "11:05",
+        "title": "MATH 2 AND",
+        "courseName": "Precalculus",
+        "professor": "QUEVEDO J M",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "11:15",
+        "end": "12:35",
+        "title": "MATH 2C",
+        "courseName": "Concurrent Support for Precalculus",
+        "professor": "QUEVEDO J M",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "11:15",
+        "end": "12:35",
+        "title": "MATH 2C",
+        "courseName": "Concurrent Support for Precalculus",
+        "professor": "QUEVEDO J M",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "17:00",
+        "end": "19:05",
+        "title": "MATH 4 AND",
+        "courseName": "College Algebra for STEM Majors",
+        "professor": "CHITGAR M H",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "17:00",
+        "end": "19:05",
+        "title": "MATH 4 AND",
+        "courseName": "College Algebra for STEM Majors",
+        "professor": "CHITGAR M H",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "19:15",
+        "end": "20:05",
+        "title": "MATH 4C",
+        "courseName": "Concurrent Support for College Algebra for STEM Majors",
+        "professor": "CHITGAR M H",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "19:15",
+        "end": "20:05",
+        "title": "MATH 4C",
+        "courseName": "Concurrent Support for College Algebra for STEM Majors",
+        "professor": "CHITGAR M H",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "12:45",
+        "end": "14:05",
+        "title": "MATH 21",
+        "courseName": "Finite Mathematics",
+        "professor": "MIANO I A",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "12:45",
+        "end": "14:05",
+        "title": "MATH 21",
+        "courseName": "Finite Mathematics",
+        "professor": "MIANO I A",
+        "status": "OCCUPIED"
+      }
+    ]
+  },
+  "room-307": {
+    "type": "CLASSROOM",
+    "label": "MSB 307\ue55f",
+    "events": [
+      {
+        "day": "Thu",
+        "start": "12:45",
+        "end": "14:50",
+        "title": "MATH 4 AND",
+        "courseName": "College Algebra for STEM Majors",
+        "professor": "LOPEZ MA",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "12:45",
+        "end": "14:50",
+        "title": "MATH 4 AND",
+        "courseName": "College Algebra for STEM Majors",
+        "professor": "LOPEZ MA",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "15:00",
+        "end": "15:50",
+        "title": "MATH 4C",
+        "courseName": "Concurrent Support for College Algebra for STEM Majors",
+        "professor": "LOPEZ MA",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "15:00",
+        "end": "15:50",
+        "title": "MATH 4C",
+        "courseName": "Concurrent Support for College Algebra for STEM Majors",
+        "professor": "LOPEZ MA",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "09:00",
+        "end": "11:25",
+        "title": "MATH 8",
+        "courseName": "Calculus 2",
+        "professor": "LAI I",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "09:00",
+        "end": "11:25",
+        "title": "MATH 8",
+        "courseName": "Calculus 2",
+        "professor": "LAI I",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "12:45",
+        "end": "14:05",
+        "title": "MATH 21 AND",
+        "courseName": "Finite Mathematics",
+        "professor": "MIANO I A",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "12:45",
+        "end": "14:05",
+        "title": "MATH 21 AND",
+        "courseName": "Finite Mathematics",
+        "professor": "MIANO I A",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "14:15",
+        "end": "15:05",
+        "title": "MATH 21C",
+        "courseName": "Concurrent Support for Finite Mathematics",
+        "professor": "MIANO I A",
+        "status": "OCCUPIED"
+      }
+    ]
+  },
+  "room-303": {
+    "type": "CLASSROOM",
+    "label": "MSB 303\ue55f",
+    "events": [
+      {
+        "day": "Thu",
+        "start": "08:15",
+        "end": "09:20",
+        "title": "MATH 7",
+        "courseName": "Calculus 1",
+        "professor": "KONYA W",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "08:15",
+        "end": "09:20",
+        "title": "MATH 7",
+        "courseName": "Calculus 1",
+        "professor": "KONYA W",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "08:15",
+        "end": "09:20",
+        "title": "MATH 7",
+        "courseName": "Calculus 1",
+        "professor": "KONYA W",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "08:15",
+        "end": "09:20",
+        "title": "MATH 7",
+        "courseName": "Calculus 1",
+        "professor": "KONYA W",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "12:45",
+        "end": "15:10",
+        "title": "MATH 7",
+        "courseName": "Calculus 1",
+        "professor": "BASKAUSKAS V A",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "12:45",
+        "end": "15:10",
+        "title": "MATH 7",
+        "courseName": "Calculus 1",
+        "professor": "BASKAUSKAS V A",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "15:30",
+        "end": "17:55",
+        "title": "MATH 8",
+        "courseName": "Calculus 2",
+        "professor": "BASKAUSKAS V A",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "15:30",
+        "end": "17:55",
+        "title": "MATH 8",
+        "courseName": "Calculus 2",
+        "professor": "BASKAUSKAS V A",
+        "status": "OCCUPIED"
+      }
+    ]
+  },
+  "room-302": {
+    "type": "CLASSROOM",
+    "label": "MSB 302\ue55f",
+    "events": [
+      {
+        "day": "Thu",
+        "start": "09:30",
+        "end": "10:35",
+        "title": "MATH 7",
+        "courseName": "Calculus 1",
+        "professor": "RODAS B G",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "09:30",
+        "end": "10:35",
+        "title": "MATH 7",
+        "courseName": "Calculus 1",
+        "professor": "RODAS B G",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "09:30",
+        "end": "10:35",
+        "title": "MATH 7",
+        "courseName": "Calculus 1",
+        "professor": "RODAS B G",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "09:30",
+        "end": "10:35",
+        "title": "MATH 7",
+        "courseName": "Calculus 1",
+        "professor": "RODAS B G",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "12:45",
+        "end": "15:10",
+        "title": "MATH 7 AND",
+        "courseName": "Calculus 1",
+        "professor": "PACHAS-FLORES W",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "12:45",
+        "end": "15:10",
+        "title": "MATH 7 AND",
+        "courseName": "Calculus 1",
+        "professor": "PACHAS-FLORES W",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "15:20",
+        "end": "16:10",
+        "title": "MATH 7C",
+        "courseName": "Concurrent Support for Calculus 1",
+        "professor": "PACHAS-FLORES W",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "15:20",
+        "end": "16:10",
+        "title": "MATH 7C",
+        "courseName": "Concurrent Support for Calculus 1",
+        "professor": "PACHAS-FLORES W",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "17:15",
+        "end": "18:35",
+        "title": "MATH 10",
+        "courseName": "Discrete Structures",
+        "professor": "JAHANGARD E",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "17:15",
+        "end": "18:35",
+        "title": "MATH 10",
+        "courseName": "Discrete Structures",
+        "professor": "JAHANGARD E",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "12:45",
+        "end": "14:05",
+        "title": "MATH 29",
+        "courseName": "Calculus 2 for Business and Social Science",
+        "professor": "RODAS B G",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "12:45",
+        "end": "14:05",
+        "title": "MATH 29",
+        "courseName": "Calculus 2 for Business and Social Science",
+        "professor": "RODAS B G",
+        "status": "OCCUPIED"
+      }
+    ]
+  },
+  "room-101": {
+    "type": "CLASSROOM",
+    "label": "MSB 101\ue55f",
+    "events": [
+      {
+        "day": "Thu",
+        "start": "09:30",
+        "end": "10:35",
+        "title": "MATH 7 AND",
+        "courseName": "Calculus 1",
+        "professor": "HERICHI H",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "09:30",
+        "end": "10:35",
+        "title": "MATH 7 AND",
+        "courseName": "Calculus 1",
+        "professor": "HERICHI H",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "09:30",
+        "end": "10:35",
+        "title": "MATH 7 AND",
+        "courseName": "Calculus 1",
+        "professor": "HERICHI H",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "09:30",
+        "end": "10:35",
+        "title": "MATH 7 AND",
+        "courseName": "Calculus 1",
+        "professor": "HERICHI H",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "10:45",
+        "end": "11:35",
+        "title": "MATH 7C",
+        "courseName": "Concurrent Support for Calculus 1",
+        "professor": "HERICHI H",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "10:45",
+        "end": "11:35",
+        "title": "MATH 7C",
+        "courseName": "Concurrent Support for Calculus 1",
+        "professor": "HERICHI H",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "08:15",
+        "end": "09:20",
+        "title": "MATH 11",
+        "courseName": "Multivariable Calculus",
+        "professor": "HERICHI H",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "08:15",
+        "end": "09:20",
+        "title": "MATH 11",
+        "courseName": "Multivariable Calculus",
+        "professor": "HERICHI H",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "08:15",
+        "end": "09:20",
+        "title": "MATH 11",
+        "courseName": "Multivariable Calculus",
+        "professor": "HERICHI H",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "08:15",
+        "end": "09:20",
+        "title": "MATH 11",
+        "courseName": "Multivariable Calculus",
+        "professor": "HERICHI H",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "12:45",
+        "end": "14:05",
+        "title": "MATH 15",
+        "courseName": "Ordinary Differential Equations",
+        "professor": "HERICHI H",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "12:45",
+        "end": "14:05",
+        "title": "MATH 15",
+        "courseName": "Ordinary Differential Equations",
+        "professor": "HERICHI H",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "12:45",
+        "end": "14:05",
+        "title": "MATH 15",
+        "courseName": "Ordinary Differential Equations",
+        "professor": "HERICHI H",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "12:45",
+        "end": "14:05",
+        "title": "MATH 15",
+        "courseName": "Ordinary Differential Equations",
+        "professor": "HERICHI H",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "18:00",
+        "end": "20:25",
+        "title": "MATH 28",
+        "courseName": "Calculus 1 for Business and Social Science",
+        "professor": "SMITH S P",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "18:00",
+        "end": "20:25",
+        "title": "MATH 28",
+        "courseName": "Calculus 1 for Business and Social Science",
+        "professor": "SMITH S P",
+        "status": "OCCUPIED"
+      }
+    ]
+  },
+  "room-209": {
+    "type": "CLASSROOM",
+    "label": "MSB 209\ue55f",
+    "events": [
+      {
+        "day": "Thu",
+        "start": "08:15",
+        "end": "09:20",
+        "title": "MATH 8",
+        "courseName": "Calculus 2",
+        "professor": "OUELLETTE K R",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "08:15",
+        "end": "09:20",
+        "title": "MATH 8",
+        "courseName": "Calculus 2",
+        "professor": "OUELLETTE K R",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "08:15",
+        "end": "09:20",
+        "title": "MATH 8",
+        "courseName": "Calculus 2",
+        "professor": "OUELLETTE K R",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "08:15",
+        "end": "09:20",
+        "title": "MATH 8",
+        "courseName": "Calculus 2",
+        "professor": "OUELLETTE K R",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "09:30",
+        "end": "10:35",
+        "title": "MATH 11",
+        "courseName": "Multivariable Calculus",
+        "professor": "OUELLETTE K R",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Mon",
+        "start": "09:30",
+        "end": "10:35",
+        "title": "MATH 11",
+        "courseName": "Multivariable Calculus",
+        "professor": "OUELLETTE K R",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "09:30",
+        "end": "10:35",
+        "title": "MATH 11",
+        "courseName": "Multivariable Calculus",
+        "professor": "OUELLETTE K R",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "09:30",
+        "end": "10:35",
+        "title": "MATH 11",
+        "courseName": "Multivariable Calculus",
+        "professor": "OUELLETTE K R",
         "status": "OCCUPIED"
       }
     ]
   },
   "room-316": {
     "type": "CLASSROOM",
-    "label": "MSB 316",
+    "label": "MSB 316\ue55f",
     "events": [
       {
-        "day": "Thu",
-        "start": "12:00",
-        "end": "16:30",
+        "day": "Mon",
+        "start": "15:45",
+        "end": "18:15",
         "title": "PHYSCS 21",
         "courseName": "Mechanics with Lab",
-        "professor": "STROHMAIER K D",
+        "professor": "MENACHEKANIAN E",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "15:45",
+        "end": "18:15",
+        "title": "PHYSCS 21",
+        "courseName": "Mechanics with Lab",
+        "professor": "MENACHEKANIAN E",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Fri",
+        "start": "15:45",
+        "end": "18:45",
+        "title": "PHYSCS 21",
+        "courseName": "Mechanics with Lab",
+        "professor": "MENACHEKANIAN E",
         "status": "OCCUPIED"
       },
       {
         "day": "Mon",
-        "start": "12:00",
-        "end": "16:30",
-        "title": "PHYSCS 21",
-        "courseName": "Mechanics with Lab",
-        "professor": "STROHMAIER K D",
-        "status": "OCCUPIED"
-      },
-      {
-        "day": "Tue",
-        "start": "12:00",
-        "end": "16:30",
-        "title": "PHYSCS 21",
-        "courseName": "Mechanics with Lab",
+        "start": "08:30",
+        "end": "10:35",
+        "title": "PHYSCS 22",
+        "courseName": "Electricity and Magnetism with Lab",
         "professor": "STROHMAIER K D",
         "status": "OCCUPIED"
       },
       {
         "day": "Wed",
-        "start": "12:00",
-        "end": "16:30",
-        "title": "PHYSCS 21",
-        "courseName": "Mechanics with Lab",
+        "start": "08:30",
+        "end": "10:35",
+        "title": "PHYSCS 22",
+        "courseName": "Electricity and Magnetism with Lab",
         "professor": "STROHMAIER K D",
         "status": "OCCUPIED"
       },
       {
         "day": "Fri",
-        "start": "12:00",
-        "end": "16:30",
-        "title": "PHYSCS 21",
-        "courseName": "Mechanics with Lab",
+        "start": "08:30",
+        "end": "11:30",
+        "title": "PHYSCS 22",
+        "courseName": "Electricity and Magnetism with Lab",
         "professor": "STROHMAIER K D",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "08:45",
+        "end": "11:15",
+        "title": "PHYSCS 23",
+        "courseName": "Fluids, Waves, Thermodynamics, Optics with Lab",
+        "professor": "FARIDIAN F",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "08:45",
+        "end": "11:15",
+        "title": "PHYSCS 23",
+        "courseName": "Fluids, Waves, Thermodynamics, Optics with Lab",
+        "professor": "FARIDIAN F",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "12:45",
+        "end": "14:50",
+        "title": "PHYSCS 23",
+        "courseName": "Fluids, Waves, Thermodynamics, Optics with Lab",
+        "professor": "PAIK S T",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "12:45",
+        "end": "14:50",
+        "title": "PHYSCS 23",
+        "courseName": "Fluids, Waves, Thermodynamics, Optics with Lab",
+        "professor": "PAIK S T",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Fri",
+        "start": "12:00",
+        "end": "15:00",
+        "title": "PHYSCS 23",
+        "courseName": "Fluids, Waves, Thermodynamics, Optics with Lab",
+        "professor": "PAIK S T",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Thu",
+        "start": "16:00",
+        "end": "19:30",
+        "title": "PHYSCS 23",
+        "courseName": "Fluids, Waves, Thermodynamics, Optics with Lab",
+        "professor": "SANTANA RO",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Tue",
+        "start": "16:00",
+        "end": "19:30",
+        "title": "PHYSCS 23",
+        "courseName": "Fluids, Waves, Thermodynamics, Optics with Lab",
+        "professor": "SANTANA RO",
+        "status": "OCCUPIED"
+      },
+      {
+        "day": "Wed",
+        "start": "12:00",
+        "end": "15:05",
+        "title": "PHYSCS 24",
+        "courseName": "Modern Physics with Lab",
+        "professor": "MENACHEKANIAN E",
         "status": "OCCUPIED"
       }
     ]

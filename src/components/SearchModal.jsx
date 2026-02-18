@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import ROOM_SCHEDULES from "../data/roomSchedule_LIVE.json";
 import SI_SCHEDULES from "../data/siSchedule.json";
 
-export const SearchModal = ({ onClose, onNavigate }) => {
+export const SearchModal = ({ onClose, onNavigate, starredItems, onToggleStar }) => {
     const [query, setQuery] = useState("");
     const [debouncedQuery, setDebouncedQuery] = useState("");
     const [results, setResults] = useState([]);
@@ -27,7 +27,13 @@ export const SearchModal = ({ onClose, onNavigate }) => {
         // 1. Search SI
         Object.entries(SI_SCHEDULES).forEach(([roomId, data]) => {
             if (data.label?.toLowerCase().includes(lowerQ)) {
-                hits.push({ roomId, label: data.label, type: "SI Session", detail: "SI Session Room" });
+                hits.push({
+                    id: roomId,
+                    roomId,
+                    label: data.label,
+                    type: "SI Session",
+                    detail: "SI Session Room"
+                });
             }
             if (data.events) {
                 data.events.forEach(ev => {
@@ -37,10 +43,14 @@ export const SearchModal = ({ onClose, onNavigate }) => {
                         ev.professor?.toLowerCase().includes(lowerQ)
                     ) {
                         hits.push({
+                            id: `${roomId}-${ev.day}-${ev.start}-${ev.courseName}`,
                             roomId,
                             label: data.label,
                             type: "SI Session",
-                            detail: `${ev.title}: ${ev.courseName}`
+                            detail: `${ev.title}: ${ev.courseName}`,
+                            day: ev.day,
+                            start: ev.start,
+                            end: ev.end
                         });
                     }
                 });
@@ -51,7 +61,13 @@ export const SearchModal = ({ onClose, onNavigate }) => {
         Object.entries(ROOM_SCHEDULES).forEach(([roomId, data]) => {
             // Label match
             if (data.label?.toLowerCase().includes(lowerQ)) {
-                hits.push({ roomId, label: data.label, type: "Room", detail: data.type || "Classroom" });
+                hits.push({
+                    id: roomId,
+                    roomId,
+                    label: data.label,
+                    type: "Room",
+                    detail: data.type || "Classroom"
+                });
             }
             // Event match
             if (data.events) {
@@ -69,7 +85,12 @@ export const SearchModal = ({ onClose, onNavigate }) => {
                             detail: `${ev.title}: ${ev.courseName} (${ev.day} ${ev.start} - ${ev.end}) • ${ev.professor}`,
                             // Sort Helpers
                             sortDay: ev.day,
-                            sortTime: ev.start
+                            sortTime: ev.start,
+                            // Star Helpers
+                            id: `${roomId}-${ev.day}-${ev.start}-${ev.courseName}`,
+                            day: ev.day,
+                            start: ev.start,
+                            end: ev.end
                         });
                     }
                 });
@@ -159,17 +180,34 @@ export const SearchModal = ({ onClose, onNavigate }) => {
                             onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "rgba(255,255,255,0.05)"}
                             onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "transparent"}
                         >
-                            <div style={{ fontWeight: "bold", color: "var(--text-primary, white)", display: "flex", justifyContent: "space-between" }}>
-                                {r.label}
-                                <span style={{
-                                    fontSize: "0.75em", opacity: 0.9,
-                                    background: r.type === "SI Session" ? "#F59E0B" : "#4B5563", // Amber for SI, Gray-600 for Class
-                                    color: "white", // Ensure white text for contrast
-                                    padding: "2px 8px", borderRadius: "99px",
-                                    fontWeight: "500"
-                                }}>
-                                    {r.type}
-                                </span>
+                            <div style={{ fontWeight: "bold", color: "var(--text-primary, white)", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                                <span>{r.label}</span>
+                                <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                                    <span style={{
+                                        fontSize: "0.75em", opacity: 0.9,
+                                        background: r.type === "SI Session" ? "#F59E0B" : "#4B5563", // Amber for SI, Gray-600 for Class
+                                        color: "white", // Ensure white text for contrast
+                                        padding: "2px 8px", borderRadius: "99px",
+                                        fontWeight: "500"
+                                    }}>
+                                        {r.type}
+                                    </span>
+                                    <button
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            onToggleStar(r);
+                                        }}
+                                        style={{
+                                            background: "none", border: "none", cursor: "pointer",
+                                            fontSize: "1.5rem",
+                                            color: starredItems.some(s => s.id === r.id) ? "#fbbf24" : "#4b5563",
+                                            lineHeight: 1, padding: "0 4px"
+                                        }}
+                                        title={starredItems.some(s => s.id === r.id) ? "Remove Star" : "Add Star"}
+                                    >
+                                        {starredItems.some(s => s.id === r.id) ? "★" : "☆"}
+                                    </button>
+                                </div>
                             </div>
                             <div style={{ fontSize: "0.85rem", color: "var(--text-secondary, #9ca3af)" }}>{r.detail}</div>
                         </div>

@@ -33,7 +33,7 @@ const getCurrentStatus = () => {
   return { day, time: `${hours}:${minutes}` };
 };
 
-const RoomTooltip = ({ info, position }) => {
+const RoomTooltip = ({ info, position, starredItems }) => {
   if (!info) return null;
   return (
     <motion.div
@@ -55,11 +55,17 @@ const RoomTooltip = ({ info, position }) => {
         border: "1px solid #e5e7eb"
       }}
     >
-      <h3 style={{ margin: "0 0 4px 0", fontSize: "1rem", color: "#111827" }}>{info.roomLabel}</h3>
+      <h3 style={{ margin: "0 0 4px 0", fontSize: "1rem", color: "#111827", display: "flex", alignItems: "center", gap: "6px" }}>
+        {info.roomLabel}
+        {starredItems?.some(s => s.id === info.roomId) && <span style={{ color: "#fbbf24" }}>★</span>}
+      </h3>
       {info.activeEvent ? (
         <>
-          <div style={{ fontSize: "0.85rem", fontWeight: "bold", color: COLORS[info.activeEvent.status] }}>
+          <div style={{ fontSize: "0.85rem", fontWeight: "bold", color: COLORS[info.activeEvent.status], display: "flex", alignItems: "center", gap: "6px" }}>
             {info.activeEvent.title}
+            {starredItems?.some(s => s.id === `${info.roomId}-${info.activeEvent.day}-${info.activeEvent.start}-${info.activeEvent.courseName}`) &&
+              <span style={{ color: "#fbbf24", fontSize: "1rem" }}>★</span>
+            }
           </div>
           <div style={{ fontSize: "0.8rem", color: "#4b5563", marginTop: "4px" }}>
             {info.activeEvent.courseName}
@@ -107,6 +113,31 @@ export function BuildingMap({ darkMode, setDarkMode }) {
   // NEW: Search Modal State
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [highlightedRoom, setHighlightedRoom] = useState(null);
+
+  // NEW: Starred Items State (Persisted)
+  const [starredItems, setStarredItems] = useState(() => {
+    try {
+      const saved = localStorage.getItem("apollo-starred-items");
+      return saved ? JSON.parse(saved) : [];
+    } catch (e) {
+      console.error("Failed to parse starred items", e);
+      return [];
+    }
+  });
+
+  const toggleStar = useCallback((item) => {
+    setStarredItems(prev => {
+      const exists = prev.find(i => i.id === item.id);
+      let newItems;
+      if (exists) {
+        newItems = prev.filter(i => i.id !== item.id);
+      } else {
+        newItems = [...prev, item];
+      }
+      localStorage.setItem("apollo-starred-items", JSON.stringify(newItems));
+      return newItems;
+    });
+  }, []);
 
   // Navigation from Search
   const handleNavigate = (roomId) => {
@@ -249,6 +280,7 @@ export function BuildingMap({ darkMode, setDarkMode }) {
     const status = getRoomStatus(roomId);
     if (status && status.roomData) {
       setHoveredRoom({
+        roomId,
         roomLabel: status.roomData.label,
         activeEvent: status.activeEvent,
         isStudyRoom: status.roomData.type === "STUDY_ROOM"
@@ -277,10 +309,24 @@ export function BuildingMap({ darkMode, setDarkMode }) {
       return highlightedRoom === roomId ? "#22c55e" : "rgba(200, 200, 200, 0.1)";
     }
 
-    // 2. Otherwise return standard status color
+    // 2. Starred Item Active?
+    const activeStarred = starredItems.find(item => {
+      if (item.roomId !== roomId) return false;
+      // Check for time match
+      if (item.day && item.start && item.end) {
+        return item.day === simulationState.day &&
+          simulationState.time >= item.start &&
+          simulationState.time < item.end;
+      }
+      return false;
+    });
+
+    if (activeStarred) return "#a855f7"; // Purple-500
+
+    // 3. Otherwise return standard status color
     const status = getRoomStatus(roomId);
     return status ? status.color : COLORS.OFFLINE;
-  }, [getRoomStatus, highlightedRoom]);
+  }, [getRoomStatus, highlightedRoom, starredItems, simulationState]);
 
   const activeTransform = {
     transform: `translate(${FLOOR_OFFSETS[currentFloor].x}px, ${FLOOR_OFFSETS[currentFloor].y}px)`
@@ -325,7 +371,12 @@ export function BuildingMap({ darkMode, setDarkMode }) {
       >
         <AnimatePresence>
           {isSearchOpen && (
-            <SearchModal onClose={() => setIsSearchOpen(false)} onNavigate={handleNavigate} />
+            <SearchModal
+              onClose={() => setIsSearchOpen(false)}
+              onNavigate={handleNavigate}
+              starredItems={starredItems}
+              onToggleStar={toggleStar}
+            />
           )}
         </AnimatePresence>
 
@@ -393,7 +444,7 @@ export function BuildingMap({ darkMode, setDarkMode }) {
       </motion.div>
 
       <AnimatePresence>
-        {hoveredRoom && <RoomTooltip info={hoveredRoom} position={mousePos} />}
+        {hoveredRoom && <RoomTooltip info={hoveredRoom} position={mousePos} starredItems={starredItems} />}
       </AnimatePresence>
 
       {/* DEBUG PANEL (Outside Map) */}

@@ -329,27 +329,6 @@ export function BuildingMap({ darkMode, setDarkMode }) {
           )}
         </AnimatePresence>
 
-        {/* TOP RIGHT: Spotlight Search Trigger (Inside Map Card) */}
-        <div style={{ position: "absolute", top: "20px", right: "20px", zIndex: 20 }}>
-          <button
-            onClick={() => setIsSearchOpen(true)}
-            style={{
-              padding: "8px 16px",
-              borderRadius: "99px",
-              border: "1px solid #e5e7eb", // Fixed light gray border
-              background: "#ffffff", // Fixed white background
-              color: "#374151", // Fixed dark gray text
-              boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
-              cursor: "pointer",
-              display: "flex", alignItems: "center", gap: "6px",
-              transition: "all 0.2s",
-              fontSize: "0.9rem"
-            }}
-          >
-            🔍 Search
-          </button>
-        </div>
-
         {/* OVERLAY: Floor Switcher */}
         <div className="floor-switcher">
           {[1, 2, 3].map((floorNum) => (
@@ -363,6 +342,15 @@ export function BuildingMap({ darkMode, setDarkMode }) {
               Floor {floorNum}
             </motion.button>
           ))}
+
+          {/* SEARCH BUTTON (Moved Inside) */}
+          <div style={{ width: "1px", height: "24px", background: "#e5e7eb", margin: "0 8px" }} />
+          <button
+            onClick={() => setIsSearchOpen(true)}
+            className="search-btn-inline"
+          >
+            🔍 Search
+          </button>
         </div>
 
         {/* MAP CONTENT */}

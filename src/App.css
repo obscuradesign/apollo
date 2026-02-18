@@ -137,6 +137,29 @@ body {
   /* Smooth scroll on iOS */
   scrollbar-width: none;
   /* Hide scrollbar for cleaner look */
+  
+  align-items: center; /* Vertically center items */
+}
+
+.search-btn-inline {
+  padding: 6px 16px;
+  border-radius: 99px;
+  border: 1px solid transparent; 
+  background: transparent;
+  color: #4b5563; /* Gray-600 */
+  cursor: pointer;
+  display: flex; 
+  align-items: center; 
+  gap: 6px;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.search-btn-inline:hover {
+  background-color: #f3f4f6;
+  color: #111827;
 }
 
 .legend-container::-webkit-scrollbar {

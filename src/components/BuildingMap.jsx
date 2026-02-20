@@ -2,25 +2,46 @@ import React, { useState, useEffect, useCallback } from "react";
 import { Level1 } from "./Level1";
 import { Level2 } from "./Level2";
 import { Level3 } from "./Level3";
+import { DrescherLevel1 } from "./DrescherLevel1";
+import { DrescherLevel2 } from "./DrescherLevel2";
+import { DrescherLevel3 } from "./DrescherLevel3";
 import { motion, AnimatePresence } from "framer-motion";
-import ROOM_SCHEDULES from "../data/roomSchedule_LIVE.json";
+import { ROOM_SCHEDULES as STATIC_SCHEDULES } from "../data/roomSchedule.js";
+import LIVE_SCHEDULES from "../data/roomSchedule_LIVE.json";
 import SI_SCHEDULES from "../data/siSchedule.json";
 import "../App.css";
 import { SearchModal } from "./SearchModal";
 
+// Merge: LIVE data wins over static fallbacks (scraped events override stale static)
+const ROOM_SCHEDULES = { ...STATIC_SCHEDULES, ...LIVE_SCHEDULES };
+
 const COLORS = {
   LOCKED: "#9CA3AF",
-  OCCUPIED: "#EF4444",
-  SI_SESSION: "#EAB308",
-  STUDY_ROOM: "#3B82F6",
+  OCCUPIED: "#EF5350",
+  SI_SESSION: "#FBBF24",
+  STUDY_ROOM: "#FB923C",
+  PROGRAM: "#60A5FA",
+  OFFICE: "#60A5FA",
   OFFLINE: "#3b3b3c"
 };
 
-// Manual offsets (x,y) to visually center each floor's unique SVG shape within the viewport
+const BUILDINGS = {
+  MSB: { label: "MSB", floors: 3 },
+  DRSCHR: { label: "Drescher", floors: 3 }
+};
+
+// Manual offsets (x,y) to visually center each floor's SVG shape within the viewport
 const FLOOR_OFFSETS = {
-  1: { x: 0, y: 0 },
-  2: { x: -20, y: 0 },
-  3: { x: -30, y: 0 }
+  MSB: {
+    1: { x: 0, y: 0 },
+    2: { x: -20, y: 0 },
+    3: { x: -30, y: 0 }
+  },
+  DRSCHR: {
+    1: { x: 0, y: 0 },
+    2: { x: 0, y: 100, scale: 0.8 },
+    3: { x: 0, y: 100, scale: 0.8 }
+  }
 };
 
 const DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -35,6 +56,13 @@ const getCurrentStatus = () => {
 
 const RoomTooltip = ({ info, position, starredItems }) => {
   if (!info) return null;
+
+  const isDepartment = info.roomType === "PROGRAM" || info.roomType === "OFFICE";
+  const skipSuffix = /(department|program|offices|office|center|tutoring)/i.test(info.roomLabel);
+  const displayLabel = isDepartment && !skipSuffix
+    ? `${info.roomLabel} Department`
+    : info.roomLabel;
+
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.8, y: 10 }}
@@ -56,7 +84,7 @@ const RoomTooltip = ({ info, position, starredItems }) => {
       }}
     >
       <h3 style={{ margin: "0 0 4px 0", fontSize: "1rem", color: "#111827", display: "flex", alignItems: "center", gap: "6px" }}>
-        {info.roomLabel}
+        {displayLabel}
         {starredItems?.some(s => s.id === info.roomId) && <span style={{ color: "#fbbf24" }}>★</span>}
       </h3>
       {info.activeEvent ? (
@@ -78,9 +106,13 @@ const RoomTooltip = ({ info, position, starredItems }) => {
           </div>
         </>
       ) : (
-        <div style={{ fontSize: "0.8rem", color: "#9ca3af", fontStyle: "italic" }}>
-          {info.isStudyRoom ? "Open for Study (Click to Book)" : "Currently Empty"}
-        </div>
+        isDepartment ? null : (
+          <div style={{ fontSize: "0.8rem", color: "#9ca3af", fontStyle: "italic" }}>
+            {info.isStudyRoom
+              ? (info.clickable === false ? "Study Room (No Booking)" : (info.url ? "Click for Info" : "Open for Study (Click to Book)"))
+              : "Currently Empty"}
+          </div>
+        )
       )}
     </motion.div>
   );
@@ -93,16 +125,19 @@ const Legend = () => (
     animate={{ opacity: 1, y: 0, x: "-50%" }}
     transition={{ delay: 0.5, duration: 0.5 }}
   >
+    <div className="legend-item"><div className="color-dot" style={{ backgroundColor: "#a855f7" }}></div><span>Starred</span></div>
     <div className="legend-item"><div className="color-dot" style={{ backgroundColor: COLORS.OCCUPIED }}></div><span>Class</span></div>
     <div className="legend-item"><div className="color-dot" style={{ backgroundColor: COLORS.SI_SESSION }}></div><span>SI Session</span></div>
-    <div className="legend-item"><div className="color-dot" style={{ backgroundColor: COLORS.STUDY_ROOM }}></div><span>Study Room</span></div>
+    <div className="legend-item"><div className="color-dot" style={{ backgroundColor: COLORS.STUDY_ROOM }}></div><span>Study Space</span></div>
+    <div className="legend-item"><div className="color-dot" style={{ backgroundColor: COLORS.PROGRAM }}></div><span>Department</span></div>
     <div className="legend-item"><div className="color-dot" style={{ backgroundColor: COLORS.LOCKED }}></div><span>Empty/Locked</span></div>
-    <div className="legend-item"><div className="color-dot" style={{ backgroundColor: COLORS.OFFLINE }}></div><span>Staff/Office/Untracked</span></div>
   </motion.div>
 );
 
 
+
 export function BuildingMap({ darkMode, setDarkMode }) {
+  const [currentBuilding, setCurrentBuilding] = useState("MSB");
   const [currentFloor, setCurrentFloor] = useState(1);
   const [simulationState, setSimulationState] = useState(getCurrentStatus());
   const [isLive, setIsLive] = useState(true);
@@ -144,11 +179,24 @@ export function BuildingMap({ darkMode, setDarkMode }) {
     setIsSearchOpen(false);
     setHighlightedRoom(roomId);
 
-    // Auto-switch floor logic
-    const roomNum = roomId.replace("room-", "");
-    if (roomNum.startsWith("1")) setCurrentFloor(1);
-    if (roomNum.startsWith("2")) setCurrentFloor(2);
-    if (roomNum.startsWith("3")) setCurrentFloor(3);
+    // Auto-switch building and floor based on room ID prefix
+    if (roomId.startsWith("room-")) {
+      setCurrentBuilding("MSB");
+      const num = roomId.replace("room-", "");
+      if (num.startsWith("1")) setCurrentFloor(1);
+      else if (num.startsWith("2")) setCurrentFloor(2);
+      else if (num.startsWith("3")) setCurrentFloor(3);
+    } else if (roomId.startsWith("drschr-")) {
+      setCurrentBuilding("DRSCHR");
+      const num = roomId.replace("drschr-", "");
+      if (num.startsWith("1")) setCurrentFloor(1);
+      else if (num.startsWith("2")) setCurrentFloor(2);
+      else if (num.startsWith("3")) setCurrentFloor(3);
+    } else {
+      // Other buildings: try to detect floor from first digit
+      const match = roomId.match(/-(\d)/);
+      if (match) setCurrentFloor(parseInt(match[1]));
+    }
 
     // Auto-clear highlight after 3 seconds
     setTimeout(() => setHighlightedRoom(null), 3000);
@@ -258,6 +306,10 @@ export function BuildingMap({ darkMode, setDarkMode }) {
 
     if (roomData.type === "STUDY_ROOM") {
       color = COLORS.STUDY_ROOM;
+    } else if (roomData.type === "PROGRAM") {
+      color = COLORS.PROGRAM;
+    } else if (roomData.type === "OFFICE") {
+      color = COLORS.OFFICE;
     } else if (roomData.events) {
       activeEvent = roomData.events.find(event => {
         return event.day === simulationState.day &&
@@ -282,23 +334,45 @@ export function BuildingMap({ darkMode, setDarkMode }) {
       setHoveredRoom({
         roomId,
         roomLabel: status.roomData.label,
+        roomType: status.roomData.type,
         activeEvent: status.activeEvent,
-        isStudyRoom: status.roomData.type === "STUDY_ROOM"
+        isStudyRoom: status.roomData.type === "STUDY_ROOM",
+        clickable: status.roomData.clickable,
+        url: status.roomData.url
       });
     }
   };
 
   const handleRoomClick = (roomId) => {
-    if (["room-107b", "room-107c", "room-107d"].includes(roomId)) {
-      const confirmed = window.confirm(
-        "This will open the SMC study room booking site in a new tab. Continue?"
-      );
-      if (confirmed) {
-        window.open(
-          "https://smc.mywconline.com/schedule/calendar?scheduleid=sc6933704f3873d",
-          "_blank",
-          "noopener,noreferrer"
+    const status = getRoomStatus(roomId);
+    if (!status?.roomData) return;
+    if (status.roomData.clickable === false) return;
+
+    if (status.roomData.type === "STUDY_ROOM") {
+      if (status.roomData.url) {
+        // Custom URL logic (e.g. Modern Languages Lab)
+        if (window.confirm(`Visit the ${status.roomData.label} website?`)) {
+          window.open(status.roomData.url, "_blank", "noopener,noreferrer");
+        }
+      } else {
+        // Default booking logic
+        const confirmed = window.confirm(
+          "This will open the SMC study room booking site in a new tab. Continue?"
         );
+        if (confirmed) {
+          window.open(
+            "https://smc.mywconline.com/schedule/calendar?scheduleid=sc6933704f3873d",
+            "_blank",
+            "noopener,noreferrer"
+          );
+        }
+      }
+    } else if (status.roomData.type === "PROGRAM" || status.roomData.type === "OFFICE") {
+      const confirmed = window.confirm(`Visit the ${status.roomData.label} website?`);
+      if (confirmed) {
+        // Use dynamic URL if available, otherwise fallback placeholder
+        const targetUrl = status.roomData.url || "https://www.smc.edu/PLACEHOLDER_DEPARTMENT_LINK";
+        window.open(targetUrl, "_blank", "noopener,noreferrer");
       }
     }
   };
@@ -328,9 +402,8 @@ export function BuildingMap({ darkMode, setDarkMode }) {
     return status ? status.color : COLORS.OFFLINE;
   }, [getRoomStatus, highlightedRoom, starredItems, simulationState]);
 
-  const activeTransform = {
-    transform: `translate(${FLOOR_OFFSETS[currentFloor].x}px, ${FLOOR_OFFSETS[currentFloor].y}px)`
-  };
+  const offsets = FLOOR_OFFSETS[currentBuilding]?.[currentFloor] || { x: 0, y: 0 };
+  // Offsets are handled within motion.div animate props now, activeTransform removed.
 
   return (
     <motion.div
@@ -380,9 +453,25 @@ export function BuildingMap({ darkMode, setDarkMode }) {
           )}
         </AnimatePresence>
 
-        {/* OVERLAY: Floor Switcher */}
+        {/* OVERLAY: Building + Floor Switcher */}
         <div className="floor-switcher">
-          {[1, 2, 3].map((floorNum) => (
+          {/* Building Selector */}
+          {Object.entries(BUILDINGS).map(([key, bldg]) => (
+            <motion.button
+              key={key}
+              onClick={() => { setCurrentBuilding(key); setCurrentFloor(1); }}
+              className={`floor-btn ${currentBuilding === key ? "building-active" : ""}`}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              {bldg.label}
+            </motion.button>
+          ))}
+
+          <div style={{ width: "1px", height: "24px", background: "#e5e7eb", margin: "0 8px" }} />
+
+          {/* Floor Selector */}
+          {Array.from({ length: BUILDINGS[currentBuilding].floors }, (_, i) => i + 1).map((floorNum) => (
             <motion.button
               key={floorNum}
               onClick={() => setCurrentFloor(floorNum)}
@@ -390,11 +479,11 @@ export function BuildingMap({ darkMode, setDarkMode }) {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Floor {floorNum}
+              F{floorNum}
             </motion.button>
           ))}
 
-          {/* SEARCH BUTTON (Moved Inside) */}
+          {/* SEARCH BUTTON */}
           <div style={{ width: "1px", height: "24px", background: "#e5e7eb", margin: "0 8px" }} />
           <button
             onClick={() => setIsSearchOpen(true)}
@@ -412,15 +501,14 @@ export function BuildingMap({ darkMode, setDarkMode }) {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          zIndex: 1,
-          overflow: "hidden"
+          zIndex: 1
         }}>
           <AnimatePresence mode="wait">
             <motion.div
-              key={currentFloor}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
+              key={`${currentBuilding}-${currentFloor}`}
+              initial={{ opacity: 0, x: offsets.x + 20, y: offsets.y, scale: (offsets.scale || 1) * 0.95 }}
+              animate={{ opacity: 1, x: offsets.x, y: offsets.y, scale: offsets.scale || 1 }}
+              exit={{ opacity: 0, x: offsets.x - 20, y: offsets.y, scale: (offsets.scale || 1) * 0.95 }}
               transition={{ duration: 0.3 }}
               style={{
                 width: "100%",
@@ -428,13 +516,17 @@ export function BuildingMap({ darkMode, setDarkMode }) {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                paddingTop: "30px",
-                ...activeTransform
+                paddingTop: "30px"
               }}
             >
-              {currentFloor === 1 && <Level1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
-              {currentFloor === 2 && <Level2 getColor={getColorProp} onHover={handleRoomHover} />}
-              {currentFloor === 3 && <Level3 getColor={getColorProp} onHover={handleRoomHover} />}
+              {/* MSB Floors */}
+              {currentBuilding === "MSB" && currentFloor === 1 && <Level1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+              {currentBuilding === "MSB" && currentFloor === 2 && <Level2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+              {currentBuilding === "MSB" && currentFloor === 3 && <Level3 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+              {/* Drescher Floors */}
+              {currentBuilding === "DRSCHR" && currentFloor === 1 && <DrescherLevel1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+              {currentBuilding === "DRSCHR" && currentFloor === 2 && <DrescherLevel2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+              {currentBuilding === "DRSCHR" && currentFloor === 3 && <DrescherLevel3 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
             </motion.div>
           </AnimatePresence>
         </div>

@@ -1,12 +1,20 @@
 import React from 'react';
 
 // Wrapped with React.memo for performance optimization
-export const Level3 = React.memo(function Level3({ getColor, onHover }) {
+export const Level3 = React.memo(function Level3({ getColor, onHover, onClick }) {
     return (
 
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 548.22 436.26">
-            <g id="Grayed_Out" data-name="Grayed Out" fill="#3b3b3c">
-                <path id="gray-offices-3-4" d="m140.47 282.59-3.41 51.25 60.72 26.72s16.98-40.76 63.39-61.79l-.43-3.32-10.43-29.18-17.82 5.82-39.29 14.06-13.4.14-11.32-2.01-28.02-1.69" />
+            <g id="Earth_Sci_Dept" data-name="Earth Sciences Department">
+                <path
+                    id="room-3-earth-sci"
+                    d="m140.47 282.59-3.41 51.25 60.72 26.72s16.98-40.76 63.39-61.79l-.43-3.32-10.43-29.18-17.82 5.82-39.29 14.06-13.4.14-11.32-2.01-28.02-1.69"
+                    fill={getColor("room-3-earth-sci")}
+                    onMouseEnter={() => onHover("room-3-earth-sci", true)}
+                    onMouseLeave={() => onHover("room-3-earth-sci", false)}
+                    onClick={() => onClick("room-3-earth-sci")}
+                    style={{ cursor: "pointer", transition: "opacity 0.2s" }}
+                />
             </g>
             <g id="Hallways" fill="#e5e5e5">
                 <path d="m261.94 297.95-11.22-32.12-16.67 6.31-40.84 14.01-13.69-.68-38.65-2.86 1.24-29.01-5.1-38.66-8.95-29.72-14.12-28.67-29.93-45.81 26.59-17.15 1.93-1.23 5.47-3.77 28.33-18.87 33.53 52.25L204 148.03l25.04 19.63 19.27 11.21 22.27 10.43 25.69 7.91 16.1 41.18.37 7.31-23.17 6.73-27.15 9.89 10.55 30.86z" />
@@ -24,10 +32,34 @@ export const Level3 = React.memo(function Level3({ getColor, onHover }) {
                 </g>
                 <path d="m312.74 282.49-.5-23.47.5-10.67-.51-13.99v-34.34l14.28 3.06 22.42.66 47.98.5 23.62.5 28.43-.38v30.62-30.62h12.99v45.56l.45.38v.5l-.45.12v28.15h-12.8l-.19-28.15h1.41l-.83-.42-.58-.58-.08 28.77-102.78-.1-22.66 1.91-4.75.56" />
             </g>
-            <g id="Grayed_Out_2" data-name="Grayed Out 2" fill="#3b3b3c">
-                <path id="gray-offices-3-3" d="m156.02 300.22-.18 3.05-1.84 17.62v2.03l19.61 9.47.24-8.18.29-2.92.88-11.29.33-2.8.68-5.98-20.27-1.99" />
-                <path id="gray-offices-3-2" d="m185 295.92 3.09.23 5.26 1.12 7.68-3.63 3.09-.91 10.47-3.72 3.03-.95 10.66-3.75 2.97-1.08s5.38-.94 5.25-1.18-3.19-9.42-3.09-9.49-40.79 14.03-40.79 14.03l-12.79-.31-.56 9.72 3.96.26" />
-                <path id="gray-offices-3-1" d="m181.18 307.87-1.45 13.42.25 3.06-.28 2.98-.72 6.62 2.13 1.24 18.72-6.39 2.54-2.54 2.49-3.07s7.81-8.19 11.65-12.03c3.34-3.33 9.33-8.75 9.33-8.75l3.44-3.24 2.58-1.72 9.11-5.32v-4.34l-2.8-.95-22.81 8.41-3.16 1.08-3.26 1.22-11.93 3.94-4.8.78-8.14 3.1" />
+            <g id="Earth_Sci_Dept_2" data-name="Earth Sciences Department 2">
+                <path
+                    id="room-3-earth-sci-a"
+                    d="m156.02 300.22-.18 3.05-1.84 17.62v2.03l19.61 9.47.24-8.18.29-2.92.88-11.29.33-2.8.68-5.98-20.27-1.99"
+                    fill={getColor("room-3-earth-sci-a")}
+                    onMouseEnter={() => onHover("room-3-earth-sci-a", true)}
+                    onMouseLeave={() => onHover("room-3-earth-sci-a", false)}
+                    onClick={() => onClick("room-3-earth-sci-a")}
+                    style={{ cursor: "pointer", transition: "opacity 0.2s" }}
+                />
+                <path
+                    id="room-3-earth-sci-b"
+                    d="m185 295.92 3.09.23 5.26 1.12 7.68-3.63 3.09-.91 10.47-3.72 3.03-.95 10.66-3.75 2.97-1.08s5.38-.94 5.25-1.18-3.19-9.42-3.09-9.49-40.79 14.03-40.79 14.03l-12.79-.31-.56 9.72 3.96.26"
+                    fill={getColor("room-3-earth-sci-b")}
+                    onMouseEnter={() => onHover("room-3-earth-sci-b", true)}
+                    onMouseLeave={() => onHover("room-3-earth-sci-b", false)}
+                    onClick={() => onClick("room-3-earth-sci-b")}
+                    style={{ cursor: "pointer", transition: "opacity 0.2s" }}
+                />
+                <path
+                    id="room-3-earth-sci-c"
+                    d="m181.18 307.87-1.45 13.42.25 3.06-.28 2.98-.72 6.62 2.13 1.24 18.72-6.39 2.54-2.54 2.49-3.07s7.81-8.19 11.65-12.03c3.34-3.33 9.33-8.75 9.33-8.75l3.44-3.24 2.58-1.72 9.11-5.32v-4.34l-2.8-.95-22.81 8.41-3.16 1.08-3.26 1.22-11.93 3.94-4.8.78-8.14 3.1"
+                    fill={getColor("room-3-earth-sci-c")}
+                    onMouseEnter={() => onHover("room-3-earth-sci-c", true)}
+                    onMouseLeave={() => onHover("room-3-earth-sci-c", false)}
+                    onClick={() => onClick("room-3-earth-sci-c")}
+                    style={{ cursor: "pointer", transition: "opacity 0.2s" }}
+                />
             </g>
             <g id="ROOMS">
                 <g id="Floor_3" data-name="Floor 3">

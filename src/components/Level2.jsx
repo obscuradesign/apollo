@@ -1,14 +1,20 @@
 import React from 'react';
 
 // Wrapped with React.memo for performance optimization
-export const Level2 = React.memo(function Level2({ getColor, onHover }) {
+export const Level2 = React.memo(function Level2({ getColor, onHover, onClick }) {
     return (
 
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 546.96 436.26">
-            <g id="Grayed_Out" data-name="Grayed Out" fill="#3b3b3c">
-                <g id="floor-2-offices">
-                    <path id="gray-offices-2-3" d="m133.49 283.1-3.41 51.25 60.72 26.72s16.98-40.76 63.39-61.79l-.43-3.32-10.43-29.18-17.82 5.82-39.29 14.06-13.4.14-11.32-2.01-28.02-1.69" />
-                </g>
+            <g id="Math_Dept" data-name="Mathematics Department">
+                <path
+                    id="room-2-math-offices"
+                    d="m133.49 283.1-3.41 51.25 60.72 26.72s16.98-40.76 63.39-61.79l-.43-3.32-10.43-29.18-17.82 5.82-39.29 14.06-13.4.14-11.32-2.01-28.02-1.69"
+                    fill={getColor("room-2-math-offices")}
+                    onMouseEnter={() => onHover("room-2-math-offices", true)}
+                    onMouseLeave={() => onHover("room-2-math-offices", false)}
+                    onClick={() => onClick("room-2-math-offices")}
+                    style={{ cursor: "pointer", transition: "opacity 0.2s" }}
+                />
             </g>
             <g id="Hallways" fill="#e5e5e5">
                 <path d="m111.68 98.8-6.65-5.46-27.9 17.81" />
@@ -20,9 +26,25 @@ export const Level2 = React.memo(function Level2({ getColor, onHover }) {
                     <path d="m269.89 280.48 1.16-4.06-1.08 2.38c-.39.6-1.31.26-1.17-.47l1.74-3.91c.18-.25.39-.31.68-.33.69-.04 1.85-.06 2.53 0 .25.02.43.1.57.31.51 1.2 1.12 2.37 1.62 3.57.09.22.18.36.14.61-.06.48-.67.66-1.04.37-.11-.09-.15-.19-.21-.31-.37-.72-.65-1.53-1.01-2.26l-.13-.22 1.13 4.3h-.98v3.71s-.06.14-.08.17c-.31.57-1.2.34-1.2-.35 0-.06.03-.12.03-.18v-3.27c-.02-.13-.24-.06-.34-.08v3.74l-.09.18c-.18.27-.63.35-.9.17-.08-.06-.26-.29-.26-.38v-3.66s-.04-.05-.05-.05h-1.08ZM280.6 276.18l-.53 2.51a.638.638 0 0 1-1.24-.21c.27-1.11.39-2.33.69-3.43.17-.6.53-.9 1.16-.95.75-.05 1.97-.05 2.72 0 .55.04.97.31 1.13.85.14 1.09.57 2.27.68 3.35.09.85-.82 1.12-1.21.42l-.56-2.63v8.13s-.09.21-.1.22c0 0-.13.1-.15.11-.41.26-.87.09-.99-.38v-4.66c-.04-.23-.29-.3-.32 0-.12 1.44.13 3.08 0 4.52-.04.46-.35.69-.81.62-.16-.03-.33-.19-.4-.33-.01-.03-.08-.22-.08-.23v-7.92ZM276.76 271.63h.99v13.03h-.99zM272.39 271.55c1.47-.07 1.57 2.21.08 2.25s-1.55-2.18-.08-2.25M282.85 273.45c-1.03 1.06-2.67-.5-1.62-1.57s2.62.54 1.62 1.57" />
                 </g>
             </g>
-            <g id="Grayed_Out_2" data-name="Grayed Out 2" fill="#3b3b3c">
-                <path id="gray-offices-2-2" d="m148.8 303.37-1.15 14.45-.31 3.25-.39 2.07 19.61 9.47.1-8.3.24-2.96 1.17-11.24.25-2.8.66-5.88-19.91-1.01" />
-                <path id="gray-offices-2-1" d="m173.88 301.96-.56 19.79-.35 3.02-.9 10.33 8.45 2.85 2.83 1.02 1.57.73 10.2-13.79 2.25-2.58s7.33-8.6 11.73-11.78 10.52-8.88 10.52-8.88l2.94-1.72 2.76-2.03 8.98-7.08-.73-3.64-2.81-.95-22.94 8.6-3.06 1.11-12.22 4.25-2.79 1.16-4.96.31-10.9-.71" />
+            <g id="Math_Dept_2" data-name="Mathematics Department 2">
+                <path
+                    id="room-2-math-offices-a"
+                    d="m148.8 303.37-1.15 14.45-.31 3.25-.39 2.07 19.61 9.47.1-8.3.24-2.96 1.17-11.24.25-2.8.66-5.88-19.91-1.01"
+                    fill={getColor("room-2-math-offices-a")}
+                    onMouseEnter={() => onHover("room-2-math-offices-a", true)}
+                    onMouseLeave={() => onHover("room-2-math-offices-a", false)}
+                    onClick={() => onClick("room-2-math-offices-a")}
+                    style={{ cursor: "pointer", transition: "opacity 0.2s" }}
+                />
+                <path
+                    id="room-2-math-offices-b"
+                    d="m173.88 301.96-.56 19.79-.35 3.02-.9 10.33 8.45 2.85 2.83 1.02 1.57.73 10.2-13.79 2.25-2.58s7.33-8.6 11.73-11.78 10.52-8.88 10.52-8.88l2.94-1.72 2.76-2.03 8.98-7.08-.73-3.64-2.81-.95-22.94 8.6-3.06 1.11-12.22 4.25-2.79 1.16-4.96.31-10.9-.71"
+                    fill={getColor("room-2-math-offices-b")}
+                    onMouseEnter={() => onHover("room-2-math-offices-b", true)}
+                    onMouseLeave={() => onHover("room-2-math-offices-b", false)}
+                    onClick={() => onClick("room-2-math-offices-b")}
+                    style={{ cursor: "pointer", transition: "opacity 0.2s" }}
+                />
             </g>
             <g id="ROOMS">
                 <g id="Floor_2" data-name="Floor 2">

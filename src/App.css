@@ -125,7 +125,7 @@ body {
   flex-wrap: nowrap;
   white-space: nowrap;
   background-color: rgba(255, 255, 255, 0.95);
-  padding: 4px;
+  padding: 3px 3px 3px 8px;
   border-radius: 9999px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   border: 1px solid #e5e7eb;
@@ -137,19 +137,21 @@ body {
   /* Smooth scroll on iOS */
   scrollbar-width: none;
   /* Hide scrollbar for cleaner look */
-  
-  align-items: center; /* Vertically center items */
+
+  align-items: center;
+  /* Vertically center items */
 }
 
 .search-btn-inline {
   padding: 6px 16px;
-  border-radius: 99px;
-  border: 1px solid transparent; 
+  border-radius: 9999px;
+  border: 1px solid transparent;
   background: transparent;
-  color: #4b5563; /* Gray-600 */
+  color: #4b5563;
+  /* Gray-600 */
   cursor: pointer;
-  display: flex; 
-  align-items: center; 
+  display: flex;
+  align-items: center;
   gap: 6px;
   transition: all 0.2s;
   font-size: 0.9rem;
@@ -209,6 +211,13 @@ body {
   background-color: #f3f4f6;
   color: #000;
   box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+}
+
+.floor-btn.building-active {
+  background-color: #f3f4f6;
+  color: #000;
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  font-weight: 700;
 }
 
 .legend-item {

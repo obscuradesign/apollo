@@ -1,7 +1,7 @@
 <div align="center">
   <br />
   <h1>Apollo</h1>
-  <h3>The Santa Monica College Math & Science Building Map</h3>
+  <h3>The Santa Monica College Interactive Campus Map</h3>
   <p>
     <strong>Find empty classrooms, track live lectures, and locate SI Sessions in real-time.</strong>
   </p>
@@ -32,13 +32,15 @@
 
 ## 📖 About The Project
 
-**Apollo** is an interactive, real-time visualization of the Math & Science Building at Santa Monica College. 
+**Apollo** is an interactive, real-time visualization of the Math & Science Building and Drescher Hall at Santa Monica College. 
 
 Finding an empty room to study in or locating a specific SI (Supplemental Instruction) session can be frustrating. Apollo solves this by scraping the official schedule and visualizing it on a dynamic, 3-level interactive map.
 
 ### 🌟 Key Features
 
 * **🔍 Global Search:** Instantly locate professors, specific classes (e.g., "Math 7"), or room numbers.
+* **⭐ Starred Rooms:** Save specific classes or rooms to your schedule for quick access later, synced securely via browser local storage.
+* **🏢 Multiple Buildings:** Seamlessly switch between campus buildings including the Math & Science Building and Drescher Hall.
 * **🌙 Persistent Dark Mode:** Full dark-theme support that persists across browser sessions.
 * **🔴 Live Class Tracking:** Rooms turn **Red** when a class is currently in session.
 * **🟡 SI Integration:** Rooms turn **Gold** for Supplemental Instruction sessions (automatically overriding regular class data).
@@ -107,6 +109,8 @@ To fetch the latest class schedules:
 
 ## 🗺️ Roadmap
 
+- [x] **Saved Schedule:** Allow users to star rooms and classes to save them to their schedule.
+- [x] **Multiple Buildings:** Support for additional campus buildings, starting with Drescher Hall.
 - [x] **Basic Mobile Functionality** Currently, the SVG does not render on mobile. Fix this major bug to enable mobile viewing.
 - [x] **Search:** Add a search bar to quickly locate professors or specific room numbers.\
 - [x] **Dark Mode:** Add a dark mode toggle to the app.

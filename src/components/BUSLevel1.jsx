@@ -12,7 +12,7 @@ export const BUSLevel1 = React.memo(function BUSLevel1({ getColor, onHover, onCl
     });
 
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" id="Floor_1" data-name="Floor 1" viewBox="0 0 792 576">
+        <svg xmlns="http://www.w3.org/2000/svg" id="Floor_1" data-name="Floor 1" viewBox="70 68 656 443">
             <g id="hallways" fill="#e5e5e5">
                 <path d="M223.61 183.19V147.8h43.3v101.52-37h-53.87v-20.83l10.57-2" />
                 <path id="hallway" d="M354.1 242.49v-11h42.6v10.32h-12.03v17.08h.47v2h23.78v-8.13h5.61V231.5h44.13v2.61h14.48v2.48h26.83v-2.48h15v-2.61h7.65v3.61h-5.65v11.91h6.78v6.78h40.57v36.17h25.3v-56.48h-9.43v-18.52h-35.26v-2h-13.17v2h-35.04v-16.89H478.5v3.46h-18.83v8.3h18.83v7.74h-46.41v-14.51l-14.59-.1s-10.87-3.04-15.83 13.57h-14v-20.46h7.31v-12.67h-3.92V147.8h-24.87v13.7h-15.13v3.13h-14.87v51.52h-14.57v-2H309.1v2h-88.65v-3.83h-4.61v2h-12.7v17.17h67.56v17.17h-2v6.65h2v25.26h-36.53v14.6h18.88l2-1.82h13.65v7.48l2 11.55h12.19V309h-1.54v-2h3.54v-10.84h-2V282.5h33.65v-12.88h3.23v-7.78H295.9v-2l-11.02-4.91 1.11-9.05 12.69-12.08 13.95-1.74 15.38 8.41" />

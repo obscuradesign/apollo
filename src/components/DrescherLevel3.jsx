@@ -18,7 +18,7 @@ export const DrescherLevel3 = React.memo(function DrescherLevel3({ getColor, onH
     //const wallStyle = { stroke: "#000", strokeMiterlimit: 10, strokeWidth: ".5px" };
 
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 677.54 203.12">
+        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 677.54 363">
             <g id="Layer_1-2" data-name="Layer 1" fill="#e5e5e5" transform="translate(5 15)">
                 <path id="Hallways" d="m0 40.09 3.52 59.68 32.57-.72 17.19-33.64 61.51.76 137.35 2.51 105.91 8.53v62.76l17.31 7.09 1.58 38.89 54.67.79 22.37-39.68 16.45-1.58 159.95-45.26 36.74-1.58.78-23.45-6.68-34.96-30.84-.89-4.18 37.22-158.7-2.75L510.65 7.7 424.32 0 38.26 40.42z" />
             </g>

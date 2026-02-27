@@ -99,10 +99,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: stretch;
-  min-height: 500px;
-  /* Force height so map has space */
   overflow: hidden;
   /* Clips the map if it slides too far */
+  padding-bottom: 50px;
+  /* Space for the absolutely-positioned legend */
 }
 
 .map-card svg {
@@ -111,6 +111,7 @@ body {
   max-width: 100%;
   display: block;
 }
+
 
 /* --- OVERLAY CONTROLS (Top & Bottom) --- */
 .floor-switcher {
@@ -310,7 +311,6 @@ body {
 /* --- MOBILE OPTIMIZATIONS --- */
 @media (max-width: 600px) {
   .map-card {
-    min-height: 350px;
     align-items: flex-start;
     padding-bottom: 60px;
   }

@@ -470,7 +470,14 @@ export function BuildingMap({ darkMode, setDarkMode }) {
     return status ? status.color : COLORS.OFFLINE;
   }, [getRoomStatus, highlightedRoom, starredItems, simulationState]);
 
-  const offsets = FLOOR_OFFSETS[currentBuilding]?.[currentFloor] || { x: 0, y: 0 };
+  const offsets = (() => {
+    const base = FLOOR_OFFSETS[currentBuilding]?.[currentFloor] || { x: 0, y: 0 };
+    // Drescher floors 2-3: use smaller y offset on mobile
+    if (currentBuilding === "DRSCHR" && currentFloor >= 2 && isMobile) {
+      return { ...base, y: 50 };
+    }
+    return base;
+  })();
   // Offsets are handled within motion.div animate props now, activeTransform removed.
 
   return (
@@ -596,9 +603,7 @@ export function BuildingMap({ darkMode, setDarkMode }) {
 
         {/* MAP CONTENT */}
         <div style={{
-          flex: 1,
           width: "100%",
-          height: "100%",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -613,11 +618,11 @@ export function BuildingMap({ darkMode, setDarkMode }) {
               transition={{ duration: 0.3 }}
               style={{
                 width: "100%",
-                height: "100%",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                paddingTop: "30px"
+                paddingTop: "30px",
+                ...((!isMobile && currentBuilding === "DRSCHR" && currentFloor >= 2) ? { maxHeight: "350px" } : {})
               }}
             >
               {/* MSB Floors */}

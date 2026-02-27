@@ -1,11 +1,5 @@
 import React from 'react';
-{/* Paste your SVG content for HSS Floor 1 here.
-          Remember to add ID tags and use standard event handlers:
-          fill={getColor("hss-XXX")}
-          onMouseEnter={() => onHover("hss-XXX", true)}
-          onMouseLeave={() => onHover("hss-XXX", false)}
-          onClick={() => onClick("hss-XXX")}
-      */}
+
 export const HSSLevel1 = React.memo(function HSSLevel1({ getColor, onHover, onClick }) {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" id="Floor_1" data-name="Floor 1" viewBox="0 0 792 576">

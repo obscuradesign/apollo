@@ -32,7 +32,7 @@
 
 ## 📖 About The Project
 
-**Apollo** is an interactive, real-time visualization of the Math & Science Building and Drescher Hall at Santa Monica College. 
+**Apollo** is an interactive, real-time visualization of five campus buildings at Santa Monica College: **Math & Science (MSB)**, **Drescher Hall**, **Humanities & Social Sciences (HSS)**, **Science (SCI)**, and **Business (BUS)**. 
 
 Finding an empty room to study in or locating a specific SI (Supplemental Instruction) session can be frustrating. Apollo solves this by scraping the official schedule and visualizing it on a dynamic, 3-level interactive map.
 
@@ -40,9 +40,9 @@ Finding an empty room to study in or locating a specific SI (Supplemental Instru
 
 * **🔍 Global Search:** Instantly locate professors, specific classes (e.g., "Math 7"), or room numbers.
 * **⭐ Starred Rooms:** Save specific classes or rooms to your schedule for quick access later, synced securely via browser local storage.
-* **🏢 Multiple Buildings:** Seamlessly switch between campus buildings including the Math & Science Building and Drescher Hall.
+* **🏢 Multiple Buildings:** Seamlessly switch between five campus buildings (MSB, Drescher, HSS, SCI, BUS) with a mobile-responsive dropdown selector.
 * **🌙 Persistent Dark Mode:** Full dark-theme support that persists across browser sessions.
-* **🔴 Live Class Tracking:** Rooms turn **Red** when a class is currently in session.
+* **🟢 Live Class Tracking:** Rooms turn **Red** when a class is currently in session.
 * **🟡 SI Integration:** Rooms turn **Gold** for Supplemental Instruction sessions (automatically overriding regular class data).
 * **🔵 Study Rooms:** Dedicated study rooms are highlighted **Blue** with direct booking links.
 * **🏗️ Google Maps-style UI:** An immersive Overlay layout where controls float over the interactive map for maximum screen real estate.
@@ -62,7 +62,7 @@ Apollo runs on a hybrid architecture combining a React frontend with a Python-po
 
 ### Data Flow
 1.  **Harvesting:** Two local Python scripts (`smc_harvester.py` and `si_harvester.py`) scrape the official SMC Schedule of Classes (Oracle APEX) and the SI page of the SMC website.
-2.  **Processing:** The scripts parse thousands of HTML rows, filtering specifically for the "MS" (Math/Science) building and normalizing time formats.
+2.  **Processing:** The scripts parse thousands of HTML rows, filtering for supported buildings (MSB, Drescher, HSS, SCI, BUS) and normalizing time formats.
 3.  **Static Generation:** The data is compiled into optimized JSON files (`roomSchedule_LIVE.json` and `siSchedule.json`).
 4.  **Runtime Rendering:** The React frontend reads this static data, compares it against the user's system clock (or "Time Machine" state), and updates the SVG fill colors in real-time.
 
@@ -110,7 +110,7 @@ To fetch the latest class schedules:
 ## 🗺️ Roadmap
 
 - [x] **Saved Schedule:** Allow users to star rooms and classes to save them to their schedule.
-- [x] **Multiple Buildings:** Support for additional campus buildings, starting with Drescher Hall.
+- [x] **Multiple Buildings:** Support for additional campus buildings (Drescher Hall, HSS, Science, Business).
 - [x] **Basic Mobile Functionality** Currently, the SVG does not render on mobile. Fix this major bug to enable mobile viewing.
 - [x] **Search:** Add a search bar to quickly locate professors or specific room numbers.\
 - [x] **Dark Mode:** Add a dark mode toggle to the app.

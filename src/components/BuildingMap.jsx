@@ -5,6 +5,14 @@ import { Level3 } from "./Level3";
 import { DrescherLevel1 } from "./DrescherLevel1";
 import { DrescherLevel2 } from "./DrescherLevel2";
 import { DrescherLevel3 } from "./DrescherLevel3";
+import { HSSLevel1 } from "./HSSLevel1";
+import { HSSLevel2 } from "./HSSLevel2";
+import { HSSLevel3 } from "./HSSLevel3";
+import { SCILevel1 } from "./SCILevel1";
+import { SCILevel2 } from "./SCILevel2";
+import { SCILevel3 } from "./SCILevel3";
+import { BUSLevel1 } from "./BUSLevel1";
+import { BUSLevel2 } from "./BUSLevel2";
 import { motion, AnimatePresence } from "framer-motion";
 import { ROOM_SCHEDULES as STATIC_SCHEDULES } from "../data/roomSchedule.js";
 import LIVE_SCHEDULES from "../data/roomSchedule_LIVE.json";
@@ -27,7 +35,10 @@ const COLORS = {
 
 const BUILDINGS = {
   MSB: { label: "MSB", floors: 3 },
-  DRSCHR: { label: "Drescher", floors: 3 }
+  DRSCHR: { label: "Drescher", floors: 3 },
+  HSS: { label: "HSS", floors: 3 },
+  SCI: { label: "SCI", floors: 3 },
+  BUS: { label: "BUS", floors: 2 }
 };
 
 // Manual offsets (x,y) to visually center each floor's SVG shape within the viewport
@@ -41,6 +52,20 @@ const FLOOR_OFFSETS = {
     1: { x: 0, y: 0 },
     2: { x: 0, y: 100, scale: 0.8 },
     3: { x: 0, y: 100, scale: 0.8 }
+  },
+  HSS: {
+    1: { x: 0, y: 0 },
+    2: { x: 0, y: 0 },
+    3: { x: 0, y: 0 }
+  },
+  SCI: {
+    1: { x: 0, y: 0 },
+    2: { x: 0, y: 0 },
+    3: { x: 0, y: 0 }
+  },
+  BUS: {
+    1: { x: 0, y: 0 },
+    2: { x: 0, y: 0 }
   }
 };
 
@@ -58,7 +83,7 @@ const RoomTooltip = ({ info, position, starredItems }) => {
   if (!info) return null;
 
   const isDepartment = info.roomType === "PROGRAM" || info.roomType === "OFFICE";
-  const skipSuffix = /(department|program|offices|office|center|tutoring)/i.test(info.roomLabel);
+  const skipSuffix = /(department|program|offices|office|center|tutoring|senate|stockroom|cosmetology|room|closet)/i.test(info.roomLabel);
   const displayLabel = isDepartment && !skipSuffix
     ? `${info.roomLabel} Department`
     : info.roomLabel;
@@ -142,8 +167,33 @@ export function BuildingMap({ darkMode, setDarkMode }) {
   const [simulationState, setSimulationState] = useState(getCurrentStatus());
   const [isLive, setIsLive] = useState(true);
 
+  // Mobile detection for responsive UI
+  const [isMobile, setIsMobile] = useState(() => window.innerWidth <= 600);
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 600px)");
+    const handler = (e) => setIsMobile(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
+
+  const [buildingDropdownOpen, setBuildingDropdownOpen] = useState(false);
+
   const [hoveredRoom, setHoveredRoom] = useState(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
+  // Close dropdown when clicking outside
+  const dropdownRef = React.useRef(null);
+  useEffect(() => {
+    if (!buildingDropdownOpen) return;
+    const handler = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setBuildingDropdownOpen(false);
+      }
+    };
+    // Use setTimeout to avoid catching the opening click
+    const id = setTimeout(() => document.addEventListener("click", handler), 0);
+    return () => { clearTimeout(id); document.removeEventListener("click", handler); };
+  }, [buildingDropdownOpen]);
 
   // NEW: Search Modal State
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -192,6 +242,24 @@ export function BuildingMap({ darkMode, setDarkMode }) {
       if (num.startsWith("1")) setCurrentFloor(1);
       else if (num.startsWith("2")) setCurrentFloor(2);
       else if (num.startsWith("3")) setCurrentFloor(3);
+    } else if (roomId.startsWith("hss-")) {
+      setCurrentBuilding("HSS");
+      const num = roomId.replace("hss-", "");
+      if (num.startsWith("1")) setCurrentFloor(1);
+      else if (num.startsWith("2")) setCurrentFloor(2);
+      else if (num.startsWith("3")) setCurrentFloor(3);
+    } else if (roomId.startsWith("sci-")) {
+      setCurrentBuilding("SCI");
+      const num = roomId.replace("sci-", "");
+      if (num.startsWith("1")) setCurrentFloor(1);
+      else if (num.startsWith("2")) setCurrentFloor(2);
+      else if (num.startsWith("3")) setCurrentFloor(3);
+    } else if (roomId.startsWith("bus-")) {
+      setCurrentBuilding("BUS");
+      const num = roomId.replace("bus-", "");
+      if (num.startsWith("1")) setCurrentFloor(1);
+      else if (num.startsWith("2")) setCurrentFloor(2);
+
     } else {
       // Other buildings: try to detect floor from first digit
       const match = roomId.match(/-(\d)/);
@@ -455,18 +523,51 @@ export function BuildingMap({ darkMode, setDarkMode }) {
 
         {/* OVERLAY: Building + Floor Switcher */}
         <div className="floor-switcher">
-          {/* Building Selector */}
-          {Object.entries(BUILDINGS).map(([key, bldg]) => (
-            <motion.button
-              key={key}
-              onClick={() => { setCurrentBuilding(key); setCurrentFloor(1); }}
-              className={`floor-btn ${currentBuilding === key ? "building-active" : ""}`}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              {bldg.label}
-            </motion.button>
-          ))}
+          {/* Building Selector: Dropdown on mobile, tabs on desktop */}
+          {isMobile ? (
+            <div className="building-dropdown" ref={dropdownRef}>
+              <button
+                className="building-dropdown-trigger"
+                onClick={() => setBuildingDropdownOpen(!buildingDropdownOpen)}
+              >
+                {BUILDINGS[currentBuilding].label}
+                <span style={{ marginLeft: "4px", fontSize: "0.7rem", transition: "transform 0.2s", display: "inline-block", transform: buildingDropdownOpen ? "rotate(180deg)" : "rotate(0deg)" }}>▾</span>
+              </button>
+              <AnimatePresence>
+                {buildingDropdownOpen && (
+                  <motion.div
+                    className="building-dropdown-menu"
+                    initial={{ opacity: 0, y: -8, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: -8, scale: 0.95 }}
+                    transition={{ duration: 0.15 }}
+                  >
+                    {Object.entries(BUILDINGS).map(([key, bldg]) => (
+                      <button
+                        key={key}
+                        className={`building-dropdown-item ${currentBuilding === key ? "active" : ""}`}
+                        onClick={() => { setCurrentBuilding(key); setCurrentFloor(1); setBuildingDropdownOpen(false); }}
+                      >
+                        {bldg.label}
+                      </button>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          ) : (
+            Object.entries(BUILDINGS).map(([key, bldg]) => (
+              <motion.button
+                key={key}
+                onClick={() => { setCurrentBuilding(key); setCurrentFloor(1); }}
+                className={`floor-btn ${currentBuilding === key ? "building-active" : ""}`}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {bldg.label}
+              </motion.button>
+            ))
+          )}
 
           <div style={{ width: "1px", height: "24px", background: "#e5e7eb", margin: "0 8px" }} />
 
@@ -489,7 +590,7 @@ export function BuildingMap({ darkMode, setDarkMode }) {
             onClick={() => setIsSearchOpen(true)}
             className="search-btn-inline"
           >
-            🔍 Search
+            🔍{!isMobile && " Search"}
           </button>
         </div>
 
@@ -527,6 +628,17 @@ export function BuildingMap({ darkMode, setDarkMode }) {
               {currentBuilding === "DRSCHR" && currentFloor === 1 && <DrescherLevel1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
               {currentBuilding === "DRSCHR" && currentFloor === 2 && <DrescherLevel2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
               {currentBuilding === "DRSCHR" && currentFloor === 3 && <DrescherLevel3 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+              {/* HSS Floors */}
+              {currentBuilding === "HSS" && currentFloor === 1 && <HSSLevel1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+              {currentBuilding === "HSS" && currentFloor === 2 && <HSSLevel2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+              {currentBuilding === "HSS" && currentFloor === 3 && <HSSLevel3 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+              {/* SCI Floors */}
+              {currentBuilding === "SCI" && currentFloor === 1 && <SCILevel1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+              {currentBuilding === "SCI" && currentFloor === 2 && <SCILevel2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+              {currentBuilding === "SCI" && currentFloor === 3 && <SCILevel3 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+              {/* BUS Floors */}
+              {currentBuilding === "BUS" && currentFloor === 1 && <BUSLevel1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+              {currentBuilding === "BUS" && currentFloor === 2 && <BUSLevel2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
             </motion.div>
           </AnimatePresence>
         </div>
@@ -554,7 +666,7 @@ export function BuildingMap({ darkMode, setDarkMode }) {
             backgroundColor: isLive ? "#dcfce7" : "#fee2e2",
             color: isLive ? "#166534" : "#991b1b"
           }}>
-            {isLive ? "🔴 LIVE DATA" : "🕰️ TIME MACHINE"}
+            {isLive ? "🟢 LIVE DATA" : "🕰️ TIME MACHINE"}
           </span>
           {!isLive && (
             <button onClick={returnToLive} style={{ fontSize: "0.75rem", padding: "4px 8px", cursor: "pointer" }}>

@@ -25,7 +25,7 @@ def normalize_room_id(raw_text):
     MSB rooms return 'room-{number}' for backward compatibility.
     Other buildings return '{building_lower}-{number}'.
     Returns None if no building/room pattern is found."""
-    match = re.search(r"([A-Z]{2,})\s+(\d+[a-zA-Z]?)", raw_text)
+    match = re.search(r"([A-Z]+)\s+(\d+[a-zA-Z]?)", raw_text)
     if not match:
         return None
     building = match.group(1)

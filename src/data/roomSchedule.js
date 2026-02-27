@@ -205,4 +205,238 @@ export const ROOM_SCHEDULES = {
   "drschr-314r": { type: "OFFICE", label: "ESL Department", group: "ESL_DEPT" },
   "drschr-314s": { type: "OFFICE", label: "ESL Department", group: "ESL_DEPT" },
   "drschr-314t": { type: "OFFICE", label: "ESL Break Room", group: "ESL_DEPT" },
+
+  // =============================================
+  // HSS (Humanities & Social Sciences)
+  // =============================================
+
+  // --- FLOOR 1 ---
+  "hss-165": { type: "CLASSROOM", label: "HSS 165 (Harvey Stromberg Lecture Hall)", events: [] },
+
+  // --- FLOOR 2: Academic Senate ---
+  "hss-261": { type: "PROGRAM", label: "Academic Senate", group: "ACAD_SENATE", url: "https://www.smc.edu/administration/governance/academic-senate/" },
+
+  // --- FLOOR 3: Philosophy / Social Sciences Department ---
+  "dept-hallway": { type: "OFFICE", label: "Philosophy/Social Sciences", group: "PHIL_SOC_SCI", url: "https://www.smc.edu/academics/academic-departments/philosophy-and-social-sciences/" },
+  "hss-352": { type: "OFFICE", label: "Philosophy/Social Sciences Offices", group: "PHIL_SOC_SCI", url: "https://www.smc.edu/academics/academic-departments/philosophy-and-social-sciences/" },
+  "hss-353": { type: "OFFICE", label: "Philosophy/Social Sciences Offices", group: "PHIL_SOC_SCI", url: "https://www.smc.edu/academics/academic-departments/philosophy-and-social-sciences/" },
+  "hss-354": { type: "OFFICE", label: "Philosophy/Social Sciences Offices", group: "PHIL_SOC_SCI", url: "https://www.smc.edu/academics/academic-departments/philosophy-and-social-sciences/" },
+  "hss-355": { type: "OFFICE", label: "Philosophy/Social Sciences Offices", group: "PHIL_SOC_SCI", url: "https://www.smc.edu/academics/academic-departments/philosophy-and-social-sciences/" },
+  "hss-356": { type: "OFFICE", label: "Philosophy/Social Sciences Offices", group: "PHIL_SOC_SCI", url: "https://www.smc.edu/academics/academic-departments/philosophy-and-social-sciences/" },
+  "hss-357": { type: "OFFICE", label: "Philosophy/Social Sciences Offices", group: "PHIL_SOC_SCI", url: "https://www.smc.edu/academics/academic-departments/philosophy-and-social-sciences/" },
+  "hss-358": { type: "OFFICE", label: "Philosophy/Social Sciences Offices", group: "PHIL_SOC_SCI", url: "https://www.smc.edu/academics/academic-departments/philosophy-and-social-sciences/" },
+  "hss-359": { type: "OFFICE", label: "Philosophy/Social Sciences Offices", group: "PHIL_SOC_SCI", url: "https://www.smc.edu/academics/academic-departments/philosophy-and-social-sciences/" },
+  "hss-360": { type: "OFFICE", label: "Philosophy/Social Sciences Offices", group: "PHIL_SOC_SCI", url: "https://www.smc.edu/academics/academic-departments/philosophy-and-social-sciences/" },
+  "hss-361": { type: "OFFICE", label: "Philosophy/Social Sciences Offices", group: "PHIL_SOC_SCI", url: "https://www.smc.edu/academics/academic-departments/philosophy-and-social-sciences/" },
+  "hss-362": { type: "OFFICE", label: "Philosophy/Social Sciences Offices", group: "PHIL_SOC_SCI", url: "https://www.smc.edu/academics/academic-departments/philosophy-and-social-sciences/" },
+  "hss-363": { type: "OFFICE", label: "Philosophy/Social Sciences Offices", group: "PHIL_SOC_SCI", url: "https://www.smc.edu/academics/academic-departments/philosophy-and-social-sciences/" },
+  "hss-364": { type: "OFFICE", label: "Philosophy/Social Sciences Offices", group: "PHIL_SOC_SCI", url: "https://www.smc.edu/academics/academic-departments/philosophy-and-social-sciences/" },
+  "hss-365": { type: "OFFICE", label: "Philosophy/Social Sciences Offices", group: "PHIL_SOC_SCI", url: "https://www.smc.edu/academics/academic-departments/philosophy-and-social-sciences/" },
+  "hss-366": { type: "OFFICE", label: "Philosophy/Social Sciences Offices", group: "PHIL_SOC_SCI", url: "https://www.smc.edu/academics/academic-departments/philosophy-and-social-sciences/" },
+  "hss-367": { type: "OFFICE", label: "Philosophy/Social Sciences Offices", group: "PHIL_SOC_SCI", url: "https://www.smc.edu/academics/academic-departments/philosophy-and-social-sciences/" },
+  "hss-368": { type: "OFFICE", label: "Philosophy/Social Sciences Offices", group: "PHIL_SOC_SCI", url: "https://www.smc.edu/academics/academic-departments/philosophy-and-social-sciences/" },
+  "hss-369": { type: "OFFICE", label: "Philosophy/Social Sciences Offices", group: "PHIL_SOC_SCI", url: "https://www.smc.edu/academics/academic-departments/philosophy-and-social-sciences/" },
+  "hss-370": { type: "OFFICE", label: "Philosophy/Social Sciences Offices", group: "PHIL_SOC_SCI", url: "https://www.smc.edu/academics/academic-departments/philosophy-and-social-sciences/" },
+  "hss-371": { type: "OFFICE", label: "Philosophy/Social Sciences Offices", group: "PHIL_SOC_SCI", url: "https://www.smc.edu/academics/academic-departments/philosophy-and-social-sciences/" },
+  "hss-372": { type: "OFFICE", label: "Philosophy/Social Sciences Offices", group: "PHIL_SOC_SCI", url: "https://www.smc.edu/academics/academic-departments/philosophy-and-social-sciences/" },
+  "hss-373": { type: "OFFICE", label: "Philosophy/Social Sciences Offices", group: "PHIL_SOC_SCI", url: "https://www.smc.edu/academics/academic-departments/philosophy-and-social-sciences/" },
+  "hss-374": { type: "OFFICE", label: "Philosophy/Social Sciences Offices", group: "PHIL_SOC_SCI", url: "https://www.smc.edu/academics/academic-departments/philosophy-and-social-sciences/" },
+  "hss-375": { type: "OFFICE", label: "Philosophy/Social Sciences Offices", group: "PHIL_SOC_SCI", url: "https://www.smc.edu/academics/academic-departments/philosophy-and-social-sciences/" },
+  "hss-376": { type: "OFFICE", label: "Philosophy/Social Sciences Offices", group: "PHIL_SOC_SCI", url: "https://www.smc.edu/academics/academic-departments/philosophy-and-social-sciences/" },
+  "hss-377": { type: "OFFICE", label: "Philosophy/Social Sciences Offices", group: "PHIL_SOC_SCI", url: "https://www.smc.edu/academics/academic-departments/philosophy-and-social-sciences/" },
+  "hss-378": { type: "OFFICE", label: "Philosophy/Social Sciences Offices", group: "PHIL_SOC_SCI", url: "https://www.smc.edu/academics/academic-departments/philosophy-and-social-sciences/" },
+  "hss-379": { type: "OFFICE", label: "Philosophy/Social Sciences Offices", group: "PHIL_SOC_SCI", url: "https://www.smc.edu/academics/academic-departments/philosophy-and-social-sciences/" },
+  "hss-380": { type: "OFFICE", label: "Philosophy/Social Sciences Offices", group: "PHIL_SOC_SCI", url: "https://www.smc.edu/academics/academic-departments/philosophy-and-social-sciences/" },
+  "hss-381": { type: "OFFICE", label: "Philosophy/Social Sciences Offices", group: "PHIL_SOC_SCI", url: "https://www.smc.edu/academics/academic-departments/philosophy-and-social-sciences/" },
+  "hss-382": { type: "OFFICE", label: "Philosophy/Social Sciences Offices", group: "PHIL_SOC_SCI", url: "https://www.smc.edu/academics/academic-departments/philosophy-and-social-sciences/" },
+  "hss-383": { type: "OFFICE", label: "Philosophy/Social Sciences Offices", group: "PHIL_SOC_SCI", url: "https://www.smc.edu/academics/academic-departments/philosophy-and-social-sciences/" },
+  "hss-385": { type: "OFFICE", label: "Philosophy/Social Sciences Offices", group: "PHIL_SOC_SCI", url: "https://www.smc.edu/academics/academic-departments/philosophy-and-social-sciences/" },
+  "hss-386": { type: "OFFICE", label: "Philosophy/Social Sciences Offices", group: "PHIL_SOC_SCI", url: "https://www.smc.edu/academics/academic-departments/philosophy-and-social-sciences/" },
+  "hss-387": { type: "OFFICE", label: "Philosophy/Social Sciences Offices", group: "PHIL_SOC_SCI", url: "https://www.smc.edu/academics/academic-departments/philosophy-and-social-sciences/" },
+  "hss-388": { type: "OFFICE", label: "Philosophy/Social Sciences Offices", group: "PHIL_SOC_SCI", url: "https://www.smc.edu/academics/academic-departments/philosophy-and-social-sciences/" },
+
+  // --- FLOOR 3: History / Ethnic Studies Department ---
+  "dept-hallway-2": { type: "OFFICE", label: "History/Ethnic Studies", group: "HIST_ETH_STUDIES", url: "https://www.smc.edu/academics/academic-departments/history/" },
+  "hss-303": { type: "OFFICE", label: "History/Ethnic Studies Offices", group: "HIST_ETH_STUDIES", url: "https://www.smc.edu/academics/academic-departments/history/" },
+  "hss-304": { type: "OFFICE", label: "History/Ethnic Studies Offices", group: "HIST_ETH_STUDIES", url: "https://www.smc.edu/academics/academic-departments/history/" },
+  "hss-305": { type: "OFFICE", label: "History/Ethnic Studies Offices", group: "HIST_ETH_STUDIES", url: "https://www.smc.edu/academics/academic-departments/history/" },
+  "hss-306": { type: "OFFICE", label: "History/Ethnic Studies Offices", group: "HIST_ETH_STUDIES", url: "https://www.smc.edu/academics/academic-departments/history/" },
+  "hss-307": { type: "OFFICE", label: "History/Ethnic Studies Offices", group: "HIST_ETH_STUDIES", url: "https://www.smc.edu/academics/academic-departments/history/" },
+  "hss-308": { type: "OFFICE", label: "History/Ethnic Studies Offices", group: "HIST_ETH_STUDIES", url: "https://www.smc.edu/academics/academic-departments/history/" },
+  "hss-309": { type: "OFFICE", label: "History/Ethnic Studies Offices", group: "HIST_ETH_STUDIES", url: "https://www.smc.edu/academics/academic-departments/history/" },
+  "hss-310": { type: "OFFICE", label: "History/Ethnic Studies Offices", group: "HIST_ETH_STUDIES", url: "https://www.smc.edu/academics/academic-departments/history/" },
+  "hss-311": { type: "OFFICE", label: "History/Ethnic Studies Offices", group: "HIST_ETH_STUDIES", url: "https://www.smc.edu/academics/academic-departments/history/" },
+  "hss-312": { type: "OFFICE", label: "History/Ethnic Studies Offices", group: "HIST_ETH_STUDIES", url: "https://www.smc.edu/academics/academic-departments/history/" },
+  "hss-313": { type: "OFFICE", label: "History/Ethnic Studies Offices", group: "HIST_ETH_STUDIES", url: "https://www.smc.edu/academics/academic-departments/history/" },
+  "hss-316": { type: "OFFICE", label: "History/Ethnic Studies Offices", group: "HIST_ETH_STUDIES", url: "https://www.smc.edu/academics/academic-departments/history/" },
+  "hss-317": { type: "OFFICE", label: "History/Ethnic Studies Offices", group: "HIST_ETH_STUDIES", url: "https://www.smc.edu/academics/academic-departments/history/" },
+  "dept-conference-room": { type: "OFFICE", label: "Department Conference Room", group: "HIST_ETH_STUDIES", url: "https://www.smc.edu/academics/academic-departments/history/" },
+
+  // =============================================
+  // SCI (Science Building)
+  // =============================================
+
+  // --- FLOOR 1 ---
+  "sci-103": { type: "CLASSROOM", label: "SCI 103 (Prep Lab)", events: [] },
+  "sci-104": { type: "CLASSROOM", label: "SCI 104 (Prep Lab)", events: [] },
+  "sci-123": { type: "CLASSROOM", label: "SCI 123 (Prep Lab)", events: [] },
+  "sci-125": { type: "CLASSROOM", label: "SCI 125 (Prep Lab)", events: [] },
+  "sci-130": { type: "CLASSROOM", label: "SCI 130 (Biology Student Projects Lab)", events: [] },
+  "sci-131": { type: "CLASSROOM", label: "SCI 131 (Prep Lab)", events: [] },
+  "sci-132": { type: "CLASSROOM", label: "SCI 132 (Zoological Collections)", events: [] },
+  "sci-133": { type: "CLASSROOM", label: "SCI 133 (Prep Lab)", events: [] },
+
+  // --- FLOOR 2 ---
+  // Classrooms
+  "sci-201": { type: "CLASSROOM", label: "SCI 201", events: [] },
+  "sci-209": { type: "CLASSROOM", label: "SCI 209", events: [] },
+  "sci-220": { type: "CLASSROOM", label: "SCI 220", events: [] },
+  "sci-224": { type: "CLASSROOM", label: "SCI 224", events: [] },
+  "sci-225": { type: "CLASSROOM", label: "SCI 225", events: [] },
+  "sci-227": { type: "CLASSROOM", label: "SCI 227", events: [] },
+  "sci-242": { type: "CLASSROOM", label: "SCI 242", events: [] },
+  "sci-243": { type: "CLASSROOM", label: "SCI 243", events: [] },
+  "sci-244a": { type: "CLASSROOM", label: "SCI 244A", events: [] },
+  "sci-244b": { type: "CLASSROOM", label: "SCI 244B", events: [] },
+
+  // Prep Labs
+  "sci-202": { type: "CLASSROOM", label: "SCI 202 (Prep Lab)", events: [] },
+  "sci-204": { type: "CLASSROOM", label: "SCI 204 (Prep Lab)", events: [] },
+  "sci-205": { type: "CLASSROOM", label: "SCI 205 (Prep Lab)", events: [] },
+  "sci-206": { type: "CLASSROOM", label: "SCI 206 (Prep Lab)", events: [] },
+  "sci-208": { type: "CLASSROOM", label: "SCI 208 (Prep Lab)", events: [] },
+  "sci-221": { type: "CLASSROOM", label: "SCI 221 (Prep Lab)", events: [] },
+  "sci-222": { type: "CLASSROOM", label: "SCI 222 (Prep Lab)", events: [] },
+  "sci-223": { type: "CLASSROOM", label: "SCI 223 (Prep Lab)", events: [] },
+  "sci-226": { type: "CLASSROOM", label: "SCI 226 (Prep Lab)", events: [] },
+
+  // Bookable / Special
+  "sci-245": { type: "STUDY_ROOM", label: "Science Learning Resource Center", url: "https://www.smc.edu/student-support/academic-support/tutoring-centers/science-lrc.php" },
+  "sci-240": { type: "STUDY_ROOM", label: "Science Computer Center", url: "https://admin.smc.edu/administration/information-technology/academic-computing/" },
+
+  // --- Life/Physical Sciences Department ---
+  "sci-250-hallway": { type: "OFFICE", label: "Life/Physical Sciences", group: "LIFE_PHYS_SCI", url: "https://www.smc.edu/academics/academic-departments/physical-sciences/" },
+  "extra-office": { type: "OFFICE", label: "Life/Physical Sciences Office", group: "LIFE_PHYS_SCI", url: "https://www.smc.edu/academics/academic-departments/physical-sciences/" },
+  "sci-251": { type: "OFFICE", label: "Life/Physical Sciences Conference Room", group: "LIFE_PHYS_SCI", url: "https://www.smc.edu/academics/academic-departments/physical-sciences/" },
+  "sci-255": { type: "OFFICE", label: "Life/Physical Sciences Workroom", group: "LIFE_PHYS_SCI", url: "https://www.smc.edu/academics/academic-departments/physical-sciences/" },
+  "sci-258": { type: "OFFICE", label: "Life/Physical Sciences Offices", group: "LIFE_PHYS_SCI", url: "https://www.smc.edu/academics/academic-departments/physical-sciences/" },
+  "sci-261": { type: "OFFICE", label: "Life/Physical Sciences Offices", group: "LIFE_PHYS_SCI", url: "https://www.smc.edu/academics/academic-departments/physical-sciences/" },
+  "sci-262": { type: "OFFICE", label: "Life/Physical Sciences Offices", group: "LIFE_PHYS_SCI", url: "https://www.smc.edu/academics/academic-departments/physical-sciences/" },
+  "sci-263": { type: "OFFICE", label: "Life/Physical Sciences Offices", group: "LIFE_PHYS_SCI", url: "https://www.smc.edu/academics/academic-departments/physical-sciences/" },
+  "sci-264": { type: "OFFICE", label: "Life/Physical Sciences Offices", group: "LIFE_PHYS_SCI", url: "https://www.smc.edu/academics/academic-departments/physical-sciences/" },
+  "sci-265": { type: "OFFICE", label: "Life/Physical Sciences Offices", group: "LIFE_PHYS_SCI", url: "https://www.smc.edu/academics/academic-departments/physical-sciences/" },
+  "sci-266": { type: "OFFICE", label: "Life/Physical Sciences Offices", group: "LIFE_PHYS_SCI", url: "https://www.smc.edu/academics/academic-departments/physical-sciences/" },
+  "sci-267": { type: "OFFICE", label: "Life/Physical Sciences Offices", group: "LIFE_PHYS_SCI", url: "https://www.smc.edu/academics/academic-departments/physical-sciences/" },
+  "sci-268": { type: "OFFICE", label: "Life/Physical Sciences Offices", group: "LIFE_PHYS_SCI", url: "https://www.smc.edu/academics/academic-departments/physical-sciences/" },
+  "sci-269": { type: "OFFICE", label: "Life/Physical Sciences Offices", group: "LIFE_PHYS_SCI", url: "https://www.smc.edu/academics/academic-departments/physical-sciences/" },
+  "sci-270": { type: "OFFICE", label: "Life/Physical Sciences Offices", group: "LIFE_PHYS_SCI", url: "https://www.smc.edu/academics/academic-departments/physical-sciences/" },
+  "sci-271": { type: "OFFICE", label: "Life/Physical Sciences Offices", group: "LIFE_PHYS_SCI", url: "https://www.smc.edu/academics/academic-departments/physical-sciences/" },
+  "sci-272": { type: "OFFICE", label: "Life/Physical Sciences Offices", group: "LIFE_PHYS_SCI", url: "https://www.smc.edu/academics/academic-departments/physical-sciences/" },
+  "sci-273": { type: "OFFICE", label: "Life/Physical Sciences Offices", group: "LIFE_PHYS_SCI", url: "https://www.smc.edu/academics/academic-departments/physical-sciences/" },
+  "sci-274": { type: "OFFICE", label: "Life/Physical Sciences Offices", group: "LIFE_PHYS_SCI", url: "https://www.smc.edu/academics/academic-departments/physical-sciences/" },
+  "sci-275": { type: "OFFICE", label: "Life/Physical Sciences Offices", group: "LIFE_PHYS_SCI", url: "https://www.smc.edu/academics/academic-departments/physical-sciences/" },
+  "sci-276": { type: "OFFICE", label: "Life/Physical Sciences Offices", group: "LIFE_PHYS_SCI", url: "https://www.smc.edu/academics/academic-departments/physical-sciences/" },
+  "sci-277": { type: "OFFICE", label: "Life/Physical Sciences Offices", group: "LIFE_PHYS_SCI", url: "https://www.smc.edu/academics/academic-departments/physical-sciences/" },
+  "sci-278": { type: "OFFICE", label: "Life/Physical Sciences Offices", group: "LIFE_PHYS_SCI", url: "https://www.smc.edu/academics/academic-departments/physical-sciences/" },
+  "sci-279": { type: "OFFICE", label: "Life/Physical Sciences Offices", group: "LIFE_PHYS_SCI", url: "https://www.smc.edu/academics/academic-departments/physical-sciences/" },
+  "sci-280": { type: "OFFICE", label: "Life/Physical Sciences Offices", group: "LIFE_PHYS_SCI", url: "https://www.smc.edu/academics/academic-departments/physical-sciences/" },
+  "sci-281": { type: "OFFICE", label: "Life/Physical Sciences Offices", group: "LIFE_PHYS_SCI", url: "https://www.smc.edu/academics/academic-departments/physical-sciences/" },
+  "sci-282": { type: "OFFICE", label: "Life/Physical Sciences Offices", group: "LIFE_PHYS_SCI", url: "https://www.smc.edu/academics/academic-departments/physical-sciences/" },
+  "sci-283": { type: "OFFICE", label: "Life/Physical Sciences Offices", group: "LIFE_PHYS_SCI", url: "https://www.smc.edu/academics/academic-departments/physical-sciences/" },
+  "sci-284": { type: "OFFICE", label: "Life/Physical Sciences Offices", group: "LIFE_PHYS_SCI", url: "https://www.smc.edu/academics/academic-departments/physical-sciences/" },
+  "sci-285": { type: "OFFICE", label: "Life/Physical Sciences Offices", group: "LIFE_PHYS_SCI", url: "https://www.smc.edu/academics/academic-departments/physical-sciences/" },
+  "sci-286": { type: "OFFICE", label: "Life/Physical Sciences Offices", group: "LIFE_PHYS_SCI", url: "https://www.smc.edu/academics/academic-departments/physical-sciences/" },
+  "sci-287": { type: "OFFICE", label: "Life/Physical Sciences Offices", group: "LIFE_PHYS_SCI", url: "https://www.smc.edu/academics/academic-departments/physical-sciences/" },
+  "sci-288": { type: "OFFICE", label: "Life/Physical Sciences Offices", group: "LIFE_PHYS_SCI", url: "https://www.smc.edu/academics/academic-departments/physical-sciences/" },
+  "sci-289": { type: "OFFICE", label: "Life/Physical Sciences Offices", group: "LIFE_PHYS_SCI", url: "https://www.smc.edu/academics/academic-departments/physical-sciences/" },
+
+  // --- FLOOR 3 ---
+  // Classrooms
+  "sci-301": { type: "CLASSROOM", label: "SCI 301", events: [] },
+  "sci-303": { type: "CLASSROOM", label: "SCI 303 (Prep Lab)", events: [] },
+  "sci-305": { type: "CLASSROOM", label: "SCI 305", events: [] },
+  "sci-322": { type: "CLASSROOM", label: "SCI 322", events: [] },
+  "sci-328": { type: "CLASSROOM", label: "SCI 328 (Prep Lab)", events: [] },
+  "sci-332": { type: "CLASSROOM", label: "SCI 332", events: [] },
+  "sci-333": { type: "CLASSROOM", label: "SCI 333", events: [] },
+
+  // Chemistry Student Projects Lab
+  "sci-320": { type: "CLASSROOM", label: "SCI 320 (Chemistry Student Projects Lab)", events: [] },
+
+  // Chemistry Stockroom
+  "sci-324": { type: "OFFICE", label: "Chemistry Stockroom", group: "CHEM_STOCKROOM", url: "https://www.smc.edu/academics/academic-departments/physical-sciences/chemistry/" },
+  "sci-325": { type: "OFFICE", label: "Chemistry Stockroom", group: "CHEM_STOCKROOM", url: "https://www.smc.edu/academics/academic-departments/physical-sciences/chemistry/" },
+  "sci-326": { type: "OFFICE", label: "Chemistry Stockroom", group: "CHEM_STOCKROOM", url: "https://www.smc.edu/academics/academic-departments/physical-sciences/chemistry/" },
+  "sci-327": { type: "OFFICE", label: "Chemistry Stockroom", group: "CHEM_STOCKROOM", url: "https://www.smc.edu/academics/academic-departments/physical-sciences/chemistry/" },
+
+  // =============================================
+  // BUS (Business Building)
+  // =============================================
+
+  // --- FLOOR 1 ---
+
+
+  // --- Fashion Department ---
+  "bus-120": { type: "OFFICE", label: "Fashion Department", group: "FASHION_DEPT", url: "https://www.smc.edu/academics/academic-departments/photography-fashion/fashion/" },
+  "bus-120a": { type: "OFFICE", label: "Fashion Department Offices", group: "FASHION_DEPT", url: "https://www.smc.edu/academics/academic-departments/photography-fashion/fashion/" },
+  "bus-120b": { type: "OFFICE", label: "Fashion Department Offices", group: "FASHION_DEPT", url: "https://www.smc.edu/academics/academic-departments/photography-fashion/fashion/" },
+  "bus-120c": { type: "OFFICE", label: "Fashion Department Offices", group: "FASHION_DEPT", url: "https://www.smc.edu/academics/academic-departments/photography-fashion/fashion/" },
+  "bus-120d": { type: "OFFICE", label: "Fashion Department Offices", group: "FASHION_DEPT", url: "https://www.smc.edu/academics/academic-departments/photography-fashion/fashion/" },
+  "bus-120e": { type: "OFFICE", label: "Fashion Department Offices", group: "FASHION_DEPT", url: "https://www.smc.edu/academics/academic-departments/photography-fashion/fashion/" },
+  "bus-120f": { type: "OFFICE", label: "Fashion Department Offices", group: "FASHION_DEPT", url: "https://www.smc.edu/academics/academic-departments/photography-fashion/fashion/" },
+  "bus-120g": { type: "OFFICE", label: "Fashion Department Offices", group: "FASHION_DEPT", url: "https://www.smc.edu/academics/academic-departments/photography-fashion/fashion/" },
+  "bus-120h": { type: "OFFICE", label: "Fashion Department Offices", group: "FASHION_DEPT", url: "https://www.smc.edu/academics/academic-departments/photography-fashion/fashion/" },
+  "bus-120j": { type: "OFFICE", label: "Fashion Department Offices", group: "FASHION_DEPT", url: "https://www.smc.edu/academics/academic-departments/photography-fashion/fashion/" },
+
+  // --- Cosmetology Department ---
+  "bus-149a": { type: "OFFICE", label: "Cosmetology Offices", group: "COSMETOLOGY", url: "https://www.smc.edu/academics/academic-departments/cosmetology/" },
+  "bus-149b": { type: "OFFICE", label: "Cosmetology Offices", group: "COSMETOLOGY", url: "https://www.smc.edu/academics/academic-departments/cosmetology/" },
+  "bus-145b": { type: "OFFICE", label: "Cosmetology Offices", group: "COSMETOLOGY", url: "https://www.smc.edu/academics/academic-departments/cosmetology/" },
+  "bus-147": { type: "OFFICE", label: "Cosmetology Offices", group: "COSMETOLOGY", url: "https://www.smc.edu/academics/academic-departments/cosmetology/" },
+  "bus-148": { type: "OFFICE", label: "Cosmetology Offices", group: "COSMETOLOGY", url: "https://www.smc.edu/academics/academic-departments/cosmetology/" },
+  "bus-139": { type: "OFFICE", label: "Cosmetology Facial Room", group: "COSMETOLOGY", url: "https://www.smc.edu/academics/academic-departments/cosmetology/" },
+  "bus-131": { type: "OFFICE", label: "Cosmetology Skincare Room", group: "COSMETOLOGY", url: "https://www.smc.edu/academics/academic-departments/cosmetology/" },
+  "bus-143F": { type: "OFFICE", label: "Cosmetology Floor", group: "COSMETOLOGY", url: "https://www.smc.edu/academics/academic-departments/cosmetology/" },
+  "bus-143D": { type: "OFFICE", label: "Cosmetology Classroom", group: "COSMETOLOGY", url: "https://www.smc.edu/academics/academic-departments/cosmetology/" },
+  "bus-145": { type: "OFFICE", label: "Cosmetology Shampoo Bowl Room", group: "COSMETOLOGY", url: "https://www.smc.edu/academics/academic-departments/cosmetology/" },
+  "bus-151": { type: "OFFICE", label: "Cosmetology Skincare Room", group: "COSMETOLOGY", url: "https://www.smc.edu/academics/academic-departments/cosmetology/" },
+
+  // --- Board Room ---
+  "bus-117": { type: "OFFICE", label: "Board Room", group: "BOARD_ROOM", clickable: false },
+  "bus-111": { type: "OFFICE", label: "Board Room Extra Seating", group: "BOARD_ROOM", clickable: false },
+  "bus-117a": { type: "OFFICE", label: "Board Room", group: "BOARD_ROOM", clickable: false },
+  "bus-111a": { type: "OFFICE", label: "Board Room", group: "BOARD_ROOM", clickable: false },
+  "bus-117b": { type: "OFFICE", label: "Board Room", group: "BOARD_ROOM", clickable: false },
+
+  // --- FLOOR 2 ---
+  // CSIS Computer Lab
+  "bus-231": { type: "STUDY_ROOM", label: "CSIS Computer Lab", url: "https://admin.smc.edu/administration/information-technology/academic-computing/" },
+
+  // --- Business/CSIS Department ---
+  "bus-220": { type: "OFFICE", label: "Business/CSIS Offices", group: "BUS_CSIS_DEPT", url: "https://www.smc.edu/academics/academic-departments/business/" },
+  "bus-220a": { type: "OFFICE", label: "Business/CSIS Offices", group: "BUS_CSIS_DEPT", url: "https://www.smc.edu/academics/academic-departments/business/" },
+  "bus-220b": { type: "OFFICE", label: "Business/CSIS Offices", group: "BUS_CSIS_DEPT", url: "https://www.smc.edu/academics/academic-departments/business/" },
+  "bus-220c": { type: "OFFICE", label: "Business/CSIS Offices", group: "BUS_CSIS_DEPT", url: "https://www.smc.edu/academics/academic-departments/business/" },
+  "bus-220d": { type: "OFFICE", label: "Business/CSIS Offices", group: "BUS_CSIS_DEPT", url: "https://www.smc.edu/academics/academic-departments/business/" },
+  "bus-220e": { type: "OFFICE", label: "Business/CSIS Offices", group: "BUS_CSIS_DEPT", url: "https://www.smc.edu/academics/academic-departments/business/" },
+  "bus-220f": { type: "OFFICE", label: "Business/CSIS Offices", group: "BUS_CSIS_DEPT", url: "https://www.smc.edu/academics/academic-departments/business/" },
+  "bus-220g": { type: "OFFICE", label: "Business/CSIS Offices", group: "BUS_CSIS_DEPT", url: "https://www.smc.edu/academics/academic-departments/business/" },
+  "bus-220h": { type: "OFFICE", label: "Business/CSIS Offices", group: "BUS_CSIS_DEPT", url: "https://www.smc.edu/academics/academic-departments/business/" },
+  "bus-220j": { type: "OFFICE", label: "Business/CSIS Offices", group: "BUS_CSIS_DEPT", url: "https://www.smc.edu/academics/academic-departments/business/" },
+  "bus-220k": { type: "OFFICE", label: "Business/CSIS Offices", group: "BUS_CSIS_DEPT", url: "https://www.smc.edu/academics/academic-departments/business/" },
+  "bus-220m": { type: "OFFICE", label: "Business/CSIS Offices", group: "BUS_CSIS_DEPT", url: "https://www.smc.edu/academics/academic-departments/business/" },
+  "bus-220n": { type: "OFFICE", label: "Business/CSIS Offices", group: "BUS_CSIS_DEPT", url: "https://www.smc.edu/academics/academic-departments/business/" },
+  "bus-220p": { type: "OFFICE", label: "Business/CSIS Offices", group: "BUS_CSIS_DEPT", url: "https://www.smc.edu/academics/academic-departments/business/" },
+  "bus-220q": { type: "OFFICE", label: "Business/CSIS Offices", group: "BUS_CSIS_DEPT", url: "https://www.smc.edu/academics/academic-departments/business/" },
+  "bus-220r": { type: "OFFICE", label: "Business/CSIS Offices", group: "BUS_CSIS_DEPT", url: "https://www.smc.edu/academics/academic-departments/business/" },
+  "bus-220s": { type: "OFFICE", label: "Business/CSIS Conference Room", group: "BUS_CSIS_DEPT", url: "https://www.smc.edu/academics/academic-departments/business/" },
+  "bus-220t": { type: "OFFICE", label: "Business/CSIS Offices", group: "BUS_CSIS_DEPT", url: "https://www.smc.edu/academics/academic-departments/business/" },
+  "bus-220u": { type: "OFFICE", label: "SMC Career Closet", group: "BUS_CSIS_DEPT", url: "https://www.smc.edu/academics/academic-departments/business/career-closet.php" },
+  "bus-220v": { type: "OFFICE", label: "Business/CSIS Break Room", group: "BUS_CSIS_DEPT", url: "https://www.smc.edu/academics/academic-departments/business/" },
+  "bus-200a": { type: "OFFICE", label: "Business/CSIS Offices", group: "BUS_CSIS_DEPT", url: "https://www.smc.edu/academics/academic-departments/business/" },
+  "bus-200b": { type: "OFFICE", label: "Business/CSIS Offices", group: "BUS_CSIS_DEPT", url: "https://www.smc.edu/academics/academic-departments/business/" },
+  "bus-200c": { type: "OFFICE", label: "Business/CSIS Offices", group: "BUS_CSIS_DEPT", url: "https://www.smc.edu/academics/academic-departments/business/" },
+  "bus-200d": { type: "OFFICE", label: "Business/CSIS Offices", group: "BUS_CSIS_DEPT", url: "https://www.smc.edu/academics/academic-departments/business/" },
+  "bus-200e": { type: "OFFICE", label: "Business/CSIS Offices", group: "BUS_CSIS_DEPT", url: "https://www.smc.edu/academics/academic-departments/business/" },
+  "bus-261": { type: "OFFICE", label: "Business/CSIS Offices", group: "BUS_CSIS_DEPT", url: "https://www.smc.edu/academics/academic-departments/business/" }
 };

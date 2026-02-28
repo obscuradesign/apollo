@@ -25,6 +25,10 @@ def normalize_room_id(raw_text):
     MSB rooms return 'room-{number}' for backward compatibility.
     Other buildings return '{building_lower}-{number}'.
     Returns None if no building/room pattern is found."""
+    # Map website abbreviations to app prefixes
+    BUILDING_ALIASES = {
+        "DH": "drschr",   # Drescher Hall
+    }
     match = re.search(r"([A-Z]+)\s+(\d+[a-zA-Z]?)", raw_text)
     if not match:
         return None
@@ -32,7 +36,8 @@ def normalize_room_id(raw_text):
     number = match.group(2)
     if building == "MSB":
         return f"room-{number}"
-    return f"{building.lower()}-{number}"
+    prefix = BUILDING_ALIASES.get(building, building.lower())
+    return f"{prefix}-{number}"
 
 def parse_schedule(schedule_text):
     """

@@ -1,1 +1,539 @@
-{}
+{
+  "bus-253": {
+    "type": "CLASSROOM",
+    "label": "BUS 253",
+    "events": [
+      {
+        "day": "Tue",
+        "start": "15:00",
+        "end": "16:00",
+        "title": "SI Session",
+        "courseName": "SI: ACCTG 1",
+        "professor": "Leader: Maggie (Brookins)",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Thu",
+        "start": "15:00",
+        "end": "16:00",
+        "title": "SI Session",
+        "courseName": "SI: ACCTG 1",
+        "professor": "Leader: Maggie (Brookins)",
+        "status": "SI_SESSION"
+      }
+    ]
+  },
+  "bus-250": {
+    "type": "CLASSROOM",
+    "label": "BUS 250",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "15:40",
+        "end": "16:40",
+        "title": "SI Session",
+        "courseName": "SI: ACCTG 2",
+        "professor": "Leader: Sepia (Trippetti)",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Wed",
+        "start": "15:40",
+        "end": "16:40",
+        "title": "SI Session",
+        "courseName": "SI: ACCTG 2",
+        "professor": "Leader: Sepia (Trippetti)",
+        "status": "SI_SESSION"
+      }
+    ]
+  },
+  "room-206": {
+    "type": "CLASSROOM",
+    "label": "MSB 206",
+    "events": [
+      {
+        "day": "Tue",
+        "start": "12:00",
+        "end": "13:00",
+        "title": "SI Session",
+        "courseName": "SI: ANATOMY 1",
+        "professor": "Leader: Lilly (Grant)",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Tue",
+        "start": "14:00",
+        "end": "15:00",
+        "title": "SI Session",
+        "courseName": "SI: Chem 19",
+        "professor": "Leader: Tina (Kelsey)",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Fri",
+        "start": "17:30",
+        "end": "18:30",
+        "title": "SI Session",
+        "courseName": "SI: Chem 19",
+        "professor": "Leader: Tina (Kelsey)",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Tue",
+        "start": "08:15",
+        "end": "09:15",
+        "title": "SI Session",
+        "courseName": "SI: MATH 2",
+        "professor": "Leader: Kimberly (Quevedo)",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Thu",
+        "start": "11:30",
+        "end": "12:30",
+        "title": "SI Session",
+        "courseName": "SI: MATH 2",
+        "professor": "Leader: Kimberly (Quevedo)",
+        "status": "SI_SESSION"
+      }
+    ]
+  },
+  "room-207": {
+    "type": "CLASSROOM",
+    "label": "MSB 207",
+    "events": [
+      {
+        "day": "Thu",
+        "start": "12:00",
+        "end": "13:00",
+        "title": "SI Session",
+        "courseName": "SI: ANATOMY 1",
+        "professor": "Leader: Lilly (Grant)",
+        "status": "SI_SESSION"
+      }
+    ]
+  },
+  "sci-157": {
+    "type": "CLASSROOM",
+    "label": "SCI 157",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "14:00",
+        "end": "15:00",
+        "title": "SI Session",
+        "courseName": "SI: ANATOMY 1",
+        "professor": "Leader: Journey (Williams)",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Thu",
+        "start": "16:00",
+        "end": "17:00",
+        "title": "SI Session",
+        "courseName": "SI: ANATOMY 1",
+        "professor": "Leader: Journey (Williams)",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Thu",
+        "start": "11:30",
+        "end": "12:30",
+        "title": "SI Session",
+        "courseName": "SI: Chem 12",
+        "professor": "Leader: Sirabi (Hunter)",
+        "status": "SI_SESSION"
+      }
+    ]
+  },
+  "room-211": {
+    "type": "CLASSROOM",
+    "label": "MSB 211",
+    "events": [
+      {
+        "day": "Tue",
+        "start": "11:30",
+        "end": "12:30",
+        "title": "SI Session",
+        "courseName": "SI: Chem 10",
+        "professor": "Leader: Luna (Schmidt)",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Thu",
+        "start": "11:30",
+        "end": "12:30",
+        "title": "SI Session",
+        "courseName": "SI: Chem 10",
+        "professor": "Leader: Luna (Schmidt)",
+        "status": "SI_SESSION"
+      }
+    ]
+  },
+  "sci-159": {
+    "type": "CLASSROOM",
+    "label": "SCI 159",
+    "events": [
+      {
+        "day": "Wed",
+        "start": "16:30",
+        "end": "17:30",
+        "title": "SI Session",
+        "courseName": "SI: Chem 12",
+        "professor": "Leader: Sirabi (Hunter)",
+        "status": "SI_SESSION"
+      }
+    ]
+  },
+  "sci-151": {
+    "type": "CLASSROOM",
+    "label": "SCI 151",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "14:30",
+        "end": "15:30",
+        "title": "SI Session",
+        "courseName": "SI: Chem 21",
+        "professor": "Leader: Maliha (Baker)",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Wed",
+        "start": "14:30",
+        "end": "15:30",
+        "title": "SI Session",
+        "courseName": "SI: Chem 21",
+        "professor": "Leader: Maliha (Baker)",
+        "status": "SI_SESSION"
+      }
+    ]
+  },
+  "room-310": {
+    "type": "CLASSROOM",
+    "label": "MSB 310",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "11:30",
+        "end": "12:30",
+        "title": "SI Session",
+        "courseName": "SI: Chem 22",
+        "professor": "Leader: Kenza",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Thu",
+        "start": "11:30",
+        "end": "12:30",
+        "title": "SI Session",
+        "courseName": "SI: Chem 22",
+        "professor": "Leader: Kenza",
+        "status": "SI_SESSION"
+      }
+    ]
+  },
+  "drschr-305": {
+    "type": "CLASSROOM",
+    "label": "DH 305",
+    "events": [
+      {
+        "day": "Tue",
+        "start": "14:15",
+        "end": "15:15",
+        "title": "SI Session",
+        "courseName": "SI: CS 20A",
+        "professor": "Leader: Vanessa",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Thu",
+        "start": "14:15",
+        "end": "15:15",
+        "title": "SI Session",
+        "courseName": "SI: CS 20A",
+        "professor": "Leader: Vanessa",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Mon",
+        "start": "11:00",
+        "end": "12:00",
+        "title": "SI Session",
+        "courseName": "SI: CS20A",
+        "professor": "Leader: Niki",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Mon",
+        "start": "15:30",
+        "end": "16:30",
+        "title": "SI Session",
+        "courseName": "SI: CS 52",
+        "professor": "Leader: Dara",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Wed",
+        "start": "15:30",
+        "end": "16:30",
+        "title": "SI Session",
+        "courseName": "SI: CS 52",
+        "professor": "Leader: Dara",
+        "status": "SI_SESSION"
+      }
+    ]
+  },
+  "room-205": {
+    "type": "CLASSROOM",
+    "label": "MSB 205",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "14:00",
+        "end": "15:00",
+        "title": "SI Session",
+        "courseName": "SI: ENGR 12",
+        "professor": "Leader: Ethan",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Tue",
+        "start": "11:30",
+        "end": "12:30",
+        "title": "SI Session",
+        "courseName": "SI: ENGR 12",
+        "professor": "Leader: Ethan",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Mon",
+        "start": "11:00",
+        "end": "12:00",
+        "title": "SI Session",
+        "courseName": "SI: PHYSCS 21",
+        "professor": "Leader: Frans (Dang)",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Wed",
+        "start": "11:00",
+        "end": "12:00",
+        "title": "SI Session",
+        "courseName": "SI: PHYSCS 21",
+        "professor": "Leader: Frans (Dang)",
+        "status": "SI_SESSION"
+      }
+    ]
+  },
+  "drschr-222": {
+    "type": "CLASSROOM",
+    "label": "DH 222",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "17:00",
+        "end": "18:00",
+        "title": "SI Session",
+        "courseName": "SI: JAPAN 1",
+        "professor": "Leader: Nicholas",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Wed",
+        "start": "17:00",
+        "end": "18:00",
+        "title": "SI Session",
+        "courseName": "SI: JAPAN 1",
+        "professor": "Leader: Nicholas",
+        "status": "SI_SESSION"
+      }
+    ]
+  },
+  "room-208": {
+    "type": "CLASSROOM",
+    "label": "MSB 208",
+    "events": [
+      {
+        "day": "Tue",
+        "start": "15:30",
+        "end": "16:30",
+        "title": "SI Session",
+        "courseName": "SI: Math 7",
+        "professor": "Leader: Michael (Wang)",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Thu",
+        "start": "15:30",
+        "end": "16:30",
+        "title": "SI Session",
+        "courseName": "SI: Math 7",
+        "professor": "Leader: Michael (Wang)",
+        "status": "SI_SESSION"
+      }
+    ]
+  },
+  "room-101": {
+    "type": "CLASSROOM",
+    "label": "MSB 101",
+    "events": [
+      {
+        "day": "Tue",
+        "start": "11:00",
+        "end": "12:00",
+        "title": "SI Session",
+        "courseName": "SI: MATH 7",
+        "professor": "Leader: Spencer (Rodas)",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Thu",
+        "start": "11:00",
+        "end": "12:00",
+        "title": "SI Session",
+        "courseName": "SI: MATH 7",
+        "professor": "Leader: Spencer (Rodas)",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Mon",
+        "start": "16:30",
+        "end": "17:30",
+        "title": "SI Session",
+        "courseName": "SI: Math 28",
+        "professor": "Leader: Edras",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Wed",
+        "start": "16:30",
+        "end": "17:30",
+        "title": "SI Session",
+        "courseName": "SI: Math 28",
+        "professor": "Leader: Edras",
+        "status": "SI_SESSION"
+      }
+    ]
+  },
+  "room-210": {
+    "type": "CLASSROOM",
+    "label": "MSB 210",
+    "events": [
+      {
+        "day": "Tue",
+        "start": "11:30",
+        "end": "12:30",
+        "title": "SI Session",
+        "courseName": "SI: MATH 8",
+        "professor": "Leader: Luis (Konya)",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Thu",
+        "start": "11:30",
+        "end": "12:30",
+        "title": "SI Session",
+        "courseName": "SI: MATH 8",
+        "professor": "Leader: Luis (Konya)",
+        "status": "SI_SESSION"
+      }
+    ]
+  },
+  "room-301": {
+    "type": "CLASSROOM",
+    "label": "MSB 301",
+    "events": [
+      {
+        "day": "Thu",
+        "start": "12:35",
+        "end": "13:35",
+        "title": "SI Session",
+        "courseName": "SI: MATH 8",
+        "professor": "Leader: Wendy (Lai)",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Thu",
+        "start": "13:35",
+        "end": "14:35",
+        "title": "SI Session",
+        "courseName": "SI: MATH 8",
+        "professor": "Leader: Wendy (Lai)",
+        "status": "SI_SESSION"
+      }
+    ]
+  },
+  "room-303": {
+    "type": "CLASSROOM",
+    "label": "MSB 303",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "11:00",
+        "end": "12:00",
+        "title": "SI Session",
+        "courseName": "SI: Math 11",
+        "professor": "Leader: Sander (Bene)",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Wed",
+        "start": "11:00",
+        "end": "12:00",
+        "title": "SI Session",
+        "courseName": "SI: Math 11",
+        "professor": "Leader: Sander (Bene)",
+        "status": "SI_SESSION"
+      }
+    ]
+  },
+  "room-309": {
+    "type": "CLASSROOM",
+    "label": "MSB 309",
+    "events": [
+      {
+        "day": "Tue",
+        "start": "11:15",
+        "end": "12:15",
+        "title": "SI Session",
+        "courseName": "SI: Math 21",
+        "professor": "Leader: Jack (Ross)",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Thu",
+        "start": "11:15",
+        "end": "12:15",
+        "title": "SI Session",
+        "courseName": "SI: Math 21",
+        "professor": "Leader: Jack (Ross)",
+        "status": "SI_SESSION"
+      }
+    ]
+  },
+  "room-209": {
+    "type": "CLASSROOM",
+    "label": "MSB 209",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "11:30",
+        "end": "12:30",
+        "title": "SI Session",
+        "courseName": "SI: PHYSCS 22",
+        "professor": "Leader: Jaxon (Strohmaier)",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Tue",
+        "start": "11:00",
+        "end": "12:00",
+        "title": "SI Session",
+        "courseName": "SI: PHYSCS 22",
+        "professor": "Leader: Jaxon (Strohmaier)",
+        "status": "SI_SESSION"
+      }
+    ]
+  }
+}

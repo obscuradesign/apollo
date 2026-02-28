@@ -26,37 +26,73 @@ TARGET_SUBJECTS = [ "Accounting",
 ]
 
 def normalize_room_id(raw_text):
-    if "MSB" not in raw_text:
+    """Extracts a room key from location text like 'MSB 101' or 'SCI 159'.
+    MSB rooms return 'room-{number}' for backward compatibility.
+    Other buildings return '{building_lower}-{number}'.
+    Returns None if no building/room pattern is found."""
+    # Map website abbreviations to app prefixes
+    BUILDING_ALIASES = {
+        "DH": "drschr",   # Drescher Hall
+    }
+    match = re.search(r"([A-Z]+)\s+(\d+[a-zA-Z]?)", raw_text)
+    if not match:
         return None
-    match = re.search(r"(?:MSB)\s+(\d+[a-zA-Z]?)", raw_text)
-    if match:
-        return f"room-{match.group(1)}"
-    return None
+    building = match.group(1)
+    number = match.group(2)
+    if building == "MSB":
+        return f"room-{number}"
+    prefix = BUILDING_ALIASES.get(building, building.lower())
+    return f"{prefix}-{number}"
 
 def parse_si_time(time_str):
     # Normalize dashes and spaces
     clean_str = re.sub(r"[—–-]", "-", time_str).strip()
     
-    # Regex: Day + Start + - + End + am/pm
-    # Matches "Monday 12:30 - 1:30 p.m." or "Tue 8:00 - 9:00 a.m."
-    match = re.search(r"^([A-Za-z]+)\s+(\d{1,2}(?::\d{2})?)\s*-\s*(\d{1,2}(?::\d{2})?)\s*([ap]\.?m\.?)", clean_str, re.IGNORECASE)
+    # Try Format 1: Each time has its own meridiem
+    # e.g. "Monday 4:30 p.m. - 5:30 p.m."
+    match = re.search(
+        r"^([A-Za-z]+)\s+(\d{1,2}(?::\d{2})?)\s*([ap]\.?m\.?)\s*-\s*(\d{1,2}(?::\d{2})?)\s*([ap]\.?m\.?)",
+        clean_str, re.IGNORECASE
+    )
     
-    if not match:
-        return None, None, None
+    if match:
+        day_full = match.group(1)
+        start_raw = match.group(2)
+        start_meridiem = match.group(3).replace(".", "").lower()
+        end_raw = match.group(4)
+        end_meridiem = match.group(5).replace(".", "").lower()
+    else:
+        # Format 2: Single meridiem at end
+        # e.g. "Monday 12:30 - 1:30 p.m." or "Tue 8:00 - 9:00 a.m."
+        match = re.search(
+            r"^([A-Za-z]+)\s+(\d{1,2}(?::\d{2})?)\s*-\s*(\d{1,2}(?::\d{2})?)\s*([ap]\.?m\.?)",
+            clean_str, re.IGNORECASE
+        )
+        if not match:
+            return None, None, None
 
-    day_full = match.group(1)
-    start_raw = match.group(2)
-    end_raw = match.group(3)
-    meridiem = match.group(4).replace(".", "").lower()
+        day_full = match.group(1)
+        start_raw = match.group(2)
+        end_raw = match.group(3)
+        end_meridiem = match.group(4).replace(".", "").lower()
+
+        # Infer start meridiem from end meridiem
+        start_hour = int(start_raw.split(":")[0]) if ":" in start_raw else int(start_raw)
+        
+        # If end is PM and start hour is 8-11, the session spans AM→PM (e.g. "11:30 - 12:30 p.m.")
+        if "pm" in end_meridiem and 8 <= start_hour <= 11:
+            start_meridiem = "am"
+        else:
+            start_meridiem = end_meridiem
 
     days_map = {
         "Monday": "Mon", "Tuesday": "Tue", "Wednesday": "Wed", 
         "Thursday": "Thu", "Friday": "Fri", "Saturday": "Sat", "Sunday": "Sun"
     }
-    # Handle partial matches like "Tue" or "Tuesday"
+    # Handle partial matches and typos like "Wendesday"
     day_short = None
     for full, short in days_map.items():
-        if full.lower().startswith(day_full.lower()):
+        if full.lower().startswith(day_full.lower()[:2]):
             day_short = short
             break
             
@@ -68,22 +104,8 @@ def parse_si_time(time_str):
         if "pm" in m and h != 12: h += 12
         if "am" in m and h == 12: h = 0
         return f"{h:02d}:{min_:02d}"
-
-    def get_val(t): 
-        if ":" not in t: t += ":00"
-        return int(t.replace(":",""))
-
-    s_val = get_val(start_raw)
-    e_val = get_val(end_raw)
-    
-    start_meridiem = meridiem
-    # Heuristic: If start > end (e.g. 11 - 1), start is likely AM
-    if "pm" in meridiem and s_val > e_val and s_val < 1200:
-        start_meridiem = "am"
-    elif "pm" in meridiem and s_val == 1200:
-        start_meridiem = "pm"
         
-    return day_short, convert(start_raw, start_meridiem), convert(end_raw, meridiem)
+    return day_short, convert(start_raw, start_meridiem), convert(end_raw, end_meridiem)
 
 def scrape_si_sessions():
     options = webdriver.ChromeOptions()

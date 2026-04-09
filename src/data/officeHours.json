@@ -1,0 +1,1868 @@
+{
+  "drschr-305": {
+    "type": "CLASSROOM",
+    "label": "DH 305",
+    "events": [
+      {
+        "day": "Tue",
+        "start": "16:00",
+        "end": "18:00",
+        "title": "Office Hours",
+        "courseName": "CS20A/CS52 OH",
+        "professor": "Prof. Greenfield",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "16:00",
+        "end": "18:00",
+        "title": "Office Hours",
+        "courseName": "CS20A/CS52 OH",
+        "professor": "Prof. Greenfield",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "room-203": {
+    "type": "CLASSROOM",
+    "label": "MSB 203",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "15:40",
+        "end": "16:05",
+        "title": "Office Hours",
+        "courseName": "Prof. Asadyan - Math OH",
+        "professor": "Prof. Asadyan",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Wed",
+        "start": "15:40",
+        "end": "16:05",
+        "title": "Office Hours",
+        "courseName": "Prof. Asadyan - Math OH",
+        "professor": "Prof. Asadyan",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "room-106": {
+    "type": "CLASSROOM",
+    "label": "MSB 106",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "18:25",
+        "end": "19:15",
+        "title": "Office Hours",
+        "courseName": "Prof. Askarian - Math 13 OH",
+        "professor": "Prof. Askarian",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Wed",
+        "start": "18:25",
+        "end": "19:15",
+        "title": "Office Hours",
+        "courseName": "Prof. Askarian - Math 13 OH",
+        "professor": "Prof. Askarian",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Tue",
+        "start": "18:25",
+        "end": "19:15",
+        "title": "Office Hours",
+        "courseName": "Prof. Askarian - Math 8 OH",
+        "professor": "Prof. Askarian",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "18:25",
+        "end": "19:15",
+        "title": "Office Hours",
+        "courseName": "Prof. Askarian - Math 8 OH",
+        "professor": "Prof. Askarian",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Fri",
+        "start": "09:00",
+        "end": "10:30",
+        "title": "Office Hours",
+        "courseName": "Prof. Herichi - Math 11 OH",
+        "professor": "Prof. Herichi",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Fri",
+        "start": "10:45",
+        "end": "12:15",
+        "title": "Office Hours",
+        "courseName": "Prof. Herichi - Math 15 OH",
+        "professor": "Prof. Herichi",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Mon",
+        "start": "15:45",
+        "end": "16:30",
+        "title": "Office Hours",
+        "courseName": "Prof. Lai - Math 8 OH",
+        "professor": "Prof. Lai",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Tue",
+        "start": "15:45",
+        "end": "16:30",
+        "title": "Office Hours",
+        "courseName": "Prof. Lai - Math 7 OH",
+        "professor": "Prof. Lai",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "15:45",
+        "end": "16:30",
+        "title": "Office Hours",
+        "courseName": "Prof. Lai - Math 11 OH",
+        "professor": "Prof. Lai",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "16:00",
+        "end": "17:00",
+        "title": "Office Hours",
+        "courseName": "Prof. Lopez - Math 2 OH",
+        "professor": "Prof. Lopez",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "room-253": {
+    "type": "CLASSROOM",
+    "label": "MSB 253",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "11:40",
+        "end": "12:40",
+        "title": "Office Hours",
+        "courseName": "Prof. Baskauskas - Math OH",
+        "professor": "Prof. Baskauskas",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Wed",
+        "start": "11:40",
+        "end": "12:40",
+        "title": "Office Hours",
+        "courseName": "Prof. Baskauskas - Math OH",
+        "professor": "Prof. Baskauskas",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Mon",
+        "start": "18:00",
+        "end": "18:20",
+        "title": "Office Hours",
+        "courseName": "Prof. Baskauskas - Math OH",
+        "professor": "Prof. Baskauskas",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Wed",
+        "start": "18:00",
+        "end": "18:20",
+        "title": "Office Hours",
+        "courseName": "Prof. Baskauskas - Math OH",
+        "professor": "Prof. Baskauskas",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "bundy-213": {
+    "type": "CLASSROOM",
+    "label": "Bundy 213",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "09:20",
+        "end": "10:10",
+        "title": "Office Hours",
+        "courseName": "Prof. Bayssa - Math OH",
+        "professor": "Prof. Bayssa",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Wed",
+        "start": "09:20",
+        "end": "10:10",
+        "title": "Office Hours",
+        "courseName": "Prof. Bayssa - Math OH",
+        "professor": "Prof. Bayssa",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Tue",
+        "start": "16:25",
+        "end": "17:25",
+        "title": "Office Hours",
+        "courseName": "Prof. England - Math OH",
+        "professor": "Prof. England",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "16:25",
+        "end": "17:25",
+        "title": "Office Hours",
+        "courseName": "Prof. England - Math OH",
+        "professor": "Prof. England",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Tue",
+        "start": "10:30",
+        "end": "10:55",
+        "title": "Office Hours",
+        "courseName": "Prof. Graves - Math OH",
+        "professor": "Prof. Graves",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "10:30",
+        "end": "10:55",
+        "title": "Office Hours",
+        "courseName": "Prof. Graves - Math OH",
+        "professor": "Prof. Graves",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "room-241": {
+    "type": "CLASSROOM",
+    "label": "MSB 241",
+    "events": [
+      {
+        "day": "Wed",
+        "start": "10:30",
+        "end": "11:10",
+        "title": "Office Hours",
+        "courseName": "Prof. Bene - Math OH",
+        "professor": "Prof. Bene",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "10:30",
+        "end": "11:10",
+        "title": "Office Hours",
+        "courseName": "Prof. Bene - Math OH",
+        "professor": "Prof. Bene",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "room-107": {
+    "type": "CLASSROOM",
+    "label": "MSB 107 Math Lab",
+    "events": [
+      {
+        "day": "Wed",
+        "start": "13:45",
+        "end": "14:45",
+        "title": "Office Hours",
+        "courseName": "Prof. Bene - Math OH",
+        "professor": "Prof. Bene",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Tue",
+        "start": "12:50",
+        "end": "13:50",
+        "title": "Office Hours",
+        "courseName": "Prof. Foster - Math OH",
+        "professor": "Prof. Foster",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Tue",
+        "start": "08:55",
+        "end": "09:55",
+        "title": "Office Hours",
+        "courseName": "Prof. Lee - Math OH",
+        "professor": "Prof. Lee",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Wed",
+        "start": "12:45",
+        "end": "13:45",
+        "title": "Office Hours",
+        "courseName": "Prof. Lopez - Math OH",
+        "professor": "Prof. Lopez",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Mon",
+        "start": "11:10",
+        "end": "12:10",
+        "title": "Office Hours",
+        "courseName": "Prof. Musselman - Math OH",
+        "professor": "Prof. Musselman",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "16:30",
+        "end": "17:30",
+        "title": "Office Hours",
+        "courseName": "Prof. Pachas-Flores - Math OH",
+        "professor": "Prof. Pachas-Flores",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Tue",
+        "start": "08:30",
+        "end": "09:30",
+        "title": "Office Hours",
+        "courseName": "Prof. Quevedo - Math OH",
+        "professor": "Prof. Quevedo",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Wed",
+        "start": "18:00",
+        "end": "19:00",
+        "title": "Office Hours",
+        "courseName": "Prof. Richardson - Math OH",
+        "professor": "Prof. Richardson",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Mon",
+        "start": "15:25",
+        "end": "16:25",
+        "title": "Office Hours",
+        "courseName": "Prof. Simo - Math OH",
+        "professor": "Prof. Simo",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Mon",
+        "start": "12:15",
+        "end": "13:55",
+        "title": "Office Hours",
+        "courseName": "Prof. Smith - Math OH",
+        "professor": "Prof. Smith",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Wed",
+        "start": "12:15",
+        "end": "13:55",
+        "title": "Office Hours",
+        "courseName": "Prof. Smith - Math OH",
+        "professor": "Prof. Smith",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Wed",
+        "start": "15:00",
+        "end": "16:00",
+        "title": "Office Hours",
+        "courseName": "Prof. Soleymani - Math OH",
+        "professor": "Prof. Soleymani",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Tue",
+        "start": "16:05",
+        "end": "16:35",
+        "title": "Office Hours",
+        "courseName": "Prof. Wang - Math OH",
+        "professor": "Prof. Wang",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "16:05",
+        "end": "16:35",
+        "title": "Office Hours",
+        "courseName": "Prof. Wang - Math OH",
+        "professor": "Prof. Wang",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "pv-176": {
+    "type": "CLASSROOM",
+    "label": "PV 176",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "12:25",
+        "end": "13:25",
+        "title": "Office Hours",
+        "courseName": "Prof. Bronie - Math OH",
+        "professor": "Prof. Bronie",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Wed",
+        "start": "14:55",
+        "end": "16:03",
+        "title": "Office Hours",
+        "courseName": "Prof. Bronie - Math OH",
+        "professor": "Prof. Bronie",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Tue",
+        "start": "13:00",
+        "end": "14:15",
+        "title": "Office Hours",
+        "courseName": "Prof. Fanelli - Math OH",
+        "professor": "Prof. Fanelli",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "13:00",
+        "end": "14:15",
+        "title": "Office Hours",
+        "courseName": "Prof. Fanelli - Math OH",
+        "professor": "Prof. Fanelli",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "room-260": {
+    "type": "CLASSROOM",
+    "label": "MSB 260",
+    "events": [
+      {
+        "day": "Tue",
+        "start": "17:40",
+        "end": "18:45",
+        "title": "Office Hours",
+        "courseName": "Prof. Chan - Math OH",
+        "professor": "Prof. Chan",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "17:40",
+        "end": "18:45",
+        "title": "Office Hours",
+        "courseName": "Prof. Chan - Math OH",
+        "professor": "Prof. Chan",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "cmd-105": {
+    "type": "CLASSROOM",
+    "label": "CMD 105",
+    "events": [
+      {
+        "day": "Tue",
+        "start": "12:25",
+        "end": "13:00",
+        "title": "Office Hours",
+        "courseName": "Prof. Chau - Math OH",
+        "professor": "Prof. Chau",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "12:25",
+        "end": "13:00",
+        "title": "Office Hours",
+        "courseName": "Prof. Chau - Math OH",
+        "professor": "Prof. Chau",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Tue",
+        "start": "11:55",
+        "end": "12:40",
+        "title": "Office Hours",
+        "courseName": "Prof. Dean - Math OH",
+        "professor": "Prof. Dean",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "11:55",
+        "end": "12:40",
+        "title": "Office Hours",
+        "courseName": "Prof. Dean - Math OH",
+        "professor": "Prof. Dean",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "room-261": {
+    "type": "CLASSROOM",
+    "label": "MSB 261",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "16:30",
+        "end": "16:55",
+        "title": "Office Hours",
+        "courseName": "Prof. Chitgar - Math OH",
+        "professor": "Prof. Chitgar",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Wed",
+        "start": "16:30",
+        "end": "16:55",
+        "title": "Office Hours",
+        "courseName": "Prof. Chitgar - Math OH",
+        "professor": "Prof. Chitgar",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Wed",
+        "start": "20:10",
+        "end": "20:40",
+        "title": "Office Hours",
+        "courseName": "Prof. Chitgar - Math OH",
+        "professor": "Prof. Chitgar",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Tue",
+        "start": "07:00",
+        "end": "07:55",
+        "title": "Office Hours",
+        "courseName": "Prof. Kim - Math OH",
+        "professor": "Prof. Kim",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "07:00",
+        "end": "07:55",
+        "title": "Office Hours",
+        "courseName": "Prof. Kim - Math OH",
+        "professor": "Prof. Kim",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Tue",
+        "start": "15:30",
+        "end": "15:55",
+        "title": "Office Hours",
+        "courseName": "Prof. Mardirosian - Math OH",
+        "professor": "Prof. Mardirosian",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Tue",
+        "start": "18:30",
+        "end": "19:30",
+        "title": "Office Hours",
+        "courseName": "Prof. Mardirosian - Math OH",
+        "professor": "Prof. Mardirosian",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "18:30",
+        "end": "19:30",
+        "title": "Office Hours",
+        "courseName": "Prof. Mardirosian - Math OH",
+        "professor": "Prof. Mardirosian",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "bundy-228": {
+    "type": "CLASSROOM",
+    "label": "Bundy 228",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "14:30",
+        "end": "15:20",
+        "title": "Office Hours",
+        "courseName": "Prof. Dabagh - Math OH",
+        "professor": "Prof. Dabagh",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Wed",
+        "start": "14:30",
+        "end": "15:20",
+        "title": "Office Hours",
+        "courseName": "Prof. Dabagh - Math OH",
+        "professor": "Prof. Dabagh",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "bundy-216": {
+    "type": "CLASSROOM",
+    "label": "Bundy 216",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "17:00",
+        "end": "17:30",
+        "title": "Office Hours",
+        "courseName": "Prof. England - Math OH",
+        "professor": "Prof. England",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Wed",
+        "start": "17:00",
+        "end": "17:30",
+        "title": "Office Hours",
+        "courseName": "Prof. England - Math OH",
+        "professor": "Prof. England",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "room-252": {
+    "type": "CLASSROOM",
+    "label": "MSB 252",
+    "events": [
+      {
+        "day": "Tue",
+        "start": "13:00",
+        "end": "14:15",
+        "title": "Office Hours",
+        "courseName": "OH",
+        "professor": "Fanelli, D.",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "13:00",
+        "end": "14:15",
+        "title": "Office Hours",
+        "courseName": "OH",
+        "professor": "Fanelli, D.",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Mon",
+        "start": "19:00",
+        "end": "20:10",
+        "title": "Office Hours",
+        "courseName": "Prof. Jiang - Math OH",
+        "professor": "Prof. Jiang",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Wed",
+        "start": "19:00",
+        "end": "20:10",
+        "title": "Office Hours",
+        "courseName": "Prof. Jiang - Math OH",
+        "professor": "Prof. Jiang",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "room-239": {
+    "type": "CLASSROOM",
+    "label": "MSB 239",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "07:10",
+        "end": "07:40",
+        "title": "Office Hours",
+        "courseName": "Prof. Foster - Math OH",
+        "professor": "Prof. Foster",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Wed",
+        "start": "07:10",
+        "end": "07:40",
+        "title": "Office Hours",
+        "courseName": "Prof. Foster - Math OH",
+        "professor": "Prof. Foster",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Tue",
+        "start": "07:10",
+        "end": "07:55",
+        "title": "Office Hours",
+        "courseName": "Prof. Foster - Math OH",
+        "professor": "Prof. Foster",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "07:10",
+        "end": "07:55",
+        "title": "Office Hours",
+        "courseName": "Prof. Foster - Math OH",
+        "professor": "Prof. Foster",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "12:50",
+        "end": "13:50",
+        "title": "Office Hours",
+        "courseName": "Prof. Foster - Math OH",
+        "professor": "Prof. Foster",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Mon",
+        "start": "12:45",
+        "end": "13:15",
+        "title": "Office Hours",
+        "courseName": "Prof. Quevedo - Math OH",
+        "professor": "Prof. Quevedo",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Wed",
+        "start": "12:45",
+        "end": "13:15",
+        "title": "Office Hours",
+        "courseName": "Prof. Quevedo - Math OH",
+        "professor": "Prof. Quevedo",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "08:15",
+        "end": "09:15",
+        "title": "Office Hours",
+        "courseName": "Prof. Quevedo - Math OH",
+        "professor": "Prof. Quevedo",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "room-258": {
+    "type": "CLASSROOM",
+    "label": "MSB 258",
+    "events": [
+      {
+        "day": "Tue",
+        "start": "07:10",
+        "end": "07:55",
+        "title": "Office Hours",
+        "courseName": "Prof. Gharamanians - Math OH",
+        "professor": "Prof. Gharamanians",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "07:10",
+        "end": "07:55",
+        "title": "Office Hours",
+        "courseName": "Prof. Gharamanians - Math OH",
+        "professor": "Prof. Gharamanians",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Tue",
+        "start": "11:30",
+        "end": "12:30",
+        "title": "Office Hours",
+        "courseName": "Prof. Gharamanians - Math OH",
+        "professor": "Prof. Gharamanians",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "11:30",
+        "end": "12:30",
+        "title": "Office Hours",
+        "courseName": "Prof. Gharamanians - Math OH",
+        "professor": "Prof. Gharamanians",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "bundy-212": {
+    "type": "CLASSROOM",
+    "label": "Bundy 212",
+    "events": [
+      {
+        "day": "Tue",
+        "start": "13:30",
+        "end": "15:04",
+        "title": "Office Hours",
+        "courseName": "Prof. Graves - Math OH",
+        "professor": "Prof. Graves",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "room-256": {
+    "type": "CLASSROOM",
+    "label": "MSB 256",
+    "events": [
+      {
+        "day": "Thu",
+        "start": "10:00",
+        "end": "11:00",
+        "title": "Office Hours",
+        "courseName": "Prof. Hancock - Math OH",
+        "professor": "Prof. Hancock",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "room-206": {
+    "type": "CLASSROOM",
+    "label": "MSB 206",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "20:10",
+        "end": "20:45",
+        "title": "Office Hours",
+        "courseName": "Prof. He - Math OH",
+        "professor": "Prof. He",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Wed",
+        "start": "20:10",
+        "end": "20:45",
+        "title": "Office Hours",
+        "courseName": "Prof. He - Math OH",
+        "professor": "Prof. He",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "room-251": {
+    "type": "CLASSROOM",
+    "label": "MSB 251",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "14:10",
+        "end": "15:05",
+        "title": "Office Hours",
+        "courseName": "Prof. Herichi - Math OH",
+        "professor": "Prof. Herichi",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Tue",
+        "start": "14:10",
+        "end": "15:05",
+        "title": "Office Hours",
+        "courseName": "Prof. Herichi - Math OH",
+        "professor": "Prof. Herichi",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Wed",
+        "start": "14:10",
+        "end": "15:05",
+        "title": "Office Hours",
+        "courseName": "Prof. Herichi - Math OH",
+        "professor": "Prof. Herichi",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "14:10",
+        "end": "15:05",
+        "title": "Office Hours",
+        "courseName": "Prof. Herichi - Math OH",
+        "professor": "Prof. Herichi",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Tue",
+        "start": "10:45",
+        "end": "11:15",
+        "title": "Office Hours",
+        "courseName": "Prof. Herichi - Math OH",
+        "professor": "Prof. Herichi",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "10:45",
+        "end": "11:15",
+        "title": "Office Hours",
+        "courseName": "Prof. Herichi - Math OH",
+        "professor": "Prof. Herichi",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Tue",
+        "start": "10:40",
+        "end": "11:10",
+        "title": "Office Hours",
+        "courseName": "Prof. Ouellette - Math OH",
+        "professor": "Prof. Ouellette",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "10:40",
+        "end": "11:10",
+        "title": "Office Hours",
+        "courseName": "Prof. Ouellette - Math OH",
+        "professor": "Prof. Ouellette",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Tue",
+        "start": "14:10",
+        "end": "14:40",
+        "title": "Office Hours",
+        "courseName": "Prof. Ouellette - Math OH",
+        "professor": "Prof. Ouellette",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "14:10",
+        "end": "14:40",
+        "title": "Office Hours",
+        "courseName": "Prof. Ouellette - Math OH",
+        "professor": "Prof. Ouellette",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Wed",
+        "start": "10:45",
+        "end": "11:45",
+        "title": "Office Hours",
+        "courseName": "Prof. Ouellette - Math OH",
+        "professor": "Prof. Ouellette",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "bundy-2nd": {
+    "type": "CLASSROOM",
+    "label": "Bundy 2nd floor lobby",
+    "events": [
+      {
+        "day": "Tue",
+        "start": "16:40",
+        "end": "18:00",
+        "title": "Office Hours",
+        "courseName": "Prof. Huang - Math OH",
+        "professor": "Prof. Huang",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "16:40",
+        "end": "18:00",
+        "title": "Office Hours",
+        "courseName": "Prof. Huang - Math OH",
+        "professor": "Prof. Huang",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Tue",
+        "start": "16:45",
+        "end": "17:50",
+        "title": "Office Hours",
+        "courseName": "Prof. Maknouni - Math OH",
+        "professor": "Prof. Maknouni",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "15:45",
+        "end": "16:50",
+        "title": "Office Hours",
+        "courseName": "Prof. Maknouni - Math OH",
+        "professor": "Prof. Maknouni",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "room-250": {
+    "type": "CLASSROOM",
+    "label": "MSB 250",
+    "events": [
+      {
+        "day": "Tue",
+        "start": "14:50",
+        "end": "15:50",
+        "title": "Office Hours",
+        "courseName": "Prof. Jahangard - Math OH",
+        "professor": "Prof. Jahangard",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "14:50",
+        "end": "15:50",
+        "title": "Office Hours",
+        "courseName": "Prof. Jahangard - Math OH",
+        "professor": "Prof. Jahangard",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Mon",
+        "start": "18:45",
+        "end": "19:45",
+        "title": "Office Hours",
+        "courseName": "Prof. Jahangard - Math OH",
+        "professor": "Prof. Jahangard",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Tue",
+        "start": "10:00",
+        "end": "11:15",
+        "title": "Office Hours",
+        "courseName": "Prof. Konya - Math OH",
+        "professor": "Prof. Konya",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "10:00",
+        "end": "11:15",
+        "title": "Office Hours",
+        "courseName": "Prof. Konya - Math OH",
+        "professor": "Prof. Konya",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Wed",
+        "start": "10:00",
+        "end": "10:30",
+        "title": "Office Hours",
+        "courseName": "Prof. Konya - Math OH",
+        "professor": "Prof. Konya",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "room-103": {
+    "type": "CLASSROOM",
+    "label": "MSB 103",
+    "events": [
+      {
+        "day": "Wed",
+        "start": "18:45",
+        "end": "19:45",
+        "title": "Office Hours",
+        "courseName": "Prof. Jahangard - Math 10 OH",
+        "professor": "Prof. Jahangard",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Mon",
+        "start": "19:25",
+        "end": "19:55",
+        "title": "Office Hours",
+        "courseName": "Prof. Martinez - Math 54/C1000 OH",
+        "professor": "Prof. Martinez",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Mon",
+        "start": "10:45",
+        "end": "11:45",
+        "title": "Office Hours",
+        "courseName": "Prof. Ouellette - Math 8 OH",
+        "professor": "Prof. Ouellette",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "14:45",
+        "end": "15:45",
+        "title": "Office Hours",
+        "courseName": "Prof. Ouellette - Math 13 OH",
+        "professor": "Prof. Ouellette",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Mon",
+        "start": "16:00",
+        "end": "16:45",
+        "title": "Office Hours",
+        "courseName": "Prof. Ramsey - Math OH",
+        "professor": "Prof. Ramsey",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Wed",
+        "start": "16:00",
+        "end": "16:45",
+        "title": "Office Hours",
+        "courseName": "Prof. Ramsey - Math OH",
+        "professor": "Prof. Ramsey",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Wed",
+        "start": "15:00",
+        "end": "16:00",
+        "title": "Office Hours",
+        "courseName": "Prof. Rodas - Math 7 OH",
+        "professor": "Prof. Rodas",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "room-205": {
+    "type": "CLASSROOM",
+    "label": "MSB 205",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "15:15",
+        "end": "16:15",
+        "title": "Office Hours",
+        "courseName": "Prof. Kamin - Math OH",
+        "professor": "Prof. Kamin",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Wed",
+        "start": "15:15",
+        "end": "16:15",
+        "title": "Office Hours",
+        "courseName": "Prof. Kamin - Math OH",
+        "professor": "Prof. Kamin",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Mon",
+        "start": "18:15",
+        "end": "19:35",
+        "title": "Office Hours",
+        "courseName": "Prof. Karkafi - Math OH",
+        "professor": "Prof. Karkafi",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Wed",
+        "start": "18:15",
+        "end": "19:35",
+        "title": "Office Hours",
+        "courseName": "Prof. Karkafi - Math OH",
+        "professor": "Prof. Karkafi",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "room-210": {
+    "type": "CLASSROOM",
+    "label": "MSB 210",
+    "events": [
+      {
+        "day": "Tue",
+        "start": "15:15",
+        "end": "16:15",
+        "title": "Office Hours",
+        "courseName": "Prof. Kamin - Math OH",
+        "professor": "Prof. Kamin",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "15:15",
+        "end": "16:15",
+        "title": "Office Hours",
+        "courseName": "Prof. Kamin - Math OH",
+        "professor": "Prof. Kamin",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "black-collegians-lab": {
+    "type": "CLASSROOM",
+    "label": "Black Collegians Tutoring Lab",
+    "events": [
+      {
+        "day": "Tue",
+        "start": "16:00",
+        "end": "17:00",
+        "title": "Office Hours",
+        "courseName": "Prof. Konya - Math OH",
+        "professor": "Prof. Konya",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "room-254": {
+    "type": "CLASSROOM",
+    "label": "MSB 254",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "11:40",
+        "end": "12:10",
+        "title": "Office Hours",
+        "courseName": "Prof. Lai - Math OH",
+        "professor": "Prof. Lai",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Wed",
+        "start": "15:30",
+        "end": "16:15",
+        "title": "Office Hours",
+        "courseName": "Prof. Lai - Math OH",
+        "professor": "Prof. Lai",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "10:30",
+        "end": "11:15",
+        "title": "Office Hours",
+        "courseName": "Prof. Lai - Math OH",
+        "professor": "Prof. Lai",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Mon",
+        "start": "09:15",
+        "end": "09:45",
+        "title": "Office Hours",
+        "courseName": "Prof. Wang - Math OH",
+        "professor": "Prof. Wang",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Wed",
+        "start": "09:15",
+        "end": "09:45",
+        "title": "Office Hours",
+        "courseName": "Prof. Wang - Math OH",
+        "professor": "Prof. Wang",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Mon",
+        "start": "15:30",
+        "end": "16:00",
+        "title": "Office Hours",
+        "courseName": "Prof. Wang - Math OH",
+        "professor": "Prof. Wang",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Tue",
+        "start": "15:30",
+        "end": "16:00",
+        "title": "Office Hours",
+        "courseName": "Prof. Wang - Math OH",
+        "professor": "Prof. Wang",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Wed",
+        "start": "15:30",
+        "end": "16:00",
+        "title": "Office Hours",
+        "courseName": "Prof. Wang - Math OH",
+        "professor": "Prof. Wang",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "15:30",
+        "end": "16:00",
+        "title": "Office Hours",
+        "courseName": "Prof. Wang - Math OH",
+        "professor": "Prof. Wang",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "cmd-106": {
+    "type": "CLASSROOM",
+    "label": "CMD 106",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "12:00",
+        "end": "12:35",
+        "title": "Office Hours",
+        "courseName": "Prof. Lan - Math OH",
+        "professor": "Prof. Lan",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Wed",
+        "start": "12:00",
+        "end": "12:35",
+        "title": "Office Hours",
+        "courseName": "Prof. Lan - Math OH",
+        "professor": "Prof. Lan",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "room-240": {
+    "type": "CLASSROOM",
+    "label": "MSB 240",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "12:40",
+        "end": "13:40",
+        "title": "Office Hours",
+        "courseName": "Prof. Lee - Math OH",
+        "professor": "Prof. Lee",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Tue",
+        "start": "08:10",
+        "end": "08:50",
+        "title": "Office Hours",
+        "courseName": "Prof. Lee - Math OH",
+        "professor": "Prof. Lee",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "08:10",
+        "end": "09:30",
+        "title": "Office Hours",
+        "courseName": "Prof. Lee - Math OH",
+        "professor": "Prof. Lee",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "room-236": {
+    "type": "CLASSROOM",
+    "label": "MSB 236",
+    "events": [
+      {
+        "day": "Tue",
+        "start": "09:15",
+        "end": "10:35",
+        "title": "Office Hours",
+        "courseName": "Prof. London - Math OH",
+        "professor": "Prof. London",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Mon",
+        "start": "10:35",
+        "end": "11:00",
+        "title": "Office Hours",
+        "courseName": "Prof. Lopez - Math OH",
+        "professor": "Prof. Lopez",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Tue",
+        "start": "16:00",
+        "end": "17:00",
+        "title": "Office Hours",
+        "courseName": "Prof. Lopez - Math OH",
+        "professor": "Prof. Lopez",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Wed",
+        "start": "14:00",
+        "end": "15:35",
+        "title": "Office Hours",
+        "courseName": "Prof. Lopez - Math OH",
+        "professor": "Prof. Lopez",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "room-231": {
+    "type": "CLASSROOM",
+    "label": "MSB 231",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "12:45",
+        "end": "13:45",
+        "title": "Office Hours",
+        "courseName": "Prof. Lopez - Math OH",
+        "professor": "Prof. Lopez",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Mon",
+        "start": "17:30",
+        "end": "19:00",
+        "title": "Office Hours",
+        "courseName": "Prof. Richardson - Math OH",
+        "professor": "Prof. Richardson",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Tue",
+        "start": "17:30",
+        "end": "19:00",
+        "title": "Office Hours",
+        "courseName": "Prof. Richardson - Math OH",
+        "professor": "Prof. Richardson",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Wed",
+        "start": "17:30",
+        "end": "17:55",
+        "title": "Office Hours",
+        "courseName": "Prof. Richardson - Math OH",
+        "professor": "Prof. Richardson",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "room-202": {
+    "type": "CLASSROOM",
+    "label": "MSB 202",
+    "events": [
+      {
+        "day": "Tue",
+        "start": "16:00",
+        "end": "17:00",
+        "title": "Office Hours",
+        "courseName": "Prof. Lopez - Math OH",
+        "professor": "Prof. Lopez",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "16:00",
+        "end": "17:00",
+        "title": "Office Hours",
+        "courseName": "Prof. Lopez - Math OH",
+        "professor": "Prof. Lopez",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "room-238": {
+    "type": "CLASSROOM",
+    "label": "MSB 238",
+    "events": [
+      {
+        "day": "Tue",
+        "start": "16:11",
+        "end": "16:55",
+        "title": "Office Hours",
+        "courseName": "Prof. Man - Math OH",
+        "professor": "Prof. Man",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "16:11",
+        "end": "16:55",
+        "title": "Office Hours",
+        "courseName": "Prof. Man - Math OH",
+        "professor": "Prof. Man",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Tue",
+        "start": "19:10",
+        "end": "19:30",
+        "title": "Office Hours",
+        "courseName": "Prof. Man - Math OH",
+        "professor": "Prof. Man",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "19:10",
+        "end": "19:30",
+        "title": "Office Hours",
+        "courseName": "Prof. Man - Math OH",
+        "professor": "Prof. Man",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "room-237": {
+    "type": "CLASSROOM",
+    "label": "MSB 237",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "14:25",
+        "end": "14:55",
+        "title": "Office Hours",
+        "courseName": "Prof. Martinez - Math OH",
+        "professor": "Prof. Martinez",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Wed",
+        "start": "14:25",
+        "end": "14:55",
+        "title": "Office Hours",
+        "courseName": "Prof. Martinez - Math OH",
+        "professor": "Prof. Martinez",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "room-232": {
+    "type": "CLASSROOM",
+    "label": "MSB 232",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "14:15",
+        "end": "15:15",
+        "title": "Office Hours",
+        "courseName": "Prof. Miano - Math OH",
+        "professor": "Prof. Miano",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Tue",
+        "start": "14:15",
+        "end": "15:15",
+        "title": "Office Hours",
+        "courseName": "Prof. Miano - Math OH",
+        "professor": "Prof. Miano",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "14:15",
+        "end": "15:15",
+        "title": "Office Hours",
+        "courseName": "Prof. Miano - Math OH",
+        "professor": "Prof. Miano",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "room-108": {
+    "type": "CLASSROOM",
+    "label": "MSB 108 Math Lab",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "15:20",
+        "end": "15:50",
+        "title": "Office Hours",
+        "courseName": "Prof. Miano - Math OH",
+        "professor": "Prof. Miano",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Tue",
+        "start": "15:20",
+        "end": "15:50",
+        "title": "Office Hours",
+        "courseName": "Prof. Miano - Math OH",
+        "professor": "Prof. Miano",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "room-235": {
+    "type": "CLASSROOM",
+    "label": "MSB 235",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "07:25",
+        "end": "07:55",
+        "title": "Office Hours",
+        "courseName": "Prof. Musselman - Math OH",
+        "professor": "Prof. Musselman",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Wed",
+        "start": "07:25",
+        "end": "07:55",
+        "title": "Office Hours",
+        "courseName": "Prof. Musselman - Math OH",
+        "professor": "Prof. Musselman",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "room-102": {
+    "type": "CLASSROOM",
+    "label": "MSB 102",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "21:30",
+        "end": "22:00",
+        "title": "Office Hours",
+        "courseName": "Prof. Musselman - Math OH",
+        "professor": "Prof. Musselman",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Tue",
+        "start": "21:30",
+        "end": "22:00",
+        "title": "Office Hours",
+        "courseName": "Prof. Musselman - Math OH",
+        "professor": "Prof. Musselman",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Wed",
+        "start": "21:30",
+        "end": "22:00",
+        "title": "Office Hours",
+        "courseName": "Prof. Musselman - Math OH",
+        "professor": "Prof. Musselman",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "21:30",
+        "end": "22:00",
+        "title": "Office Hours",
+        "courseName": "Prof. Musselman - Math OH",
+        "professor": "Prof. Musselman",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Tue",
+        "start": "15:55",
+        "end": "16:55",
+        "title": "Office Hours",
+        "courseName": "Prof. Simo - Math OH",
+        "professor": "Prof. Simo",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "15:55",
+        "end": "16:55",
+        "title": "Office Hours",
+        "courseName": "Prof. Simo - Math OH",
+        "professor": "Prof. Simo",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Wed",
+        "start": "15:25",
+        "end": "16:25",
+        "title": "Office Hours",
+        "courseName": "Prof. Simo - Math OH",
+        "professor": "Prof. Simo",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "room-249": {
+    "type": "CLASSROOM",
+    "label": "MSB 249",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "15:50",
+        "end": "16:50",
+        "title": "Office Hours",
+        "courseName": "Prof. Pachas-Flores - Math OH",
+        "professor": "Prof. Pachas-Flores",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Wed",
+        "start": "15:50",
+        "end": "16:50",
+        "title": "Office Hours",
+        "courseName": "Prof. Pachas-Flores - Math OH",
+        "professor": "Prof. Pachas-Flores",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Tue",
+        "start": "16:20",
+        "end": "17:20",
+        "title": "Office Hours",
+        "courseName": "Prof. Pachas-Flores - Math OH",
+        "professor": "Prof. Pachas-Flores",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "bundy-317q": {
+    "type": "CLASSROOM",
+    "label": "Bundy 317Q",
+    "events": [
+      {
+        "day": "Thu",
+        "start": "16:00",
+        "end": "16:50",
+        "title": "Office Hours",
+        "courseName": "Prof. Perez-Fernandez - Math OH",
+        "professor": "Prof. Perez-Fernandez",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "malibu-lounge": {
+    "type": "CLASSROOM",
+    "label": "Malibu Student Lounge",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "12:05",
+        "end": "12:40",
+        "title": "Office Hours",
+        "courseName": "Prof. Perez - Math OH",
+        "professor": "Prof. Perez",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Tue",
+        "start": "12:05",
+        "end": "12:40",
+        "title": "Office Hours",
+        "courseName": "Prof. Perez - Math OH",
+        "professor": "Prof. Perez",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Wed",
+        "start": "12:05",
+        "end": "12:40",
+        "title": "Office Hours",
+        "courseName": "Prof. Perez - Math OH",
+        "professor": "Prof. Perez",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "12:05",
+        "end": "12:40",
+        "title": "Office Hours",
+        "courseName": "Prof. Perez - Math OH",
+        "professor": "Prof. Perez",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "room-244": {
+    "type": "CLASSROOM",
+    "label": "MSB 244",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "11:00",
+        "end": "12:00",
+        "title": "Office Hours",
+        "courseName": "Prof. Rodas - Math OH",
+        "professor": "Prof. Rodas",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Tue",
+        "start": "14:00",
+        "end": "15:00",
+        "title": "Office Hours",
+        "courseName": "Prof. Rodas - Math OH",
+        "professor": "Prof. Rodas",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "14:00",
+        "end": "15:00",
+        "title": "Office Hours",
+        "courseName": "Prof. Rodas - Math OH",
+        "professor": "Prof. Rodas",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "room-243": {
+    "type": "CLASSROOM",
+    "label": "MSB 243",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "15:00",
+        "end": "16:00",
+        "title": "Office Hours",
+        "courseName": "Prof. Soleymani - Math OH",
+        "professor": "Prof. Soleymani",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Tue",
+        "start": "14:00",
+        "end": "15:00",
+        "title": "Office Hours",
+        "courseName": "Prof. Soleymani - Math OH",
+        "professor": "Prof. Soleymani",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "14:00",
+        "end": "15:00",
+        "title": "Office Hours",
+        "courseName": "Prof. Soleymani - Math OH",
+        "professor": "Prof. Soleymani",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  },
+  "room-201": {
+    "type": "CLASSROOM",
+    "label": "MSB 201",
+    "events": [
+      {
+        "day": "Tue",
+        "start": "11:00",
+        "end": "12:00",
+        "title": "Office Hours",
+        "courseName": "Prof. Vendlinski - Math OH",
+        "professor": "Prof. Vendlinski",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Thu",
+        "start": "11:00",
+        "end": "12:00",
+        "title": "Office Hours",
+        "courseName": "Prof. Vendlinski - Math OH",
+        "professor": "Prof. Vendlinski",
+        "status": "OFFICE_HOURS"
+      },
+      {
+        "day": "Fri",
+        "start": "07:25",
+        "end": "07:55",
+        "title": "Office Hours",
+        "courseName": "Prof. Xie - Math OH",
+        "professor": "Prof. Xie",
+        "status": "OFFICE_HOURS"
+      }
+    ]
+  }
+}

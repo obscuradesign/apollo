@@ -16,17 +16,30 @@ import { BUSLevel2 } from "./BUSLevel2";
 import { motion, AnimatePresence } from "framer-motion";
 import { ROOM_SCHEDULES as STATIC_SCHEDULES } from "../data/roomSchedule.js";
 import LIVE_SCHEDULES from "../data/roomSchedule_LIVE.json";
-import SI_SCHEDULES from "../data/siSchedule.json";
+import SI_SCHEDULES_RAW from "../data/siSchedule.json";
+import OFFICE_HOURS from "../data/officeHours.json";
 import "../App.css";
 import { SearchModal } from "./SearchModal";
 
 // Merge: LIVE data wins over static fallbacks (scraped events override stale static)
 const ROOM_SCHEDULES = { ...STATIC_SCHEDULES, ...LIVE_SCHEDULES };
 
+// Merge SI schedules and office hours. For rooms in both, concatenate their events.
+const SI_SCHEDULES = Object.keys({ ...SI_SCHEDULES_RAW, ...OFFICE_HOURS }).reduce((acc, roomId) => {
+  const siRoom = SI_SCHEDULES_RAW[roomId];
+  const ohRoom = OFFICE_HOURS[roomId];
+  acc[roomId] = {
+    ...(siRoom || ohRoom),
+    events: [...(siRoom?.events || []), ...(ohRoom?.events || [])]
+  };
+  return acc;
+}, {});
+
 const COLORS = {
   LOCKED: "#9CA3AF",
   OCCUPIED: "#EF5350",
   SI_SESSION: "#FBBF24",
+  OFFICE_HOURS: "#FBBF24",
   STUDY_ROOM: "#FB923C",
   PROGRAM: "#60A5FA",
   OFFICE: "#60A5FA",

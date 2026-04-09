@@ -134,15 +134,6 @@
         "courseName": "SI: ANATOMY 1",
         "professor": "Leader: Journey (Williams)",
         "status": "SI_SESSION"
-      },
-      {
-        "day": "Thu",
-        "start": "11:30",
-        "end": "12:30",
-        "title": "SI Session",
-        "courseName": "SI: Chem 12",
-        "professor": "Leader: Sirabi (Hunter)",
-        "status": "SI_SESSION"
       }
     ]
   },
@@ -175,9 +166,36 @@
     "label": "SCI 159",
     "events": [
       {
+        "day": "Mon",
+        "start": "16:45",
+        "end": "17:45",
+        "title": "SI Session",
+        "courseName": "SI: Chem 11",
+        "professor": "Leader: Sirabi (McClure)",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Fri",
+        "start": "10:00",
+        "end": "11:00",
+        "title": "SI Session",
+        "courseName": "SI: Chem 11",
+        "professor": "Leader: Sirabi (McClure)",
+        "status": "SI_SESSION"
+      },
+      {
         "day": "Wed",
-        "start": "16:30",
-        "end": "17:30",
+        "start": "16:45",
+        "end": "17:45",
+        "title": "SI Session",
+        "courseName": "SI: Chem 12",
+        "professor": "Leader: Sirabi (Hunter)",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Fri",
+        "start": "11:00",
+        "end": "12:00",
         "title": "SI Session",
         "courseName": "SI: Chem 12",
         "professor": "Leader: Sirabi (Hunter)",
@@ -469,7 +487,7 @@
     "label": "MSB 303",
     "events": [
       {
-        "day": "Mon",
+        "day": "Wed",
         "start": "11:00",
         "end": "12:00",
         "title": "SI Session",
@@ -478,9 +496,9 @@
         "status": "SI_SESSION"
       },
       {
-        "day": "Wed",
-        "start": "11:00",
-        "end": "12:00",
+        "day": "Thu",
+        "start": "15:00",
+        "end": "16:00",
         "title": "SI Session",
         "courseName": "SI: Math 11",
         "professor": "Leader: Sander (Bene)",
@@ -517,18 +535,24 @@
     "label": "MSB 209",
     "events": [
       {
-        "day": "Mon",
-        "start": "11:30",
-        "end": "12:30",
+        "day": "Tue",
+        "start": "11:00",
+        "end": "12:00",
         "title": "SI Session",
         "courseName": "SI: PHYSCS 22",
         "professor": "Leader: Jaxon (Strohmaier)",
         "status": "SI_SESSION"
-      },
+      }
+    ]
+  },
+  "room-212": {
+    "type": "CLASSROOM",
+    "label": "MSB 212",
+    "events": [
       {
-        "day": "Tue",
-        "start": "11:00",
-        "end": "12:00",
+        "day": "Thu",
+        "start": "14:00",
+        "end": "15:00",
         "title": "SI Session",
         "courseName": "SI: PHYSCS 22",
         "professor": "Leader: Jaxon (Strohmaier)",

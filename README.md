@@ -43,7 +43,7 @@ Finding an empty room to study in or locating a specific SI (Supplemental Instru
 * **🏢 Multiple Buildings:** Seamlessly switch between five campus buildings (MSB, Drescher, HSS, SCI, BUS) with a mobile-responsive dropdown selector.
 * **🌙 Persistent Dark Mode:** Full dark-theme support that persists across browser sessions.
 * **🟢 Live Class Tracking:** Rooms turn **Red** when a class is currently in session.
-* **🟡 SI Integration:** Rooms turn **Gold** for Supplemental Instruction sessions (automatically overriding regular class data).
+* **🟡 Academic Support:** Rooms turn **Gold** for Supplemental Instruction sessions and **Professor Office Hours** (automatically overriding regular class closures so you know where to get help).
 * **🔵 Study Rooms:** Dedicated study rooms are highlighted **Blue** with direct booking links.
 * **🏗️ Google Maps-style UI:** An immersive Overlay layout where controls float over the interactive map for maximum screen real estate.
 * **🕰️ Time Machine:** Need to plan for later? Use the Time Machine debug panel to jump to any day or time in the future.
@@ -63,7 +63,7 @@ Apollo runs on a hybrid architecture combining a React frontend with a Python-po
 ### Data Flow
 1.  **Harvesting:** Two local Python scripts (`smc_harvester.py` and `si_harvester.py`) scrape the official SMC Schedule of Classes (Oracle APEX) and the SI page of the SMC website.
 2.  **Processing:** The scripts parse thousands of HTML rows, filtering for supported buildings (MSB, Drescher, HSS, SCI, BUS) and normalizing time formats.
-3.  **Static Generation:** The data is compiled into optimized JSON files (`roomSchedule_LIVE.json` and `siSchedule.json`).
+3.  **Static Handling:** The data is compiled into optimized JSON files (`roomSchedule_LIVE.json` and `siSchedule.json`). Manually-entry data like `officeHours.json` is safely merged so the harvesters don't overwrite it.
 4.  **Runtime Rendering:** The React frontend reads this static data, compares it against the user's system clock (or "Time Machine" state), and updates the SVG fill colors in real-time.
 
 ---

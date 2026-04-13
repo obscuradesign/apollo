@@ -132,8 +132,8 @@ export const ROOM_SCHEDULES = {
   "drschr-301d": { type: "PROGRAM", label: "STEM Program Offices", group: "STEM", url: "https://www.smc.edu/student-support/academic-support/counseling/special-support-programs/stem/" },
   "drschr-301e": { type: "PROGRAM", label: "STEM Program Offices", group: "STEM", url: "https://www.smc.edu/student-support/academic-support/counseling/special-support-programs/stem/" },
   "drschr-301f": { type: "PROGRAM", label: "STEM Program Offices", group: "STEM", url: "https://www.smc.edu/student-support/academic-support/counseling/special-support-programs/stem/" },
-  "drschr-302": { type: "STUDY_ROOM", label: "STEM Lab", group: "STEM", url: "https://www.smc.edu/student-support/academic-support/supplemental-instruction/" },
-  "drschr-302a": { type: "PROGRAM", label: "SI Coordinator Office", group: "STEM", url: "https://www.smc.edu/student-support/academic-support/counseling/special-support-programs/stem/" },
+  "drschr-302": { type: "STUDY_ROOM", label: "STEM Lab", group: "STEM", url: "https://www.smc.edu/student-support/academic-support/counseling/special-support-programs/stem/" },
+  "drschr-302a": { type: "PROGRAM", label: "SI Coordinator Office", group: "STEM", url: "https://www.smc.edu/student-support/academic-support/supplemental-instruction/" },
   "drschr-304": { type: "STUDY_ROOM", label: "STEM Lab Quiet Room", group: "STEM", url: "https://www.smc.edu/student-support/academic-support/counseling/special-support-programs/stem/tutoring.php" },
   "drschr-306f": { type: "PROGRAM", label: "STEM Program Offices", group: "STEM", url: "https://www.smc.edu/student-support/academic-support/counseling/special-support-programs/stem/" },
 

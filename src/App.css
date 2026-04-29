@@ -105,11 +105,42 @@ body {
   /* Space for the absolutely-positioned legend */
 }
 
+.map-card.compact {
+  padding-bottom: 60px;
+}
+
+/* Compact SVGs (SSC) render at a fixed natural size so the wall units map
+   cleanly to the pixel grid. Paired with .crisp below for edge snapping. */
+.map-card.compact svg {
+  width: 480px;
+  height: 480px;
+  max-width: 90%;
+}
+
 .map-card svg {
   width: 100%;
   height: 100%;
   max-width: 100%;
   display: block;
+}
+
+/* Per-building opt-in: snap wall edges to the pixel grid to eliminate
+   sub-pixel seams and inconsistent wall thickness. Not applied to buildings
+   where the default anti-aliased look is preferred. */
+.map-card.crisp svg {
+  shape-rendering: crispEdges;
+}
+
+/* Opt bathroom icons back out of crispEdges since their curved strokes need
+   anti-aliasing to not look jagged. Matches any group whose id starts with
+   "Bathroom-Sign" (e.g. Bathroom-Sign-1, Bathroom-Sign-1-2, etc.). The
+   "tables" group on SSC Floor 1 contains curved decorative shapes that
+   need the same treatment. */
+.map-card.crisp svg [id^="Bathroom-Sign"],
+.map-card.crisp svg [id^="Bathroom-Sign"] *,
+.map-card.crisp svg #tables,
+.map-card.crisp svg #tables * {
+  shape-rendering: geometricPrecision;
 }
 
 
@@ -313,6 +344,10 @@ body {
   .map-card {
     align-items: flex-start;
     padding-bottom: 60px;
+  }
+
+  .map-card.compact {
+    padding-bottom: 70px;
   }
 
   .floor-switcher {

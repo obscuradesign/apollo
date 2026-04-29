@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import ROOM_SCHEDULES from "../data/roomSchedule_LIVE.json";
+import { ROOM_SCHEDULES as STATIC_SCHEDULES } from "../data/roomSchedule.js";
+import LIVE_SCHEDULES from "../data/roomSchedule_LIVE.json";
 import SI_SCHEDULES from "../data/siSchedule.json";
+
+// Merge static department metadata with live-harvested classroom data so both
+// appear in search. LIVE wins on collisions (same merge order as BuildingMap).
+const ROOM_SCHEDULES = { ...STATIC_SCHEDULES, ...LIVE_SCHEDULES };
 
 export const SearchModal = ({ onClose, onNavigate, starredItems, onToggleStar }) => {
     const [query, setQuery] = useState("");
@@ -59,14 +64,35 @@ export const SearchModal = ({ onClose, onNavigate, starredItems, onToggleStar })
 
         // 2. Search Classes
         Object.entries(ROOM_SCHEDULES).forEach(([roomId, data]) => {
-            // Label match
-            if (data.label?.toLowerCase().includes(lowerQ)) {
+            // Label match — skip sub-offices (labels ending in "Offices"); they
+            // share a label with the main hub, so searching the program name
+            // would otherwise return N near-identical hits. Main hubs (e.g.
+            // "Scholars Program") still match; users navigate to the hub and
+            // can see individual offices on the map.
+            if (
+                data.label?.toLowerCase().includes(lowerQ) &&
+                !data.label.toLowerCase().endsWith(" offices")
+            ) {
                 hits.push({
                     id: roomId,
                     roomId,
                     label: data.label,
                     type: "Room",
                     detail: data.type || "Classroom"
+                });
+            }
+            // Alias match (for rooms shared by multiple services, e.g. ssc-340)
+            if (Array.isArray(data.aliases)) {
+                data.aliases.forEach(alias => {
+                    if (alias?.toLowerCase().includes(lowerQ)) {
+                        hits.push({
+                            id: `${roomId}-alias-${alias}`,
+                            roomId,
+                            label: alias,
+                            type: "Room",
+                            detail: `Shared space with ${data.label}`
+                        });
+                    }
                 });
             }
             // Event match

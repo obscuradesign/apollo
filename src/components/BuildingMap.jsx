@@ -13,6 +13,9 @@ import { SCILevel2 } from "./SCILevel2";
 import { SCILevel3 } from "./SCILevel3";
 import { BUSLevel1 } from "./BUSLevel1";
 import { BUSLevel2 } from "./BUSLevel2";
+import { SSCLevel1 } from "./SSCLevel1";
+import { SSCLevel2 } from "./SSCLevel2";
+import { SSCLevel3 } from "./SSCLevel3";
 import { motion, AnimatePresence } from "framer-motion";
 import { ROOM_SCHEDULES as STATIC_SCHEDULES } from "../data/roomSchedule.js";
 import LIVE_SCHEDULES from "../data/roomSchedule_LIVE.json";
@@ -51,7 +54,8 @@ const BUILDINGS = {
   DRSCHR: { label: "Drescher", floors: 3 },
   HSS: { label: "HSS", floors: 3 },
   SCI: { label: "SCI", floors: 3 },
-  BUS: { label: "BUS", floors: 2 }
+  BUS: { label: "BUS", floors: 2 },
+  SSC: { label: "SSC", floors: 3 }
 };
 
 // Manual offsets (x,y) to visually center each floor's SVG shape within the viewport
@@ -79,6 +83,11 @@ const FLOOR_OFFSETS = {
   BUS: {
     1: { x: 0, y: 0 },
     2: { x: 0, y: 0 }
+  },
+  SSC: {
+    1: { x: 0, y: 0 },
+    2: { x: 0, y: 0 },
+    3: { x: 0, y: 0 }
   }
 };
 
@@ -96,7 +105,7 @@ const RoomTooltip = ({ info, position, starredItems }) => {
   if (!info) return null;
 
   const isDepartment = info.roomType === "PROGRAM" || info.roomType === "OFFICE";
-  const skipSuffix = /(department|program|offices|office|center|tutoring|senate|stockroom|cosmetology|room|closet)/i.test(info.roomLabel);
+  const skipSuffix = /(department|program|offices|office|center|tutoring|senate|stockroom|cosmetology|room|closet|services?|hall|admissions|lab)/i.test(info.roomLabel);
   const displayLabel = isDepartment && !skipSuffix
     ? `${info.roomLabel} Department`
     : info.roomLabel;
@@ -273,6 +282,12 @@ export function BuildingMap({ darkMode, setDarkMode }) {
       if (num.startsWith("1")) setCurrentFloor(1);
       else if (num.startsWith("2")) setCurrentFloor(2);
 
+    } else if (roomId.startsWith("ssc-")) {
+      setCurrentBuilding("SSC");
+      const num = roomId.replace("ssc-", "");
+      if (num.startsWith("1")) setCurrentFloor(1);
+      else if (num.startsWith("2")) setCurrentFloor(2);
+      else if (num.startsWith("3")) setCurrentFloor(3);
     } else {
       // Other buildings: try to detect floor from first digit
       const match = roomId.match(/-(\d)/);
@@ -525,7 +540,7 @@ export function BuildingMap({ darkMode, setDarkMode }) {
 
       {/* Map Card */}
       <motion.div
-        className="map-card"
+        className={`map-card ${currentBuilding === "SSC" ? "compact crisp" : ""} ${["HSS", "SCI"].includes(currentBuilding) ? "crisp" : ""}`}
         initial={{ scale: 0.95, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.5 }}
@@ -634,7 +649,7 @@ export function BuildingMap({ darkMode, setDarkMode }) {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                paddingTop: "30px",
+                paddingTop: currentBuilding === "SSC" ? "70px" : "30px",
                 ...((!isMobile && currentBuilding === "DRSCHR" && currentFloor >= 2) ? { maxHeight: "350px" } : {})
               }}
             >
@@ -657,6 +672,10 @@ export function BuildingMap({ darkMode, setDarkMode }) {
               {/* BUS Floors */}
               {currentBuilding === "BUS" && currentFloor === 1 && <BUSLevel1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
               {currentBuilding === "BUS" && currentFloor === 2 && <BUSLevel2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+              {/* SSC Floors */}
+              {currentBuilding === "SSC" && currentFloor === 1 && <SSCLevel1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+              {currentBuilding === "SSC" && currentFloor === 2 && <SSCLevel2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+              {currentBuilding === "SSC" && currentFloor === 3 && <SSCLevel3 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
             </motion.div>
           </AnimatePresence>
         </div>

@@ -8,7 +8,7 @@ import SI_SCHEDULES from "../data/siSchedule.json";
 // appear in search. LIVE wins on collisions (same merge order as BuildingMap).
 const ROOM_SCHEDULES = { ...STATIC_SCHEDULES, ...LIVE_SCHEDULES };
 
-export const SearchModal = ({ onClose, onNavigate, starredItems, onToggleStar }) => {
+export const SearchModal = ({ onClose, onNavigate }) => {
     const [query, setQuery] = useState("");
     const [debouncedQuery, setDebouncedQuery] = useState("");
     const [results, setResults] = useState([]);
@@ -218,21 +218,6 @@ export const SearchModal = ({ onClose, onNavigate, starredItems, onToggleStar })
                                     }}>
                                         {r.type}
                                     </span>
-                                    <button
-                                        onClick={(e) => {
-                                            e.stopPropagation();
-                                            onToggleStar(r);
-                                        }}
-                                        style={{
-                                            background: "none", border: "none", cursor: "pointer",
-                                            fontSize: "1.5rem",
-                                            color: starredItems.some(s => s.id === r.id) ? "#fbbf24" : "#4b5563",
-                                            lineHeight: 1, padding: "0 4px"
-                                        }}
-                                        title={starredItems.some(s => s.id === r.id) ? "Remove Star" : "Add Star"}
-                                    >
-                                        {starredItems.some(s => s.id === r.id) ? "★" : "☆"}
-                                    </button>
                                 </div>
                             </div>
                             <div style={{ fontSize: "0.85rem", color: "var(--text-secondary, #9ca3af)" }}>{r.detail}</div>

@@ -23,6 +23,8 @@ import SI_SCHEDULES_RAW from "../data/siSchedule.json";
 import OFFICE_HOURS from "../data/officeHours.json";
 import "../App.css";
 import { SearchModal } from "./SearchModal";
+import { LoginModal } from "./LoginModal";
+import { StudentDashboard } from "./StudentDashboard";
 
 // Merge: LIVE data wins over static fallbacks (scraped events override stale static)
 const ROOM_SCHEDULES = { ...STATIC_SCHEDULES, ...LIVE_SCHEDULES };
@@ -101,7 +103,7 @@ const getCurrentStatus = () => {
   return { day, time: `${hours}:${minutes}` };
 };
 
-const RoomTooltip = ({ info, position, starredItems }) => {
+const RoomTooltip = ({ info, position }) => {
   if (!info) return null;
 
   const isDepartment = info.roomType === "PROGRAM" || info.roomType === "OFFICE";
@@ -132,26 +134,36 @@ const RoomTooltip = ({ info, position, starredItems }) => {
     >
       <h3 style={{ margin: "0 0 4px 0", fontSize: "1rem", color: "#111827", display: "flex", alignItems: "center", gap: "6px" }}>
         {displayLabel}
-        {starredItems?.some(s => s.id === info.roomId) && <span style={{ color: "#fbbf24" }}>★</span>}
       </h3>
       {info.activeEvent ? (
-        <>
-          <div style={{ fontSize: "0.85rem", fontWeight: "bold", color: COLORS[info.activeEvent.status], display: "flex", alignItems: "center", gap: "6px" }}>
-            {info.activeEvent.title}
-            {starredItems?.some(s => s.id === `${info.roomId}-${info.activeEvent.day}-${info.activeEvent.start}-${info.activeEvent.courseName}`) &&
-              <span style={{ color: "#fbbf24", fontSize: "1rem" }}>★</span>
-            }
-          </div>
-          <div style={{ fontSize: "0.8rem", color: "#4b5563", marginTop: "4px" }}>
-            {info.activeEvent.courseName}
-          </div>
-          <div style={{ fontSize: "0.8rem", color: "#6b7280" }}>
-            👨‍🏫 {info.activeEvent.professor}
-          </div>
-          <div style={{ fontSize: "0.8rem", color: "#6b7280", marginTop: "4px" }}>
-            🕒 {info.activeEvent.start} - {info.activeEvent.end}
-          </div>
-        </>
+        info.activeEvent.isPrivate ? (
+          <>
+            <div style={{ fontSize: "0.85rem", fontWeight: "bold", color: COLORS[info.activeEvent.status] }}>
+              Occupied (Private)
+            </div>
+            <div style={{ fontSize: "0.8rem", color: "#6b7280", marginTop: "4px" }}>
+              Class details hidden.
+            </div>
+            <div style={{ fontSize: "0.8rem", color: "#6b7280", marginTop: "4px" }}>
+              🕒 {info.activeEvent.start} - {info.activeEvent.end}
+            </div>
+          </>
+        ) : (
+          <>
+            <div style={{ fontSize: "0.85rem", fontWeight: "bold", color: COLORS[info.activeEvent.status], display: "flex", alignItems: "center", gap: "6px" }}>
+              {info.activeEvent.title}
+            </div>
+            <div style={{ fontSize: "0.8rem", color: "#4b5563", marginTop: "4px" }}>
+              {info.activeEvent.courseName}
+            </div>
+            <div style={{ fontSize: "0.8rem", color: "#6b7280" }}>
+              👨‍🏫 {info.activeEvent.professor}
+            </div>
+            <div style={{ fontSize: "0.8rem", color: "#6b7280", marginTop: "4px" }}>
+              🕒 {info.activeEvent.start} - {info.activeEvent.end}
+            </div>
+          </>
+        )
       ) : (
         isDepartment ? null : (
           <div style={{ fontSize: "0.8rem", color: "#9ca3af", fontStyle: "italic" }}>
@@ -172,7 +184,7 @@ const Legend = () => (
     animate={{ opacity: 1, y: 0, x: "-50%" }}
     transition={{ delay: 0.5, duration: 0.5 }}
   >
-    <div className="legend-item"><div className="color-dot" style={{ backgroundColor: "#a855f7" }}></div><span>Starred</span></div>
+    <div className="legend-item"><div className="color-dot" style={{ backgroundColor: "#22c55e" }}></div><span>My Course</span></div>
     <div className="legend-item"><div className="color-dot" style={{ backgroundColor: COLORS.OCCUPIED }}></div><span>Class</span></div>
     <div className="legend-item"><div className="color-dot" style={{ backgroundColor: COLORS.SI_SESSION }}></div><span>SI/OH</span></div>
     <div className="legend-item"><div className="color-dot" style={{ backgroundColor: COLORS.STUDY_ROOM }}></div><span>Study Space</span></div>
@@ -184,6 +196,8 @@ const Legend = () => (
 
 
 export function BuildingMap({ darkMode, setDarkMode }) {
+  const [currentUser, setCurrentUser] = useState(null);
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [currentBuilding, setCurrentBuilding] = useState("MSB");
   const [currentFloor, setCurrentFloor] = useState(1);
   const [simulationState, setSimulationState] = useState(getCurrentStatus());
@@ -221,35 +235,17 @@ export function BuildingMap({ darkMode, setDarkMode }) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [highlightedRoom, setHighlightedRoom] = useState(null);
 
-  // NEW: Starred Items State (Persisted)
-  const [starredItems, setStarredItems] = useState(() => {
-    try {
-      const saved = localStorage.getItem("apollo-starred-items");
-      return saved ? JSON.parse(saved) : [];
-    } catch (e) {
-      console.error("Failed to parse starred items", e);
-      return [];
-    }
-  });
 
-  const toggleStar = useCallback((item) => {
-    setStarredItems(prev => {
-      const exists = prev.find(i => i.id === item.id);
-      let newItems;
-      if (exists) {
-        newItems = prev.filter(i => i.id !== item.id);
-      } else {
-        newItems = [...prev, item];
-      }
-      localStorage.setItem("apollo-starred-items", JSON.stringify(newItems));
-      return newItems;
-    });
-  }, []);
 
-  // Navigation from Search
-  const handleNavigate = (roomId) => {
+  // Navigation from Search or Dashboard
+  const handleNavigate = (roomId, timeToSet = null) => {
     setIsSearchOpen(false);
     setHighlightedRoom(roomId);
+
+    if (timeToSet) {
+      setIsLive(false);
+      setSimulationState(prev => ({ ...prev, time: timeToSet }));
+    }
 
     // Auto-switch building and floor based on room ID prefix
     if (roomId.startsWith("room-")) {
@@ -412,13 +408,28 @@ export function BuildingMap({ darkMode, setDarkMode }) {
           simulationState.time >= event.start &&
           simulationState.time < event.end;
       });
-      if (activeEvent) color = COLORS[activeEvent.status];
+      if (activeEvent) {
+        color = COLORS[activeEvent.status];
+        
+        // Privacy filter
+        const isEnrolled = currentUser?.enrolledCourses?.some(c => 
+          c.title === activeEvent.title && 
+          c.day === simulationState.day && 
+          c.start === activeEvent.start
+        );
+        
+        if (!isEnrolled) {
+           activeEvent = { ...activeEvent, isPrivate: true };
+        } else {
+           color = "#22c55e"; // Highlight enrolled courses in green
+        }
+      }
     } else {
       color = COLORS.OFFLINE;
     }
 
     return { color, activeEvent, roomData };
-  }, [simulationState.day, simulationState.time]);
+  }, [simulationState.day, simulationState.time, currentUser]);
 
   const handleRoomHover = (roomId, isHovering) => {
     if (!isHovering) {
@@ -479,24 +490,10 @@ export function BuildingMap({ darkMode, setDarkMode }) {
       return highlightedRoom === roomId ? "#22c55e" : "rgba(200, 200, 200, 0.1)";
     }
 
-    // 2. Starred Item Active?
-    const activeStarred = starredItems.find(item => {
-      if (item.roomId !== roomId) return false;
-      // Check for time match
-      if (item.day && item.start && item.end) {
-        return item.day === simulationState.day &&
-          simulationState.time >= item.start &&
-          simulationState.time < item.end;
-      }
-      return false;
-    });
-
-    if (activeStarred) return "#a855f7"; // Purple-500
-
-    // 3. Otherwise return standard status color
+    // 2. Otherwise return standard status color
     const status = getRoomStatus(roomId);
     return status ? status.color : COLORS.OFFLINE;
-  }, [getRoomStatus, highlightedRoom, starredItems, simulationState]);
+  }, [getRoomStatus, highlightedRoom]);
 
   const offsets = (() => {
     const base = FLOOR_OFFSETS[currentBuilding]?.[currentFloor] || { x: 0, y: 0 };
@@ -538,6 +535,14 @@ export function BuildingMap({ darkMode, setDarkMode }) {
 
       </motion.div>
 
+      <StudentDashboard 
+        currentUser={currentUser} 
+        onLoginClick={() => setIsLoginModalOpen(true)}
+        onLogoutClick={() => setCurrentUser(null)}
+        onNavigate={handleNavigate}
+        currentDay={simulationState.day}
+      />
+
       {/* Map Card */}
       <motion.div
         className={`map-card ${currentBuilding === "SSC" ? "compact crisp" : ""} ${["HSS", "SCI"].includes(currentBuilding) ? "crisp" : ""}`}
@@ -550,8 +555,12 @@ export function BuildingMap({ darkMode, setDarkMode }) {
             <SearchModal
               onClose={() => setIsSearchOpen(false)}
               onNavigate={handleNavigate}
-              starredItems={starredItems}
-              onToggleStar={toggleStar}
+            />
+          )}
+          {isLoginModalOpen && (
+            <LoginModal 
+              onClose={() => setIsLoginModalOpen(false)}
+              onLogin={setCurrentUser}
             />
           )}
         </AnimatePresence>
@@ -685,7 +694,7 @@ export function BuildingMap({ darkMode, setDarkMode }) {
       </motion.div>
 
       <AnimatePresence>
-        {hoveredRoom && <RoomTooltip info={hoveredRoom} position={mousePos} starredItems={starredItems} />}
+        {hoveredRoom && <RoomTooltip info={hoveredRoom} position={mousePos} />}
       </AnimatePresence>
 
       {/* DEBUG PANEL (Outside Map) */}

@@ -1,0 +1,35 @@
+{
+  "123456": {
+    "firstName": "Kevin",
+    "password": "smc",
+    "enrolledCourses": [
+      {
+        "title": "ACCTG 1",
+        "courseName": "Introduction to Financial Accounting",
+        "professor": "PLATZ W A",
+        "roomId": "bus-106",
+        "day": "Mon",
+        "start": "08:30",
+        "end": "10:55"
+      },
+      {
+        "title": "AD JUS 1",
+        "courseName": "Introduction to Administration of Justice",
+        "professor": "BEY-TAYLOR M",
+        "roomId": "bus-106",
+        "day": "Thu",
+        "start": "12:45",
+        "end": "14:05"
+      },
+      {
+        "title": "ASTRON 3",
+        "courseName": "Stellar Astronomy with Laboratory",
+        "professor": "BALM S P",
+        "roomId": "room-320",
+        "day": "Mon",
+        "start": "18:45",
+        "end": "21:50"
+      }
+    ]
+  }
+}

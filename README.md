@@ -32,7 +32,7 @@
 
 ## 📖 About The Project
 
-**Apollo** is an interactive, real-time visualization of five campus buildings at Santa Monica College: **Math & Science (MSB)**, **Drescher Hall**, **Humanities & Social Sciences (HSS)**, **Science (SCI)**, and **Business (BUS)**. 
+**Apollo** is an interactive, real-time visualization of six campus buildings at Santa Monica College: **Math & Science (MSB)**, **Drescher Hall**, **Humanities & Social Sciences (HSS)**, **Science (SCI)**, **Business (BUS)**, and the **Student Success Center (SSC)**.
 
 Finding an empty room to study in or locating a specific SI (Supplemental Instruction) session can be frustrating. Apollo solves this by scraping the official schedule and visualizing it on a dynamic, 3-level interactive map.
 

@@ -5,6 +5,8 @@ export const ROOM_SCHEDULES = {
 
   // --- FLOOR 1: MIXED USE ---
   // --- STATIC STUDY ROOMS (Blue) ---
+  "room-107": { type: "PROGRAM", label: "Math Lab", group: "MATH", url: "https://www.smc.edu/student-support/academic-support/tutoring-centers/math-lab/" },
+  "room-108": { type: "PROGRAM", label: "Math Lab Quiet Room", group: "MATH", url: "https://www.smc.edu/student-support/academic-support/tutoring-centers/math-lab/" },
   "room-107b": { type: "STUDY_ROOM", label: "Group Study 107B", policy: "First come, first served" },
   "room-107c": { type: "STUDY_ROOM", label: "Group Study 107C", policy: "First come, first served" },
   "room-107d": { type: "STUDY_ROOM", label: "Group Study 107D", policy: "First come, first served" },

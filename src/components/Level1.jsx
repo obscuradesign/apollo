@@ -22,6 +22,24 @@ export const Level1 = React.memo(function Level1({ getColor, onHover, onClick })
       </g>
       <g id="ROOMS">
         <g id="Floor_1" data-name="Floor 1">
+          <path
+            id="room-108"
+            fill={getColor("room-108")}
+            d="m134.36 137.76-1.29.84-1.64 1.14.22.3.26.38 1.86 2.68-6.46 4.47 3.41 5.31 14.46 22.45.78.15 27.98-6.72 6.29-4.24 3.44-5.87-.14-7.16-3.93-6.51-20.52-22.09z"
+            onMouseEnter={() => onHover("room-108", true)}
+            onMouseLeave={() => onHover("room-108", false)}
+            onClick={() => onClick("room-108")}
+            style={{ cursor: "pointer", transition: "opacity 0.2s" }}
+          />
+          <path
+            id="room-107"
+            fill={getColor("room-107")}
+            d="m101.77 108.78-3.64-5.09-.1-1.13L128.4 82.8l2.55-1.69 27.51 41-27.03 17.63-.82.57-3.18-4.59-1.56-2.1-6.84 3.17-17.66-26.57z"
+            onMouseEnter={() => onHover("room-107", true)}
+            onMouseLeave={() => onHover("room-107", false)}
+            onClick={() => onClick("room-107")}
+            style={{ cursor: "pointer", transition: "opacity 0.2s" }}
+          />
           {/* --- ROOM 101 --- */}
           <path
             id="room-101"
@@ -29,6 +47,7 @@ export const Level1 = React.memo(function Level1({ getColor, onHover, onClick })
             d="m153.12 325 19.9-3.67 3.72-.78 6.47-1.58s4.68 4.94 5.19 7.07c1.66 6.85-.67 11.49-.67 11.49l-1.43 3.77-.59 1.27s-6.2 14.27-6.89 14.52-34.84-14.9-34.84-14.9l9.13-17.19"
             onMouseEnter={() => onHover("room-101", true)}
             onMouseLeave={() => onHover("room-101", false)}
+            onClick={() => onClick("room-101")}
             style={{ cursor: "pointer", transition: "opacity 0.2s" }}
           />
 
@@ -39,6 +58,7 @@ export const Level1 = React.memo(function Level1({ getColor, onHover, onClick })
             d="m154.86 302.86-1.62 3.38-15.63 32.55-20.55-8.9-1.47-3.38 2.84-36.98s5.17-12.59 16.46-7.02c.98.48 1.03.74 2.12 1.52 12.92 9.3 0 0 0 0l2.75 2.16 16.79 13.15-1.68 3.5"
             onMouseEnter={() => onHover("room-102", true)}
             onMouseLeave={() => onHover("room-102", false)}
+            onClick={() => onClick("room-102")}
             style={{ cursor: "pointer", transition: "opacity 0.2s" }}
           />
 
@@ -49,6 +69,7 @@ export const Level1 = React.memo(function Level1({ getColor, onHover, onClick })
             d="m114.75 151.2-1.86-2.94-17.56 11.02 10.34 15.94 11.58-7.52s9.33-3.39-2.5-16.5"
             onMouseEnter={() => onHover("room-103", true)}
             onMouseLeave={() => onHover("room-103", false)}
+            onClick={() => onClick("room-103")}
             style={{ cursor: "pointer", transition: "opacity 0.2s" }}
           />
 
@@ -59,6 +80,7 @@ export const Level1 = React.memo(function Level1({ getColor, onHover, onClick })
             d="m81.52 100.39 2.4 3.57 14.25 21.16.38 1.13 2.43 3.75-17.31 11.32-19.2-29.58 17.73-11.8"
             onMouseEnter={() => onHover("room-106", true)}
             onMouseLeave={() => onHover("room-106", false)}
+            onClick={() => onClick("room-106")}
             style={{ cursor: "pointer", transition: "opacity 0.2s" }}
           />
 
@@ -69,6 +91,7 @@ export const Level1 = React.memo(function Level1({ getColor, onHover, onClick })
             d="M275.4 204.41v3.16l2.69 26.85 4.95 4.02 10.86-.69h3.52l5.39.12-1.78-4.04v-29.64l-24.63-2.97z"
             onMouseEnter={() => onHover("room-112", true)}
             onMouseLeave={() => onHover("room-112", false)}
+            onClick={() => onClick("room-112")}
             style={{ cursor: "pointer", transition: "opacity 0.2s" }}
           />
 
@@ -79,6 +102,7 @@ export const Level1 = React.memo(function Level1({ getColor, onHover, onClick })
             d="m302.81 235.31 5.27-.02s40.41-.28 40.79-.28h3.81s2.84.25 2.93.51-2.02-29.94-2.02-29.94l-46.54-1.17-5.74-.52v31.62l1.48.5"
             onMouseEnter={() => onHover("room-113", true)}
             onMouseLeave={() => onHover("room-113", false)}
+            onClick={() => onClick("room-113")}
             style={{ cursor: "pointer", transition: "opacity 0.2s" }}
           />
 
@@ -89,6 +113,7 @@ export const Level1 = React.memo(function Level1({ getColor, onHover, onClick })
             d="M376.76 235.02h51.96l-.57-26.57 3.51-.29s-.42-1.61-.57-1.57-1.76 0-1.76 0l-.73-1.66-53.87.4-.5 29.59 2.54 1.1"
             onMouseEnter={() => onHover("room-116", true)}
             onMouseLeave={() => onHover("room-116", false)}
+            onClick={() => onClick("room-116")}
             style={{ cursor: "pointer", transition: "opacity 0.2s" }}
           />
 
@@ -99,6 +124,7 @@ export const Level1 = React.memo(function Level1({ getColor, onHover, onClick })
             d="M376.76 250.1h44.9l3.41.03 2.95-.03-.51 28.68-52.21.47-.5-29.65 1.96-.5"
             onMouseEnter={() => onHover("room-117", true)}
             onMouseLeave={() => onHover("room-117", false)}
+            onClick={() => onClick("room-117")}
             style={{ cursor: "pointer", transition: "opacity 0.2s" }}
           />
 
@@ -109,6 +135,7 @@ export const Level1 = React.memo(function Level1({ getColor, onHover, onClick })
             d="M304.05 250.1h49.51v28.68l-37.36.83-13.39.83V250.1l1.36-1"
             onMouseEnter={() => onHover("room-119", true)}
             onMouseLeave={() => onHover("room-119", false)}
+            onClick={() => onClick("room-119")}
             style={{ cursor: "pointer", transition: "opacity 0.2s" }}
           />
 

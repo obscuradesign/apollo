@@ -60,7 +60,8 @@ const BUILDINGS = {
   SCI: { label: "SCI", floors: 3 },
   BUS: { label: "BUS", floors: 2 },
   SSC: { label: "SSC", floors: 3 },
-  ART: { label: "Art", floors: 2 }
+  ART: { label: "Art", floors: 2 },
+  PV: { label: "Pico Village", floors: 1 }
 };
 
 // Manual offsets (x,y) to visually center each floor's SVG shape within the viewport
@@ -97,6 +98,9 @@ const FLOOR_OFFSETS = {
     1: { x: 0, y: 0 },
     2: { x: 0, y: 0 },
     3: { x: 0, y: 0 }
+  },
+  PV: {
+    1: { x: 0, y: 0 }
   }
 };
 
@@ -302,6 +306,9 @@ export function BuildingMap({ darkMode, setDarkMode }) {
       if (num.startsWith("1")) setCurrentFloor(1);
       else if (num.startsWith("2")) setCurrentFloor(2);
       else if (num.startsWith("3")) setCurrentFloor(3);
+    } else if (roomId.startsWith("pv-")) {
+      setCurrentBuilding("PV");
+      setCurrentFloor(1);
     } else {
       // Other buildings: try to detect floor from first digit
       const match = roomId.match(/-(\d)/);
@@ -664,6 +671,8 @@ export function BuildingMap({ darkMode, setDarkMode }) {
               {currentBuilding === "DRSCHR" && currentFloor === 1 && <DrescherLevel1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
               {currentBuilding === "DRSCHR" && currentFloor === 2 && <DrescherLevel2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
               {currentBuilding === "DRSCHR" && currentFloor === 3 && <DrescherLevel3 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+              {/* Pico Village (shares Drescher 1 unified view) */}
+              {currentBuilding === "PV" && currentFloor === 1 && <DrescherLevel1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
               {/* HSS Floors */}
               {currentBuilding === "HSS" && currentFloor === 1 && <HSSLevel1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
               {currentBuilding === "HSS" && currentFloor === 2 && <HSSLevel2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}

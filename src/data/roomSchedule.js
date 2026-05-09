@@ -729,5 +729,37 @@ export const ROOM_SCHEDULES = {
 
   // --- Shared Staff Spaces ---
   "ssc-391": { type: "OFFICE", label: "Staff Break Room", clickable: false },
-  "ssc-396": { type: "OFFICE", label: "Academic Affairs Conference Room", group: "ACADEMIC_AFFAIRS", url: "https://www.smc.edu/student-support/ssc/Directory.php" }
+  "ssc-396": { type: "OFFICE", label: "Academic Affairs Conference Room", group: "ACADEMIC_AFFAIRS", url: "https://www.smc.edu/student-support/ssc/Directory.php" },
+
+  // =============================================
+  // ART (Art Complex)
+  // =============================================
+
+  // --- FLOOR 1 ---
+  "a-100": { type: "CLASSROOM", label: "Art 100", events: [] },
+  "a-102": { type: "CLASSROOM", label: "Art 102", events: [] },
+  "a-102a": { type: "CLASSROOM", label: "Art 102A", events: [] },
+  "a-103": { type: "CLASSROOM", label: "Art 103", events: [] },
+  "a-110": { type: "CLASSROOM", label: "Art 110", events: [] },
+  "a-112": { type: "OFFICE", label: "Art Department Offices", group: "ART_DEPT", url: "https://www.smc.edu/academics/academic-departments/art/" },
+
+  // Art Department
+  "a-114": { type: "OFFICE", label: "Art Department", group: "ART_DEPT", url: "https://www.smc.edu/academics/academic-departments/art/" },
+  "a-126a": { type: "OFFICE", label: "Art Department Offices", group: "ART_DEPT", url: "https://www.smc.edu/academics/academic-departments/art/" },
+
+  "a-116": { type: "CLASSROOM", label: "Art 116", events: [] },
+  "a-118": { type: "CLASSROOM", label: "Art 118", events: [] },
+  "a-119": { type: "CLASSROOM", label: "Art 119", events: [] },
+  "a-120": { type: "CLASSROOM", label: "Art 120", events: [] },
+  "a-124": { type: "CLASSROOM", label: "Art 124", events: [] },
+  "a-125": { type: "CLASSROOM", label: "Art 125", events: [] },
+  "a-125a": { type: "CLASSROOM", label: "Art 125A", events: [] },
+  "a-125b": { type: "CLASSROOM", label: "Art 125B", events: [] },
+  "a-126": { type: "CLASSROOM", label: "Art 126", events: [] },
+
+  // --- FLOOR 2 ---
+  "a-214": { type: "CLASSROOM", label: "Art 214", events: [] },
+  "a-216": { type: "OFFICE", label: "Art Adjunct Office", clickable: false },
+  "a-218": { type: "OFFICE", label: "Storage Closet", clickable: false },
+  "a-220": { type: "CLASSROOM", label: "Art 220", events: [] }
 };

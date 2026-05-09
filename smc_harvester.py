@@ -106,7 +106,9 @@ def scrape_smc_live():
 
         print("📅 Selecting Semester...")
         term_select = Select(driver.find_element(By.ID, SEMESTER_DROPDOWN_ID))
-        term_select.select_by_index(0) 
+        term_select.select_by_index(0)
+        selected_term = term_select.first_selected_option.text
+        print(f"   ✓ Selected semester: {selected_term!r}")
         time.sleep(1)
 
         # Expand the "Advanced" collapsible section
@@ -147,6 +149,7 @@ def scrape_smc_live():
         
         # --- PAGINATION LOOP ---
         page_num = 1
+        dropped_locations = set()
         while True:
             # 1. Find the Data Table
             xpath_selector = "//table[.//th[contains(., 'Course Name')]]/tbody/tr"
@@ -167,8 +170,11 @@ def scrape_smc_live():
                     instructor = cells[9].text.strip()
                     
                     room_key = normalize_room_id(location_text)
-                    if not room_key: 
-                        continue  # Not a target building, skip silently
+                    if not room_key:
+                        if location_text not in dropped_locations:
+                            dropped_locations.add(location_text)
+                            print(f"   ⏭️  Skipped row (no building/room match): {location_text!r}")
+                        continue
 
                     days, start, end = parse_schedule(schedule_text)
                     if not start or not end: 
@@ -191,7 +197,8 @@ def scrape_smc_live():
                         # Basic duplicate check
                         if new_event not in scraped_data[room_key]["events"]:
                             scraped_data[room_key]["events"].append(new_event)
-                except:
+                except Exception as e:
+                    print(f"   ⚠️ Row error: {e}")
                     continue
 
             # 3. Check for "Next" Button
@@ -232,10 +239,13 @@ def scrape_smc_live():
     finally:
         driver.quit()
         
-    print(f"💾 Saving {len(scraped_data)} rooms to {OUTPUT_PATH}...")
-    with open(OUTPUT_PATH, "w") as f:
-        json.dump(scraped_data, f, indent=2)
-    print("✅ Done!")
+    if scraped_data:
+        print(f"💾 Saving {len(scraped_data)} rooms to {OUTPUT_PATH}...")
+        with open(OUTPUT_PATH, "w") as f:
+            json.dump(scraped_data, f, indent=2)
+        print("✅ Done!")
+    else:
+        print(f"⚠️ Scrape produced 0 rooms — leaving existing {OUTPUT_PATH} untouched.")
 
 if __name__ == "__main__":
     scrape_smc_live()

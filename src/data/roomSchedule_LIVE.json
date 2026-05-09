@@ -1,158 +1,26 @@
 {
-    "bus-106": {
-        "type": "CLASSROOM",
-        "label": "BUS 106",
-        "events": [
-            {
-                "day": "Mon",
-                "start": "08:30",
-                "end": "10:55",
-                "title": "ACCTG 1",
-                "courseName": "Introduction to Financial Accounting",
-                "professor": "PLATZ W A",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Wed",
-                "start": "08:30",
-                "end": "10:55",
-                "title": "ACCTG 1",
-                "courseName": "Introduction to Financial Accounting",
-                "professor": "PLATZ W A",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Mon",
-                "start": "12:45",
-                "end": "14:05",
-                "title": "ACCTG 45",
-                "courseName": "Individual Financial Planning",
-                "professor": "HANOUNEK T H",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Wed",
-                "start": "12:45",
-                "end": "14:05",
-                "title": "ACCTG 45",
-                "courseName": "Individual Financial Planning",
-                "professor": "HANOUNEK T H",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Thu",
-                "start": "12:45",
-                "end": "14:05",
-                "title": "AD JUS 1",
-                "courseName": "Introduction to Administration of Justice",
-                "professor": "BEY-TAYLOR M",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Tue",
-                "start": "12:45",
-                "end": "14:05",
-                "title": "AD JUS 1",
-                "courseName": "Introduction to Administration of Justice",
-                "professor": "BEY-TAYLOR M",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Thu",
-                "start": "09:30",
-                "end": "10:50",
-                "title": "AD JUS 2",
-                "courseName": "Concepts of Criminal Law",
-                "professor": "JUNGHAHN L A",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Tue",
-                "start": "09:30",
-                "end": "10:50",
-                "title": "AD JUS 2",
-                "courseName": "Concepts of Criminal Law",
-                "professor": "JUNGHAHN L A",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Thu",
-                "start": "08:00",
-                "end": "09:20",
-                "title": "BUS 20",
-                "courseName": "Principles of Marketing",
-                "professor": "SENKO E A",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Tue",
-                "start": "08:00",
-                "end": "09:20",
-                "title": "BUS 20",
-                "courseName": "Principles of Marketing",
-                "professor": "SENKO E A",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Wed",
-                "start": "17:45",
-                "end": "20:50",
-                "title": "BUS 20",
-                "courseName": "Principles of Marketing",
-                "professor": "OLIVERI J S",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Mon",
-                "start": "12:45",
-                "end": "14:05",
-                "title": "BUS 45",
-                "courseName": "Individual Financial Planning",
-                "professor": "HANOUNEK T H",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Wed",
-                "start": "12:45",
-                "end": "14:05",
-                "title": "BUS 45",
-                "courseName": "Individual Financial Planning",
-                "professor": "HANOUNEK T H",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Thu",
-                "start": "14:15",
-                "end": "15:50",
-                "title": "BUS 62",
-                "courseName": "Human Relations and Ethical Issues in Business",
-                "professor": "SMITH DEBORAH R",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Thu",
-                "start": "11:15",
-                "end": "12:35",
-                "title": "REALES 1",
-                "courseName": "Real Estate Principles",
-                "professor": "MACIAS J F",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Tue",
-                "start": "11:15",
-                "end": "12:35",
-                "title": "REALES 1",
-                "courseName": "Real Estate Principles",
-                "professor": "MACIAS J F",
-                "status": "OCCUPIED"
-            }
-        ]
-    },
     "bus-254": {
         "type": "CLASSROOM",
         "label": "BUS 254",
         "events": [
+            {
+                "day": "Mon",
+                "start": "08:30",
+                "end": "10:55",
+                "title": "ACCTG 1",
+                "courseName": "Introduction to Financial Accounting",
+                "professor": "PLATZ W A",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "08:30",
+                "end": "10:55",
+                "title": "ACCTG 1",
+                "courseName": "Introduction to Financial Accounting",
+                "professor": "PLATZ W A",
+                "status": "OCCUPIED"
+            },
             {
                 "day": "Thu",
                 "start": "08:30",
@@ -388,24 +256,6 @@
                 "status": "OCCUPIED"
             },
             {
-                "day": "Mon",
-                "start": "09:30",
-                "end": "11:55",
-                "title": "ACCTG 2",
-                "courseName": "Corporate Financial and Managerial Accounting",
-                "professor": "Staff",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Wed",
-                "start": "09:30",
-                "end": "11:55",
-                "title": "ACCTG 2",
-                "courseName": "Corporate Financial and Managerial Accounting",
-                "professor": "Staff",
-                "status": "OCCUPIED"
-            },
-            {
                 "day": "Thu",
                 "start": "09:30",
                 "end": "10:50",
@@ -439,6 +289,153 @@
                 "title": "PRO CR 7",
                 "courseName": "Coaching of Soccer",
                 "professor": "PIERCE T L",
+                "status": "OCCUPIED"
+            }
+        ]
+    },
+    "bus-252": {
+        "type": "CLASSROOM",
+        "label": "BUS 252",
+        "events": [
+            {
+                "day": "Mon",
+                "start": "09:30",
+                "end": "11:55",
+                "title": "ACCTG 2",
+                "courseName": "Corporate Financial and Managerial Accounting",
+                "professor": "RUBIO C",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "09:30",
+                "end": "11:55",
+                "title": "ACCTG 2",
+                "courseName": "Corporate Financial and Managerial Accounting",
+                "professor": "RUBIO C",
+                "status": "OCCUPIED"
+            }
+        ]
+    },
+    "bus-106": {
+        "type": "CLASSROOM",
+        "label": "BUS 106",
+        "events": [
+            {
+                "day": "Mon",
+                "start": "12:45",
+                "end": "14:05",
+                "title": "ACCTG 45",
+                "courseName": "Individual Financial Planning",
+                "professor": "HANOUNEK T H",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "12:45",
+                "end": "14:05",
+                "title": "ACCTG 45",
+                "courseName": "Individual Financial Planning",
+                "professor": "HANOUNEK T H",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Thu",
+                "start": "12:45",
+                "end": "14:05",
+                "title": "AD JUS 1",
+                "courseName": "Introduction to Administration of Justice",
+                "professor": "BEY-TAYLOR M",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Tue",
+                "start": "12:45",
+                "end": "14:05",
+                "title": "AD JUS 1",
+                "courseName": "Introduction to Administration of Justice",
+                "professor": "BEY-TAYLOR M",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Thu",
+                "start": "09:30",
+                "end": "10:50",
+                "title": "AD JUS 2",
+                "courseName": "Concepts of Criminal Law",
+                "professor": "JUNGHAHN L A",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Tue",
+                "start": "09:30",
+                "end": "10:50",
+                "title": "AD JUS 2",
+                "courseName": "Concepts of Criminal Law",
+                "professor": "JUNGHAHN L A",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Thu",
+                "start": "08:00",
+                "end": "09:20",
+                "title": "BUS 20",
+                "courseName": "Principles of Marketing",
+                "professor": "SENKO E A",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Tue",
+                "start": "08:00",
+                "end": "09:20",
+                "title": "BUS 20",
+                "courseName": "Principles of Marketing",
+                "professor": "SENKO E A",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "17:45",
+                "end": "20:50",
+                "title": "BUS 20",
+                "courseName": "Principles of Marketing",
+                "professor": "OLIVERI J S",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Mon",
+                "start": "12:45",
+                "end": "14:05",
+                "title": "BUS 45",
+                "courseName": "Individual Financial Planning",
+                "professor": "HANOUNEK T H",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "12:45",
+                "end": "14:05",
+                "title": "BUS 45",
+                "courseName": "Individual Financial Planning",
+                "professor": "HANOUNEK T H",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Thu",
+                "start": "11:15",
+                "end": "12:35",
+                "title": "REALES 1",
+                "courseName": "Real Estate Principles",
+                "professor": "MACIAS J F",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Tue",
+                "start": "11:15",
+                "end": "12:35",
+                "title": "REALES 1",
+                "courseName": "Real Estate Principles",
+                "professor": "MACIAS J F",
                 "status": "OCCUPIED"
             }
         ]
@@ -611,9 +608,9 @@
             }
         ]
     },
-    "drschr-213": {
+    "drschr-207": {
         "type": "CLASSROOM",
-        "label": "DRSCHR 213",
+        "label": "DRSCHR 207",
         "events": [
             {
                 "day": "Thu",
@@ -634,57 +631,39 @@
                 "status": "OCCUPIED"
             },
             {
-                "day": "Mon",
-                "start": "09:30",
-                "end": "10:50",
-                "title": "ENGL C1001",
-                "courseName": "Critical Thinking and Writing",
-                "professor": "WINKLER K D",
+                "day": "Wed",
+                "start": "11:15",
+                "end": "12:35",
+                "title": "ENGL C1000 AND",
+                "courseName": "Academic Reading and Writing",
+                "professor": "BARHAM A C",
                 "status": "OCCUPIED"
             },
             {
                 "day": "Wed",
-                "start": "09:30",
-                "end": "10:50",
-                "title": "ENGL C1001",
-                "courseName": "Critical Thinking and Writing",
-                "professor": "WINKLER K D",
+                "start": "12:45",
+                "end": "13:35",
+                "title": "ENGL 28",
+                "courseName": "Intensive College Writing Skills",
+                "professor": "BARHAM A C",
                 "status": "OCCUPIED"
             },
             {
-                "day": "Mon",
-                "start": "11:15",
-                "end": "12:35",
+                "day": "Fri",
+                "start": "11:30",
+                "end": "14:35",
                 "title": "ENGL C1001",
                 "courseName": "Critical Thinking and Writing",
-                "professor": "WINKLER K D",
+                "professor": "KARRON R",
                 "status": "OCCUPIED"
             },
             {
                 "day": "Wed",
-                "start": "11:15",
-                "end": "12:35",
+                "start": "14:15",
+                "end": "15:35",
                 "title": "ENGL C1001",
                 "courseName": "Critical Thinking and Writing",
-                "professor": "WINKLER K D",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Thu",
-                "start": "09:00",
-                "end": "11:25",
-                "title": "JAPAN 1",
-                "courseName": "Elementary Japanese I",
-                "professor": "TAKEMORI K",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Tue",
-                "start": "09:00",
-                "end": "11:25",
-                "title": "JAPAN 1",
-                "courseName": "Elementary Japanese I",
-                "professor": "TAKEMORI K",
+                "professor": "KARRON R",
                 "status": "OCCUPIED"
             }
         ]
@@ -811,7 +790,7 @@
                 "day": "Mon",
                 "start": "08:00",
                 "end": "10:05",
-                "title": "STAT C1000",
+                "title": "STAT C1000 AND",
                 "courseName": "Introduction to Statistics",
                 "professor": "MUSSELMAN M J",
                 "status": "OCCUPIED"
@@ -820,7 +799,7 @@
                 "day": "Wed",
                 "start": "08:00",
                 "end": "10:05",
-                "title": "STAT C1000",
+                "title": "STAT C1000 AND",
                 "courseName": "Introduction to Statistics",
                 "professor": "MUSSELMAN M J",
                 "status": "OCCUPIED"
@@ -847,7 +826,7 @@
                 "day": "Thu",
                 "start": "08:00",
                 "end": "10:05",
-                "title": "STAT C1000",
+                "title": "STAT C1000 AND",
                 "courseName": "Introduction to Statistics",
                 "professor": "KIM J J",
                 "status": "OCCUPIED"
@@ -856,7 +835,7 @@
                 "day": "Tue",
                 "start": "08:00",
                 "end": "10:05",
-                "title": "STAT C1000",
+                "title": "STAT C1000 AND",
                 "courseName": "Introduction to Statistics",
                 "professor": "KIM J J",
                 "status": "OCCUPIED"
@@ -1130,6 +1109,870 @@
             }
         ]
     },
+    "a-220": {
+        "type": "CLASSROOM",
+        "label": "A 220",
+        "events": [
+            {
+                "day": "Tue",
+                "start": "08:00",
+                "end": "11:00",
+                "title": "ART 10A",
+                "courseName": "Design I",
+                "professor": "ARUTIAN C L",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Mon",
+                "start": "10:00",
+                "end": "12:25",
+                "title": "ART 10A",
+                "courseName": "Design I",
+                "professor": "SHIBATA J M",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "10:00",
+                "end": "12:25",
+                "title": "ART 10A",
+                "courseName": "Design I",
+                "professor": "SHIBATA J M",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Mon",
+                "start": "16:00",
+                "end": "18:20",
+                "title": "ART 10A",
+                "courseName": "Design I",
+                "professor": "PERSON I S",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "16:00",
+                "end": "18:20",
+                "title": "ART 10A",
+                "courseName": "Design I",
+                "professor": "PERSON I S",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Thu",
+                "start": "08:00",
+                "end": "11:15",
+                "title": "ART 10A",
+                "courseName": "Design I",
+                "professor": "HUERTA R B",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Fri",
+                "start": "10:00",
+                "end": "15:00",
+                "title": "ART 10A",
+                "courseName": "Design I",
+                "professor": "DE ANDA III I",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Mon",
+                "start": "13:00",
+                "end": "15:25",
+                "title": "ART 30A",
+                "courseName": "Beginning Watercolor Painting I",
+                "professor": "SHIBATA J M",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "13:00",
+                "end": "15:25",
+                "title": "ART 30A",
+                "courseName": "Beginning Watercolor Painting I",
+                "professor": "SHIBATA J M",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Sat",
+                "start": "10:00",
+                "end": "15:00",
+                "title": "ART 30C",
+                "courseName": "Acrylic Painting Techniques",
+                "professor": "OTA N T",
+                "status": "OCCUPIED"
+            }
+        ]
+    },
+    "a-118": {
+        "type": "CLASSROOM",
+        "label": "A 118",
+        "events": [
+            {
+                "day": "Thu",
+                "start": "12:45",
+                "end": "15:00",
+                "title": "ART 10A",
+                "courseName": "Design I",
+                "professor": "AANRUD L B",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Mon",
+                "start": "15:20",
+                "end": "17:45",
+                "title": "ART 10A",
+                "courseName": "Design I",
+                "professor": "MIYANO E",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Thu",
+                "start": "15:20",
+                "end": "17:45",
+                "title": "ART 10B",
+                "courseName": "Design Theory & Practice",
+                "professor": "MIYANO E",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Tue",
+                "start": "15:20",
+                "end": "17:45",
+                "title": "ART 10B",
+                "courseName": "Design Theory & Practice",
+                "professor": "MIYANO E",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Sat",
+                "start": "09:00",
+                "end": "14:15",
+                "title": "ART 30A",
+                "courseName": "Beginning Watercolor Painting I",
+                "professor": "AARONS R R",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Sat",
+                "start": "09:00",
+                "end": "14:15",
+                "title": "ART 30B",
+                "courseName": "Watercolor Painting II",
+                "professor": "AARONS R R",
+                "status": "OCCUPIED"
+            }
+        ]
+    },
+    "a-119": {
+        "type": "CLASSROOM",
+        "label": "A 119",
+        "events": [
+            {
+                "day": "Thu",
+                "start": "12:45",
+                "end": "15:05",
+                "title": "ART 10C",
+                "courseName": "Digital Media",
+                "professor": "HUERTA R B",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Tue",
+                "start": "12:45",
+                "end": "15:05",
+                "title": "ART 10C",
+                "courseName": "Digital Media",
+                "professor": "HUERTA R B",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Mon",
+                "start": "09:00",
+                "end": "11:50",
+                "title": "ART 75",
+                "courseName": "Form and Information",
+                "professor": "BADGER C P",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Fri",
+                "start": "12:00",
+                "end": "17:05",
+                "title": "ART 80",
+                "courseName": "Introduction to Exhibition & Display",
+                "professor": "GARCIA K F",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Fri",
+                "start": "12:00",
+                "end": "17:05",
+                "title": "ART 82",
+                "courseName": "Exhibition and Display Production",
+                "professor": "GARCIA K F",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Fri",
+                "start": "12:00",
+                "end": "17:05",
+                "title": "ART 84",
+                "courseName": "Exhibition & Display Implementation, Activation, and Management",
+                "professor": "GARCIA K F",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "11:00",
+                "end": "16:05",
+                "title": "ART 87A",
+                "courseName": "Art Mentor Portfolio",
+                "professor": "SILVER E M",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "11:00",
+                "end": "16:05",
+                "title": "ART 87B",
+                "courseName": "Art Mentor Professional Practice",
+                "professor": "SILVER E M",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "11:00",
+                "end": "16:05",
+                "title": "ART 87C",
+                "courseName": "Art Mentor Material and Exhibition Studies",
+                "professor": "SILVER E M",
+                "status": "OCCUPIED"
+            }
+        ]
+    },
+    "a-126": {
+        "type": "CLASSROOM",
+        "label": "A 126",
+        "events": [
+            {
+                "day": "Thu",
+                "start": "12:45",
+                "end": "17:50",
+                "title": "ART 13",
+                "courseName": "Form and Space: Introduction to 3D Design",
+                "professor": "SILVER E M",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Thu",
+                "start": "18:30",
+                "end": "21:00",
+                "title": "ART 13",
+                "courseName": "Form and Space: Introduction to 3D Design",
+                "professor": "PEREZ H N",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Tue",
+                "start": "18:30",
+                "end": "21:00",
+                "title": "ART 13",
+                "courseName": "Form and Space: Introduction to 3D Design",
+                "professor": "PEREZ H N",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "17:00",
+                "end": "22:05",
+                "title": "ART 60",
+                "courseName": "Introduction to Printmaking",
+                "professor": "THOMASON M M",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Mon",
+                "start": "17:00",
+                "end": "22:05",
+                "title": "ART 62",
+                "courseName": "Serigraphy (Silkscreen)",
+                "professor": "THOMASON M M",
+                "status": "OCCUPIED"
+            }
+        ]
+    },
+    "a-120": {
+        "type": "CLASSROOM",
+        "label": "A 120",
+        "events": [
+            {
+                "day": "Mon",
+                "start": "08:00",
+                "end": "10:25",
+                "title": "ART 20A",
+                "courseName": "Drawing I - Introduction to Drawing",
+                "professor": "BURCHMAN J H",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "08:00",
+                "end": "10:25",
+                "title": "ART 20A",
+                "courseName": "Drawing I - Introduction to Drawing",
+                "professor": "BURCHMAN J H",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Fri",
+                "start": "09:00",
+                "end": "14:05",
+                "title": "ART 20A",
+                "courseName": "Drawing I - Introduction to Drawing",
+                "professor": "VICICH G M",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Mon",
+                "start": "11:15",
+                "end": "13:40",
+                "title": "ART 20A",
+                "courseName": "Drawing I - Introduction to Drawing",
+                "professor": "BURCHMAN J H",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "11:15",
+                "end": "13:40",
+                "title": "ART 20A",
+                "courseName": "Drawing I - Introduction to Drawing",
+                "professor": "BURCHMAN J H",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Tue",
+                "start": "12:45",
+                "end": "17:50",
+                "title": "ART 20A",
+                "courseName": "Drawing I - Introduction to Drawing",
+                "professor": "ZARCONE J",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Sat",
+                "start": "10:00",
+                "end": "15:00",
+                "title": "ART 20A",
+                "courseName": "Drawing I - Introduction to Drawing",
+                "professor": "CISNEROS N",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Thu",
+                "start": "08:00",
+                "end": "10:15",
+                "title": "ART 20A",
+                "courseName": "Drawing I - Introduction to Drawing",
+                "professor": "AANRUD L B",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Tue",
+                "start": "08:00",
+                "end": "10:15",
+                "title": "ART 20A",
+                "courseName": "Drawing I - Introduction to Drawing",
+                "professor": "AANRUD L B",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Mon",
+                "start": "18:00",
+                "end": "21:30",
+                "title": "ART 20A",
+                "courseName": "Drawing I - Introduction to Drawing",
+                "professor": "THOMAS K",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "18:00",
+                "end": "21:30",
+                "title": "ART 20A",
+                "courseName": "Drawing I - Introduction to Drawing",
+                "professor": "THOMAS K",
+                "status": "OCCUPIED"
+            }
+        ]
+    },
+    "a-102": {
+        "type": "CLASSROOM",
+        "label": "A 102",
+        "events": [
+            {
+                "day": "Tue",
+                "start": "08:30",
+                "end": "10:50",
+                "title": "ART 20A",
+                "courseName": "Drawing I - Introduction to Drawing",
+                "professor": "OTA N T",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Fri",
+                "start": "10:00",
+                "end": "15:00",
+                "title": "ART 20A",
+                "courseName": "Drawing I - Introduction to Drawing",
+                "professor": "SELVIK R R",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Tue",
+                "start": "17:30",
+                "end": "21:30",
+                "title": "ART 20B",
+                "courseName": "Drawing II - Drawing with Color",
+                "professor": "MAMMARELLA C J",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Sat",
+                "start": "10:00",
+                "end": "15:05",
+                "title": "ART 35",
+                "courseName": "Airbrush Techniques",
+                "professor": "PEREZ H N",
+                "status": "OCCUPIED"
+            }
+        ]
+    },
+    "a-100": {
+        "type": "CLASSROOM",
+        "label": "A 100",
+        "events": [
+            {
+                "day": "Thu",
+                "start": "08:30",
+                "end": "10:55",
+                "title": "ART 21A",
+                "courseName": "Figure Drawing I",
+                "professor": "TRUJILLO M E",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Tue",
+                "start": "08:30",
+                "end": "10:55",
+                "title": "ART 21A",
+                "courseName": "Figure Drawing I",
+                "professor": "TRUJILLO M E",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Fri",
+                "start": "10:00",
+                "end": "15:00",
+                "title": "ART 21A",
+                "courseName": "Figure Drawing I",
+                "professor": "MAMMARELLA C J",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "18:00",
+                "end": "21:45",
+                "title": "ART 21A",
+                "courseName": "Figure Drawing I",
+                "professor": "KOMPANEYETS M",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Thu",
+                "start": "12:45",
+                "end": "15:10",
+                "title": "ART 21B",
+                "courseName": "Figure Drawing II",
+                "professor": "TRUJILLO M E",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Tue",
+                "start": "12:45",
+                "end": "15:10",
+                "title": "ART 21B",
+                "courseName": "Figure Drawing II",
+                "professor": "TRUJILLO M E",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Fri",
+                "start": "10:00",
+                "end": "15:00",
+                "title": "ART 21B",
+                "courseName": "Figure Drawing II",
+                "professor": "MAMMARELLA C J",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Thu",
+                "start": "12:45",
+                "end": "15:10",
+                "title": "ART 21C",
+                "courseName": "Figure Drawing for Portfolio Development",
+                "professor": "TRUJILLO M E",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Tue",
+                "start": "12:45",
+                "end": "15:10",
+                "title": "ART 21C",
+                "courseName": "Figure Drawing for Portfolio Development",
+                "professor": "TRUJILLO M E",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "08:00",
+                "end": "13:05",
+                "title": "ART 31",
+                "courseName": "Beginning Oil Painting",
+                "professor": "TRUJILLO M E",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Mon",
+                "start": "11:30",
+                "end": "16:35",
+                "title": "ART 31",
+                "courseName": "Beginning Oil Painting",
+                "professor": "ZARCONE J",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Sat",
+                "start": "10:00",
+                "end": "15:00",
+                "title": "ART 31",
+                "courseName": "Beginning Oil Painting",
+                "professor": "MACKAY A C",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Mon",
+                "start": "17:00",
+                "end": "21:50",
+                "title": "ART 31",
+                "courseName": "Beginning Oil Painting",
+                "professor": "MACKAY A C",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Mon",
+                "start": "11:30",
+                "end": "16:35",
+                "title": "ART 32",
+                "courseName": "Intermediate Painting",
+                "professor": "ZARCONE J",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Sat",
+                "start": "10:00",
+                "end": "15:00",
+                "title": "ART 32",
+                "courseName": "Intermediate Painting",
+                "professor": "MACKAY A C",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Mon",
+                "start": "17:00",
+                "end": "21:50",
+                "title": "ART 32",
+                "courseName": "Intermediate Painting",
+                "professor": "MACKAY A C",
+                "status": "OCCUPIED"
+            }
+        ]
+    },
+    "a-124": {
+        "type": "CLASSROOM",
+        "label": "A 124",
+        "events": [
+            {
+                "day": "Thu",
+                "start": "09:00",
+                "end": "11:30",
+                "title": "ART 40A",
+                "courseName": "Sculpture Fundamentals",
+                "professor": "SILVER E M",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Tue",
+                "start": "09:00",
+                "end": "11:30",
+                "title": "ART 40A",
+                "courseName": "Sculpture Fundamentals",
+                "professor": "SILVER E M",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Mon",
+                "start": "12:00",
+                "end": "14:25",
+                "title": "ART 40A",
+                "courseName": "Sculpture Fundamentals",
+                "professor": "BADGER C P",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "12:00",
+                "end": "14:25",
+                "title": "ART 40A",
+                "courseName": "Sculpture Fundamentals",
+                "professor": "BADGER C P",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Tue",
+                "start": "12:45",
+                "end": "17:50",
+                "title": "ART 40B",
+                "courseName": "Sculpture Explorations",
+                "professor": "SILVER E M",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Tue",
+                "start": "12:45",
+                "end": "17:50",
+                "title": "ART 40C",
+                "courseName": "Advanced Sculpture",
+                "professor": "SILVER E M",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Mon",
+                "start": "15:00",
+                "end": "17:30",
+                "title": "ART 43A",
+                "courseName": "Glass Sculpture I",
+                "professor": "BROMBERG T L",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "15:00",
+                "end": "17:30",
+                "title": "ART 43A",
+                "courseName": "Glass Sculpture I",
+                "professor": "BROMBERG T L",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Mon",
+                "start": "15:00",
+                "end": "17:30",
+                "title": "ART 43B",
+                "courseName": "Glass Sculpture II",
+                "professor": "BROMBERG T L",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "15:00",
+                "end": "17:30",
+                "title": "ART 43B",
+                "courseName": "Glass Sculpture II",
+                "professor": "BROMBERG T L",
+                "status": "OCCUPIED"
+            }
+        ]
+    },
+    "a-214": {
+        "type": "CLASSROOM",
+        "label": "A 214",
+        "events": [
+            {
+                "day": "Tue",
+                "start": "09:30",
+                "end": "10:50",
+                "title": "AHIS 1",
+                "courseName": "Western Art History I",
+                "professor": "DONAHUE N J",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Mon",
+                "start": "11:00",
+                "end": "12:20",
+                "title": "AHIS 1",
+                "courseName": "Western Art History I",
+                "professor": "SIMMONS B B",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "11:00",
+                "end": "12:20",
+                "title": "AHIS 1",
+                "courseName": "Western Art History I",
+                "professor": "SIMMONS B B",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Thu",
+                "start": "16:00",
+                "end": "17:20",
+                "title": "AHIS 1",
+                "courseName": "Western Art History I",
+                "professor": "PRECIADO G",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Tue",
+                "start": "16:00",
+                "end": "17:20",
+                "title": "AHIS 1",
+                "courseName": "Western Art History I",
+                "professor": "PRECIADO G",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Thu",
+                "start": "08:00",
+                "end": "11:05",
+                "title": "AHIS 1",
+                "courseName": "Western Art History I",
+                "professor": "MEYER W J",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Mon",
+                "start": "09:30",
+                "end": "10:50",
+                "title": "AHIS 2",
+                "courseName": "Western Art History II",
+                "professor": "MAJSTOROVIC M",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "09:30",
+                "end": "10:50",
+                "title": "AHIS 2",
+                "courseName": "Western Art History II",
+                "professor": "MAJSTOROVIC M",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "17:45",
+                "end": "21:15",
+                "title": "AHIS 2",
+                "courseName": "Western Art History II",
+                "professor": "MEYER W J",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Mon",
+                "start": "12:45",
+                "end": "14:05",
+                "title": "AHIS 5",
+                "courseName": "Latin American Art History 1",
+                "professor": "SIMMONS B B",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "12:45",
+                "end": "14:05",
+                "title": "AHIS 5",
+                "courseName": "Latin American Art History 1",
+                "professor": "SIMMONS B B",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Sat",
+                "start": "10:00",
+                "end": "14:15",
+                "title": "AHIS 11",
+                "courseName": "Art Appreciation: Introduction to Global Visual Culture",
+                "professor": "MENDOZA B",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Thu",
+                "start": "14:20",
+                "end": "15:40",
+                "title": "AHIS 11",
+                "courseName": "Art Appreciation: Introduction to Global Visual Culture",
+                "professor": "PRECIADO G",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Tue",
+                "start": "14:20",
+                "end": "15:40",
+                "title": "AHIS 11",
+                "courseName": "Art Appreciation: Introduction to Global Visual Culture",
+                "professor": "PRECIADO G",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Thu",
+                "start": "12:45",
+                "end": "14:00",
+                "title": "AHIS 18",
+                "courseName": "Introduction to African Art History",
+                "professor": "RODRIGUEZ K",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Tue",
+                "start": "12:45",
+                "end": "14:00",
+                "title": "AHIS 18",
+                "courseName": "Introduction to African Art History",
+                "professor": "RODRIGUEZ K",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Thu",
+                "start": "18:00",
+                "end": "21:00",
+                "title": "AHIS 52",
+                "courseName": "History of Photography",
+                "professor": "MACE J Y",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Fri",
+                "start": "10:00",
+                "end": "14:05",
+                "title": "AHIS 72",
+                "courseName": "American Art History",
+                "professor": "RODRIGUEZ K",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Thu",
+                "start": "18:00",
+                "end": "21:00",
+                "title": "PHOTO 52",
+                "courseName": "History of Photography",
+                "professor": "MACE J Y",
+                "status": "OCCUPIED"
+            }
+        ]
+    },
     "hss-106": {
         "type": "CLASSROOM",
         "label": "HSS 106",
@@ -1201,7 +2044,7 @@
                 "day": "Thu",
                 "start": "08:00",
                 "end": "09:20",
-                "title": "ENGL C1000",
+                "title": "ENGL C1000 AND",
                 "courseName": "Academic Reading and Writing",
                 "professor": "GARCIA M S",
                 "status": "OCCUPIED"
@@ -1210,7 +2053,7 @@
                 "day": "Tue",
                 "start": "08:00",
                 "end": "09:20",
-                "title": "ENGL C1000",
+                "title": "ENGL C1000 AND",
                 "courseName": "Academic Reading and Writing",
                 "professor": "GARCIA M S",
                 "status": "OCCUPIED"
@@ -1357,7 +2200,7 @@
                 "day": "Thu",
                 "start": "12:45",
                 "end": "14:05",
-                "title": "ENGL C1000",
+                "title": "ENGL C1000 AND",
                 "courseName": "Academic Reading and Writing",
                 "professor": "BLACKWELL N",
                 "status": "OCCUPIED"
@@ -1366,7 +2209,7 @@
                 "day": "Tue",
                 "start": "12:45",
                 "end": "14:05",
-                "title": "ENGL C1000",
+                "title": "ENGL C1000 AND",
                 "courseName": "Academic Reading and Writing",
                 "professor": "BLACKWELL N",
                 "status": "OCCUPIED"
@@ -1405,6 +2248,15 @@
                 "title": "HIST 10",
                 "courseName": "Ethnicity and American Culture",
                 "professor": "CRUZ J S",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "15:45",
+                "end": "17:05",
+                "title": "MEDIA 10",
+                "courseName": "Media, Gender, and Race",
+                "professor": "OBSATZ S B",
                 "status": "OCCUPIED"
             }
         ]
@@ -1762,15 +2614,6 @@
                 "status": "OCCUPIED"
             },
             {
-                "day": "Mon",
-                "start": "18:45",
-                "end": "21:50",
-                "title": "BIOL 3",
-                "courseName": "Fundamentals of Biology",
-                "professor": "GRIFFIS K",
-                "status": "OCCUPIED"
-            },
-            {
                 "day": "Wed",
                 "start": "18:45",
                 "end": "21:50",
@@ -1864,6 +2707,15 @@
                 "title": "BIOL 3",
                 "courseName": "Fundamentals of Biology",
                 "professor": "PERKINS K K",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Mon",
+                "start": "18:45",
+                "end": "21:50",
+                "title": "BIOL 3",
+                "courseName": "Fundamentals of Biology",
+                "professor": "GRIFFIS K",
                 "status": "OCCUPIED"
             },
             {
@@ -2594,6 +3446,138 @@
             }
         ]
     },
+    "drschr-208": {
+        "type": "CLASSROOM",
+        "label": "DRSCHR 208",
+        "events": [
+            {
+                "day": "Thu",
+                "start": "14:15",
+                "end": "15:50",
+                "title": "BUS 62",
+                "courseName": "Human Relations and Ethical Issues in Business",
+                "professor": "SMITH DEBORAH R",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Tue",
+                "start": "12:45",
+                "end": "14:05",
+                "title": "ENGL C1000",
+                "courseName": "Academic Reading and Writing",
+                "professor": "MISAGHI A M",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Thu",
+                "start": "17:30",
+                "end": "19:35",
+                "title": "FRENCH 2",
+                "courseName": "Elementary French II",
+                "professor": "CASE S A",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Tue",
+                "start": "17:30",
+                "end": "19:35",
+                "title": "FRENCH 2",
+                "courseName": "Elementary French II",
+                "professor": "CASE S A",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Mon",
+                "start": "14:30",
+                "end": "16:55",
+                "title": "JAPAN 2",
+                "courseName": "Elementary Japanese II",
+                "professor": "KITAZONO Y",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "14:30",
+                "end": "16:55",
+                "title": "JAPAN 2",
+                "courseName": "Elementary Japanese II",
+                "professor": "KITAZONO Y",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Mon",
+                "start": "09:30",
+                "end": "10:55",
+                "title": "KOREAN 1",
+                "courseName": "Elementary Korean I",
+                "professor": "CHA J",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "09:30",
+                "end": "10:55",
+                "title": "KOREAN 1",
+                "courseName": "Elementary Korean I",
+                "professor": "CHA J",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Mon",
+                "start": "11:10",
+                "end": "12:40",
+                "title": "KOREAN 2",
+                "courseName": "Elementary Korean II",
+                "professor": "CHA J",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "11:10",
+                "end": "12:40",
+                "title": "KOREAN 2",
+                "courseName": "Elementary Korean II",
+                "professor": "CHA J",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Thu",
+                "start": "09:30",
+                "end": "10:50",
+                "title": "LING 1",
+                "courseName": "Introduction to Linguistics",
+                "professor": "AL RIFAE K",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Tue",
+                "start": "09:30",
+                "end": "10:50",
+                "title": "LING 1",
+                "courseName": "Introduction to Linguistics",
+                "professor": "AL RIFAE K",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Mon",
+                "start": "17:10",
+                "end": "18:35",
+                "title": "RUSS 2",
+                "courseName": "Elementary Russian II",
+                "professor": "MAKAROVA E",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "17:10",
+                "end": "18:35",
+                "title": "RUSS 2",
+                "courseName": "Elementary Russian II",
+                "professor": "MAKAROVA E",
+                "status": "OCCUPIED"
+            }
+        ]
+    },
     "sci-157": {
         "type": "CLASSROOM",
         "label": "SCI 157",
@@ -3030,7 +4014,7 @@
                 "end": "20:15",
                 "title": "CHEM 19",
                 "courseName": "Fundamentals of General, Organic, and Biological Chemistry",
-                "professor": "Staff",
+                "professor": "BAUTISTA E",
                 "status": "OCCUPIED"
             },
             {
@@ -3039,7 +4023,7 @@
                 "end": "20:15",
                 "title": "CHEM 19",
                 "courseName": "Fundamentals of General, Organic, and Biological Chemistry",
-                "professor": "Staff",
+                "professor": "BAUTISTA E",
                 "status": "OCCUPIED"
             },
             {
@@ -3154,6 +4138,15 @@
                 "title": "CHEM 11",
                 "courseName": "General Chemistry I",
                 "professor": "PAPAZYAN A",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Mon",
+                "start": "08:30",
+                "end": "12:30",
+                "title": "CHEM 11",
+                "courseName": "General Chemistry I",
+                "professor": "VILLARAMA R",
                 "status": "OCCUPIED"
             },
             {
@@ -3464,15 +4457,6 @@
             },
             {
                 "day": "Mon",
-                "start": "08:30",
-                "end": "12:30",
-                "title": "CHEM 11",
-                "courseName": "General Chemistry I",
-                "professor": "VILLARAMA R",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Mon",
                 "start": "12:45",
                 "end": "16:45",
                 "title": "CHEM 12",
@@ -3609,7 +4593,7 @@
                 "end": "21:00",
                 "title": "CHEM 19",
                 "courseName": "Fundamentals of General, Organic, and Biological Chemistry",
-                "professor": "Staff",
+                "professor": "BAUTISTA E",
                 "status": "OCCUPIED"
             },
             {
@@ -3929,9 +4913,9 @@
             }
         ]
     },
-    "hss-155": {
+    "hss-255": {
         "type": "CLASSROOM",
-        "label": "HSS 155",
+        "label": "HSS 255",
         "events": [
             {
                 "day": "Mon",
@@ -3991,36 +4975,45 @@
                 "day": "Thu",
                 "start": "09:30",
                 "end": "10:50",
-                "title": "COM ST 35",
-                "courseName": "Interpersonal Communication",
-                "professor": "TREMEAU CHEKROUN J",
+                "title": "PHILOS 1",
+                "courseName": "Knowledge and Reality",
+                "professor": "DAILY M S",
                 "status": "OCCUPIED"
             },
             {
                 "day": "Tue",
                 "start": "09:30",
                 "end": "10:50",
-                "title": "COM ST 35",
-                "courseName": "Interpersonal Communication",
-                "professor": "TREMEAU CHEKROUN J",
+                "title": "PHILOS 1",
+                "courseName": "Knowledge and Reality",
+                "professor": "DAILY M S",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "11:15",
+                "end": "12:35",
+                "title": "PSYCH 11",
+                "courseName": "Child Growth and Development",
+                "professor": "CUE E N",
                 "status": "OCCUPIED"
             },
             {
                 "day": "Thu",
                 "start": "12:45",
                 "end": "14:05",
-                "title": "COM ST 35",
-                "courseName": "Interpersonal Communication",
-                "professor": "TREMEAU CHEKROUN J",
+                "title": "SOCIOL 1",
+                "courseName": "Introduction to Sociology",
+                "professor": "ROMO R",
                 "status": "OCCUPIED"
             },
             {
                 "day": "Tue",
                 "start": "12:45",
                 "end": "14:05",
-                "title": "COM ST 35",
-                "courseName": "Interpersonal Communication",
-                "professor": "TREMEAU CHEKROUN J",
+                "title": "SOCIOL 1",
+                "courseName": "Introduction to Sociology",
+                "professor": "ROMO R",
                 "status": "OCCUPIED"
             }
         ]
@@ -4171,15 +5164,6 @@
                 "status": "OCCUPIED"
             },
             {
-                "day": "Wed",
-                "start": "15:45",
-                "end": "17:05",
-                "title": "MEDIA 10",
-                "courseName": "Media, Gender, and Race",
-                "professor": "OBSATZ S B",
-                "status": "OCCUPIED"
-            },
-            {
                 "day": "Tue",
                 "start": "12:45",
                 "end": "14:05",
@@ -4228,6 +5212,108 @@
                 "title": "COM ST 37",
                 "courseName": "Intercultural Communication",
                 "professor": "GRASS N L",
+                "status": "OCCUPIED"
+            }
+        ]
+    },
+    "hss-104": {
+        "type": "CLASSROOM",
+        "label": "HSS 104",
+        "events": [
+            {
+                "day": "Thu",
+                "start": "09:30",
+                "end": "10:50",
+                "title": "COM ST 35",
+                "courseName": "Interpersonal Communication",
+                "professor": "TREMEAU CHEKROUN J",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Tue",
+                "start": "09:30",
+                "end": "10:50",
+                "title": "COM ST 35",
+                "courseName": "Interpersonal Communication",
+                "professor": "TREMEAU CHEKROUN J",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Thu",
+                "start": "12:45",
+                "end": "14:05",
+                "title": "HIST 12",
+                "courseName": "The United States History Since Reconstruction",
+                "professor": "CHI J S",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Tue",
+                "start": "12:45",
+                "end": "14:05",
+                "title": "HIST 12",
+                "courseName": "The United States History Since Reconstruction",
+                "professor": "CHI J S",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Mon",
+                "start": "09:30",
+                "end": "10:50",
+                "title": "HIST 33",
+                "courseName": "World Civilizations I",
+                "professor": "REILLY B J",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "09:30",
+                "end": "10:50",
+                "title": "HIST 33",
+                "courseName": "World Civilizations I",
+                "professor": "REILLY B J",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Mon",
+                "start": "11:15",
+                "end": "12:35",
+                "title": "HIST 34",
+                "courseName": "World Civilizations II",
+                "professor": "REILLY B J",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "11:15",
+                "end": "12:35",
+                "title": "HIST 34",
+                "courseName": "World Civilizations II",
+                "professor": "REILLY B J",
+                "status": "OCCUPIED"
+            }
+        ]
+    },
+    "hss-155": {
+        "type": "CLASSROOM",
+        "label": "HSS 155",
+        "events": [
+            {
+                "day": "Thu",
+                "start": "12:45",
+                "end": "14:05",
+                "title": "COM ST 35",
+                "courseName": "Interpersonal Communication",
+                "professor": "TREMEAU CHEKROUN J",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Tue",
+                "start": "12:45",
+                "end": "14:05",
+                "title": "COM ST 35",
+                "courseName": "Interpersonal Communication",
+                "professor": "TREMEAU CHEKROUN J",
                 "status": "OCCUPIED"
             }
         ]
@@ -4554,7 +5640,7 @@
                 "end": "11:35",
                 "title": "COSM 31E",
                 "courseName": "Multi Texture Styling",
-                "professor": "ALEXANDER BROA N",
+                "professor": "ALEXANDER NAT",
                 "status": "OCCUPIED"
             },
             {
@@ -4587,7 +5673,7 @@
                 "end": "11:35",
                 "title": "COSM 16",
                 "courseName": "Nail Care 1",
-                "professor": "ALEXANDER BROA N",
+                "professor": "ALEXANDER NAT",
                 "status": "OCCUPIED"
             },
             {
@@ -4963,30 +6049,6 @@
                 "title": "COUNS 41H",
                 "courseName": "Roadmap to College Readiness",
                 "professor": "ROH A",
-                "status": "OCCUPIED"
-            }
-        ]
-    },
-    "ssc-159": {
-        "type": "CLASSROOM",
-        "label": "SSC 159: High Tech Training Center",
-        "events": [
-            {
-                "day": "Mon",
-                "start": "12:45",
-                "end": "13:50",
-                "title": "COUNS 59",
-                "courseName": "Textbook Strategies Using Technology",
-                "professor": "COURTO L",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Wed",
-                "start": "12:45",
-                "end": "13:50",
-                "title": "COUNS 59",
-                "courseName": "Textbook Strategies Using Technology",
-                "professor": "COURTO L",
                 "status": "OCCUPIED"
             }
         ]
@@ -5850,7 +6912,7 @@
                 "end": "17:05",
                 "title": "ENGR 1",
                 "courseName": "Introduction to Engineering",
-                "professor": "Staff",
+                "professor": "MALIK R",
                 "status": "OCCUPIED"
             },
             {
@@ -5877,7 +6939,7 @@
                 "end": "19:55",
                 "title": "ENGR 11",
                 "courseName": "Engineering Graphics and Design",
-                "professor": "Staff",
+                "professor": "VAULT A",
                 "status": "OCCUPIED"
             },
             {
@@ -5886,7 +6948,7 @@
                 "end": "19:55",
                 "title": "ENGR 11",
                 "courseName": "Engineering Graphics and Design",
-                "professor": "Staff",
+                "professor": "VAULT A",
                 "status": "OCCUPIED"
             },
             {
@@ -5900,6 +6962,15 @@
             },
             {
                 "day": "Fri",
+                "start": "08:00",
+                "end": "09:45",
+                "title": "ENGR 21",
+                "courseName": "Circuit Analysis",
+                "professor": "AL SHEYAB A D",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Fri",
                 "start": "10:15",
                 "end": "12:00",
                 "title": "ENGR 21",
@@ -5908,12 +6979,21 @@
                 "status": "OCCUPIED"
             },
             {
+                "day": "Fri",
+                "start": "10:15",
+                "end": "12:00",
+                "title": "ENGR 21",
+                "courseName": "Circuit Analysis",
+                "professor": "AL SHEYAB A D",
+                "status": "OCCUPIED"
+            },
+            {
                 "day": "Wed",
                 "start": "08:30",
                 "end": "11:35",
                 "title": "ENGR 22",
                 "courseName": "Circuit Analysis Lab",
-                "professor": "Staff",
+                "professor": "CHUNG C",
                 "status": "OCCUPIED"
             },
             {
@@ -6235,7 +7315,7 @@
                 "day": "Tue",
                 "start": "12:45",
                 "end": "14:05",
-                "title": "ENGL C1000",
+                "title": "ENGL C1000 AND",
                 "courseName": "Academic Reading and Writing",
                 "professor": "BARHAM A C",
                 "status": "OCCUPIED"
@@ -6490,7 +7570,7 @@
                 "day": "Thu",
                 "start": "09:30",
                 "end": "10:50",
-                "title": "ENGL C1000",
+                "title": "ENGL C1000 AND",
                 "courseName": "Academic Reading and Writing",
                 "professor": "BOSTICK J D",
                 "status": "OCCUPIED"
@@ -6499,7 +7579,7 @@
                 "day": "Tue",
                 "start": "09:30",
                 "end": "10:50",
-                "title": "ENGL C1000",
+                "title": "ENGL C1000 AND",
                 "courseName": "Academic Reading and Writing",
                 "professor": "BOSTICK J D",
                 "status": "OCCUPIED"
@@ -6524,9 +7604,9 @@
             }
         ]
     },
-    "drschr-207": {
+    "room-210": {
         "type": "CLASSROOM",
-        "label": "DRSCHR 207",
+        "label": "MSB 210",
         "events": [
             {
                 "day": "Thu",
@@ -6565,30 +7645,93 @@
                 "status": "OCCUPIED"
             },
             {
-                "day": "Wed",
-                "start": "11:15",
-                "end": "12:35",
-                "title": "ENGL C1000",
-                "courseName": "Academic Reading and Writing",
-                "professor": "BARHAM A C",
+                "day": "Mon",
+                "start": "17:00",
+                "end": "19:25",
+                "title": "MATH 2",
+                "courseName": "Precalculus",
+                "professor": "RAMSEY E D",
                 "status": "OCCUPIED"
             },
             {
                 "day": "Wed",
-                "start": "12:45",
-                "end": "13:35",
-                "title": "ENGL 28",
-                "courseName": "Intensive College Writing Skills",
-                "professor": "BARHAM A C",
+                "start": "17:00",
+                "end": "19:25",
+                "title": "MATH 2",
+                "courseName": "Precalculus",
+                "professor": "RAMSEY E D",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "11:15",
+                "end": "13:40",
+                "title": "MATH 7",
+                "courseName": "Calculus 1",
+                "professor": "BENE A J",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Thu",
+                "start": "19:35",
+                "end": "22:00",
+                "title": "MATH 7",
+                "courseName": "Calculus 1",
+                "professor": "MAN S",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Tue",
+                "start": "19:35",
+                "end": "22:00",
+                "title": "MATH 7",
+                "courseName": "Calculus 1",
+                "professor": "MAN S",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Mon",
+                "start": "14:15",
+                "end": "16:40",
+                "title": "MATH 8",
+                "courseName": "Calculus 2",
+                "professor": "SMITH S P",
                 "status": "OCCUPIED"
             },
             {
                 "day": "Wed",
                 "start": "14:15",
-                "end": "15:35",
-                "title": "ENGL C1001",
-                "courseName": "Critical Thinking and Writing",
-                "professor": "KARRON R",
+                "end": "16:40",
+                "title": "MATH 8",
+                "courseName": "Calculus 2",
+                "professor": "SMITH S P",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "08:00",
+                "end": "10:25",
+                "title": "MATH 11",
+                "courseName": "Multivariable Calculus",
+                "professor": "BENE A J",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Thu",
+                "start": "12:45",
+                "end": "15:10",
+                "title": "MATH 28",
+                "courseName": "Calculus 1 for Business and Social Science",
+                "professor": "KAMIN G",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Tue",
+                "start": "12:45",
+                "end": "15:10",
+                "title": "MATH 28",
+                "courseName": "Calculus 1 for Business and Social Science",
+                "professor": "KAMIN G",
                 "status": "OCCUPIED"
             }
         ]
@@ -6811,7 +7954,7 @@
                 "day": "Mon",
                 "start": "09:30",
                 "end": "11:35",
-                "title": "MATH 6",
+                "title": "MATH 6 AND",
                 "courseName": "Modern Mathematical Methods for STEM Majors",
                 "professor": "LOPEZ J E",
                 "status": "OCCUPIED"
@@ -6820,7 +7963,7 @@
                 "day": "Wed",
                 "start": "09:30",
                 "end": "11:35",
-                "title": "MATH 6",
+                "title": "MATH 6 AND",
                 "courseName": "Modern Mathematical Methods for STEM Majors",
                 "professor": "LOPEZ J E",
                 "status": "OCCUPIED"
@@ -6847,7 +7990,7 @@
                 "day": "Thu",
                 "start": "12:45",
                 "end": "14:50",
-                "title": "MATH 6",
+                "title": "MATH 6 AND",
                 "courseName": "Modern Mathematical Methods for STEM Majors",
                 "professor": "LOPEZ J E",
                 "status": "OCCUPIED"
@@ -6856,7 +7999,7 @@
                 "day": "Tue",
                 "start": "12:45",
                 "end": "14:50",
-                "title": "MATH 6",
+                "title": "MATH 6 AND",
                 "courseName": "Modern Mathematical Methods for STEM Majors",
                 "professor": "LOPEZ J E",
                 "status": "OCCUPIED"
@@ -7066,7 +8209,7 @@
                 "day": "Thu",
                 "start": "08:00",
                 "end": "09:20",
-                "title": "ENGL C1000",
+                "title": "ENGL C1000 AND",
                 "courseName": "Academic Reading and Writing",
                 "professor": "LIVANIS L",
                 "status": "OCCUPIED"
@@ -7075,7 +8218,7 @@
                 "day": "Tue",
                 "start": "08:00",
                 "end": "09:20",
-                "title": "ENGL C1000",
+                "title": "ENGL C1000 AND",
                 "courseName": "Academic Reading and Writing",
                 "professor": "LIVANIS L",
                 "status": "OCCUPIED"
@@ -7160,24 +8303,6 @@
                 "courseName": "Critical Thinking and Writing",
                 "professor": "ROSS M S",
                 "status": "OCCUPIED"
-            },
-            {
-                "day": "Mon",
-                "start": "14:30",
-                "end": "16:55",
-                "title": "ITAL 1",
-                "courseName": "Elementary Italian I",
-                "professor": "LORENZI P",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Wed",
-                "start": "14:30",
-                "end": "16:55",
-                "title": "ITAL 1",
-                "courseName": "Elementary Italian I",
-                "professor": "LORENZI P",
-                "status": "OCCUPIED"
             }
         ]
     },
@@ -7247,128 +8372,23 @@
                 "courseName": "Critical Thinking and Writing",
                 "professor": "PEEPLES R A",
                 "status": "OCCUPIED"
-            }
-        ]
-    },
-    "drschr-208": {
-        "type": "CLASSROOM",
-        "label": "DRSCHR 208",
-        "events": [
-            {
-                "day": "Tue",
-                "start": "12:45",
-                "end": "14:05",
-                "title": "ENGL C1000",
-                "courseName": "Academic Reading and Writing",
-                "professor": "MISAGHI A M",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Thu",
-                "start": "17:30",
-                "end": "19:35",
-                "title": "FRENCH 2",
-                "courseName": "Elementary French II",
-                "professor": "CASE S A",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Tue",
-                "start": "17:30",
-                "end": "19:35",
-                "title": "FRENCH 2",
-                "courseName": "Elementary French II",
-                "professor": "CASE S A",
-                "status": "OCCUPIED"
             },
             {
                 "day": "Mon",
                 "start": "14:30",
                 "end": "16:55",
-                "title": "JAPAN 2",
-                "courseName": "Elementary Japanese II",
-                "professor": "KITAZONO Y",
+                "title": "JAPAN 1",
+                "courseName": "Elementary Japanese I",
+                "professor": "KATO N K",
                 "status": "OCCUPIED"
             },
             {
                 "day": "Wed",
                 "start": "14:30",
                 "end": "16:55",
-                "title": "JAPAN 2",
-                "courseName": "Elementary Japanese II",
-                "professor": "KITAZONO Y",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Mon",
-                "start": "09:30",
-                "end": "10:55",
-                "title": "KOREAN 1",
-                "courseName": "Elementary Korean I",
-                "professor": "CHA J",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Wed",
-                "start": "09:30",
-                "end": "10:55",
-                "title": "KOREAN 1",
-                "courseName": "Elementary Korean I",
-                "professor": "CHA J",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Mon",
-                "start": "11:10",
-                "end": "12:40",
-                "title": "KOREAN 2",
-                "courseName": "Elementary Korean II",
-                "professor": "CHA J",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Wed",
-                "start": "11:10",
-                "end": "12:40",
-                "title": "KOREAN 2",
-                "courseName": "Elementary Korean II",
-                "professor": "CHA J",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Thu",
-                "start": "09:30",
-                "end": "10:50",
-                "title": "LING 1",
-                "courseName": "Introduction to Linguistics",
-                "professor": "AL RIFAE K",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Tue",
-                "start": "09:30",
-                "end": "10:50",
-                "title": "LING 1",
-                "courseName": "Introduction to Linguistics",
-                "professor": "AL RIFAE K",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Mon",
-                "start": "17:10",
-                "end": "18:35",
-                "title": "RUSS 2",
-                "courseName": "Elementary Russian II",
-                "professor": "MAKAROVA E",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Wed",
-                "start": "17:10",
-                "end": "18:35",
-                "title": "RUSS 2",
-                "courseName": "Elementary Russian II",
-                "professor": "MAKAROVA E",
+                "title": "JAPAN 1",
+                "courseName": "Elementary Japanese I",
+                "professor": "KATO N K",
                 "status": "OCCUPIED"
             }
         ]
@@ -7390,7 +8410,7 @@
                 "day": "Wed",
                 "start": "09:30",
                 "end": "10:50",
-                "title": "ENGL C1000",
+                "title": "ENGL C1000 AND",
                 "courseName": "Academic Reading and Writing",
                 "professor": "HIOUREAS E C",
                 "status": "OCCUPIED"
@@ -7513,7 +8533,7 @@
                 "day": "Mon",
                 "start": "08:00",
                 "end": "09:20",
-                "title": "ENGL C1000",
+                "title": "ENGL C1000 AND",
                 "courseName": "Academic Reading and Writing",
                 "professor": "VAZQUEZ LU",
                 "status": "OCCUPIED"
@@ -7522,7 +8542,7 @@
                 "day": "Wed",
                 "start": "08:00",
                 "end": "09:20",
-                "title": "ENGL C1000",
+                "title": "ENGL C1000 AND",
                 "courseName": "Academic Reading and Writing",
                 "professor": "VAZQUEZ LU",
                 "status": "OCCUPIED"
@@ -7568,7 +8588,7 @@
                 "start": "08:00",
                 "end": "09:20",
                 "title": "PSYC C1000",
-                "courseName": "General Psychology",
+                "courseName": "Introduction to Psychology",
                 "professor": "SCHWARTZ A F",
                 "status": "OCCUPIED"
             },
@@ -7577,7 +8597,7 @@
                 "start": "12:45",
                 "end": "14:05",
                 "title": "PSYC C1000",
-                "courseName": "General Psychology",
+                "courseName": "Introduction to Psychology",
                 "professor": "DAVIS-KING D T",
                 "status": "OCCUPIED"
             },
@@ -7618,7 +8638,7 @@
                 "day": "Mon",
                 "start": "08:00",
                 "end": "09:20",
-                "title": "ENGL C1000",
+                "title": "ENGL C1000 AND",
                 "courseName": "Academic Reading and Writing",
                 "professor": "LIVANIS L",
                 "status": "OCCUPIED"
@@ -7627,7 +8647,7 @@
                 "day": "Wed",
                 "start": "08:00",
                 "end": "09:20",
-                "title": "ENGL C1000",
+                "title": "ENGL C1000 AND",
                 "courseName": "Academic Reading and Writing",
                 "professor": "LIVANIS L",
                 "status": "OCCUPIED"
@@ -7654,7 +8674,7 @@
                 "day": "Mon",
                 "start": "11:15",
                 "end": "12:35",
-                "title": "ENGL C1000",
+                "title": "ENGL C1000 AND",
                 "courseName": "Academic Reading and Writing",
                 "professor": "LIVANIS L",
                 "status": "OCCUPIED"
@@ -7663,7 +8683,7 @@
                 "day": "Wed",
                 "start": "11:15",
                 "end": "12:35",
-                "title": "ENGL C1000",
+                "title": "ENGL C1000 AND",
                 "courseName": "Academic Reading and Writing",
                 "professor": "LIVANIS L",
                 "status": "OCCUPIED"
@@ -7723,7 +8743,7 @@
                 "day": "Thu",
                 "start": "09:30",
                 "end": "10:50",
-                "title": "ENGL C1000",
+                "title": "ENGL C1000 AND",
                 "courseName": "Academic Reading and Writing",
                 "professor": "GARNICA A M",
                 "status": "OCCUPIED"
@@ -7732,7 +8752,7 @@
                 "day": "Tue",
                 "start": "09:30",
                 "end": "10:50",
-                "title": "ENGL C1000",
+                "title": "ENGL C1000 AND",
                 "courseName": "Academic Reading and Writing",
                 "professor": "GARNICA A M",
                 "status": "OCCUPIED"
@@ -7759,7 +8779,7 @@
                 "day": "Mon",
                 "start": "14:15",
                 "end": "15:35",
-                "title": "ENGL C1000",
+                "title": "ENGL C1000 AND",
                 "courseName": "Academic Reading and Writing",
                 "professor": "DOUCET W J",
                 "status": "OCCUPIED"
@@ -7768,7 +8788,7 @@
                 "day": "Wed",
                 "start": "14:15",
                 "end": "15:35",
-                "title": "ENGL C1000",
+                "title": "ENGL C1000 AND",
                 "courseName": "Academic Reading and Writing",
                 "professor": "DOUCET W J",
                 "status": "OCCUPIED"
@@ -7795,9 +8815,9 @@
                 "day": "Fri",
                 "start": "11:30",
                 "end": "14:35",
-                "title": "ENGL C1001",
-                "courseName": "Critical Thinking and Writing",
-                "professor": "KARRON R",
+                "title": "ENGL 73",
+                "courseName": "Writing in Poetry",
+                "professor": "DOUCET W J",
                 "status": "OCCUPIED"
             }
         ]
@@ -7810,7 +8830,7 @@
                 "day": "Wed",
                 "start": "09:30",
                 "end": "10:50",
-                "title": "ENGL C1000",
+                "title": "ENGL C1000 AND",
                 "courseName": "Academic Reading and Writing",
                 "professor": "JONES S T",
                 "status": "OCCUPIED"
@@ -7819,7 +8839,7 @@
                 "day": "Wed",
                 "start": "11:15",
                 "end": "12:35",
-                "title": "ENGL C1000",
+                "title": "ENGL C1000 AND",
                 "courseName": "Academic Reading and Writing",
                 "professor": "WEATHERFORD K C",
                 "status": "OCCUPIED"
@@ -7884,7 +8904,7 @@
                 "end": "11:00",
                 "title": "SPAN 1",
                 "courseName": "Elementary Spanish I",
-                "professor": "MORA C",
+                "professor": "MORA LACIANA C",
                 "status": "OCCUPIED"
             },
             {
@@ -7893,7 +8913,7 @@
                 "end": "11:00",
                 "title": "SPAN 1",
                 "courseName": "Elementary Spanish I",
-                "professor": "MORA C",
+                "professor": "MORA LACIANA C",
                 "status": "OCCUPIED"
             }
         ]
@@ -7906,7 +8926,7 @@
                 "day": "Mon",
                 "start": "11:15",
                 "end": "12:35",
-                "title": "ENGL C1000",
+                "title": "ENGL C1000 AND",
                 "courseName": "Academic Reading and Writing",
                 "professor": "COLMER I H",
                 "status": "OCCUPIED"
@@ -7915,7 +8935,7 @@
                 "day": "Wed",
                 "start": "11:15",
                 "end": "12:35",
-                "title": "ENGL C1000",
+                "title": "ENGL C1000 AND",
                 "courseName": "Academic Reading and Writing",
                 "professor": "COLMER I H",
                 "status": "OCCUPIED"
@@ -8029,7 +9049,7 @@
                 "day": "Tue",
                 "start": "12:45",
                 "end": "14:05",
-                "title": "ENGL C1000",
+                "title": "ENGL C1000 AND",
                 "courseName": "Academic Reading and Writing",
                 "professor": "WEATHERFORD K C",
                 "status": "OCCUPIED"
@@ -8144,93 +9164,6 @@
             }
         ]
     },
-    "drschr-205": {
-        "type": "CLASSROOM",
-        "label": "DRSCHR 205",
-        "events": [
-            {
-                "day": "Fri",
-                "start": "11:30",
-                "end": "14:35",
-                "title": "ENGL 73",
-                "courseName": "Writing in Poetry",
-                "professor": "DOUCET W J",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Thu",
-                "start": "14:30",
-                "end": "16:55",
-                "title": "KOREAN 1",
-                "courseName": "Elementary Korean I",
-                "professor": "TARK E",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Tue",
-                "start": "14:30",
-                "end": "16:55",
-                "title": "KOREAN 1",
-                "courseName": "Elementary Korean I",
-                "professor": "TARK E",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Mon",
-                "start": "09:00",
-                "end": "11:00",
-                "title": "SPAN 1",
-                "courseName": "Elementary Spanish I",
-                "professor": "ESPINAL J",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Wed",
-                "start": "09:00",
-                "end": "11:00",
-                "title": "SPAN 1",
-                "courseName": "Elementary Spanish I",
-                "professor": "ESPINAL J",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Mon",
-                "start": "11:15",
-                "end": "13:05",
-                "title": "SPAN 1",
-                "courseName": "Elementary Spanish I",
-                "professor": "CARTER J D",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Wed",
-                "start": "11:15",
-                "end": "13:05",
-                "title": "SPAN 1",
-                "courseName": "Elementary Spanish I",
-                "professor": "CARTER J D",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Mon",
-                "start": "14:30",
-                "end": "16:30",
-                "title": "SPAN 1",
-                "courseName": "Elementary Spanish I",
-                "professor": "ESPINAL J",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Wed",
-                "start": "14:30",
-                "end": "16:30",
-                "title": "SPAN 1",
-                "courseName": "Elementary Spanish I",
-                "professor": "ESPINAL J",
-                "status": "OCCUPIED"
-            }
-        ]
-    },
     "drschr-222": {
         "type": "CLASSROOM",
         "label": "DRSCHR 222",
@@ -8278,24 +9211,6 @@
                 "title": "FRENCH 1",
                 "courseName": "Elementary French I",
                 "professor": "CASE S A",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Mon",
-                "start": "14:30",
-                "end": "16:55",
-                "title": "JAPAN 1",
-                "courseName": "Elementary Japanese I",
-                "professor": "KATO N K",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Wed",
-                "start": "14:30",
-                "end": "16:55",
-                "title": "JAPAN 1",
-                "courseName": "Elementary Japanese I",
-                "professor": "KATO N K",
                 "status": "OCCUPIED"
             },
             {
@@ -8437,6 +9352,24 @@
                 "status": "OCCUPIED"
             },
             {
+                "day": "Mon",
+                "start": "12:45",
+                "end": "14:50",
+                "title": "ESL 19B",
+                "courseName": "English Fundamentals 2",
+                "professor": "LERNIHAN V",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "12:45",
+                "end": "14:50",
+                "title": "ESL 19B",
+                "courseName": "English Fundamentals 2",
+                "professor": "LERNIHAN V",
+                "status": "OCCUPIED"
+            },
+            {
                 "day": "Thu",
                 "start": "12:45",
                 "end": "14:50",
@@ -8564,7 +9497,7 @@
                 "start": "17:15",
                 "end": "18:35",
                 "title": "PSYC C1000",
-                "courseName": "General Psychology",
+                "courseName": "Introduction to Psychology",
                 "professor": "SMITH-CLARK C T",
                 "status": "OCCUPIED"
             },
@@ -8573,7 +9506,7 @@
                 "start": "17:15",
                 "end": "18:35",
                 "title": "PSYC C1000",
-                "courseName": "General Psychology",
+                "courseName": "Introduction to Psychology",
                 "professor": "SMITH-CLARK C T",
                 "status": "OCCUPIED"
             },
@@ -8582,7 +9515,7 @@
                 "start": "18:45",
                 "end": "21:50",
                 "title": "PSYC C1000",
-                "courseName": "General Psychology",
+                "courseName": "Introduction to Psychology",
                 "professor": "SMITH-CLARK C T",
                 "status": "OCCUPIED"
             },
@@ -8593,6 +9526,84 @@
                 "title": "PSYCH 7",
                 "courseName": "Research Methods in Psychology",
                 "professor": "SMITH-CLARK C T",
+                "status": "OCCUPIED"
+            }
+        ]
+    },
+    "drschr-213": {
+        "type": "CLASSROOM",
+        "label": "DRSCHR 213",
+        "events": [
+            {
+                "day": "Mon",
+                "start": "09:30",
+                "end": "10:50",
+                "title": "ENGL C1001",
+                "courseName": "Critical Thinking and Writing",
+                "professor": "WINKLER K D",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "09:30",
+                "end": "10:50",
+                "title": "ENGL C1001",
+                "courseName": "Critical Thinking and Writing",
+                "professor": "WINKLER K D",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Mon",
+                "start": "11:15",
+                "end": "12:35",
+                "title": "ENGL C1001",
+                "courseName": "Critical Thinking and Writing",
+                "professor": "WINKLER K D",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "11:15",
+                "end": "12:35",
+                "title": "ENGL C1001",
+                "courseName": "Critical Thinking and Writing",
+                "professor": "WINKLER K D",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Mon",
+                "start": "14:30",
+                "end": "16:55",
+                "title": "ITAL 1",
+                "courseName": "Elementary Italian I",
+                "professor": "LORENZI P",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "14:30",
+                "end": "16:55",
+                "title": "ITAL 1",
+                "courseName": "Elementary Italian I",
+                "professor": "LORENZI P",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Thu",
+                "start": "09:00",
+                "end": "11:25",
+                "title": "JAPAN 1",
+                "courseName": "Elementary Japanese I",
+                "professor": "TAKEMORI K",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Tue",
+                "start": "09:00",
+                "end": "11:25",
+                "title": "JAPAN 1",
+                "courseName": "Elementary Japanese I",
+                "professor": "TAKEMORI K",
                 "status": "OCCUPIED"
             }
         ]
@@ -8897,6 +9908,24 @@
                 "courseName": "English Fundamentals 1",
                 "professor": "LERNIHAN V",
                 "status": "OCCUPIED"
+            },
+            {
+                "day": "Mon",
+                "start": "09:30",
+                "end": "10:50",
+                "title": "FASHN 19",
+                "courseName": "Fashion Marketing",
+                "professor": "KOLKO S R",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "09:30",
+                "end": "10:50",
+                "title": "FASHN 19",
+                "courseName": "Fashion Marketing",
+                "professor": "KOLKO S R",
+                "status": "OCCUPIED"
             }
         ]
     },
@@ -9043,24 +10072,6 @@
                 "title": "ESL 19B",
                 "courseName": "English Fundamentals 2",
                 "professor": "GOLDBERG B H",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Mon",
-                "start": "12:45",
-                "end": "14:50",
-                "title": "ESL 19B",
-                "courseName": "English Fundamentals 2",
-                "professor": "LERNIHAN V",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Wed",
-                "start": "12:45",
-                "end": "14:50",
-                "title": "ESL 19B",
-                "courseName": "English Fundamentals 2",
-                "professor": "LERNIHAN V",
                 "status": "OCCUPIED"
             }
         ]
@@ -9575,30 +10586,6 @@
             }
         ]
     },
-    "bus-251": {
-        "type": "CLASSROOM",
-        "label": "BUS 251",
-        "events": [
-            {
-                "day": "Mon",
-                "start": "09:30",
-                "end": "10:50",
-                "title": "FASHN 19",
-                "courseName": "Fashion Marketing",
-                "professor": "KOLKO S R",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Wed",
-                "start": "09:30",
-                "end": "10:50",
-                "title": "FASHN 19",
-                "courseName": "Fashion Marketing",
-                "professor": "KOLKO S R",
-                "status": "OCCUPIED"
-            }
-        ]
-    },
     "hss-165": {
         "type": "CLASSROOM",
         "label": "HSS 165",
@@ -9901,66 +10888,6 @@
                 "title": "HIST 12",
                 "courseName": "The United States History Since Reconstruction",
                 "professor": "AMERIAN-DONNELL S M",
-                "status": "OCCUPIED"
-            }
-        ]
-    },
-    "hss-104": {
-        "type": "CLASSROOM",
-        "label": "HSS 104",
-        "events": [
-            {
-                "day": "Thu",
-                "start": "12:45",
-                "end": "14:05",
-                "title": "HIST 12",
-                "courseName": "The United States History Since Reconstruction",
-                "professor": "CHI J S",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Tue",
-                "start": "12:45",
-                "end": "14:05",
-                "title": "HIST 12",
-                "courseName": "The United States History Since Reconstruction",
-                "professor": "CHI J S",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Mon",
-                "start": "09:30",
-                "end": "10:50",
-                "title": "HIST 33",
-                "courseName": "World Civilizations I",
-                "professor": "REILLY B J",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Wed",
-                "start": "09:30",
-                "end": "10:50",
-                "title": "HIST 33",
-                "courseName": "World Civilizations I",
-                "professor": "REILLY B J",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Mon",
-                "start": "11:15",
-                "end": "12:35",
-                "title": "HIST 34",
-                "courseName": "World Civilizations II",
-                "professor": "REILLY B J",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Wed",
-                "start": "11:15",
-                "end": "12:35",
-                "title": "HIST 34",
-                "courseName": "World Civilizations II",
-                "professor": "REILLY B J",
                 "status": "OCCUPIED"
             }
         ]
@@ -10997,6 +11924,84 @@
             }
         ]
     },
+    "drschr-205": {
+        "type": "CLASSROOM",
+        "label": "DRSCHR 205",
+        "events": [
+            {
+                "day": "Thu",
+                "start": "14:30",
+                "end": "16:55",
+                "title": "KOREAN 1",
+                "courseName": "Elementary Korean I",
+                "professor": "TARK E",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Tue",
+                "start": "14:30",
+                "end": "16:55",
+                "title": "KOREAN 1",
+                "courseName": "Elementary Korean I",
+                "professor": "TARK E",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Mon",
+                "start": "09:00",
+                "end": "11:00",
+                "title": "SPAN 1",
+                "courseName": "Elementary Spanish I",
+                "professor": "ESPINAL J",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "09:00",
+                "end": "11:00",
+                "title": "SPAN 1",
+                "courseName": "Elementary Spanish I",
+                "professor": "ESPINAL J",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Mon",
+                "start": "11:15",
+                "end": "13:05",
+                "title": "SPAN 1",
+                "courseName": "Elementary Spanish I",
+                "professor": "CARTER J D",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "11:15",
+                "end": "13:05",
+                "title": "SPAN 1",
+                "courseName": "Elementary Spanish I",
+                "professor": "CARTER J D",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Mon",
+                "start": "14:30",
+                "end": "16:30",
+                "title": "SPAN 1",
+                "courseName": "Elementary Spanish I",
+                "professor": "ESPINAL J",
+                "status": "OCCUPIED"
+            },
+            {
+                "day": "Wed",
+                "start": "14:30",
+                "end": "16:30",
+                "title": "SPAN 1",
+                "courseName": "Elementary Spanish I",
+                "professor": "ESPINAL J",
+                "status": "OCCUPIED"
+            }
+        ]
+    },
     "room-212": {
         "type": "CLASSROOM",
         "label": "MSB 212",
@@ -11023,7 +12028,7 @@
                 "day": "Thu",
                 "start": "08:00",
                 "end": "10:05",
-                "title": "STAT C1000",
+                "title": "STAT C1000 AND",
                 "courseName": "Introduction to Statistics",
                 "professor": "FOSTER M",
                 "status": "OCCUPIED"
@@ -11032,7 +12037,7 @@
                 "day": "Tue",
                 "start": "08:00",
                 "end": "10:05",
-                "title": "STAT C1000",
+                "title": "STAT C1000 AND",
                 "courseName": "Introduction to Statistics",
                 "professor": "FOSTER M",
                 "status": "OCCUPIED"
@@ -11095,7 +12100,7 @@
                 "day": "Thu",
                 "start": "12:45",
                 "end": "13:50",
-                "title": "MATH 7",
+                "title": "MATH 7 AND",
                 "courseName": "Calculus 1",
                 "professor": "SOLEYMANI S",
                 "status": "OCCUPIED"
@@ -11104,7 +12109,7 @@
                 "day": "Mon",
                 "start": "12:45",
                 "end": "13:50",
-                "title": "MATH 7",
+                "title": "MATH 7 AND",
                 "courseName": "Calculus 1",
                 "professor": "SOLEYMANI S",
                 "status": "OCCUPIED"
@@ -11113,7 +12118,7 @@
                 "day": "Tue",
                 "start": "12:45",
                 "end": "13:50",
-                "title": "MATH 7",
+                "title": "MATH 7 AND",
                 "courseName": "Calculus 1",
                 "professor": "SOLEYMANI S",
                 "status": "OCCUPIED"
@@ -11122,7 +12127,7 @@
                 "day": "Wed",
                 "start": "12:45",
                 "end": "13:50",
-                "title": "MATH 7",
+                "title": "MATH 7 AND",
                 "courseName": "Calculus 1",
                 "professor": "SOLEYMANI S",
                 "status": "OCCUPIED"
@@ -11182,7 +12187,7 @@
                 "day": "Mon",
                 "start": "12:45",
                 "end": "14:50",
-                "title": "STAT C1000",
+                "title": "STAT C1000 AND",
                 "courseName": "Introduction to Statistics",
                 "professor": "PACHAS-FLORES W",
                 "status": "OCCUPIED"
@@ -11191,7 +12196,7 @@
                 "day": "Wed",
                 "start": "12:45",
                 "end": "14:50",
-                "title": "STAT C1000",
+                "title": "STAT C1000 AND",
                 "courseName": "Introduction to Statistics",
                 "professor": "PACHAS-FLORES W",
                 "status": "OCCUPIED"
@@ -11218,7 +12223,7 @@
                 "day": "Thu",
                 "start": "07:00",
                 "end": "08:05",
-                "title": "MATH 2",
+                "title": "MATH 2 AND",
                 "courseName": "Precalculus",
                 "professor": "QUEVEDO J M",
                 "status": "OCCUPIED"
@@ -11227,7 +12232,7 @@
                 "day": "Mon",
                 "start": "07:00",
                 "end": "08:05",
-                "title": "MATH 2",
+                "title": "MATH 2 AND",
                 "courseName": "Precalculus",
                 "professor": "QUEVEDO J M",
                 "status": "OCCUPIED"
@@ -11236,7 +12241,7 @@
                 "day": "Tue",
                 "start": "07:00",
                 "end": "08:05",
-                "title": "MATH 2",
+                "title": "MATH 2 AND",
                 "courseName": "Precalculus",
                 "professor": "QUEVEDO J M",
                 "status": "OCCUPIED"
@@ -11245,7 +12250,7 @@
                 "day": "Wed",
                 "start": "07:00",
                 "end": "08:05",
-                "title": "MATH 2",
+                "title": "MATH 2 AND",
                 "courseName": "Precalculus",
                 "professor": "QUEVEDO J M",
                 "status": "OCCUPIED"
@@ -11350,7 +12355,7 @@
                 "day": "Thu",
                 "start": "16:00",
                 "end": "18:05",
-                "title": "STAT C1000",
+                "title": "STAT C1000 AND",
                 "courseName": "Introduction to Statistics",
                 "professor": "JAHANGARD E",
                 "status": "OCCUPIED"
@@ -11359,7 +12364,7 @@
                 "day": "Tue",
                 "start": "16:00",
                 "end": "18:05",
-                "title": "STAT C1000",
+                "title": "STAT C1000 AND",
                 "courseName": "Introduction to Statistics",
                 "professor": "JAHANGARD E",
                 "status": "OCCUPIED"
@@ -11428,7 +12433,7 @@
                 "day": "Mon",
                 "start": "08:00",
                 "end": "10:05",
-                "title": "MATH 4",
+                "title": "MATH 4 AND",
                 "courseName": "College Algebra for STEM Majors",
                 "professor": "PHUNG Q T",
                 "status": "OCCUPIED"
@@ -11437,7 +12442,7 @@
                 "day": "Wed",
                 "start": "08:00",
                 "end": "10:05",
-                "title": "MATH 4",
+                "title": "MATH 4 AND",
                 "courseName": "College Algebra for STEM Majors",
                 "professor": "PHUNG Q T",
                 "status": "OCCUPIED"
@@ -11464,7 +12469,7 @@
                 "day": "Thu",
                 "start": "12:45",
                 "end": "15:10",
-                "title": "MATH 7",
+                "title": "MATH 7 AND",
                 "courseName": "Calculus 1",
                 "professor": "HANCOCK M D",
                 "status": "OCCUPIED"
@@ -11473,7 +12478,7 @@
                 "day": "Tue",
                 "start": "12:45",
                 "end": "15:10",
-                "title": "MATH 7",
+                "title": "MATH 7 AND",
                 "courseName": "Calculus 1",
                 "professor": "HANCOCK M D",
                 "status": "OCCUPIED"
@@ -11560,7 +12565,7 @@
                 "day": "Thu",
                 "start": "09:30",
                 "end": "10:35",
-                "title": "MATH 2",
+                "title": "MATH 2 AND",
                 "courseName": "Precalculus",
                 "professor": "MIANO I A",
                 "status": "OCCUPIED"
@@ -11569,7 +12574,7 @@
                 "day": "Mon",
                 "start": "09:30",
                 "end": "10:35",
-                "title": "MATH 2",
+                "title": "MATH 2 AND",
                 "courseName": "Precalculus",
                 "professor": "MIANO I A",
                 "status": "OCCUPIED"
@@ -11578,7 +12583,7 @@
                 "day": "Tue",
                 "start": "09:30",
                 "end": "10:35",
-                "title": "MATH 2",
+                "title": "MATH 2 AND",
                 "courseName": "Precalculus",
                 "professor": "MIANO I A",
                 "status": "OCCUPIED"
@@ -11587,7 +12592,7 @@
                 "day": "Wed",
                 "start": "09:30",
                 "end": "10:35",
-                "title": "MATH 2",
+                "title": "MATH 2 AND",
                 "courseName": "Precalculus",
                 "professor": "MIANO I A",
                 "status": "OCCUPIED"
@@ -11656,7 +12661,7 @@
                 "day": "Thu",
                 "start": "10:00",
                 "end": "11:05",
-                "title": "MATH 2",
+                "title": "MATH 2 AND",
                 "courseName": "Precalculus",
                 "professor": "LEE P H",
                 "status": "OCCUPIED"
@@ -11665,7 +12670,7 @@
                 "day": "Mon",
                 "start": "10:00",
                 "end": "11:05",
-                "title": "MATH 2",
+                "title": "MATH 2 AND",
                 "courseName": "Precalculus",
                 "professor": "LEE P H",
                 "status": "OCCUPIED"
@@ -11674,7 +12679,7 @@
                 "day": "Tue",
                 "start": "10:00",
                 "end": "11:05",
-                "title": "MATH 2",
+                "title": "MATH 2 AND",
                 "courseName": "Precalculus",
                 "professor": "LEE P H",
                 "status": "OCCUPIED"
@@ -11683,7 +12688,7 @@
                 "day": "Wed",
                 "start": "10:00",
                 "end": "11:05",
-                "title": "MATH 2",
+                "title": "MATH 2 AND",
                 "courseName": "Precalculus",
                 "professor": "LEE P H",
                 "status": "OCCUPIED"
@@ -11710,7 +12715,7 @@
                 "day": "Thu",
                 "start": "16:30",
                 "end": "17:35",
-                "title": "MATH 2",
+                "title": "MATH 2 AND",
                 "courseName": "Precalculus",
                 "professor": "CHAN H J",
                 "status": "OCCUPIED"
@@ -11719,7 +12724,7 @@
                 "day": "Mon",
                 "start": "16:30",
                 "end": "17:35",
-                "title": "MATH 2",
+                "title": "MATH 2 AND",
                 "courseName": "Precalculus",
                 "professor": "CHAN H J",
                 "status": "OCCUPIED"
@@ -11728,7 +12733,7 @@
                 "day": "Tue",
                 "start": "16:30",
                 "end": "17:35",
-                "title": "MATH 2",
+                "title": "MATH 2 AND",
                 "courseName": "Precalculus",
                 "professor": "CHAN H J",
                 "status": "OCCUPIED"
@@ -11737,7 +12742,7 @@
                 "day": "Wed",
                 "start": "16:30",
                 "end": "17:35",
-                "title": "MATH 2",
+                "title": "MATH 2 AND",
                 "courseName": "Precalculus",
                 "professor": "CHAN H J",
                 "status": "OCCUPIED"
@@ -11764,7 +12769,7 @@
                 "day": "Mon",
                 "start": "12:45",
                 "end": "15:10",
-                "title": "MATH 7",
+                "title": "MATH 7 AND",
                 "courseName": "Calculus 1",
                 "professor": "JAHANGARD E",
                 "status": "OCCUPIED"
@@ -11773,7 +12778,7 @@
                 "day": "Wed",
                 "start": "12:45",
                 "end": "15:10",
-                "title": "MATH 7",
+                "title": "MATH 7 AND",
                 "courseName": "Calculus 1",
                 "professor": "JAHANGARD E",
                 "status": "OCCUPIED"
@@ -11824,7 +12829,7 @@
                 "day": "Mon",
                 "start": "10:35",
                 "end": "12:40",
-                "title": "STAT C1000",
+                "title": "STAT C1000 AND",
                 "courseName": "Introduction to Statistics",
                 "professor": "SIMO A L",
                 "status": "OCCUPIED"
@@ -11833,7 +12838,7 @@
                 "day": "Wed",
                 "start": "10:35",
                 "end": "12:40",
-                "title": "STAT C1000",
+                "title": "STAT C1000 AND",
                 "courseName": "Introduction to Statistics",
                 "professor": "SIMO A L",
                 "status": "OCCUPIED"
@@ -11860,7 +12865,7 @@
                 "day": "Thu",
                 "start": "12:45",
                 "end": "14:50",
-                "title": "STAT C1000",
+                "title": "STAT C1000 AND",
                 "courseName": "Introduction to Statistics",
                 "professor": "SIMO A L",
                 "status": "OCCUPIED"
@@ -11869,7 +12874,7 @@
                 "day": "Tue",
                 "start": "12:45",
                 "end": "14:50",
-                "title": "STAT C1000",
+                "title": "STAT C1000 AND",
                 "courseName": "Introduction to Statistics",
                 "professor": "SIMO A L",
                 "status": "OCCUPIED"
@@ -11896,7 +12901,7 @@
                 "day": "Thu",
                 "start": "19:30",
                 "end": "20:35",
-                "title": "MATH 2",
+                "title": "MATH 2 AND",
                 "courseName": "Precalculus",
                 "professor": "MUSSELMAN M J",
                 "status": "OCCUPIED"
@@ -11905,7 +12910,7 @@
                 "day": "Mon",
                 "start": "19:30",
                 "end": "20:35",
-                "title": "MATH 2",
+                "title": "MATH 2 AND",
                 "courseName": "Precalculus",
                 "professor": "MUSSELMAN M J",
                 "status": "OCCUPIED"
@@ -11914,7 +12919,7 @@
                 "day": "Tue",
                 "start": "19:30",
                 "end": "20:35",
-                "title": "MATH 2",
+                "title": "MATH 2 AND",
                 "courseName": "Precalculus",
                 "professor": "MUSSELMAN M J",
                 "status": "OCCUPIED"
@@ -11923,7 +12928,7 @@
                 "day": "Wed",
                 "start": "19:30",
                 "end": "20:35",
-                "title": "MATH 2",
+                "title": "MATH 2 AND",
                 "courseName": "Precalculus",
                 "professor": "MUSSELMAN M J",
                 "status": "OCCUPIED"
@@ -12088,7 +13093,7 @@
                 "day": "Mon",
                 "start": "12:45",
                 "end": "13:55",
-                "title": "MATH 6",
+                "title": "MATH 6 AND",
                 "courseName": "Modern Mathematical Methods for STEM Majors",
                 "professor": "RICHARDSON A",
                 "status": "OCCUPIED"
@@ -12097,7 +13102,7 @@
                 "day": "Tue",
                 "start": "12:45",
                 "end": "13:55",
-                "title": "MATH 6",
+                "title": "MATH 6 AND",
                 "courseName": "Modern Mathematical Methods for STEM Majors",
                 "professor": "RICHARDSON A",
                 "status": "OCCUPIED"
@@ -12106,7 +13111,7 @@
                 "day": "Wed",
                 "start": "12:45",
                 "end": "13:55",
-                "title": "MATH 6",
+                "title": "MATH 6 AND",
                 "courseName": "Modern Mathematical Methods for STEM Majors",
                 "professor": "RICHARDSON A",
                 "status": "OCCUPIED"
@@ -12142,7 +13147,7 @@
                 "day": "Thu",
                 "start": "08:00",
                 "end": "10:25",
-                "title": "MATH 7",
+                "title": "MATH 7 AND",
                 "courseName": "Calculus 1",
                 "professor": "GHARAMANIANS J",
                 "status": "OCCUPIED"
@@ -12151,7 +13156,7 @@
                 "day": "Tue",
                 "start": "08:00",
                 "end": "10:25",
-                "title": "MATH 7",
+                "title": "MATH 7 AND",
                 "courseName": "Calculus 1",
                 "professor": "GHARAMANIANS J",
                 "status": "OCCUPIED"
@@ -12178,7 +13183,7 @@
                 "day": "Mon",
                 "start": "15:00",
                 "end": "16:30",
-                "title": "MATH 7",
+                "title": "MATH 7 AND",
                 "courseName": "Calculus 1",
                 "professor": "RICHARDSON A",
                 "status": "OCCUPIED"
@@ -12187,7 +13192,7 @@
                 "day": "Tue",
                 "start": "15:00",
                 "end": "16:30",
-                "title": "MATH 7",
+                "title": "MATH 7 AND",
                 "courseName": "Calculus 1",
                 "professor": "RICHARDSON A",
                 "status": "OCCUPIED"
@@ -12196,7 +13201,7 @@
                 "day": "Wed",
                 "start": "15:00",
                 "end": "16:30",
-                "title": "MATH 7",
+                "title": "MATH 7 AND",
                 "courseName": "Calculus 1",
                 "professor": "RICHARDSON A",
                 "status": "OCCUPIED"
@@ -12226,102 +13231,6 @@
                 "title": "MATH 7C",
                 "courseName": "Concurrent Support for Calculus 1",
                 "professor": "RICHARDSON A",
-                "status": "OCCUPIED"
-            }
-        ]
-    },
-    "room-210": {
-        "type": "CLASSROOM",
-        "label": "MSB 210",
-        "events": [
-            {
-                "day": "Mon",
-                "start": "17:00",
-                "end": "19:25",
-                "title": "MATH 2",
-                "courseName": "Precalculus",
-                "professor": "RAMSEY E D",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Wed",
-                "start": "17:00",
-                "end": "19:25",
-                "title": "MATH 2",
-                "courseName": "Precalculus",
-                "professor": "RAMSEY E D",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Wed",
-                "start": "11:15",
-                "end": "13:40",
-                "title": "MATH 7",
-                "courseName": "Calculus 1",
-                "professor": "BENE A J",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Thu",
-                "start": "19:35",
-                "end": "22:00",
-                "title": "MATH 7",
-                "courseName": "Calculus 1",
-                "professor": "MAN S",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Tue",
-                "start": "19:35",
-                "end": "22:00",
-                "title": "MATH 7",
-                "courseName": "Calculus 1",
-                "professor": "MAN S",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Mon",
-                "start": "14:15",
-                "end": "16:40",
-                "title": "MATH 8",
-                "courseName": "Calculus 2",
-                "professor": "SMITH S P",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Wed",
-                "start": "14:15",
-                "end": "16:40",
-                "title": "MATH 8",
-                "courseName": "Calculus 2",
-                "professor": "SMITH S P",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Wed",
-                "start": "08:00",
-                "end": "10:25",
-                "title": "MATH 11",
-                "courseName": "Multivariable Calculus",
-                "professor": "BENE A J",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Thu",
-                "start": "12:45",
-                "end": "15:10",
-                "title": "MATH 28",
-                "courseName": "Calculus 1 for Business and Social Science",
-                "professor": "KAMIN G",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Tue",
-                "start": "12:45",
-                "end": "15:10",
-                "title": "MATH 28",
-                "courseName": "Calculus 1 for Business and Social Science",
-                "professor": "KAMIN G",
                 "status": "OCCUPIED"
             }
         ]
@@ -12334,7 +13243,7 @@
                 "day": "Thu",
                 "start": "07:45",
                 "end": "08:50",
-                "title": "MATH 2",
+                "title": "MATH 2 AND",
                 "courseName": "Precalculus",
                 "professor": "ROSS K R",
                 "status": "OCCUPIED"
@@ -12343,7 +13252,7 @@
                 "day": "Mon",
                 "start": "07:45",
                 "end": "08:50",
-                "title": "MATH 2",
+                "title": "MATH 2 AND",
                 "courseName": "Precalculus",
                 "professor": "ROSS K R",
                 "status": "OCCUPIED"
@@ -12352,7 +13261,7 @@
                 "day": "Tue",
                 "start": "07:45",
                 "end": "08:50",
-                "title": "MATH 2",
+                "title": "MATH 2 AND",
                 "courseName": "Precalculus",
                 "professor": "ROSS K R",
                 "status": "OCCUPIED"
@@ -12361,7 +13270,7 @@
                 "day": "Wed",
                 "start": "07:45",
                 "end": "08:50",
-                "title": "MATH 2",
+                "title": "MATH 2 AND",
                 "courseName": "Precalculus",
                 "professor": "ROSS K R",
                 "status": "OCCUPIED"
@@ -12406,7 +13315,7 @@
                 "day": "Mon",
                 "start": "11:15",
                 "end": "12:35",
-                "title": "MATH 21",
+                "title": "MATH 21 AND",
                 "courseName": "Finite Mathematics",
                 "professor": "ROSS K R",
                 "status": "OCCUPIED"
@@ -12415,7 +13324,7 @@
                 "day": "Wed",
                 "start": "11:15",
                 "end": "12:35",
-                "title": "MATH 21",
+                "title": "MATH 21 AND",
                 "courseName": "Finite Mathematics",
                 "professor": "ROSS K R",
                 "status": "OCCUPIED"
@@ -12439,7 +13348,7 @@
                 "day": "Thu",
                 "start": "08:00",
                 "end": "09:05",
-                "title": "MATH 2",
+                "title": "MATH 2 AND",
                 "courseName": "Precalculus",
                 "professor": "LONDON J S",
                 "status": "OCCUPIED"
@@ -12448,7 +13357,7 @@
                 "day": "Mon",
                 "start": "08:00",
                 "end": "09:05",
-                "title": "MATH 2",
+                "title": "MATH 2 AND",
                 "courseName": "Precalculus",
                 "professor": "LONDON J S",
                 "status": "OCCUPIED"
@@ -12457,7 +13366,7 @@
                 "day": "Tue",
                 "start": "08:00",
                 "end": "09:05",
-                "title": "MATH 2",
+                "title": "MATH 2 AND",
                 "courseName": "Precalculus",
                 "professor": "LONDON J S",
                 "status": "OCCUPIED"
@@ -12466,7 +13375,7 @@
                 "day": "Wed",
                 "start": "08:00",
                 "end": "09:05",
-                "title": "MATH 2",
+                "title": "MATH 2 AND",
                 "courseName": "Precalculus",
                 "professor": "LONDON J S",
                 "status": "OCCUPIED"
@@ -12535,7 +13444,7 @@
                 "day": "Thu",
                 "start": "10:00",
                 "end": "11:05",
-                "title": "MATH 2",
+                "title": "MATH 2 AND",
                 "courseName": "Precalculus",
                 "professor": "QUEVEDO J M",
                 "status": "OCCUPIED"
@@ -12544,7 +13453,7 @@
                 "day": "Mon",
                 "start": "10:00",
                 "end": "11:05",
-                "title": "MATH 2",
+                "title": "MATH 2 AND",
                 "courseName": "Precalculus",
                 "professor": "QUEVEDO J M",
                 "status": "OCCUPIED"
@@ -12553,7 +13462,7 @@
                 "day": "Tue",
                 "start": "10:00",
                 "end": "11:05",
-                "title": "MATH 2",
+                "title": "MATH 2 AND",
                 "courseName": "Precalculus",
                 "professor": "QUEVEDO J M",
                 "status": "OCCUPIED"
@@ -12562,7 +13471,7 @@
                 "day": "Wed",
                 "start": "10:00",
                 "end": "11:05",
-                "title": "MATH 2",
+                "title": "MATH 2 AND",
                 "courseName": "Precalculus",
                 "professor": "QUEVEDO J M",
                 "status": "OCCUPIED"
@@ -12589,7 +13498,7 @@
                 "day": "Mon",
                 "start": "17:00",
                 "end": "19:05",
-                "title": "MATH 4",
+                "title": "MATH 4 AND",
                 "courseName": "College Algebra for STEM Majors",
                 "professor": "CHITGAR M H",
                 "status": "OCCUPIED"
@@ -12598,7 +13507,7 @@
                 "day": "Wed",
                 "start": "17:00",
                 "end": "19:05",
-                "title": "MATH 4",
+                "title": "MATH 4 AND",
                 "courseName": "College Algebra for STEM Majors",
                 "professor": "CHITGAR M H",
                 "status": "OCCUPIED"
@@ -12649,7 +13558,7 @@
                 "day": "Thu",
                 "start": "12:45",
                 "end": "14:50",
-                "title": "MATH 4",
+                "title": "MATH 4 AND",
                 "courseName": "College Algebra for STEM Majors",
                 "professor": "LOPEZ MA",
                 "status": "OCCUPIED"
@@ -12658,7 +13567,7 @@
                 "day": "Tue",
                 "start": "12:45",
                 "end": "14:50",
-                "title": "MATH 4",
+                "title": "MATH 4 AND",
                 "courseName": "College Algebra for STEM Majors",
                 "professor": "LOPEZ MA",
                 "status": "OCCUPIED"
@@ -12703,7 +13612,7 @@
                 "day": "Mon",
                 "start": "12:45",
                 "end": "14:05",
-                "title": "MATH 21",
+                "title": "MATH 21 AND",
                 "courseName": "Finite Mathematics",
                 "professor": "MIANO I A",
                 "status": "OCCUPIED"
@@ -12712,7 +13621,7 @@
                 "day": "Wed",
                 "start": "12:45",
                 "end": "14:05",
-                "title": "MATH 21",
+                "title": "MATH 21 AND",
                 "courseName": "Finite Mathematics",
                 "professor": "MIANO I A",
                 "status": "OCCUPIED"
@@ -12850,7 +13759,7 @@
                 "day": "Thu",
                 "start": "12:45",
                 "end": "15:10",
-                "title": "MATH 7",
+                "title": "MATH 7 AND",
                 "courseName": "Calculus 1",
                 "professor": "PACHAS-FLORES W",
                 "status": "OCCUPIED"
@@ -12859,7 +13768,7 @@
                 "day": "Tue",
                 "start": "12:45",
                 "end": "15:10",
-                "title": "MATH 7",
+                "title": "MATH 7 AND",
                 "courseName": "Calculus 1",
                 "professor": "PACHAS-FLORES W",
                 "status": "OCCUPIED"
@@ -12928,7 +13837,7 @@
                 "day": "Thu",
                 "start": "09:30",
                 "end": "10:35",
-                "title": "MATH 7",
+                "title": "MATH 7 AND",
                 "courseName": "Calculus 1",
                 "professor": "HERICHI H",
                 "status": "OCCUPIED"
@@ -12937,7 +13846,7 @@
                 "day": "Mon",
                 "start": "09:30",
                 "end": "10:35",
-                "title": "MATH 7",
+                "title": "MATH 7 AND",
                 "courseName": "Calculus 1",
                 "professor": "HERICHI H",
                 "status": "OCCUPIED"
@@ -12946,7 +13855,7 @@
                 "day": "Tue",
                 "start": "09:30",
                 "end": "10:35",
-                "title": "MATH 7",
+                "title": "MATH 7 AND",
                 "courseName": "Calculus 1",
                 "professor": "HERICHI H",
                 "status": "OCCUPIED"
@@ -12955,7 +13864,7 @@
                 "day": "Wed",
                 "start": "09:30",
                 "end": "10:35",
-                "title": "MATH 7",
+                "title": "MATH 7 AND",
                 "courseName": "Calculus 1",
                 "professor": "HERICHI H",
                 "status": "OCCUPIED"
@@ -13078,7 +13987,7 @@
                 "day": "Thu",
                 "start": "09:30",
                 "end": "11:55",
-                "title": "MATH 7",
+                "title": "MATH 7 AND",
                 "courseName": "Calculus 1",
                 "professor": "FANELLI D",
                 "status": "OCCUPIED"
@@ -13087,7 +13996,7 @@
                 "day": "Tue",
                 "start": "09:30",
                 "end": "11:55",
-                "title": "MATH 7",
+                "title": "MATH 7 AND",
                 "courseName": "Calculus 1",
                 "professor": "FANELLI D",
                 "status": "OCCUPIED"
@@ -13114,7 +14023,7 @@
                 "day": "Mon",
                 "start": "11:00",
                 "end": "12:20",
-                "title": "MATH 21",
+                "title": "MATH 21 AND",
                 "courseName": "Finite Mathematics",
                 "professor": "BRONIE B L",
                 "status": "OCCUPIED"
@@ -13123,7 +14032,7 @@
                 "day": "Wed",
                 "start": "11:00",
                 "end": "12:20",
-                "title": "MATH 21",
+                "title": "MATH 21 AND",
                 "courseName": "Finite Mathematics",
                 "professor": "BRONIE B L",
                 "status": "OCCUPIED"
@@ -13147,36 +14056,36 @@
                 "day": "Thu",
                 "start": "12:45",
                 "end": "14:25",
-                "title": "MATH 7",
+                "title": "MATH 7 AND",
                 "courseName": "Calculus 1",
-                "professor": "LEE P H",
+                "professor": "SOURY S",
                 "status": "OCCUPIED"
             },
             {
                 "day": "Mon",
                 "start": "12:45",
                 "end": "14:25",
-                "title": "MATH 7",
+                "title": "MATH 7 AND",
                 "courseName": "Calculus 1",
-                "professor": "LEE P H",
+                "professor": "SOURY S",
                 "status": "OCCUPIED"
             },
             {
                 "day": "Tue",
                 "start": "12:45",
                 "end": "14:25",
-                "title": "MATH 7",
+                "title": "MATH 7 AND",
                 "courseName": "Calculus 1",
-                "professor": "LEE P H",
+                "professor": "SOURY S",
                 "status": "OCCUPIED"
             },
             {
                 "day": "Wed",
                 "start": "12:45",
                 "end": "14:25",
-                "title": "MATH 7",
+                "title": "MATH 7 AND",
                 "courseName": "Calculus 1",
-                "professor": "LEE P H",
+                "professor": "SOURY S",
                 "status": "OCCUPIED"
             },
             {
@@ -13185,7 +14094,7 @@
                 "end": "15:15",
                 "title": "MATH 7C",
                 "courseName": "Concurrent Support for Calculus 1",
-                "professor": "LEE P H",
+                "professor": "SOURY S",
                 "status": "OCCUPIED"
             },
             {
@@ -13194,7 +14103,7 @@
                 "end": "15:15",
                 "title": "MATH 7C",
                 "courseName": "Concurrent Support for Calculus 1",
-                "professor": "LEE P H",
+                "professor": "SOURY S",
                 "status": "OCCUPIED"
             },
             {
@@ -13203,7 +14112,7 @@
                 "end": "15:15",
                 "title": "MATH 7C",
                 "courseName": "Concurrent Support for Calculus 1",
-                "professor": "LEE P H",
+                "professor": "SOURY S",
                 "status": "OCCUPIED"
             },
             {
@@ -13212,7 +14121,7 @@
                 "end": "15:15",
                 "title": "MATH 7C",
                 "courseName": "Concurrent Support for Calculus 1",
-                "professor": "LEE P H",
+                "professor": "SOURY S",
                 "status": "OCCUPIED"
             },
             {
@@ -13285,57 +14194,6 @@
                 "title": "MATH 11",
                 "courseName": "Multivariable Calculus",
                 "professor": "OUELLETTE K R",
-                "status": "OCCUPIED"
-            }
-        ]
-    },
-    "hss-255": {
-        "type": "CLASSROOM",
-        "label": "HSS 255",
-        "events": [
-            {
-                "day": "Thu",
-                "start": "09:30",
-                "end": "10:50",
-                "title": "PHILOS 1",
-                "courseName": "Knowledge and Reality",
-                "professor": "DAILY M S",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Tue",
-                "start": "09:30",
-                "end": "10:50",
-                "title": "PHILOS 1",
-                "courseName": "Knowledge and Reality",
-                "professor": "DAILY M S",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Wed",
-                "start": "11:15",
-                "end": "12:35",
-                "title": "PSYCH 11",
-                "courseName": "Child Growth and Development",
-                "professor": "CUE E N",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Thu",
-                "start": "12:45",
-                "end": "14:05",
-                "title": "SOCIOL 1",
-                "courseName": "Introduction to Sociology",
-                "professor": "ROMO R",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Tue",
-                "start": "12:45",
-                "end": "14:05",
-                "title": "SOCIOL 1",
-                "courseName": "Introduction to Sociology",
-                "professor": "ROMO R",
                 "status": "OCCUPIED"
             }
         ]
@@ -13833,7 +14691,7 @@
                 "end": "20:05",
                 "title": "PHYSCS 21",
                 "courseName": "Mechanics with Lab",
-                "professor": "ROSE R M",
+                "professor": "DE R",
                 "status": "OCCUPIED"
             },
             {
@@ -13842,7 +14700,7 @@
                 "end": "20:05",
                 "title": "PHYSCS 21",
                 "courseName": "Mechanics with Lab",
-                "professor": "ROSE R M",
+                "professor": "DE R",
                 "status": "OCCUPIED"
             },
             {
@@ -14156,7 +15014,7 @@
                 "start": "09:30",
                 "end": "10:50",
                 "title": "PSYC C1000",
-                "courseName": "General Psychology",
+                "courseName": "Introduction to Psychology",
                 "professor": "SALDANA T",
                 "status": "OCCUPIED"
             },
@@ -14165,7 +15023,7 @@
                 "start": "09:30",
                 "end": "10:50",
                 "title": "PSYC C1000",
-                "courseName": "General Psychology",
+                "courseName": "Introduction to Psychology",
                 "professor": "SALDANA T",
                 "status": "OCCUPIED"
             },
@@ -14174,7 +15032,7 @@
                 "start": "12:45",
                 "end": "14:05",
                 "title": "PSYC C1000",
-                "courseName": "General Psychology",
+                "courseName": "Introduction to Psychology",
                 "professor": "O'LEARY B A",
                 "status": "OCCUPIED"
             },
@@ -14183,7 +15041,7 @@
                 "start": "12:45",
                 "end": "14:05",
                 "title": "PSYC C1000",
-                "courseName": "General Psychology",
+                "courseName": "Introduction to Psychology",
                 "professor": "O'LEARY B A",
                 "status": "OCCUPIED"
             },
@@ -14192,7 +15050,7 @@
                 "start": "14:15",
                 "end": "15:35",
                 "title": "PSYC C1000",
-                "courseName": "General Psychology",
+                "courseName": "Introduction to Psychology",
                 "professor": "SALDANA T",
                 "status": "OCCUPIED"
             },
@@ -14506,30 +15364,6 @@
                 "title": "TH ART 42",
                 "courseName": "Acting II",
                 "professor": "SAWOSKI P",
-                "status": "OCCUPIED"
-            }
-        ]
-    },
-    "pa-66": {
-        "type": "CLASSROOM",
-        "label": "PA 66",
-        "events": [
-            {
-                "day": "Mon",
-                "start": "12:45",
-                "end": "14:50",
-                "title": "TH ART 26",
-                "courseName": "Introduction to Stage Costuming",
-                "professor": "SARABIPOUR Y",
-                "status": "OCCUPIED"
-            },
-            {
-                "day": "Wed",
-                "start": "12:45",
-                "end": "14:50",
-                "title": "TH ART 26",
-                "courseName": "Introduction to Stage Costuming",
-                "professor": "SARABIPOUR Y",
                 "status": "OCCUPIED"
             }
         ]

@@ -202,17 +202,16 @@ body {
   left: 50%;
   transform: translateX(-50%);
   z-index: 20;
-  width: 90%;
-  max-width: 550px;
-
+  width: max-content;
+  max-width: 95%;
   display: flex;
   flex-wrap: wrap;
   white-space: nowrap;
   /* ADDED to prevent text breaking */
   justify-content: center;
-  gap: 8px 16px;
+  gap: 6px 12px;
   background: rgba(255, 255, 255, 0.95);
-  padding: 8px 16px;
+  padding: 8px 12px;
   border-radius: 20px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   border: 1px solid #e5e7eb;

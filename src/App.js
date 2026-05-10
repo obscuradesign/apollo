@@ -24,7 +24,7 @@ function App() {
   return (
     <div className={`App ${darkMode ? 'dark' : ''}`}>
       <div style={{ display: "flex", justifyContent: "center", margin: "20px 0" }}>
-        <ApolloLogo style={{ height: "120px", width: "auto" }} />
+        <ApolloLogo style={{ height: "120px", width: "auto", maxWidth: "100%", objectFit: "contain" }} />
       </div>
 
       {/* This renders your entire map project */}

@@ -51,10 +51,11 @@ Finding an empty room to study in or locating a specific SI (Supplemental Instru
 
 ---
 
-## ✨ What's New in v6.0
+## ✨ What's New in v6.2.0
 
-This release reframes Apollo around a campus-level entry point, adds the Art Complex, and hardens the data pipeline.
+This release reframes Apollo around a campus-level entry point, adds the Art Complex, hardens the data pipeline, and introduces a new informational modal.
 
+* **ℹ️ About Modal:** A new interactive "About Apollo" modal provides context on the app, how it works, and includes necessary privacy/disclaimer notices. Optimized for both desktop and mobile viewing with a dedicated floating icon seamlessly integrated into the Time Machine debug panel.
 * **🗺️ Campus Overview Map:** A new [`CampusMap.jsx`](src/components/CampusMap.jsx) component renders a top-down SVG of the campus with clickable building footprints. It is now the default view on load — selecting a building drops you straight into floor 1 of that building's interior map.
 * **🎨 Art Complex (ART) added:** Two new floor components — [`AFloor1.jsx`](src/components/AFloor1.jsx) and [`AFloor2.jsx`](src/components/AFloor2.jsx) — plus ~22 new rooms (classrooms, department offices, adjunct offices) wired into [`roomSchedule.js`](src/data/roomSchedule.js). Search auto-routes any `a-###` room ID to the right floor.
 * **🧭 Unified building selector:** The desktop tab row was retired in favor of the dropdown selector, so the building picker now behaves identically on desktop and mobile (see [`BuildingMap.jsx`](src/components/BuildingMap.jsx)). The dropdown also stops collapsing the floor switcher when only the campus map is active.

@@ -196,7 +196,7 @@ const Legend = () => (
 
 
 
-export function BuildingMap({ darkMode, setDarkMode }) {
+export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
   const [currentBuilding, setCurrentBuilding] = useState("CAMPUS");
   const [currentFloor, setCurrentFloor] = useState(1);
   const [simulationState, setSimulationState] = useState(getCurrentStatus());
@@ -760,6 +760,25 @@ export function BuildingMap({ darkMode, setDarkMode }) {
             title={darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
           >
             {darkMode ? "☀️" : "🌙"}
+          </button>
+
+          {/* ABOUT BUTTON */}
+          <button
+            onClick={onOpenAbout}
+            style={{
+              background: "none",
+              border: "none",
+              cursor: "pointer",
+              fontSize: "1.2rem",
+              padding: "4px",
+              marginLeft: "5px",
+              transition: "transform 0.2s",
+              color: "var(--text-primary, #1f2937)"
+            }}
+            title="About Apollo"
+            aria-label="About Apollo"
+          >
+            ℹ️
           </button>
         </div>
       </motion.div>

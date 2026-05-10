@@ -1,6 +1,7 @@
 import React from 'react';
 import { BuildingMap } from './components/BuildingMap';
 import { ApolloLogo } from './components/ApolloLogo';
+import { AboutModal } from './components/AboutModal';
 import { Analytics } from '@vercel/analytics/react';
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
   const [darkMode, setDarkMode] = React.useState(() => {
     return localStorage.getItem('apollo-theme') === 'dark';
   });
+  const [isAboutOpen, setIsAboutOpen] = React.useState(false);
 
   React.useEffect(() => {
     if (darkMode) {
@@ -26,10 +28,13 @@ function App() {
       </div>
 
       {/* This renders your entire map project */}
-      <BuildingMap darkMode={darkMode} setDarkMode={setDarkMode} />
+      <BuildingMap darkMode={darkMode} setDarkMode={setDarkMode} onOpenAbout={() => setIsAboutOpen(true)} />
 
       {/* Vercel Analytics integration */}
       <Analytics />
+
+      {/* About Modal */}
+      {isAboutOpen && <AboutModal onClose={() => setIsAboutOpen(false)} />}
 
     </div>
   );

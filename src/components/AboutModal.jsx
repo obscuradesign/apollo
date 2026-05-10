@@ -30,7 +30,9 @@ export const AboutModal = ({ onClose }) => {
                         color: "var(--text-primary, white)",
                         display: "flex",
                         flexDirection: "column",
-                        gap: "16px"
+                        gap: "16px",
+                        maxHeight: "90vh",
+                        overflowY: "auto"
                     }}
                 >
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>

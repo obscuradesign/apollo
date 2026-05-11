@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
+import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import { Level1 } from "./Level1";
 import { Level2 } from "./Level2";
 import { Level3 } from "./Level3";
@@ -198,6 +199,7 @@ const Legend = () => (
 
 export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
   const [currentBuilding, setCurrentBuilding] = useState("CAMPUS");
+  const transformRef = useRef(null);
   const [currentFloor, setCurrentFloor] = useState(1);
   const [simulationState, setSimulationState] = useState(getCurrentStatus());
   const [isLive, setIsLive] = useState(true);
@@ -637,63 +639,90 @@ export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
           </button>
         </div>
 
-        {/* MAP CONTENT */}
-        <div style={{
-          width: "100%",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          zIndex: 1
-        }}>
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={`${currentBuilding}-${currentFloor}`}
-              initial={{ opacity: 0, x: offsets.x + 20, y: offsets.y, scale: (offsets.scale || 1) * 0.95 }}
-              animate={{ opacity: 1, x: offsets.x, y: offsets.y, scale: offsets.scale || 1 }}
-              exit={{ opacity: 0, x: offsets.x - 20, y: offsets.y, scale: (offsets.scale || 1) * 0.95 }}
-              transition={{ duration: 0.3 }}
-              style={{
-                width: "100%",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                paddingTop: currentBuilding === "SSC" ? "70px" : "30px",
-                ...((!isMobile && currentBuilding === "DRSCHR" && currentFloor >= 2) ? { maxHeight: "350px" } : {})
-              }}
-            >
-              {/* Art Floors */}
-              {currentBuilding === "ART" && currentFloor === 1 && <AFloor1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
-              {currentBuilding === "ART" && currentFloor === 2 && <AFloor2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
-              {/* MSB Floors */}
-              {currentBuilding === "MSB" && currentFloor === 1 && <Level1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
-              {currentBuilding === "MSB" && currentFloor === 2 && <Level2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
-              {currentBuilding === "MSB" && currentFloor === 3 && <Level3 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
-              {/* Drescher Floors */}
-              {currentBuilding === "DRSCHR" && currentFloor === 1 && <DrescherLevel1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
-              {currentBuilding === "DRSCHR" && currentFloor === 2 && <DrescherLevel2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
-              {currentBuilding === "DRSCHR" && currentFloor === 3 && <DrescherLevel3 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
-              {/* Pico Village (shares Drescher 1 unified view) */}
-              {currentBuilding === "PV" && currentFloor === 1 && <DrescherLevel1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
-              {/* HSS Floors */}
-              {currentBuilding === "HSS" && currentFloor === 1 && <HSSLevel1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
-              {currentBuilding === "HSS" && currentFloor === 2 && <HSSLevel2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
-              {currentBuilding === "HSS" && currentFloor === 3 && <HSSLevel3 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
-              {/* SCI Floors */}
-              {currentBuilding === "SCI" && currentFloor === 1 && <SCILevel1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
-              {currentBuilding === "SCI" && currentFloor === 2 && <SCILevel2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
-              {currentBuilding === "SCI" && currentFloor === 3 && <SCILevel3 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
-              {/* BUS Floors */}
-              {currentBuilding === "BUS" && currentFloor === 1 && <BUSLevel1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
-              {currentBuilding === "BUS" && currentFloor === 2 && <BUSLevel2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
-              {/* SSC Floors */}
-              {currentBuilding === "SSC" && currentFloor === 1 && <SSCLevel1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
-              {currentBuilding === "SSC" && currentFloor === 2 && <SSCLevel2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
-              {currentBuilding === "SSC" && currentFloor === 3 && <SSCLevel3 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
-              {/* Campus Map */}
-              {currentBuilding === "CAMPUS" && <CampusMap onBuildingClick={(id) => { setCurrentBuilding(id); setCurrentFloor(1); }} />}
-            </motion.div>
-          </AnimatePresence>
-        </div>
+        {/* MAP CONTENT — wrapped in pinch-to-zoom */}
+        <TransformWrapper
+          ref={transformRef}
+          initialScale={1}
+          minScale={1}
+          maxScale={4}
+          centerOnInit
+          wheel={{ step: 0.1 }}
+          pinch={{ step: 5 }}
+          doubleClick={{ mode: "reset" }}
+          panning={{ velocityDisabled: true }}
+          onPanningStart={(_, e) => {
+            // Let click/tap events through — only pan on multi-touch or mouse-drag
+            if (e?.touches?.length < 2 && e?.type !== "mousemove") return;
+          }}
+          key={`${currentBuilding}-${currentFloor}`}
+        >
+          <TransformComponent
+            wrapperStyle={{ width: "100%", height: "100%", overflow: "hidden" }}
+            contentStyle={{
+              width: "100%",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center"
+            }}
+          >
+            <div style={{
+              width: "100%",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              zIndex: 1
+            }}>
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={`${currentBuilding}-${currentFloor}`}
+                  initial={{ opacity: 0, x: offsets.x + 20, y: offsets.y, scale: (offsets.scale || 1) * 0.95 }}
+                  animate={{ opacity: 1, x: offsets.x, y: offsets.y, scale: offsets.scale || 1 }}
+                  exit={{ opacity: 0, x: offsets.x - 20, y: offsets.y, scale: (offsets.scale || 1) * 0.95 }}
+                  transition={{ duration: 0.3 }}
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    paddingTop: currentBuilding === "SSC" ? "70px" : "30px",
+                    ...((!isMobile && currentBuilding === "DRSCHR" && currentFloor >= 2) ? { maxHeight: "350px" } : {})
+                  }}
+                >
+                  {/* Art Floors */}
+                  {currentBuilding === "ART" && currentFloor === 1 && <AFloor1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+                  {currentBuilding === "ART" && currentFloor === 2 && <AFloor2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+                  {/* MSB Floors */}
+                  {currentBuilding === "MSB" && currentFloor === 1 && <Level1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+                  {currentBuilding === "MSB" && currentFloor === 2 && <Level2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+                  {currentBuilding === "MSB" && currentFloor === 3 && <Level3 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+                  {/* Drescher Floors */}
+                  {currentBuilding === "DRSCHR" && currentFloor === 1 && <DrescherLevel1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+                  {currentBuilding === "DRSCHR" && currentFloor === 2 && <DrescherLevel2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+                  {currentBuilding === "DRSCHR" && currentFloor === 3 && <DrescherLevel3 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+                  {/* Pico Village (shares Drescher 1 unified view) */}
+                  {currentBuilding === "PV" && currentFloor === 1 && <DrescherLevel1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+                  {/* HSS Floors */}
+                  {currentBuilding === "HSS" && currentFloor === 1 && <HSSLevel1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+                  {currentBuilding === "HSS" && currentFloor === 2 && <HSSLevel2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+                  {currentBuilding === "HSS" && currentFloor === 3 && <HSSLevel3 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+                  {/* SCI Floors */}
+                  {currentBuilding === "SCI" && currentFloor === 1 && <SCILevel1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+                  {currentBuilding === "SCI" && currentFloor === 2 && <SCILevel2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+                  {currentBuilding === "SCI" && currentFloor === 3 && <SCILevel3 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+                  {/* BUS Floors */}
+                  {currentBuilding === "BUS" && currentFloor === 1 && <BUSLevel1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+                  {currentBuilding === "BUS" && currentFloor === 2 && <BUSLevel2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+                  {/* SSC Floors */}
+                  {currentBuilding === "SSC" && currentFloor === 1 && <SSCLevel1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+                  {currentBuilding === "SSC" && currentFloor === 2 && <SSCLevel2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+                  {currentBuilding === "SSC" && currentFloor === 3 && <SSCLevel3 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+                  {/* Campus Map */}
+                  {currentBuilding === "CAMPUS" && <CampusMap onBuildingClick={(id) => { setCurrentBuilding(id); setCurrentFloor(1); }} />}
+                </motion.div>
+              </AnimatePresence>
+            </div>
+          </TransformComponent>
+        </TransformWrapper>
 
         {/* OVERLAY: Legend */}
         <Legend />

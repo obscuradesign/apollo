@@ -410,18 +410,18 @@ export function BuildingMap({ darkMode, setDarkMode }) {
       });
       if (activeEvent) {
         color = COLORS[activeEvent.status];
-        
+
         // Privacy filter
-        const isEnrolled = currentUser?.enrolledCourses?.some(c => 
-          c.title === activeEvent.title && 
-          c.day === simulationState.day && 
+        const isEnrolled = currentUser?.enrolledCourses?.some(c =>
+          c.title === activeEvent.title &&
+          c.day === simulationState.day &&
           c.start === activeEvent.start
         );
-        
+
         if (!isEnrolled) {
-           activeEvent = { ...activeEvent, isPrivate: true };
+          activeEvent = { ...activeEvent, isPrivate: true };
         } else {
-           color = "#22c55e"; // Highlight enrolled courses in green
+          color = "#22c55e"; // Highlight enrolled courses in green
         }
       }
     } else {
@@ -535,8 +535,8 @@ export function BuildingMap({ darkMode, setDarkMode }) {
 
       </motion.div>
 
-      <StudentDashboard 
-        currentUser={currentUser} 
+      <StudentDashboard
+        currentUser={currentUser}
         onLoginClick={() => setIsLoginModalOpen(true)}
         onLogoutClick={() => setCurrentUser(null)}
         onNavigate={handleNavigate}
@@ -558,7 +558,7 @@ export function BuildingMap({ darkMode, setDarkMode }) {
             />
           )}
           {isLoginModalOpen && (
-            <LoginModal 
+            <LoginModal
               onClose={() => setIsLoginModalOpen(false)}
               onLogin={setCurrentUser}
             />

@@ -175,12 +175,12 @@ All interactive floor map components have been retrofitted for WCAG 2.2 AA compl
 
 | Building | Floor 1 | Floor 2 | Floor 3 |
 |----------|---------|---------|---------|
-| **Level** (main building) | ✅ | ✅ | ✅ |
-| **Art** | ✅ | ✅ | ✅ |
+| **Level** (main building, MSB) | ✅ | ✅ | ✅ |
+| **Art** | ✅ | ✅ | ⬜ |
 | **SCI** (Science) | ✅ | ✅ | ✅ |
 | **Drescher** | ✅ | ✅ | ✅ |
 | **HSS** (Humanities & Social Sciences) | ✅ | ✅ | ✅ |
-| **BUS** (Business) | ✅ | ✅ | — |
+| **BUS** (Business) | ✅ | ✅ | ⬜ |
 | **SSC** (Student Services Center) | ✅ | ✅ | ✅ |
 
 ### What was implemented on each floor component

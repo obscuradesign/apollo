@@ -49,7 +49,7 @@ export const AboutModal = ({ onClose }) => {
                             aria-label="Close About Apollo dialog"
                             style={{
                                 background: "none", border: "none", cursor: "pointer",
-                                fontSize: "1.2rem", color: "var(--text-secondary, #9ca3af)",
+                                fontSize: "1.2rem", color: "var(--text-primary, #9ca3af)",
                                 padding: "4px"
                             }}
                         >
@@ -58,14 +58,14 @@ export const AboutModal = ({ onClose }) => {
                     </div>
 
                     <div>
-                        <h3 style={{ margin: "0 0 8px 0", fontSize: "1.1rem", color: "var(--text-secondary, #9ca3af)" }}>What is Apollo?</h3>
+                        <h3 style={{ margin: "0 0 8px 0", fontSize: "1.1rem", color: "var(--text-primary, #9ca3af)" }}>What is Apollo?</h3>
                         <p style={{ margin: 0, lineHeight: "1.5" }}>
                             Apollo is an interactive campus map designed to help you easily navigate the SMC campus, find your classrooms, SI sessions, departments, and check live schedules.
                         </p>
                     </div>
 
                     <div>
-                        <h3 style={{ margin: "0 0 8px 0", fontSize: "1.1rem", color: "var(--text-secondary, #9ca3af)" }}>How it works</h3>
+                        <h3 style={{ margin: "0 0 8px 0", fontSize: "1.1rem", color: "var(--text-primary, #9ca3af)" }}>How it works</h3>
                         <ul style={{ margin: 0, paddingLeft: "20px", lineHeight: "1.5", display: "flex", flexDirection: "column", gap: "6px" }}>
                             <li><strong>Tap a building</strong> to explore its floors and rooms.</li>
                             <li><strong>Use the search</strong> (magnifying glass) to find specific classes, professors, or SI sessions.</li>
@@ -74,16 +74,16 @@ export const AboutModal = ({ onClose }) => {
                     </div>
 
                     <div style={{ marginTop: "8px", paddingTop: "16px", borderTop: "1px solid var(--border-color, #374151)" }}>
-                        <h3 style={{ margin: "0 0 8px 0", fontSize: "1.1rem", color: "var(--text-secondary, #9ca3af)" }}>Credits</h3>
-                        <p style={{ margin: 0, fontSize: "0.9rem", color: "var(--text-secondary, #9ca3af)", lineHeight: "1.5" }}>
+                        <h3 style={{ margin: "0 0 8px 0", fontSize: "1.1rem", color: "var(--text-primary, #9ca3af)" }}>Credits</h3>
+                        <p style={{ margin: 0, fontSize: "0.9rem", color: "var(--text-primary, #9ca3af)", lineHeight: "1.5" }}>
                             Created by Kevin Davidson. Data is currently from Spring 2026. Credit for the map goes to Santa Monica College.
 
                         </p>
                     </div>
 
                     <div style={{ marginTop: "8px", paddingTop: "16px", borderTop: "1px solid var(--border-color, #374151)" }}>
-                        <h3 style={{ margin: "0 0 8px 0", fontSize: "1.1rem", color: "var(--text-secondary, #9ca3af)" }}>Disclaimer & Privacy</h3>
-                        <p style={{ margin: 0, fontSize: "0.85rem", color: "var(--text-secondary, #9ca3af)", lineHeight: "1.5" }}>
+                        <h3 style={{ margin: "0 0 8px 0", fontSize: "1.1rem", color: "var(--text-primary, #9ca3af)" }}>Disclaimer & Privacy</h3>
+                        <p style={{ margin: 0, fontSize: "0.85rem", color: "var(--text-primary, #9ca3af)", lineHeight: "1.5" }}>
                             Apollo is an independent project and is not officially affiliated with Santa Monica College. All scheduling and map data is provided "as-is" for informational purposes. Apollo does not collect personal data; your starred items and theme preferences are stored locally on your device. Anonymous usage metrics are collected via Vercel Analytics to improve the app.
                         </p>
                     </div>

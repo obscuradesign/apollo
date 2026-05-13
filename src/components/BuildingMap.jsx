@@ -43,7 +43,7 @@ const SI_SCHEDULES = Object.keys({ ...SI_SCHEDULES_RAW, ...OFFICE_HOURS }).reduc
 }, {});
 
 const COLORS = {
-  LOCKED: "#9CA3AF",
+  LOCKED: "#71717a",
   OCCUPIED: "#EF5350",
   SI_SESSION: "#FBBF24",
   OFFICE_HOURS: "#FBBF24",
@@ -146,7 +146,7 @@ const RoomTooltip = ({ info, position, starredItems }) => {
     >
       <h3 style={{ margin: "0 0 4px 0", fontSize: "1rem", color: "#111827", display: "flex", alignItems: "center", gap: "6px" }}>
         {displayLabel}
-        {starredItems?.some(s => s.id === info.roomId) && <span style={{ color: "#fbbf24" }}>★</span>}
+        {starredItems?.some(s => s.id === info.roomId) && <span style={{ color: "#1f2937", whiteSpace: "nowrap" }}>★</span>}
       </h3>
       {info.activeEvent ? (
         <>
@@ -168,7 +168,7 @@ const RoomTooltip = ({ info, position, starredItems }) => {
         </>
       ) : (
         isDepartment ? null : (
-          <div style={{ fontSize: "0.8rem", color: "#9ca3af", fontStyle: "italic" }}>
+          <div style={{ fontSize: "0.8rem", color: "#71717a", fontStyle: "italic" }}>
             {info.isStudyRoom
               ? (info.clickable === false ? "Study Room (No Booking)" : (info.url ? "Click for Info" : "Open for Study (Click to Book)"))
               : "Currently Empty"}
@@ -801,32 +801,32 @@ export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
         <div style={{ display: "flex", justifyContent: "center", gap: "10px", alignItems: "center" }}>
           <label
             htmlFor="sim-day-select"
-            style={{ fontSize: "0.75rem", fontWeight: 600, color: "var(--text-secondary, #6b7280)" }}
+            style={{ fontSize: "0.75rem", fontWeight: 600, color: "var(--text-primary, #1f2937)" }}
           >
             Day
           </label>
           <select
             id="sim-day-select"
+            className="sim-input"
             value={simulationState.day}
             onChange={handleDayChange}
-            style={{ padding: "8px", borderRadius: "6px", border: "1px solid #ccc" }}
           >
             {DAYS.map(d => <option key={d} value={d}>{d}</option>)}
           </select>
 
           <label
             htmlFor="sim-time-input"
-            style={{ fontSize: "0.75rem", fontWeight: 600, color: "var(--text-secondary, #6b7280)" }}
+            style={{ fontSize: "0.75rem", fontWeight: 600, color: "var(--text-primary, #1f2937)" }}
           >
             Time
           </label>
           <input
             id="sim-time-input"
+            className="sim-input"
             type="time"
             value={simulationState.time}
             onChange={handleTimeChange}
             onKeyDown={handleTimeKeyDown}
-            style={{ padding: "7px", borderRadius: "6px", border: "1px solid #ccc" }}
           />
 
           {/* DARK MODE TOGGLE */}
@@ -844,7 +844,7 @@ export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
             aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
             title={darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
           >
-            <span aria-hidden="true">{darkMode ? "☀️" : "🌙"}</span>
+            <span aria-hidden="true" style={{ color: "var(--text-primary)" }}>{darkMode ? "☀️" : "🌙"}</span>
           </button>
 
           {/* ABOUT BUTTON */}

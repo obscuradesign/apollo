@@ -256,7 +256,7 @@ export const SearchModal = ({ onClose, onNavigate, starredItems, onToggleStar })
                                     </button>
                                 </div>
                             </div>
-                            <div style={{ fontSize: "0.85rem", color: "var(--text-secondary, #9ca3af)" }}>{r.detail}</div>
+                            <div style={{ fontSize: "0.85rem", color: "var(--text-primary, #9ca3af)" }}>{r.detail}</div>
                         </div>
                     ))}
                 </div>

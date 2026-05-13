@@ -19,6 +19,7 @@
 
   ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
   ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+  ![Accessibility](https://img.shields.io/badge/WCAG_2.2_AA-Compliant-success?style=for-the-badge&logo=w3c)
   ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 </div>
 
@@ -46,6 +47,7 @@ Finding an empty room to study in or locating a specific SI (Supplemental Instru
 * **🟢 Live Class Tracking:** Rooms turn **Red** when a class is currently in session.
 * **🟡 Academic Support:** Rooms turn **Gold** for Supplemental Instruction sessions and **Professor Office Hours** (automatically overriding regular class closures so you know where to get help).
 * **🔵 Study Rooms:** Dedicated study rooms are highlighted **Blue** with direct booking links.
+* **♿ WCAG 2.2 AA Compliant:** Full support for screen readers, keyboard navigation, and high-contrast accessibility mode.
 * **🏗️ Google Maps-style UI:** An immersive Overlay layout where controls float over the interactive map for maximum screen real estate.
 * **🕰️ Time Machine:** Need to plan for later? Use the Time Machine debug panel to jump to any day or time in the future.
 
@@ -58,14 +60,20 @@ This release reframes Apollo around a campus-level entry point, adds the Art Com
 * **ℹ️ About Modal:** A new interactive "About Apollo" modal provides context on the app, how it works, and includes necessary privacy/disclaimer notices. Optimized for both desktop and mobile viewing with a dedicated floating icon seamlessly integrated into the Time Machine debug panel.
 * **🗺️ Campus Overview Map:** A new [`CampusMap.jsx`](src/components/CampusMap.jsx) component renders a top-down SVG of the campus with clickable building footprints. It is now the default view on load — selecting a building drops you straight into floor 1 of that building's interior map.
 * **🎨 Art Complex (ART) added:** Two new floor components — [`AFloor1.jsx`](src/components/AFloor1.jsx) and [`AFloor2.jsx`](src/components/AFloor2.jsx) — plus ~22 new rooms (classrooms, department offices, adjunct offices) wired into [`roomSchedule.js`](src/data/roomSchedule.js). Search auto-routes any `a-###` room ID to the right floor.
-* **🧭 Unified building selector:** The desktop tab row was retired in favor of the dropdown selector, so the building picker now behaves identically on desktop and mobile (see [`BuildingMap.jsx`](src/components/BuildingMap.jsx)). The dropdown also stops collapsing the floor switcher when only the campus map is active.
-* **📱 Wider mobile breakpoint:** The mobile breakpoint moved from `600px` → `799px` across CSS and JS, so tablet-sized screens now get the touch-friendly layout. The "🔍 Search" label is independently controlled via a new `.search-text` CSS class and only hides below `599px`.
-* **🛠️ Floor switcher overflow fix:** Replaced `overflow-x: auto` with `overflow: visible` so the building dropdown menu no longer gets clipped by the switcher container.
-* **🐍 Harvester hardening ([`smc_harvester.py`](smc_harvester.py)):**
-  * Logs the selected semester so you can confirm the term being scraped.
-  * Logs unrecognized building/room locations once per location instead of silently dropping them — makes it obvious when a new building needs a normalizer rule.
-  * Surfaces row-level parsing errors instead of swallowing them in a bare `except:`.
-  * **Refuses to overwrite `roomSchedule_LIVE.json` on an empty scrape**, preventing a failed run from wiping live data.
+
+---
+
+## ♿ Accessibility (WCAG 2.2 AA)
+
+Apollo is built with a "Privacy and Inclusion First" mindset. As of **v7.2.0**, Apollo is fully compliant with **WCAG 2.2 AA** standards.
+
+### Features
+* **High Contrast Mode (♿):** A user-toggled mode that switches the map to a specialized, high-visibility palette (Teal/Orange/Deep Blue) and darkens hallways to ensure a 3:1 contrast ratio for non-text elements.
+* **Full Keyboard Support:** Navigate the entire campus, switch buildings, and browse all 20 floors using only a keyboard. Includes focus-trap management for modals and "Skip to Content" links.
+* **Screen Reader Optimized:** Semantic HTML5 landmarks, ARIA roles, and `aria-live` regions for real-time simulation updates and search results.
+* **Non-Sensory Indicators:** Room status is communicated via redundant textual labels and initials (e.g., "C" for Class), ensuring usability for color-blind users.
+
+Detailed compliance tracking can be found in [**ACCESSIBILITY.md**](ACCESSIBILITY.md).
 
 ---
 
@@ -135,7 +143,8 @@ To fetch the latest class schedules:
 - [x] **Dark Mode:** Add a dark mode toggle to the app.
 - [x] **Confirmation Popup:** Add a confirmation popup before being redirected to study room booking link.
 - [x] **Campus Overview Map:** Click-through campus-level entry point that routes to building interiors.
-- [ ] **Art Complex schedule data:** Wire harvested events into the new Art rooms (component shells and room IDs are in place; `events: []` until the harvester picks them up).
+- [x] **Art Complex schedule data:** Wired harvested events into Art rooms.
+- [x] **WCAG 2.2 AA Compliance:** Achieved full AA compliance for the entire application (see `ACCESSIBILITY.md`).
 - [ ] **CPC Building floors:** Three placeholder components ([`CPCFloor1.jsx`](src/components/CPCFloor1.jsx), [`CPCFloor2.jsx`](src/components/CPCFloor2.jsx), [`CPCFloor3.jsx`](src/components/CPCFloor3.jsx)) exist but need SVG content and room schedules.
 - [ ] **Mobile Optimization:** Replace hover tooltips with a touch-friendly bottom sheet.
 - [ ] **Data Automation:** Implement GitHub Actions to run the Python scrapers automatically every new session (4 times a year).

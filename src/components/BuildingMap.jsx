@@ -143,6 +143,10 @@ const RoomTooltip = ({ info, position, starredItems, COLORS }) => {
         {displayLabel}
         {starredItems?.some(s => s.id === info.roomId) && <span style={{ color: "#1f2937", whiteSpace: "nowrap" }}>★</span>}
       </h3>
+      {/* WCAG 1.3.1 / 1.4.1: Textual Status Indicator */}
+      <div style={{ fontSize: "0.65rem", fontWeight: "bold", color: "#6b7280", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "4px" }}>
+        Status: {info.activeEvent ? info.activeEvent.status.replace("_", " ") : (info.isStudyRoom ? "Study Space" : (isDepartment ? "Department" : "Empty/Locked"))}
+      </div>
       {info.activeEvent ? (
         <>
           <div style={{ fontSize: "0.85rem", fontWeight: "bold", color: COLORS[info.activeEvent.status], display: "flex", alignItems: "center", gap: "6px" }}>
@@ -181,12 +185,12 @@ const Legend = ({ COLORS }) => (
     animate={{ opacity: 1, y: 0, x: "-50%" }}
     transition={{ delay: 0.5, duration: 0.5 }}
   >
-    <div className="legend-item"><div className="color-dot" style={{ backgroundColor: "#a855f7" }}></div><span>Starred</span></div>
-    <div className="legend-item"><div className="color-dot" style={{ backgroundColor: COLORS.OCCUPIED }}></div><span>Class</span></div>
-    <div className="legend-item"><div className="color-dot" style={{ backgroundColor: COLORS.SI_SESSION }}></div><span>SI/OH</span></div>
-    <div className="legend-item"><div className="color-dot" style={{ backgroundColor: COLORS.STUDY_ROOM }}></div><span>Study Space</span></div>
-    <div className="legend-item"><div className="color-dot" style={{ backgroundColor: COLORS.PROGRAM }}></div><span>Department</span></div>
-    <div className="legend-item"><div className="color-dot" style={{ backgroundColor: COLORS.LOCKED }}></div><span>Empty/Locked</span></div>
+    <div className="legend-item"><div className="color-dot" style={{ backgroundColor: "#a855f7" }}>★</div><span>Starred</span></div>
+    <div className="legend-item"><div className="color-dot" style={{ backgroundColor: COLORS.OCCUPIED }}>C</div><span>Class</span></div>
+    <div className="legend-item"><div className="color-dot" style={{ backgroundColor: COLORS.SI_SESSION }}>S</div><span>SI/OH</span></div>
+    <div className="legend-item"><div className="color-dot" style={{ backgroundColor: COLORS.STUDY_ROOM }}>R</div><span>Study Space</span></div>
+    <div className="legend-item"><div className="color-dot" style={{ backgroundColor: COLORS.PROGRAM }}>D</div><span>Department</span></div>
+    <div className="legend-item"><div className="color-dot" style={{ backgroundColor: COLORS.LOCKED }}>L</div><span>Empty/Locked</span></div>
   </motion.div>
 );
 

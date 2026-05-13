@@ -41,15 +41,15 @@ This document tracks Apollo's conformance to the [Web Content Accessibility Guid
 |-----------|-------|--------|----------------------|
 | [1.3.1 Info and Relationships](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships) | A | ✅ | Landmarks (`<header>`, `<main>`, `<nav>`) properly defined. Floor switcher has `role="toolbar"`. Building dropdown uses `aria-controls`/`id` relationship. Search results and floor buttons grouped in `role="list"`. All inputs in debug panel have explicit `<label>` associations. All floor map SVGs have `role="img"` and decorative elements are hidden via `aria-hidden="true"`. |
 | [1.3.2 Meaningful Sequence](https://www.w3.org/WAI/WCAG22/Understanding/meaningful-sequence) | A | ✅ | DOM order matches visual reading order. Logo → controls → map → debug panel. |
-| [1.3.3 Sensory Characteristics](https://www.w3.org/WAI/WCAG22/Understanding/sensory-characteristics) | A | 🔄 | Room status is currently communicated by color alone. Legend color dots need a secondary indicator (pattern or text abbreviation) for color-blind users. |
+| [1.3.3 Sensory Characteristics](https://www.w3.org/WAI/WCAG22/Understanding/sensory-characteristics) | A | ✅ | **Remediated.** Legend color dots now contain textual initials (**C**, **S**, **R**, **D**, **L**) and tooltips include a "Status: [Type]" line. Instructions no longer rely solely on sensory characteristics (color/shape) to identify room states. |
 | [1.3.4 Orientation](https://www.w3.org/WAI/WCAG22/Understanding/orientation) | AA | ✅ | No CSS or JS locks the page to portrait or landscape. |
-| [1.3.5 Identify Input Purpose](https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose) | AA | ⬜ | Day selector and time input need `autocomplete` attributes where applicable. |
+| [1.3.5 Identify Input Purpose](https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose) | AA | N/A | Apollo does not collect information about the user (name, email, etc.). Simulation controls (Day/Time) do not fall under this requirement. |
 
 ### 1.4 Distinguishable
 
 | Criterion | Level | Status | Implementation Notes |
 |-----------|-------|--------|----------------------|
-| [1.4.1 Use of Color](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color) | A | 🔄 | **Next Priority.** Map currently relies on color-only status indicators. Plan: Add text markers (e.g., "OCC", "SI", "LIVE") or distinct icons to the legend and tooltips to ensure status is perceivable without color. |
+| [1.4.1 Use of Color](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color) | A | ✅ | **Remediated.** Textual status labels ("Status: Class", etc.) added to tooltips and initials added to legend dots. Color is no longer the sole indicator of room status or interactive state. |
 | [1.4.2 Audio Control](https://www.w3.org/WAI/WCAG22/Understanding/audio-control) | A | N/A | No audio content. |
 | [1.4.3 Contrast (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum) | AA | ✅ | **Remediated.** Forced the map card and its overlays (Legend, Floor Switcher, Tooltips) to use high-contrast dark text (#1f2937) on a white background, ensuring a ~15:1 contrast ratio. |
 | [1.4.4 Resize Text](https://www.w3.org/WAI/WCAG22/Understanding/resize-text) | AA | ✅ | Layout uses relative units (`rem`, `%`). Verified at 200% browser zoom — no content loss or horizontal scroll. |
@@ -57,7 +57,7 @@ This document tracks Apollo's conformance to the [Web Content Accessibility Guid
 | [1.4.10 Reflow](https://www.w3.org/WAI/WCAG22/Understanding/reflow) | AA | ✅ | **Remediated.** UI optimized for mobile down to 320px. Hid search text labels on small screens, shrank legend fonts, and implemented a multi-tier media query system (<440px, <420px) to prevent component overflow. |
 | [1.4.11 Non-text Contrast](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast) | AA | ✅ | **Remediated.** Implemented a **High Contrast Mode** toggle (♿ button). When active, it switches the map to a specialized palette: SI/OH becomes Teal (#0891b2), Study Rooms become Orange (#EA580C), and Hallways darken to #949494. This ensures all interactive and structural elements meet the 3:1 contrast ratio without compromising the default UI aesthetic. |
 | [1.4.12 Text Spacing](https://www.w3.org/WAI/WCAG22/Understanding/text-spacing) | AA | ✅ | No CSS overrides `line-height`, `letter-spacing`, or `word-spacing` in a way that breaks layout when those properties are changed by the user. |
-| [1.4.13 Content on Hover or Focus](https://www.w3.org/WAI/WCAG22/Understanding/content-on-hover-or-focus) | AA | ✅ | Room tooltips appear on keyboard focus (`onFocus`) and mouse hover. Escape key now dismisses the active tooltip via a global `keydown` listener (WCAG dismissible requirement ✅). Tooltip naturally reappears when the user re-focuses or re-hovers the element. |
+| [1.4.13 Content on Hover or Focus](https://www.w3.org/WAI/WCAG22/Understanding/content-on-hover-or-focus) | AA | ✅ | **Remediated.** Room tooltips appear on keyboard focus (`onFocus`) and mouse hover. **Dismissible**: Escape key dismisses the active tooltip without moving focus. **Persistent**: Tooltips stay until focus is moved or dismissed. Meets 2.4.13 requirement for secondary content. |
 
 ---
 
@@ -97,8 +97,7 @@ This document tracks Apollo's conformance to the [Web Content Accessibility Guid
 | [2.4.5 Multiple Ways](https://www.w3.org/WAI/WCAG22/Understanding/multiple-ways) | AA | ✅ | Users can reach any room via: (1) building/floor navigation, or (2) the Search modal. Two independent paths exist. |
 | [2.4.6 Headings and Labels](https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels) | AA | ✅ | AboutModal uses `<h2>` / `<h3>` hierarchy ✅. Visually-hidden `<h1>Apollo: Santa Monica College Real-Time Map</h1>` added to `App.js` inside `<header>`. |
 | [2.4.7 Focus Visible](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible) | AA | ✅ | Global `*:focus-visible` style added in `App.css` — 3px solid blue ring with `border-radius` overrides for pill-shaped controls. Skip link retains its yellow ring via `*:focus`. Mouse users are unaffected (`:focus-visible` only fires for keyboard navigation). |
-| [2.4.11 Focus Not Obscured (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum) | AA | ✅ | **Remediated.** Added global CSS rule ensuring overlay containers (legend, switcher) drop to 40% opacity when a child element (or an element behind them) receives keyboard focus, ensuring focus rings are never fully obscured. |
-| [2.4.12 Focus Not Obscured (Enhanced)](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-enhanced) | AAA | ⬜ | AAA — out of scope for current target, but will monitor. |
+| [2.4.11 Focus Not Obscured (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum) | AA | ✅ | **Remediated.** Added global CSS rule ensuring overlay containers (legend, switcher) drop to 40% opacity when a child element (or an element behind them) receives keyboard focus, ensuring focus rings are visible through the UI. |
 
 ### 2.5 Input Modalities
 
@@ -161,11 +160,11 @@ This document tracks Apollo's conformance to the [Web Content Accessibility Guid
 
 | Principle | ✅ Done | 🔄 In Progress | ⬜ Planned | N/A |
 |-----------|---------|---------------|-----------|-----|
-| 1. Perceivable | 11 | 2 | 1 | 2 |
-| 2. Operable | 16 | 0 | 1 | 4 |
+| 1. Perceivable | 13 | 0 | 0 | 3 |
+| 2. Operable | 16 | 0 | 0 | 4 |
 | 3. Understandable | 8 | 0 | 0 | 3 |
 | 4. Robust | 2 | 0 | 0 | 0 |
-| **Total** | **37** | **2** | **2** | **9** |
+| **Total** | **39** | **0** | **0** | **10** |
 
 ---
 

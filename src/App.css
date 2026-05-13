@@ -49,9 +49,14 @@
   outline-offset: 2px;
 }
 
-/* --- VISUALLY HIDDEN (screen-reader-only utility) --- */
-/* Keeps content in the accessibility tree without rendering it visually.
-   Used for the page <h1> and live-region announcements. */
+/* --- MAP GRAPHICS CONTRAST (WCAG 1.4.11 — Non-text Contrast) --- */
+/* High Contrast Mode: Darkens hallways to meet 3:1 contrast */
+.high-contrast [id*="hallway"], 
+.high-contrast [id*="Hallways"] {
+  fill: #949494 !important;
+  stroke: none !important;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;

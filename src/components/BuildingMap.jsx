@@ -42,16 +42,7 @@ const SI_SCHEDULES = Object.keys({ ...SI_SCHEDULES_RAW, ...OFFICE_HOURS }).reduc
   return acc;
 }, {});
 
-const COLORS = {
-  LOCKED: "#71717a",
-  OCCUPIED: "#EF5350",
-  SI_SESSION: "#FBBF24",
-  OFFICE_HOURS: "#FBBF24",
-  STUDY_ROOM: "#FB923C",
-  PROGRAM: "#60A5FA",
-  OFFICE: "#60A5FA",
-  OFFLINE: "#3b3b3c"
-};
+// Colors are now handled inside BuildingMap for High Contrast mode support
 
 const BUILDINGS = {
   CAMPUS: { label: "Campus Map", floors: 0 },
@@ -115,7 +106,11 @@ const getCurrentStatus = () => {
   return { day, time: `${hours}:${minutes}` };
 };
 
-const RoomTooltip = ({ info, position, starredItems }) => {
+
+
+
+
+const RoomTooltip = ({ info, position, starredItems, COLORS }) => {
   if (!info) return null;
 
   const isDepartment = info.roomType === "PROGRAM" || info.roomType === "OFFICE";
@@ -179,7 +174,7 @@ const RoomTooltip = ({ info, position, starredItems }) => {
   );
 };
 
-const Legend = () => (
+const Legend = ({ COLORS }) => (
   <motion.div
     className="legend-container"
     initial={{ opacity: 0, y: 20, x: "-50%" }}
@@ -195,14 +190,55 @@ const Legend = () => (
   </motion.div>
 );
 
-
-
 export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
   const [currentBuilding, setCurrentBuilding] = useState("CAMPUS");
-  const transformRef = useRef(null);
   const [currentFloor, setCurrentFloor] = useState(1);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 });
+  const [hoveredRoom, setHoveredRoom] = useState(null);
   const [simulationState, setSimulationState] = useState(getCurrentStatus());
   const [isLive, setIsLive] = useState(true);
+  const [highlightedRoom, setHighlightedRoom] = useState(null);
+  const transformRef = useRef(null);
+  const [buildingDropdownOpen, setBuildingDropdownOpen] = useState(false);
+  
+  const [highContrast, setHighContrast] = useState(() => {
+    return localStorage.getItem("highContrast") === "true";
+  });
+
+  // Color Palettes
+  const NORMAL_COLORS = {
+    LOCKED: "#71717a",
+    OCCUPIED: "#EF5350",
+    SI_SESSION: "#FBBF24",
+    OFFICE_HOURS: "#FBBF24",
+    STUDY_ROOM: "#FB923C",
+    PROGRAM: "#60A5FA",
+    OFFICE: "#60A5FA",
+    OFFLINE: "#3b3b3c"
+  };
+
+  const ACCESSIBLE_COLORS = {
+    LOCKED: "#71717a",
+    OCCUPIED: "#EF5350",
+    SI_SESSION: "#0891b2",
+    OFFICE_HOURS: "#0891b2",
+    STUDY_ROOM: "#EA580C",
+    PROGRAM: "#3B82F6",
+    OFFICE: "#3B82F6",
+    OFFLINE: "#3b3b3c"
+  };
+
+  const COLORS = highContrast ? ACCESSIBLE_COLORS : NORMAL_COLORS;
+
+
+
+
+
+  useEffect(() => {
+    localStorage.setItem("highContrast", highContrast);
+  }, [highContrast]);
 
   // Mobile detection for responsive UI
   const [isMobile, setIsMobile] = useState(() => window.innerWidth <= 799);
@@ -212,12 +248,6 @@ export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
     mq.addEventListener("change", handler);
     return () => mq.removeEventListener("change", handler);
   }, []);
-
-  const [buildingDropdownOpen, setBuildingDropdownOpen] = useState(false);
-
-  const [hoveredRoom, setHoveredRoom] = useState(null);
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 });
 
   // Close dropdown when clicking outside
   const dropdownRef = React.useRef(null);
@@ -232,10 +262,6 @@ export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
     const id = setTimeout(() => document.addEventListener("click", handler), 0);
     return () => { clearTimeout(id); document.removeEventListener("click", handler); };
   }, [buildingDropdownOpen]);
-
-  // NEW: Search Modal State
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [highlightedRoom, setHighlightedRoom] = useState(null);
 
   // NEW: Starred Items State (Persisted)
   const [starredItems, setStarredItems] = useState(() => {
@@ -451,7 +477,7 @@ export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
     }
 
     return { color, activeEvent, roomData };
-  }, [simulationState.day, simulationState.time]);
+  }, [simulationState.day, simulationState.time, COLORS]);
 
   const handleRoomHover = (roomId, isHovering, keyboardEvent) => {
     if (!isHovering) {
@@ -520,7 +546,7 @@ export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
   const getColorProp = useCallback((roomId) => {
     // 1. Search Highlight
     if (highlightedRoom) {
-      return highlightedRoom === roomId ? "#22c55e" : "rgba(200, 200, 200, 0.1)";
+      return highlightedRoom === roomId ? "#16a34a" : "rgba(200, 200, 200, 0.1)";
     }
 
     // 2. Starred Item Active?
@@ -540,7 +566,7 @@ export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
     // 3. Otherwise return standard status color
     const status = getRoomStatus(roomId);
     return status ? status.color : COLORS.OFFLINE;
-  }, [getRoomStatus, highlightedRoom, starredItems, simulationState]);
+  }, [getRoomStatus, highlightedRoom, starredItems, simulationState, COLORS]);
 
   const offsets = (() => {
     const base = FLOOR_OFFSETS[currentBuilding]?.[currentFloor] || { x: 0, y: 0 };
@@ -554,7 +580,7 @@ export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
 
   return (
     <motion.div
-      className="dashboard-container"
+      className={`dashboard-container ${highContrast ? "high-contrast" : ""}`}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
@@ -761,11 +787,11 @@ export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
         </TransformWrapper>
 
         {/* OVERLAY: Legend */}
-        <Legend />
+        <Legend COLORS={COLORS} />
       </motion.div>
 
       <AnimatePresence>
-        {hoveredRoom && <RoomTooltip info={hoveredRoom} position={tooltipPos} starredItems={starredItems} />}
+        {hoveredRoom && <RoomTooltip info={hoveredRoom} position={tooltipPos} starredItems={starredItems} COLORS={COLORS} />}
       </AnimatePresence>
 
       {/* DEBUG PANEL (Outside Map) */}
@@ -845,6 +871,27 @@ export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
             title={darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
           >
             <span aria-hidden="true" style={{ color: "var(--text-primary)" }}>{darkMode ? "☀️" : "🌙"}</span>
+          </button>
+          
+          {/* HIGH CONTRAST TOGGLE */}
+          <button
+            onClick={() => setHighContrast(!highContrast)}
+            style={{
+              background: "none",
+              border: "none",
+              cursor: "pointer",
+              fontSize: "1.2rem",
+              padding: "8px",
+              marginLeft: "5px",
+              transition: "transform 0.2s",
+              color: "var(--text-primary, #1f2937)",
+              filter: highContrast ? "drop-shadow(0 0 4px rgba(59, 130, 246, 0.5))" : "none"
+            }}
+            title="Toggle Accessibility Contrast"
+            aria-label={highContrast ? "Disable High Contrast Mode" : "Enable High Contrast Mode"}
+            aria-pressed={highContrast}
+          >
+            <span aria-hidden="true" style={{ opacity: highContrast ? 1 : 0.6 }}>♿</span>
           </button>
 
           {/* ABOUT BUTTON */}

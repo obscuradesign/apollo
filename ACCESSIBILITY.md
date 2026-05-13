@@ -55,7 +55,7 @@ This document tracks Apollo's conformance to the [Web Content Accessibility Guid
 | [1.4.4 Resize Text](https://www.w3.org/WAI/WCAG22/Understanding/resize-text) | AA | ✅ | Layout uses relative units (`rem`, `%`). Verified at 200% browser zoom — no content loss or horizontal scroll. |
 | [1.4.5 Images of Text](https://www.w3.org/WAI/WCAG22/Understanding/images-of-text) | AA | ✅ | All text is real HTML/SVG text, not images of text. |
 | [1.4.10 Reflow](https://www.w3.org/WAI/WCAG22/Understanding/reflow) | AA | ✅ | **Remediated.** UI optimized for mobile down to 320px. Hid search text labels on small screens, shrank legend fonts, and implemented a multi-tier media query system (<440px, <420px) to prevent component overflow. |
-| [1.4.11 Non-text Contrast](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast) | AA | 🔄 | Room `<path>` fill colors against the white map background need 3:1 contrast verification. Gray (`#9CA3AF`) rooms on white may fail. |
+| [1.4.11 Non-text Contrast](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast) | AA | ✅ | **Remediated.** Implemented a **High Contrast Mode** toggle (♿ button). When active, it switches the map to a specialized palette: SI/OH becomes Teal (#0891b2), Study Rooms become Orange (#EA580C), and Hallways darken to #949494. This ensures all interactive and structural elements meet the 3:1 contrast ratio without compromising the default UI aesthetic. |
 | [1.4.12 Text Spacing](https://www.w3.org/WAI/WCAG22/Understanding/text-spacing) | AA | ✅ | No CSS overrides `line-height`, `letter-spacing`, or `word-spacing` in a way that breaks layout when those properties are changed by the user. |
 | [1.4.13 Content on Hover or Focus](https://www.w3.org/WAI/WCAG22/Understanding/content-on-hover-or-focus) | AA | ✅ | Room tooltips appear on keyboard focus (`onFocus`) and mouse hover. Escape key now dismisses the active tooltip via a global `keydown` listener (WCAG dismissible requirement ✅). Tooltip naturally reappears when the user re-focuses or re-hovers the element. |
 
@@ -97,7 +97,7 @@ This document tracks Apollo's conformance to the [Web Content Accessibility Guid
 | [2.4.5 Multiple Ways](https://www.w3.org/WAI/WCAG22/Understanding/multiple-ways) | AA | ✅ | Users can reach any room via: (1) building/floor navigation, or (2) the Search modal. Two independent paths exist. |
 | [2.4.6 Headings and Labels](https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels) | AA | ✅ | AboutModal uses `<h2>` / `<h3>` hierarchy ✅. Visually-hidden `<h1>Apollo: Santa Monica College Real-Time Map</h1>` added to `App.js` inside `<header>`. |
 | [2.4.7 Focus Visible](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible) | AA | ✅ | Global `*:focus-visible` style added in `App.css` — 3px solid blue ring with `border-radius` overrides for pill-shaped controls. Skip link retains its yellow ring via `*:focus`. Mouse users are unaffected (`:focus-visible` only fires for keyboard navigation). |
-| [2.4.11 Focus Not Obscured (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum) | AA | 🔄 | The floating floor-switcher overlay and legend may obscure focused elements beneath them. Needs verification now that keyboard nav is fully implemented. |
+| [2.4.11 Focus Not Obscured (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum) | AA | ✅ | **Remediated.** Added global CSS rule ensuring overlay containers (legend, switcher) drop to 40% opacity when a child element (or an element behind them) receives keyboard focus, ensuring focus rings are never fully obscured. |
 | [2.4.12 Focus Not Obscured (Enhanced)](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-enhanced) | AAA | ⬜ | AAA — out of scope for current target, but will monitor. |
 
 ### 2.5 Input Modalities
@@ -162,10 +162,10 @@ This document tracks Apollo's conformance to the [Web Content Accessibility Guid
 | Principle | ✅ Done | 🔄 In Progress | ⬜ Planned | N/A |
 |-----------|---------|---------------|-----------|-----|
 | 1. Perceivable | 7 | 3 | 1 | 2 |
-| 2. Operable | 15 | 0 | 1 | 4 |
+| 2. Operable | 16 | 0 | 1 | 4 |
 | 3. Understandable | 7 | 1 | 0 | 3 |
 | 4. Robust | 2 | 0 | 0 | 0 |
-| **Total** | **31** | **4** | **2** | **9** |
+| **Total** | **32** | **4** | **2** | **9** |
 
 ---
 
@@ -225,3 +225,5 @@ All interactive floor map components have been retrofitted for WCAG 2.2 AA compl
 - **WCAG 1.4.10 (Reflow)**: Optimized floor switcher and legend for mobile. Implemented auto-scaling for <440px and <420px widths.
 - **WCAG 2.4.11 (Focus Not Obscured)**: Added CSS rule to drop overlay opacity to 40% when tabbing, ensuring focus rings are visible through the UI.
 - **Layout Fixes**: Resolved building dropdown clipping by adjusting overflow on the map card and boosting switcher z-index to 150. Removed duplicate `aria-hidden` in `HSSLevel3.jsx`. Build now completes with zero warnings. | 1.4.3 ✅, 1.4.10 ✅, 2.4.11 ✅ |
+| 2026-05-13 | Retrofitted `CampusMap.jsx` (General Campus Map) with keyboard support (`tabIndex`, `role="button"`, `onKeyDown`) and high-contrast blue focus rings for all interactive buildings. Added descriptive `aria-label` to buildings via updated `b()` helper. | 2.1.1 ✅, 2.4.3 ✅, 2.4.7 ✅, 4.1.2 ✅ |
+| 2026-05-13 | **Contrast Remediation (Final)**: Implemented "High Contrast Mode" toggle in `BuildingMap.jsx` (♿ button). Added `ACCESSIBLE_COLORS` palette (Teal/Orange/Deep Blue) and conditional hallway darkening in `App.css`. Default mode restores original "warm" aesthetic. Legend and tooltips update dynamically. | 1.4.11 ✅ |

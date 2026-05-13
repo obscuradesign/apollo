@@ -1,7 +1,16 @@
 import * as React from "react";
 export const CampusMap = ({ onBuildingClick, ...props }) => {
-    const b = (id) => ({
+    const b = (id, label) => ({
         onClick: () => onBuildingClick(id),
+        onKeyDown: (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                onBuildingClick(id);
+            }
+        },
+        tabIndex: 0,
+        role: "button",
+        "aria-label": `View ${label} map`,
         style: { cursor: "pointer", transition: "opacity 0.2s" },
         className: "clickable-building",
         onMouseEnter: (e) => { e.currentTarget.style.opacity = 0.7; },
@@ -22,6 +31,13 @@ export const CampusMap = ({ onBuildingClick, ...props }) => {
             <style>{`
                 .clickable-building path, path.clickable-building {
                     fill: #002855 !important;
+                }
+                .clickable-building:focus {
+                    outline: 3px solid #1d4ed8;
+                    outline-offset: 2px;
+                }
+                .clickable-building:focus path, path.clickable-building:focus {
+                    fill: #003a80 !important;
                 }
             `}</style>
             <defs>
@@ -2427,7 +2443,7 @@ export const CampusMap = ({ onBuildingClick, ...props }) => {
                     }}
                 />
                 <path
-                    id="ART" {...b("ART")}
+                    id="ART" {...b("ART", "Art")}
                     d="m641.23 194.35 1.26 7.14-2.18.57 1.72 9.33 36.39-7.02 4.6 24.64-35.81 7.25 2 10.19 43.76-8.64-2.12-10.65 4.61-1.03-6.68-33.62-8.75 1.72-.58-1.95-3.57.69.12 2.07-1.73.34-1.38-7.36z"
                     style={{
                         fill: "#231f20",
@@ -2441,7 +2457,7 @@ export const CampusMap = ({ onBuildingClick, ...props }) => {
                             fill: "#e9e9ea",
                         }}
                     />
-                    <path {...b("BUS")}
+                    <path {...b("BUS", "BUS")}
                         d="M370.42 180.42h13.12v-14.51h-13.12zm-37.19-31.9h1.73v-6.91h54.92v13.24h9.67v28.78h-72.31v-29.7h4.49v-2.2h1.5v-3.22Z"
                         style={{
                             fill: "#231f20",
@@ -2523,7 +2539,7 @@ export const CampusMap = ({ onBuildingClick, ...props }) => {
                     />
                 </g>
                 <path
-                    id="DRSCHR" {...b("DRSCHR")}
+                    id="DRSCHR" {...b("DRSCHR", "Drescher")}
                     d="M467.94 99.01h17.19v14.69l41.7-.14.04 11.56 4.85-.11-.23 8.89s-.8 1.71-1.94 2.39c-1.09.65-1.97.68-2.64.68l.03 9.05-31.6.11v5.09c.06 0 .29 3.05-2.59 3.11s-2.7-3.05-2.7-3.05h-10.13c-.24-.07-1.87-.4-1.81-2.53.05-2.02 1.81-2.53 1.81-2.53l-60.83.19.06-9.97h-6.13l-.02-8.88s.48-3.61 6.01-3.56l.06-9.96 1.44-.05V79.68h17.5v19.26h-5.07v14.96l35-.12V99.02Z"
                     style={{
                         fill: "#231f20",
@@ -2783,7 +2799,7 @@ export const CampusMap = ({ onBuildingClick, ...props }) => {
                         strokeWidth: ".48px",
                     }}
                 />
-                <g id="HSS" {...b("HSS")}>
+                <g id="HSS" {...b("HSS", "HSS")}>
                     <path
                         d="m469.62 251.49.05-42.22 2.08-.06-.06-4.87-7.2.02-.11-11.07s7.42-.36 12.47-.24l.3-9.14 4.81 1.07-2.2 8.02c.15.1.06 2.55.06 2.55s.75.27.75.48l.02 13.3 5.31-.07-.09-13.59s10.33.12 17.22 2.38c0 2.61.12 16.46.12 16.7l-8.84.12.12 21.3h3.25v-3.99l3.56-.12.12 8.38-2.73-.02v11.19h-3.44l-25.59-.12Z"
                         style={{
@@ -2819,7 +2835,7 @@ export const CampusMap = ({ onBuildingClick, ...props }) => {
                     }}
                     transform="rotate(-11.2 686.485 383.887)"
                 />
-                <g id="SCI" {...b("SCI")}>
+                <g id="SCI" {...b("SCI", "SCI")}>
                     <path
                         d="m662.49 248.57.7 4.99-2.71.35-.62-4.91z"
                         style={{
@@ -2872,7 +2888,7 @@ export const CampusMap = ({ onBuildingClick, ...props }) => {
                     }}
                 />
                 <path
-                    id="SSC" {...b("SSC")}
+                    id="SSC" {...b("SSC", "SSC")}
                     d="m688.63 141.03-7.69 1.59-1.87-9.06 7.66-1.58-6.45-31.25-9.42 1.95-.08-.38-10.75 2.22 2.01 9.77-7.35 1.52-1.91-9.27-29.85 6.16 6.41 31.05 4.87-1 1.88 9.12-14.02 2.9 6.62 32.07 66.56-13.73z"
                     style={{
                         fill: "#231f20",
@@ -2894,7 +2910,7 @@ export const CampusMap = ({ onBuildingClick, ...props }) => {
                         strokeWidth: ".39px",
                     }}
                 />
-                <g id="PV" {...b("PV")}>
+                <g id="PV" {...b("PV", "Pico Village")}>
                     <path
                         d="M445.08 92.4h12.14v7.14h-12.14zM445.08 100.66h12.14v7.14h-12.14zM445.08 82.74h12.14v7.14h-12.14zM463.74 82.74h12.14v7.14h-12.14zM479.72 82.74h12.14v7.14h-12.14zM495.69 82.74h12.14v7.14h-12.14zM497.08 93.25h7.14v12.14h-7.14zM505 93.25h7.14v12.14H505zM512.93 93.29h7.14v12.14h-7.14z"
                         style={{
@@ -2948,7 +2964,7 @@ export const CampusMap = ({ onBuildingClick, ...props }) => {
                     }}
                 />
                 <path
-                    id="MSB" {...b("MSB")}
+                    id="MSB" {...b("MSB", "MSB")}
                     d="M696.4 394.04s-43.91-6.49-49.83-7.91c-5.93-1.41-5.37-1.41-20.75-9.46-15.39-8.05-27.25-38.12-27.25-38.12l-20.61 9.46s11.58 19.91 11.44 38.82c-.09 12-5.22 30.49-5.22 30.49l17.45 11.26c.1-.2.54-.85 2.03-2.79 4.66-6.07 16.66-12.28 16.66-12.28s2.25 8.31 6.66 12.2a8.1 8.1 0 0 0 5.88 2.53 8.13 8.13 0 0 0 8.13-8.13c0-3.55-2.28-6.57-5.46-7.67l-.1-2.74 13.13-.14 43.34 6.49 4.52-22.02Zm-65.88.51c.94 4.89-12.09 4.85-14.21 5.27s-11.46 3.03-13.58 2.33c-2.12-.71-.42-6.35.07-7.98.49-1.62.07-5.08 0-5.86s-1.13-9.04-1.34-10.8.24-3.25 1.91-3.46c2.26-.28 5.24 4.84 5.65 5.43 2.4 3.48 8.85 7.86 10.12 8.57s11.02 4.59 11.39 6.49"
                     style={{
                         fill: "#231f20",

@@ -634,7 +634,7 @@
                 "day": "Wed",
                 "start": "11:15",
                 "end": "12:35",
-                "title": "ENGL C1000 AND",
+                "title": "ENGL C1000",
                 "courseName": "Academic Reading and Writing",
                 "professor": "BARHAM A C",
                 "status": "OCCUPIED"
@@ -790,7 +790,7 @@
                 "day": "Mon",
                 "start": "08:00",
                 "end": "10:05",
-                "title": "STAT C1000 AND",
+                "title": "STAT C1000",
                 "courseName": "Introduction to Statistics",
                 "professor": "MUSSELMAN M J",
                 "status": "OCCUPIED"
@@ -799,7 +799,7 @@
                 "day": "Wed",
                 "start": "08:00",
                 "end": "10:05",
-                "title": "STAT C1000 AND",
+                "title": "STAT C1000",
                 "courseName": "Introduction to Statistics",
                 "professor": "MUSSELMAN M J",
                 "status": "OCCUPIED"
@@ -826,7 +826,7 @@
                 "day": "Thu",
                 "start": "08:00",
                 "end": "10:05",
-                "title": "STAT C1000 AND",
+                "title": "STAT C1000",
                 "courseName": "Introduction to Statistics",
                 "professor": "KIM J J",
                 "status": "OCCUPIED"
@@ -835,7 +835,7 @@
                 "day": "Tue",
                 "start": "08:00",
                 "end": "10:05",
-                "title": "STAT C1000 AND",
+                "title": "STAT C1000",
                 "courseName": "Introduction to Statistics",
                 "professor": "KIM J J",
                 "status": "OCCUPIED"
@@ -1173,7 +1173,7 @@
                 "end": "15:00",
                 "title": "ART 10A",
                 "courseName": "Design I",
-                "professor": "DE ANDA III I",
+                "professor": "DEA III I",
                 "status": "OCCUPIED"
             },
             {
@@ -2044,7 +2044,7 @@
                 "day": "Thu",
                 "start": "08:00",
                 "end": "09:20",
-                "title": "ENGL C1000 AND",
+                "title": "ENGL C1000",
                 "courseName": "Academic Reading and Writing",
                 "professor": "GARCIA M S",
                 "status": "OCCUPIED"
@@ -2053,7 +2053,7 @@
                 "day": "Tue",
                 "start": "08:00",
                 "end": "09:20",
-                "title": "ENGL C1000 AND",
+                "title": "ENGL C1000",
                 "courseName": "Academic Reading and Writing",
                 "professor": "GARCIA M S",
                 "status": "OCCUPIED"
@@ -2200,7 +2200,7 @@
                 "day": "Thu",
                 "start": "12:45",
                 "end": "14:05",
-                "title": "ENGL C1000 AND",
+                "title": "ENGL C1000",
                 "courseName": "Academic Reading and Writing",
                 "professor": "BLACKWELL N",
                 "status": "OCCUPIED"
@@ -2209,7 +2209,7 @@
                 "day": "Tue",
                 "start": "12:45",
                 "end": "14:05",
-                "title": "ENGL C1000 AND",
+                "title": "ENGL C1000",
                 "courseName": "Academic Reading and Writing",
                 "professor": "BLACKWELL N",
                 "status": "OCCUPIED"
@@ -7315,7 +7315,7 @@
                 "day": "Tue",
                 "start": "12:45",
                 "end": "14:05",
-                "title": "ENGL C1000 AND",
+                "title": "ENGL C1000",
                 "courseName": "Academic Reading and Writing",
                 "professor": "BARHAM A C",
                 "status": "OCCUPIED"
@@ -7570,7 +7570,7 @@
                 "day": "Thu",
                 "start": "09:30",
                 "end": "10:50",
-                "title": "ENGL C1000 AND",
+                "title": "ENGL C1000",
                 "courseName": "Academic Reading and Writing",
                 "professor": "BOSTICK J D",
                 "status": "OCCUPIED"
@@ -7579,7 +7579,7 @@
                 "day": "Tue",
                 "start": "09:30",
                 "end": "10:50",
-                "title": "ENGL C1000 AND",
+                "title": "ENGL C1000",
                 "courseName": "Academic Reading and Writing",
                 "professor": "BOSTICK J D",
                 "status": "OCCUPIED"
@@ -7954,7 +7954,7 @@
                 "day": "Mon",
                 "start": "09:30",
                 "end": "11:35",
-                "title": "MATH 6 AND",
+                "title": "MATH 6",
                 "courseName": "Modern Mathematical Methods for STEM Majors",
                 "professor": "LOPEZ J E",
                 "status": "OCCUPIED"
@@ -7963,7 +7963,7 @@
                 "day": "Wed",
                 "start": "09:30",
                 "end": "11:35",
-                "title": "MATH 6 AND",
+                "title": "MATH 6",
                 "courseName": "Modern Mathematical Methods for STEM Majors",
                 "professor": "LOPEZ J E",
                 "status": "OCCUPIED"
@@ -7990,7 +7990,7 @@
                 "day": "Thu",
                 "start": "12:45",
                 "end": "14:50",
-                "title": "MATH 6 AND",
+                "title": "MATH 6",
                 "courseName": "Modern Mathematical Methods for STEM Majors",
                 "professor": "LOPEZ J E",
                 "status": "OCCUPIED"
@@ -7999,7 +7999,7 @@
                 "day": "Tue",
                 "start": "12:45",
                 "end": "14:50",
-                "title": "MATH 6 AND",
+                "title": "MATH 6",
                 "courseName": "Modern Mathematical Methods for STEM Majors",
                 "professor": "LOPEZ J E",
                 "status": "OCCUPIED"
@@ -8209,7 +8209,7 @@
                 "day": "Thu",
                 "start": "08:00",
                 "end": "09:20",
-                "title": "ENGL C1000 AND",
+                "title": "ENGL C1000",
                 "courseName": "Academic Reading and Writing",
                 "professor": "LIVANIS L",
                 "status": "OCCUPIED"
@@ -8218,7 +8218,7 @@
                 "day": "Tue",
                 "start": "08:00",
                 "end": "09:20",
-                "title": "ENGL C1000 AND",
+                "title": "ENGL C1000",
                 "courseName": "Academic Reading and Writing",
                 "professor": "LIVANIS L",
                 "status": "OCCUPIED"
@@ -8410,7 +8410,7 @@
                 "day": "Wed",
                 "start": "09:30",
                 "end": "10:50",
-                "title": "ENGL C1000 AND",
+                "title": "ENGL C1000",
                 "courseName": "Academic Reading and Writing",
                 "professor": "HIOUREAS E C",
                 "status": "OCCUPIED"
@@ -8533,7 +8533,7 @@
                 "day": "Mon",
                 "start": "08:00",
                 "end": "09:20",
-                "title": "ENGL C1000 AND",
+                "title": "ENGL C1000",
                 "courseName": "Academic Reading and Writing",
                 "professor": "VAZQUEZ LU",
                 "status": "OCCUPIED"
@@ -8542,7 +8542,7 @@
                 "day": "Wed",
                 "start": "08:00",
                 "end": "09:20",
-                "title": "ENGL C1000 AND",
+                "title": "ENGL C1000",
                 "courseName": "Academic Reading and Writing",
                 "professor": "VAZQUEZ LU",
                 "status": "OCCUPIED"
@@ -8638,7 +8638,7 @@
                 "day": "Mon",
                 "start": "08:00",
                 "end": "09:20",
-                "title": "ENGL C1000 AND",
+                "title": "ENGL C1000",
                 "courseName": "Academic Reading and Writing",
                 "professor": "LIVANIS L",
                 "status": "OCCUPIED"
@@ -8647,7 +8647,7 @@
                 "day": "Wed",
                 "start": "08:00",
                 "end": "09:20",
-                "title": "ENGL C1000 AND",
+                "title": "ENGL C1000",
                 "courseName": "Academic Reading and Writing",
                 "professor": "LIVANIS L",
                 "status": "OCCUPIED"
@@ -8674,7 +8674,7 @@
                 "day": "Mon",
                 "start": "11:15",
                 "end": "12:35",
-                "title": "ENGL C1000 AND",
+                "title": "ENGL C1000",
                 "courseName": "Academic Reading and Writing",
                 "professor": "LIVANIS L",
                 "status": "OCCUPIED"
@@ -8683,7 +8683,7 @@
                 "day": "Wed",
                 "start": "11:15",
                 "end": "12:35",
-                "title": "ENGL C1000 AND",
+                "title": "ENGL C1000",
                 "courseName": "Academic Reading and Writing",
                 "professor": "LIVANIS L",
                 "status": "OCCUPIED"
@@ -8743,7 +8743,7 @@
                 "day": "Thu",
                 "start": "09:30",
                 "end": "10:50",
-                "title": "ENGL C1000 AND",
+                "title": "ENGL C1000",
                 "courseName": "Academic Reading and Writing",
                 "professor": "GARNICA A M",
                 "status": "OCCUPIED"
@@ -8752,7 +8752,7 @@
                 "day": "Tue",
                 "start": "09:30",
                 "end": "10:50",
-                "title": "ENGL C1000 AND",
+                "title": "ENGL C1000",
                 "courseName": "Academic Reading and Writing",
                 "professor": "GARNICA A M",
                 "status": "OCCUPIED"
@@ -8779,7 +8779,7 @@
                 "day": "Mon",
                 "start": "14:15",
                 "end": "15:35",
-                "title": "ENGL C1000 AND",
+                "title": "ENGL C1000",
                 "courseName": "Academic Reading and Writing",
                 "professor": "DOUCET W J",
                 "status": "OCCUPIED"
@@ -8788,7 +8788,7 @@
                 "day": "Wed",
                 "start": "14:15",
                 "end": "15:35",
-                "title": "ENGL C1000 AND",
+                "title": "ENGL C1000",
                 "courseName": "Academic Reading and Writing",
                 "professor": "DOUCET W J",
                 "status": "OCCUPIED"
@@ -8830,7 +8830,7 @@
                 "day": "Wed",
                 "start": "09:30",
                 "end": "10:50",
-                "title": "ENGL C1000 AND",
+                "title": "ENGL C1000",
                 "courseName": "Academic Reading and Writing",
                 "professor": "JONES S T",
                 "status": "OCCUPIED"
@@ -8839,7 +8839,7 @@
                 "day": "Wed",
                 "start": "11:15",
                 "end": "12:35",
-                "title": "ENGL C1000 AND",
+                "title": "ENGL C1000",
                 "courseName": "Academic Reading and Writing",
                 "professor": "WEATHERFORD K C",
                 "status": "OCCUPIED"
@@ -8926,7 +8926,7 @@
                 "day": "Mon",
                 "start": "11:15",
                 "end": "12:35",
-                "title": "ENGL C1000 AND",
+                "title": "ENGL C1000",
                 "courseName": "Academic Reading and Writing",
                 "professor": "COLMER I H",
                 "status": "OCCUPIED"
@@ -8935,7 +8935,7 @@
                 "day": "Wed",
                 "start": "11:15",
                 "end": "12:35",
-                "title": "ENGL C1000 AND",
+                "title": "ENGL C1000",
                 "courseName": "Academic Reading and Writing",
                 "professor": "COLMER I H",
                 "status": "OCCUPIED"
@@ -9049,7 +9049,7 @@
                 "day": "Tue",
                 "start": "12:45",
                 "end": "14:05",
-                "title": "ENGL C1000 AND",
+                "title": "ENGL C1000",
                 "courseName": "Academic Reading and Writing",
                 "professor": "WEATHERFORD K C",
                 "status": "OCCUPIED"
@@ -12028,7 +12028,7 @@
                 "day": "Thu",
                 "start": "08:00",
                 "end": "10:05",
-                "title": "STAT C1000 AND",
+                "title": "STAT C1000",
                 "courseName": "Introduction to Statistics",
                 "professor": "FOSTER M",
                 "status": "OCCUPIED"
@@ -12037,7 +12037,7 @@
                 "day": "Tue",
                 "start": "08:00",
                 "end": "10:05",
-                "title": "STAT C1000 AND",
+                "title": "STAT C1000",
                 "courseName": "Introduction to Statistics",
                 "professor": "FOSTER M",
                 "status": "OCCUPIED"
@@ -12100,7 +12100,7 @@
                 "day": "Thu",
                 "start": "12:45",
                 "end": "13:50",
-                "title": "MATH 7 AND",
+                "title": "MATH 7",
                 "courseName": "Calculus 1",
                 "professor": "SOLEYMANI S",
                 "status": "OCCUPIED"
@@ -12109,7 +12109,7 @@
                 "day": "Mon",
                 "start": "12:45",
                 "end": "13:50",
-                "title": "MATH 7 AND",
+                "title": "MATH 7",
                 "courseName": "Calculus 1",
                 "professor": "SOLEYMANI S",
                 "status": "OCCUPIED"
@@ -12118,7 +12118,7 @@
                 "day": "Tue",
                 "start": "12:45",
                 "end": "13:50",
-                "title": "MATH 7 AND",
+                "title": "MATH 7",
                 "courseName": "Calculus 1",
                 "professor": "SOLEYMANI S",
                 "status": "OCCUPIED"
@@ -12127,7 +12127,7 @@
                 "day": "Wed",
                 "start": "12:45",
                 "end": "13:50",
-                "title": "MATH 7 AND",
+                "title": "MATH 7",
                 "courseName": "Calculus 1",
                 "professor": "SOLEYMANI S",
                 "status": "OCCUPIED"
@@ -12187,7 +12187,7 @@
                 "day": "Mon",
                 "start": "12:45",
                 "end": "14:50",
-                "title": "STAT C1000 AND",
+                "title": "STAT C1000",
                 "courseName": "Introduction to Statistics",
                 "professor": "PACHAS-FLORES W",
                 "status": "OCCUPIED"
@@ -12196,7 +12196,7 @@
                 "day": "Wed",
                 "start": "12:45",
                 "end": "14:50",
-                "title": "STAT C1000 AND",
+                "title": "STAT C1000",
                 "courseName": "Introduction to Statistics",
                 "professor": "PACHAS-FLORES W",
                 "status": "OCCUPIED"
@@ -12223,7 +12223,7 @@
                 "day": "Thu",
                 "start": "07:00",
                 "end": "08:05",
-                "title": "MATH 2 AND",
+                "title": "MATH 2",
                 "courseName": "Precalculus",
                 "professor": "QUEVEDO J M",
                 "status": "OCCUPIED"
@@ -12232,7 +12232,7 @@
                 "day": "Mon",
                 "start": "07:00",
                 "end": "08:05",
-                "title": "MATH 2 AND",
+                "title": "MATH 2",
                 "courseName": "Precalculus",
                 "professor": "QUEVEDO J M",
                 "status": "OCCUPIED"
@@ -12241,7 +12241,7 @@
                 "day": "Tue",
                 "start": "07:00",
                 "end": "08:05",
-                "title": "MATH 2 AND",
+                "title": "MATH 2",
                 "courseName": "Precalculus",
                 "professor": "QUEVEDO J M",
                 "status": "OCCUPIED"
@@ -12250,7 +12250,7 @@
                 "day": "Wed",
                 "start": "07:00",
                 "end": "08:05",
-                "title": "MATH 2 AND",
+                "title": "MATH 2",
                 "courseName": "Precalculus",
                 "professor": "QUEVEDO J M",
                 "status": "OCCUPIED"
@@ -12355,7 +12355,7 @@
                 "day": "Thu",
                 "start": "16:00",
                 "end": "18:05",
-                "title": "STAT C1000 AND",
+                "title": "STAT C1000",
                 "courseName": "Introduction to Statistics",
                 "professor": "JAHANGARD E",
                 "status": "OCCUPIED"
@@ -12364,7 +12364,7 @@
                 "day": "Tue",
                 "start": "16:00",
                 "end": "18:05",
-                "title": "STAT C1000 AND",
+                "title": "STAT C1000",
                 "courseName": "Introduction to Statistics",
                 "professor": "JAHANGARD E",
                 "status": "OCCUPIED"
@@ -12433,7 +12433,7 @@
                 "day": "Mon",
                 "start": "08:00",
                 "end": "10:05",
-                "title": "MATH 4 AND",
+                "title": "MATH 4",
                 "courseName": "College Algebra for STEM Majors",
                 "professor": "PHUNG Q T",
                 "status": "OCCUPIED"
@@ -12442,7 +12442,7 @@
                 "day": "Wed",
                 "start": "08:00",
                 "end": "10:05",
-                "title": "MATH 4 AND",
+                "title": "MATH 4",
                 "courseName": "College Algebra for STEM Majors",
                 "professor": "PHUNG Q T",
                 "status": "OCCUPIED"
@@ -12469,7 +12469,7 @@
                 "day": "Thu",
                 "start": "12:45",
                 "end": "15:10",
-                "title": "MATH 7 AND",
+                "title": "MATH 7",
                 "courseName": "Calculus 1",
                 "professor": "HANCOCK M D",
                 "status": "OCCUPIED"
@@ -12478,7 +12478,7 @@
                 "day": "Tue",
                 "start": "12:45",
                 "end": "15:10",
-                "title": "MATH 7 AND",
+                "title": "MATH 7",
                 "courseName": "Calculus 1",
                 "professor": "HANCOCK M D",
                 "status": "OCCUPIED"
@@ -12565,7 +12565,7 @@
                 "day": "Thu",
                 "start": "09:30",
                 "end": "10:35",
-                "title": "MATH 2 AND",
+                "title": "MATH 2",
                 "courseName": "Precalculus",
                 "professor": "MIANO I A",
                 "status": "OCCUPIED"
@@ -12574,7 +12574,7 @@
                 "day": "Mon",
                 "start": "09:30",
                 "end": "10:35",
-                "title": "MATH 2 AND",
+                "title": "MATH 2",
                 "courseName": "Precalculus",
                 "professor": "MIANO I A",
                 "status": "OCCUPIED"
@@ -12583,7 +12583,7 @@
                 "day": "Tue",
                 "start": "09:30",
                 "end": "10:35",
-                "title": "MATH 2 AND",
+                "title": "MATH 2",
                 "courseName": "Precalculus",
                 "professor": "MIANO I A",
                 "status": "OCCUPIED"
@@ -12592,7 +12592,7 @@
                 "day": "Wed",
                 "start": "09:30",
                 "end": "10:35",
-                "title": "MATH 2 AND",
+                "title": "MATH 2",
                 "courseName": "Precalculus",
                 "professor": "MIANO I A",
                 "status": "OCCUPIED"
@@ -12661,7 +12661,7 @@
                 "day": "Thu",
                 "start": "10:00",
                 "end": "11:05",
-                "title": "MATH 2 AND",
+                "title": "MATH 2",
                 "courseName": "Precalculus",
                 "professor": "LEE P H",
                 "status": "OCCUPIED"
@@ -12670,7 +12670,7 @@
                 "day": "Mon",
                 "start": "10:00",
                 "end": "11:05",
-                "title": "MATH 2 AND",
+                "title": "MATH 2",
                 "courseName": "Precalculus",
                 "professor": "LEE P H",
                 "status": "OCCUPIED"
@@ -12679,7 +12679,7 @@
                 "day": "Tue",
                 "start": "10:00",
                 "end": "11:05",
-                "title": "MATH 2 AND",
+                "title": "MATH 2",
                 "courseName": "Precalculus",
                 "professor": "LEE P H",
                 "status": "OCCUPIED"
@@ -12688,7 +12688,7 @@
                 "day": "Wed",
                 "start": "10:00",
                 "end": "11:05",
-                "title": "MATH 2 AND",
+                "title": "MATH 2",
                 "courseName": "Precalculus",
                 "professor": "LEE P H",
                 "status": "OCCUPIED"
@@ -12715,7 +12715,7 @@
                 "day": "Thu",
                 "start": "16:30",
                 "end": "17:35",
-                "title": "MATH 2 AND",
+                "title": "MATH 2",
                 "courseName": "Precalculus",
                 "professor": "CHAN H J",
                 "status": "OCCUPIED"
@@ -12724,7 +12724,7 @@
                 "day": "Mon",
                 "start": "16:30",
                 "end": "17:35",
-                "title": "MATH 2 AND",
+                "title": "MATH 2",
                 "courseName": "Precalculus",
                 "professor": "CHAN H J",
                 "status": "OCCUPIED"
@@ -12733,7 +12733,7 @@
                 "day": "Tue",
                 "start": "16:30",
                 "end": "17:35",
-                "title": "MATH 2 AND",
+                "title": "MATH 2",
                 "courseName": "Precalculus",
                 "professor": "CHAN H J",
                 "status": "OCCUPIED"
@@ -12742,7 +12742,7 @@
                 "day": "Wed",
                 "start": "16:30",
                 "end": "17:35",
-                "title": "MATH 2 AND",
+                "title": "MATH 2",
                 "courseName": "Precalculus",
                 "professor": "CHAN H J",
                 "status": "OCCUPIED"
@@ -12769,7 +12769,7 @@
                 "day": "Mon",
                 "start": "12:45",
                 "end": "15:10",
-                "title": "MATH 7 AND",
+                "title": "MATH 7",
                 "courseName": "Calculus 1",
                 "professor": "JAHANGARD E",
                 "status": "OCCUPIED"
@@ -12778,7 +12778,7 @@
                 "day": "Wed",
                 "start": "12:45",
                 "end": "15:10",
-                "title": "MATH 7 AND",
+                "title": "MATH 7",
                 "courseName": "Calculus 1",
                 "professor": "JAHANGARD E",
                 "status": "OCCUPIED"
@@ -12829,7 +12829,7 @@
                 "day": "Mon",
                 "start": "10:35",
                 "end": "12:40",
-                "title": "STAT C1000 AND",
+                "title": "STAT C1000",
                 "courseName": "Introduction to Statistics",
                 "professor": "SIMO A L",
                 "status": "OCCUPIED"
@@ -12838,7 +12838,7 @@
                 "day": "Wed",
                 "start": "10:35",
                 "end": "12:40",
-                "title": "STAT C1000 AND",
+                "title": "STAT C1000",
                 "courseName": "Introduction to Statistics",
                 "professor": "SIMO A L",
                 "status": "OCCUPIED"
@@ -12865,7 +12865,7 @@
                 "day": "Thu",
                 "start": "12:45",
                 "end": "14:50",
-                "title": "STAT C1000 AND",
+                "title": "STAT C1000",
                 "courseName": "Introduction to Statistics",
                 "professor": "SIMO A L",
                 "status": "OCCUPIED"
@@ -12874,7 +12874,7 @@
                 "day": "Tue",
                 "start": "12:45",
                 "end": "14:50",
-                "title": "STAT C1000 AND",
+                "title": "STAT C1000",
                 "courseName": "Introduction to Statistics",
                 "professor": "SIMO A L",
                 "status": "OCCUPIED"
@@ -12901,7 +12901,7 @@
                 "day": "Thu",
                 "start": "19:30",
                 "end": "20:35",
-                "title": "MATH 2 AND",
+                "title": "MATH 2",
                 "courseName": "Precalculus",
                 "professor": "MUSSELMAN M J",
                 "status": "OCCUPIED"
@@ -12910,7 +12910,7 @@
                 "day": "Mon",
                 "start": "19:30",
                 "end": "20:35",
-                "title": "MATH 2 AND",
+                "title": "MATH 2",
                 "courseName": "Precalculus",
                 "professor": "MUSSELMAN M J",
                 "status": "OCCUPIED"
@@ -12919,7 +12919,7 @@
                 "day": "Tue",
                 "start": "19:30",
                 "end": "20:35",
-                "title": "MATH 2 AND",
+                "title": "MATH 2",
                 "courseName": "Precalculus",
                 "professor": "MUSSELMAN M J",
                 "status": "OCCUPIED"
@@ -12928,7 +12928,7 @@
                 "day": "Wed",
                 "start": "19:30",
                 "end": "20:35",
-                "title": "MATH 2 AND",
+                "title": "MATH 2",
                 "courseName": "Precalculus",
                 "professor": "MUSSELMAN M J",
                 "status": "OCCUPIED"
@@ -13093,7 +13093,7 @@
                 "day": "Mon",
                 "start": "12:45",
                 "end": "13:55",
-                "title": "MATH 6 AND",
+                "title": "MATH 6",
                 "courseName": "Modern Mathematical Methods for STEM Majors",
                 "professor": "RICHARDSON A",
                 "status": "OCCUPIED"
@@ -13102,7 +13102,7 @@
                 "day": "Tue",
                 "start": "12:45",
                 "end": "13:55",
-                "title": "MATH 6 AND",
+                "title": "MATH 6",
                 "courseName": "Modern Mathematical Methods for STEM Majors",
                 "professor": "RICHARDSON A",
                 "status": "OCCUPIED"
@@ -13111,7 +13111,7 @@
                 "day": "Wed",
                 "start": "12:45",
                 "end": "13:55",
-                "title": "MATH 6 AND",
+                "title": "MATH 6",
                 "courseName": "Modern Mathematical Methods for STEM Majors",
                 "professor": "RICHARDSON A",
                 "status": "OCCUPIED"
@@ -13147,7 +13147,7 @@
                 "day": "Thu",
                 "start": "08:00",
                 "end": "10:25",
-                "title": "MATH 7 AND",
+                "title": "MATH 7",
                 "courseName": "Calculus 1",
                 "professor": "GHARAMANIANS J",
                 "status": "OCCUPIED"
@@ -13156,7 +13156,7 @@
                 "day": "Tue",
                 "start": "08:00",
                 "end": "10:25",
-                "title": "MATH 7 AND",
+                "title": "MATH 7",
                 "courseName": "Calculus 1",
                 "professor": "GHARAMANIANS J",
                 "status": "OCCUPIED"
@@ -13183,7 +13183,7 @@
                 "day": "Mon",
                 "start": "15:00",
                 "end": "16:30",
-                "title": "MATH 7 AND",
+                "title": "MATH 7",
                 "courseName": "Calculus 1",
                 "professor": "RICHARDSON A",
                 "status": "OCCUPIED"
@@ -13192,7 +13192,7 @@
                 "day": "Tue",
                 "start": "15:00",
                 "end": "16:30",
-                "title": "MATH 7 AND",
+                "title": "MATH 7",
                 "courseName": "Calculus 1",
                 "professor": "RICHARDSON A",
                 "status": "OCCUPIED"
@@ -13201,7 +13201,7 @@
                 "day": "Wed",
                 "start": "15:00",
                 "end": "16:30",
-                "title": "MATH 7 AND",
+                "title": "MATH 7",
                 "courseName": "Calculus 1",
                 "professor": "RICHARDSON A",
                 "status": "OCCUPIED"
@@ -13243,7 +13243,7 @@
                 "day": "Thu",
                 "start": "07:45",
                 "end": "08:50",
-                "title": "MATH 2 AND",
+                "title": "MATH 2",
                 "courseName": "Precalculus",
                 "professor": "ROSS K R",
                 "status": "OCCUPIED"
@@ -13252,7 +13252,7 @@
                 "day": "Mon",
                 "start": "07:45",
                 "end": "08:50",
-                "title": "MATH 2 AND",
+                "title": "MATH 2",
                 "courseName": "Precalculus",
                 "professor": "ROSS K R",
                 "status": "OCCUPIED"
@@ -13261,7 +13261,7 @@
                 "day": "Tue",
                 "start": "07:45",
                 "end": "08:50",
-                "title": "MATH 2 AND",
+                "title": "MATH 2",
                 "courseName": "Precalculus",
                 "professor": "ROSS K R",
                 "status": "OCCUPIED"
@@ -13270,7 +13270,7 @@
                 "day": "Wed",
                 "start": "07:45",
                 "end": "08:50",
-                "title": "MATH 2 AND",
+                "title": "MATH 2",
                 "courseName": "Precalculus",
                 "professor": "ROSS K R",
                 "status": "OCCUPIED"
@@ -13315,7 +13315,7 @@
                 "day": "Mon",
                 "start": "11:15",
                 "end": "12:35",
-                "title": "MATH 21 AND",
+                "title": "MATH 21",
                 "courseName": "Finite Mathematics",
                 "professor": "ROSS K R",
                 "status": "OCCUPIED"
@@ -13324,7 +13324,7 @@
                 "day": "Wed",
                 "start": "11:15",
                 "end": "12:35",
-                "title": "MATH 21 AND",
+                "title": "MATH 21",
                 "courseName": "Finite Mathematics",
                 "professor": "ROSS K R",
                 "status": "OCCUPIED"
@@ -13348,7 +13348,7 @@
                 "day": "Thu",
                 "start": "08:00",
                 "end": "09:05",
-                "title": "MATH 2 AND",
+                "title": "MATH 2",
                 "courseName": "Precalculus",
                 "professor": "LONDON J S",
                 "status": "OCCUPIED"
@@ -13357,7 +13357,7 @@
                 "day": "Mon",
                 "start": "08:00",
                 "end": "09:05",
-                "title": "MATH 2 AND",
+                "title": "MATH 2",
                 "courseName": "Precalculus",
                 "professor": "LONDON J S",
                 "status": "OCCUPIED"
@@ -13366,7 +13366,7 @@
                 "day": "Tue",
                 "start": "08:00",
                 "end": "09:05",
-                "title": "MATH 2 AND",
+                "title": "MATH 2",
                 "courseName": "Precalculus",
                 "professor": "LONDON J S",
                 "status": "OCCUPIED"
@@ -13375,7 +13375,7 @@
                 "day": "Wed",
                 "start": "08:00",
                 "end": "09:05",
-                "title": "MATH 2 AND",
+                "title": "MATH 2",
                 "courseName": "Precalculus",
                 "professor": "LONDON J S",
                 "status": "OCCUPIED"
@@ -13444,7 +13444,7 @@
                 "day": "Thu",
                 "start": "10:00",
                 "end": "11:05",
-                "title": "MATH 2 AND",
+                "title": "MATH 2",
                 "courseName": "Precalculus",
                 "professor": "QUEVEDO J M",
                 "status": "OCCUPIED"
@@ -13453,7 +13453,7 @@
                 "day": "Mon",
                 "start": "10:00",
                 "end": "11:05",
-                "title": "MATH 2 AND",
+                "title": "MATH 2",
                 "courseName": "Precalculus",
                 "professor": "QUEVEDO J M",
                 "status": "OCCUPIED"
@@ -13462,7 +13462,7 @@
                 "day": "Tue",
                 "start": "10:00",
                 "end": "11:05",
-                "title": "MATH 2 AND",
+                "title": "MATH 2",
                 "courseName": "Precalculus",
                 "professor": "QUEVEDO J M",
                 "status": "OCCUPIED"
@@ -13471,7 +13471,7 @@
                 "day": "Wed",
                 "start": "10:00",
                 "end": "11:05",
-                "title": "MATH 2 AND",
+                "title": "MATH 2",
                 "courseName": "Precalculus",
                 "professor": "QUEVEDO J M",
                 "status": "OCCUPIED"
@@ -13498,7 +13498,7 @@
                 "day": "Mon",
                 "start": "17:00",
                 "end": "19:05",
-                "title": "MATH 4 AND",
+                "title": "MATH 4",
                 "courseName": "College Algebra for STEM Majors",
                 "professor": "CHITGAR M H",
                 "status": "OCCUPIED"
@@ -13507,7 +13507,7 @@
                 "day": "Wed",
                 "start": "17:00",
                 "end": "19:05",
-                "title": "MATH 4 AND",
+                "title": "MATH 4",
                 "courseName": "College Algebra for STEM Majors",
                 "professor": "CHITGAR M H",
                 "status": "OCCUPIED"
@@ -13558,7 +13558,7 @@
                 "day": "Thu",
                 "start": "12:45",
                 "end": "14:50",
-                "title": "MATH 4 AND",
+                "title": "MATH 4",
                 "courseName": "College Algebra for STEM Majors",
                 "professor": "LOPEZ MA",
                 "status": "OCCUPIED"
@@ -13567,7 +13567,7 @@
                 "day": "Tue",
                 "start": "12:45",
                 "end": "14:50",
-                "title": "MATH 4 AND",
+                "title": "MATH 4",
                 "courseName": "College Algebra for STEM Majors",
                 "professor": "LOPEZ MA",
                 "status": "OCCUPIED"
@@ -13612,7 +13612,7 @@
                 "day": "Mon",
                 "start": "12:45",
                 "end": "14:05",
-                "title": "MATH 21 AND",
+                "title": "MATH 21",
                 "courseName": "Finite Mathematics",
                 "professor": "MIANO I A",
                 "status": "OCCUPIED"
@@ -13621,7 +13621,7 @@
                 "day": "Wed",
                 "start": "12:45",
                 "end": "14:05",
-                "title": "MATH 21 AND",
+                "title": "MATH 21",
                 "courseName": "Finite Mathematics",
                 "professor": "MIANO I A",
                 "status": "OCCUPIED"
@@ -13759,7 +13759,7 @@
                 "day": "Thu",
                 "start": "12:45",
                 "end": "15:10",
-                "title": "MATH 7 AND",
+                "title": "MATH 7",
                 "courseName": "Calculus 1",
                 "professor": "PACHAS-FLORES W",
                 "status": "OCCUPIED"
@@ -13768,7 +13768,7 @@
                 "day": "Tue",
                 "start": "12:45",
                 "end": "15:10",
-                "title": "MATH 7 AND",
+                "title": "MATH 7",
                 "courseName": "Calculus 1",
                 "professor": "PACHAS-FLORES W",
                 "status": "OCCUPIED"
@@ -13837,7 +13837,7 @@
                 "day": "Thu",
                 "start": "09:30",
                 "end": "10:35",
-                "title": "MATH 7 AND",
+                "title": "MATH 7",
                 "courseName": "Calculus 1",
                 "professor": "HERICHI H",
                 "status": "OCCUPIED"
@@ -13846,7 +13846,7 @@
                 "day": "Mon",
                 "start": "09:30",
                 "end": "10:35",
-                "title": "MATH 7 AND",
+                "title": "MATH 7",
                 "courseName": "Calculus 1",
                 "professor": "HERICHI H",
                 "status": "OCCUPIED"
@@ -13855,7 +13855,7 @@
                 "day": "Tue",
                 "start": "09:30",
                 "end": "10:35",
-                "title": "MATH 7 AND",
+                "title": "MATH 7",
                 "courseName": "Calculus 1",
                 "professor": "HERICHI H",
                 "status": "OCCUPIED"
@@ -13864,7 +13864,7 @@
                 "day": "Wed",
                 "start": "09:30",
                 "end": "10:35",
-                "title": "MATH 7 AND",
+                "title": "MATH 7",
                 "courseName": "Calculus 1",
                 "professor": "HERICHI H",
                 "status": "OCCUPIED"
@@ -13987,7 +13987,7 @@
                 "day": "Thu",
                 "start": "09:30",
                 "end": "11:55",
-                "title": "MATH 7 AND",
+                "title": "MATH 7",
                 "courseName": "Calculus 1",
                 "professor": "FANELLI D",
                 "status": "OCCUPIED"
@@ -13996,7 +13996,7 @@
                 "day": "Tue",
                 "start": "09:30",
                 "end": "11:55",
-                "title": "MATH 7 AND",
+                "title": "MATH 7",
                 "courseName": "Calculus 1",
                 "professor": "FANELLI D",
                 "status": "OCCUPIED"
@@ -14023,7 +14023,7 @@
                 "day": "Mon",
                 "start": "11:00",
                 "end": "12:20",
-                "title": "MATH 21 AND",
+                "title": "MATH 21",
                 "courseName": "Finite Mathematics",
                 "professor": "BRONIE B L",
                 "status": "OCCUPIED"
@@ -14032,7 +14032,7 @@
                 "day": "Wed",
                 "start": "11:00",
                 "end": "12:20",
-                "title": "MATH 21 AND",
+                "title": "MATH 21",
                 "courseName": "Finite Mathematics",
                 "professor": "BRONIE B L",
                 "status": "OCCUPIED"
@@ -14056,7 +14056,7 @@
                 "day": "Thu",
                 "start": "12:45",
                 "end": "14:25",
-                "title": "MATH 7 AND",
+                "title": "MATH 7",
                 "courseName": "Calculus 1",
                 "professor": "SOURY S",
                 "status": "OCCUPIED"
@@ -14065,7 +14065,7 @@
                 "day": "Mon",
                 "start": "12:45",
                 "end": "14:25",
-                "title": "MATH 7 AND",
+                "title": "MATH 7",
                 "courseName": "Calculus 1",
                 "professor": "SOURY S",
                 "status": "OCCUPIED"
@@ -14074,7 +14074,7 @@
                 "day": "Tue",
                 "start": "12:45",
                 "end": "14:25",
-                "title": "MATH 7 AND",
+                "title": "MATH 7",
                 "courseName": "Calculus 1",
                 "professor": "SOURY S",
                 "status": "OCCUPIED"
@@ -14083,7 +14083,7 @@
                 "day": "Wed",
                 "start": "12:45",
                 "end": "14:25",
-                "title": "MATH 7 AND",
+                "title": "MATH 7",
                 "courseName": "Calculus 1",
                 "professor": "SOURY S",
                 "status": "OCCUPIED"

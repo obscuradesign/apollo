@@ -161,11 +161,11 @@ This document tracks Apollo's conformance to the [Web Content Accessibility Guid
 
 | Principle | ✅ Done | 🔄 In Progress | ⬜ Planned | N/A |
 |-----------|---------|---------------|-----------|-----|
-| 1. Perceivable | 7 | 3 | 1 | 2 |
+| 1. Perceivable | 11 | 2 | 1 | 2 |
 | 2. Operable | 16 | 0 | 1 | 4 |
-| 3. Understandable | 7 | 1 | 0 | 3 |
+| 3. Understandable | 8 | 0 | 0 | 3 |
 | 4. Robust | 2 | 0 | 0 | 0 |
-| **Total** | **32** | **4** | **2** | **9** |
+| **Total** | **37** | **2** | **2** | **9** |
 
 ---
 

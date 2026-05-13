@@ -217,6 +217,7 @@ export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
 
   const [hoveredRoom, setHoveredRoom] = useState(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 });
 
   // Close dropdown when clicking outside
   const dropdownRef = React.useRef(null);
@@ -353,6 +354,15 @@ export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
     }
   }, []);
 
+  // WCAG 1.4.13 — Escape dismisses the active room tooltip
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === 'Escape') setHoveredRoom(null);
+    };
+    document.addEventListener('keydown', handleEscape);
+    return () => document.removeEventListener('keydown', handleEscape);
+  }, []);
+
   // --- CONTROLS ---
   const handleDayChange = (e) => {
     setIsLive(false);
@@ -443,10 +453,21 @@ export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
     return { color, activeEvent, roomData };
   }, [simulationState.day, simulationState.time]);
 
-  const handleRoomHover = (roomId, isHovering) => {
+  const handleRoomHover = (roomId, isHovering, keyboardEvent) => {
     if (!isHovering) {
       setHoveredRoom(null);
       return;
+    }
+    // If triggered by keyboard focus, position tooltip at the element's center
+    if (keyboardEvent?.target) {
+      const rect = keyboardEvent.target.getBoundingClientRect();
+      setTooltipPos({
+        x: rect.left + rect.width / 2,
+        y: rect.top + rect.height / 2
+      });
+    } else {
+      // Mouse hover: use live mousePos (updated by mousemove handler)
+      setTooltipPos(mousePos);
     }
     const status = getRoomStatus(roomId);
     if (status && status.roomData) {
@@ -470,13 +491,13 @@ export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
     if (status.roomData.type === "STUDY_ROOM") {
       if (status.roomData.url) {
         // Custom URL logic (e.g. Modern Languages Lab)
-        if (window.confirm(`Visit the ${status.roomData.label} website?`)) {
+        if (window.confirm(`Open the ${status.roomData.label} page in a new tab?`)) {
           window.open(status.roomData.url, "_blank", "noopener,noreferrer");
         }
       } else {
         // Default booking logic
         const confirmed = window.confirm(
-          "This will open the SMC study room booking site in a new tab. Continue?"
+          "Open the SMC study room booking site (smc.mywconline.com) in a new tab?"
         );
         if (confirmed) {
           window.open(
@@ -487,7 +508,7 @@ export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
         }
       }
     } else if (status.roomData.type === "PROGRAM" || status.roomData.type === "OFFICE") {
-      const confirmed = window.confirm(`Visit the ${status.roomData.label} website?`);
+      const confirmed = window.confirm(`Open the ${status.roomData.label} page on smc.edu in a new tab?`);
       if (confirmed) {
         // Use dynamic URL if available, otherwise fallback placeholder
         const targetUrl = status.roomData.url || "https://www.smc.edu/PLACEHOLDER_DEPARTMENT_LINK";
@@ -581,20 +602,27 @@ export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
         </AnimatePresence>
 
         {/* OVERLAY: Building + Floor Switcher */}
-        <div className="floor-switcher">
+        <div className="floor-switcher" role="toolbar" aria-label="Map controls">
           {/* Building Selector: Dropdown for all widths */}
           <div className="building-dropdown" ref={dropdownRef}>
             <button
               className="building-dropdown-trigger"
               onClick={() => setBuildingDropdownOpen(!buildingDropdownOpen)}
+              aria-haspopup="listbox"
+              aria-expanded={buildingDropdownOpen}
+              aria-controls="building-listbox"
+              aria-label={`Select building, current: ${BUILDINGS[currentBuilding].label}`}
             >
               {BUILDINGS[currentBuilding].label}
-              <span style={{ marginLeft: "4px", fontSize: "0.7rem", transition: "transform 0.2s", display: "inline-block", transform: buildingDropdownOpen ? "rotate(180deg)" : "rotate(0deg)" }}>▾</span>
+              <span aria-hidden="true" style={{ marginLeft: "4px", fontSize: "0.7rem", transition: "transform 0.2s", display: "inline-block", transform: buildingDropdownOpen ? "rotate(180deg)" : "rotate(0deg)" }}>▾</span>
             </button>
             <AnimatePresence>
               {buildingDropdownOpen && (
                 <motion.div
+                  id="building-listbox"
                   className="building-dropdown-menu"
+                  role="listbox"
+                  aria-label="Select building"
                   initial={{ opacity: 0, y: -8, scale: 0.95 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: -8, scale: 0.95 }}
@@ -603,6 +631,8 @@ export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
                   {Object.entries(BUILDINGS).map(([key, bldg]) => (
                     <button
                       key={key}
+                      role="option"
+                      aria-selected={currentBuilding === key}
                       className={`building-dropdown-item ${currentBuilding === key ? "active" : ""}`}
                       onClick={() => { setCurrentBuilding(key); setCurrentFloor(1); setBuildingDropdownOpen(false); }}
                     >
@@ -617,25 +647,31 @@ export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
           {BUILDINGS[currentBuilding].floors > 0 && <div style={{ width: "1px", height: "24px", background: "#e5e7eb", margin: "0 8px" }} />}
 
           {/* Floor Selector */}
-          {Array.from({ length: BUILDINGS[currentBuilding].floors }, (_, i) => i + 1).map((floorNum) => (
-            <motion.button
-              key={floorNum}
-              onClick={() => setCurrentFloor(floorNum)}
-              className={`floor-btn ${currentFloor === floorNum ? "active" : ""}`}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              F{floorNum}
-            </motion.button>
-          ))}
+          <ul aria-label="Floor selector" style={{ display: "flex", gap: "4px", listStyle: "none", margin: 0, padding: 0 }}>
+            {Array.from({ length: BUILDINGS[currentBuilding].floors }, (_, i) => i + 1).map((floorNum) => (
+              <li key={floorNum}>
+                <motion.button
+                  onClick={() => setCurrentFloor(floorNum)}
+                  className={`floor-btn ${currentFloor === floorNum ? "active" : ""}`}
+                  aria-pressed={currentFloor === floorNum}
+                  aria-label={`Floor ${floorNum}`}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  F{floorNum}
+                </motion.button>
+              </li>
+            ))}
+          </ul>
 
           {/* SEARCH BUTTON */}
           <div style={{ width: "1px", height: "24px", background: "#e5e7eb", margin: "0 8px" }} />
           <button
             onClick={() => setIsSearchOpen(true)}
             className="search-btn-inline"
+            aria-label="Search rooms"
           >
-            🔍<span className="search-text"> Search</span>
+            <span aria-hidden="true">🔍</span><span className="search-text"> Search</span>
           </button>
         </div>
 
@@ -729,7 +765,7 @@ export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
       </motion.div>
 
       <AnimatePresence>
-        {hoveredRoom && <RoomTooltip info={hoveredRoom} position={mousePos} starredItems={starredItems} />}
+        {hoveredRoom && <RoomTooltip info={hoveredRoom} position={tooltipPos} starredItems={starredItems} />}
       </AnimatePresence>
 
       {/* DEBUG PANEL (Outside Map) */}
@@ -741,13 +777,18 @@ export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
       >
 
         {/* Status Badge */}
-        <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "10px" }}>
+        <div
+          aria-live="polite"
+          aria-atomic="true"
+          style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "10px" }}
+        >
           <span style={{
             fontSize: "0.75rem", padding: "4px 8px", borderRadius: "99px", fontWeight: "bold",
             backgroundColor: isLive ? "#dcfce7" : "#fee2e2",
             color: isLive ? "#166534" : "#991b1b"
           }}>
-            {isLive ? "🟢 LIVE DATA" : "🕰️ TIME MACHINE"}
+            <span aria-hidden="true">{isLive ? "🟢" : "🕰️"}</span>
+            {" "}{isLive ? "LIVE DATA" : "TIME MACHINE"}
           </span>
           {!isLive && (
             <button onClick={returnToLive} style={{ fontSize: "0.75rem", padding: "4px 8px", cursor: "pointer" }}>
@@ -758,7 +799,14 @@ export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
 
         {/* Controls */}
         <div style={{ display: "flex", justifyContent: "center", gap: "10px", alignItems: "center" }}>
+          <label
+            htmlFor="sim-day-select"
+            style={{ fontSize: "0.75rem", fontWeight: 600, color: "var(--text-secondary, #6b7280)" }}
+          >
+            Day
+          </label>
           <select
+            id="sim-day-select"
             value={simulationState.day}
             onChange={handleDayChange}
             style={{ padding: "8px", borderRadius: "6px", border: "1px solid #ccc" }}
@@ -766,7 +814,14 @@ export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
             {DAYS.map(d => <option key={d} value={d}>{d}</option>)}
           </select>
 
+          <label
+            htmlFor="sim-time-input"
+            style={{ fontSize: "0.75rem", fontWeight: 600, color: "var(--text-secondary, #6b7280)" }}
+          >
+            Time
+          </label>
           <input
+            id="sim-time-input"
             type="time"
             value={simulationState.time}
             onChange={handleTimeChange}
@@ -782,13 +837,14 @@ export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
               border: "none",
               cursor: "pointer",
               fontSize: "1.2rem",
-              padding: "4px",
+              padding: "8px",
               marginLeft: "10px",
               transition: "transform 0.2s"
             }}
+            aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
             title={darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
           >
-            {darkMode ? "☀️" : "🌙"}
+            <span aria-hidden="true">{darkMode ? "☀️" : "🌙"}</span>
           </button>
 
           {/* ABOUT BUTTON */}
@@ -799,7 +855,7 @@ export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
               border: "none",
               cursor: "pointer",
               fontSize: "1.2rem",
-              padding: "4px",
+              padding: "8px",
               marginLeft: "5px",
               transition: "transform 0.2s",
               color: "var(--text-primary, #1f2937)"

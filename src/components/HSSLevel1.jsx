@@ -1,28 +1,41 @@
 import React from 'react';
 
 export const HSSLevel1 = React.memo(function HSSLevel1({ getColor, onHover, onClick }) {
+    const r = (id) => ({
+        fill: getColor(id),
+        role: "button",
+        tabIndex: 0,
+        "aria-label": id,
+        onMouseEnter: () => onHover(id, true),
+        onMouseLeave: () => onHover(id, false),
+        onFocus: (e) => onHover(id, true, e),
+        onBlur: () => onHover(id, false),
+        onClick: () => onClick(id),
+        onKeyDown: (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onClick(id); } },
+        style: { cursor: "pointer", transition: "opacity 0.2s" }
+    });
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" id="Floor_1" data-name="Floor 1" viewBox="0 0 792 576">
+        <svg xmlns="http://www.w3.org/2000/svg" id="Floor_1" data-name="Floor 1" viewBox="0 0 792 576" role="img" aria-label="HSS Building Floor 1 map">
             <path id="electrical-room" fill="#3b3b3c" d="M579.11 334.78h-38.5v29.89h11.3v-9.78h27.2z" />
-            <path id="hss-104" fill={getColor("hss-104")} onMouseEnter={() => onHover("hss-104", true)} onMouseLeave={() => onHover("hss-104", false)} onClick={() => onClick("hss-104")} style={{ cursor: "pointer", transition: "opacity 0.2s" }} d="M619.85 194.7h64.72v103.75h-55.74v2h43.41v13.75h-52.39z" />
-            <path id="hss-105" fill={getColor("hss-105")} onMouseEnter={() => onHover("hss-105", true)} onMouseLeave={() => onHover("hss-105", false)} onClick={() => onClick("hss-105")} style={{ cursor: "pointer", transition: "opacity 0.2s" }} d="M674.24 300.45h10.33v121.94h-61.98v-67.5h-2.74V316.2h54.39z" />
-            <path id="hss-106" fill={getColor("hss-106")} onMouseEnter={() => onHover("hss-106", true)} onMouseLeave={() => onHover("hss-106", false)} onClick={() => onClick("hss-106")} style={{ cursor: "pointer", transition: "opacity 0.2s" }} d="M553.91 356.89h66.67v65.5h-66.67z" />
-            <path id="hss-103" fill={getColor("hss-103")} onMouseEnter={() => onHover("hss-103", true)} onMouseLeave={() => onHover("hss-103", false)} onClick={() => onClick("hss-103")} style={{ cursor: "pointer", transition: "opacity 0.2s" }} d="M617.85 194.7v69.8h-74.1s-.91-37.21 15.13-69.8z" />
-            <path id="hss-150" fill={getColor("hss-150")} onMouseEnter={() => onHover("hss-150", true)} onMouseLeave={() => onHover("hss-150", false)} onClick={() => onClick("hss-150")} style={{ cursor: "pointer", transition: "opacity 0.2s" }} d="M107.43 181.2h69.41v63.15h-69.41z" />
-            <path id="hss-151" fill={getColor("hss-151")} onMouseEnter={() => onHover("hss-151", true)} onMouseLeave={() => onHover("hss-151", false)} onClick={() => onClick("hss-151")} style={{ cursor: "pointer", transition: "opacity 0.2s" }} d="M107.43 246.35h69.41v60.17h-69.41z" />
-            <path id="hss-152" fill={getColor("hss-152")} onMouseEnter={() => onHover("hss-152", true)} onMouseLeave={() => onHover("hss-152", false)} onClick={() => onClick("hss-152")} style={{ cursor: "pointer", transition: "opacity 0.2s" }} d="M176.85 308.52h-69.42v65.15h31.07v-4.69h38.35z" />
-            <path id="hss-153" fill={getColor("hss-153")} onMouseEnter={() => onHover("hss-153", true)} onMouseLeave={() => onHover("hss-153", false)} onClick={() => onClick("hss-153")} style={{ cursor: "pointer", transition: "opacity 0.2s" }} d="M212.89 206.24h59.24v66.87h-59.24z" />
-            <path id="hss-154" fill={getColor("hss-154")} onMouseEnter={() => onHover("hss-154", true)} onMouseLeave={() => onHover("hss-154", false)} onClick={() => onClick("hss-154")} style={{ cursor: "pointer", transition: "opacity 0.2s" }} d="M212.89 275.11h59.24v71.37h-39.48v-4.31h-19.76z" />
-            <path id="hss-155" fill={getColor("hss-155")} onMouseEnter={() => onHover("hss-155", true)} onMouseLeave={() => onHover("hss-155", false)} onClick={() => onClick("hss-155")} style={{ cursor: "pointer", transition: "opacity 0.2s" }} d="M283.11 206.24h-8.98v66.87h61.71v-33.22h-2.86v-33.65z" />
-            <path id="hss-156" fill={getColor("hss-156")} onMouseEnter={() => onHover("hss-156", true)} onMouseLeave={() => onHover("hss-156", false)} onClick={() => onClick("hss-156")} style={{ cursor: "pointer", transition: "opacity 0.2s" }} d="M336.11 283.11v7.8h-3.13v50.87h-19.37v4.7h-39.48v-71.37h61.98z" />
-            <path id="hss-158" fill={getColor("hss-158")} onMouseEnter={() => onHover("hss-158", true)} onMouseLeave={() => onHover("hss-158", false)} onClick={() => onClick("hss-158")} style={{ cursor: "pointer", transition: "opacity 0.2s" }} d="M345.91 292.91h9.96v20.5h-20.89v-20.5z" />
-            <path id="hss-159" fill={getColor("hss-159")} onMouseEnter={() => onHover("hss-159", true)} onMouseLeave={() => onHover("hss-159", false)} onClick={() => onClick("hss-159")} style={{ cursor: "pointer", transition: "opacity 0.2s" }} d="M334.98 315.41h20.89v31.07h-11.11v-4.7h-9.78z" />
-            <path id="hss-160" fill={getColor("hss-160")} onMouseEnter={() => onHover("hss-160", true)} onMouseLeave={() => onHover("hss-160", false)} onClick={() => onClick("hss-160")} style={{ cursor: "pointer", transition: "opacity 0.2s" }} d="M334.98 206.24h17.37v31.65h-17.37z" />
-            <path id="hss-161" fill={getColor("hss-161")} onMouseEnter={() => onHover("hss-161", true)} onMouseLeave={() => onHover("hss-161", false)} onClick={() => onClick("hss-161")} style={{ cursor: "pointer", transition: "opacity 0.2s" }} d="M440.43 292.91h11.11v30.67h-11.11z" />
-            <path id="hss-163" fill={getColor("hss-163")} onMouseEnter={() => onHover("hss-163", true)} onMouseLeave={() => onHover("hss-163", false)} onClick={() => onClick("hss-163")} style={{ cursor: "pointer", transition: "opacity 0.2s" }} d="M450.93 341.24h24.08s-.36 12.2-3.62 24.87h-20.46z" />
-            <path id="hss-164" fill={getColor("hss-164")} onMouseEnter={() => onHover("hss-164", true)} onMouseLeave={() => onHover("hss-164", false)} onClick={() => onClick("hss-164")} style={{ cursor: "pointer", transition: "opacity 0.2s" }} d="M450.93 368.11v20.57h16.44s5.71-13.89 3.69-20.57z" />
-            <path id="hss-165" fill={getColor("hss-165")} onMouseEnter={() => onHover("hss-165", true)} onMouseLeave={() => onHover("hss-165", false)} onClick={() => onClick("hss-165")} style={{ cursor: "pointer", transition: "opacity 0.2s" }} d="M357.87 292.91h80.56v36.17h2v-5.5h7.41v2h9.98v-2h-4.28v-13.46h24.42s.8 19.33-2.95 31.11H463.5v-2h-14.57v42.61h2v6.36h-2v2.47h18.03s.24 3.22-1.15 4.3l-2.11 5.96H357.87z" />
-            <g id="walls" fill="#000000">
+            <path id="hss-104" d="M619.85 194.7h64.72v103.75h-55.74v2h43.41v13.75h-52.39z" {...r("hss-104")} />
+            <path id="hss-105" d="M674.24 300.45h10.33v121.94h-61.98v-67.5h-2.74V316.2h54.39z" {...r("hss-105")} />
+            <path id="hss-106" d="M553.91 356.89h66.67v65.5h-66.67z" {...r("hss-106")} />
+            <path id="hss-103" d="M617.85 194.7v69.8h-74.1s-.91-37.21 15.13-69.8z" {...r("hss-103")} />
+            <path id="hss-150" d="M107.43 181.2h69.41v63.15h-69.41z" {...r("hss-150")} />
+            <path id="hss-151" d="M107.43 246.35h69.41v60.17h-69.41z" {...r("hss-151")} />
+            <path id="hss-152" d="M176.85 308.52h-69.42v65.15h31.07v-4.69h38.35z" {...r("hss-152")} />
+            <path id="hss-153" d="M212.89 206.24h59.24v66.87h-59.24z" {...r("hss-153")} />
+            <path id="hss-154" d="M212.89 275.11h59.24v71.37h-39.48v-4.31h-19.76z" {...r("hss-154")} />
+            <path id="hss-155" d="M283.11 206.24h-8.98v66.87h61.71v-33.22h-2.86v-33.65z" {...r("hss-155")} />
+            <path id="hss-156" d="M336.11 283.11v7.8h-3.13v50.87h-19.37v4.7h-39.48v-71.37h61.98z" {...r("hss-156")} />
+            <path id="hss-158" d="M345.91 292.91h9.96v20.5h-20.89v-20.5z" {...r("hss-158")} />
+            <path id="hss-159" d="M334.98 315.41h20.89v31.07h-11.11v-4.7h-9.78z" {...r("hss-159")} />
+            <path id="hss-160" d="M334.98 206.24h17.37v31.65h-17.37z" {...r("hss-160")} />
+            <path id="hss-161" d="M440.43 292.91h11.11v30.67h-11.11z" {...r("hss-161")} />
+            <path id="hss-163" d="M450.93 341.24h24.08s-.36 12.2-3.62 24.87h-20.46z" {...r("hss-163")} />
+            <path id="hss-164" d="M450.93 368.11v20.57h16.44s5.71-13.89 3.69-20.57z" {...r("hss-164")} />
+            <path id="hss-165" d="M357.87 292.91h80.56v36.17h2v-5.5h7.41v2h9.98v-2h-4.28v-13.46h24.42s.8 19.33-2.95 31.11H463.5v-2h-14.57v42.61h2v6.36h-2v2.47h18.03s.24 3.22-1.15 4.3l-2.11 5.96H357.87z" {...r("hss-165")} />
+            <g id="walls" fill="#000000" aria-hidden="true">
                 <path d="M686.57 424.39H551.91v-57.72h-13.3v-33.89h42.5v3.35h-2v-1.35h-38.5v29.89h13.3v57.72h130.66v-68.65h2zM684.57 253.57h2v91.76h-2zM595.76 266.5h-54.02v-1c0-33.27 15.37-71.79 15.53-72.18l.25-.63h129.04v53.04h-2v-51.04H558.87c-1.95 5.04-14.85 39.48-15.13 69.8h52.02v2Z" />
                 <path d="M622.59 423.39h-2v-66.5h-2.74v-12.35h2v10.35h2.74z" />
                 <path d="M604.17 354.89h14.67v2h-14.67zM619.85 337.72h-10.42v-5.11h2v3.11h6.42v-45.94h-6.42v3.89h-2v-5.89h10.42zM617.85 193.7h2v87.26h-2z" />
@@ -106,13 +119,13 @@ export const HSSLevel1 = React.memo(function HSSLevel1({ getColor, onHover, onCl
                 </g>
                 <path d="M460.54 153.25h2v12.07h-2zM428.5 167.3h40.07v13.06H428.5z" />
             </g>
-            <g id="Bathroom-Sign-1" fill="#000000">
+            <g id="Bathroom-Sign-1" fill="#000000" aria-hidden="true">
                 <g id="Bathroom-Sign-2">
                     <path id="b-sign4" d="m438.98 215.69-.93 4.43c-.45 1.17-2.13.92-2.19-.36.48-1.96.68-4.12 1.21-6.05.29-1.06.93-1.59 2.04-1.67 1.31-.1 3.48-.1 4.79 0 .97.07 1.72.55 1.99 1.51.24 1.91 1 4.01 1.21 5.9.16 1.5-1.45 1.98-2.14.74l-.98-4.65v14.35l-.18.39c0 .01-.22.18-.26.2-.72.46-1.54.16-1.75-.67l-.02-8.21c-.05-.41-.5-.52-.54 0-.22 2.54.22 5.43 0 7.97-.07.81-.62 1.22-1.43 1.1-.29-.04-.59-.33-.7-.59-.02-.05-.13-.38-.13-.4v-13.97Z" />
                     <path id="b-sign1" d="M442.95 210.88c-1.81 1.88-4.71-.88-2.86-2.77s4.62.95 2.86 2.77" />
                 </g>
             </g>
-            <g id="Bathroom-Sign-3" fill="#000000">
+            <g id="Bathroom-Sign-3" fill="#000000" aria-hidden="true">
                 <path id="b-sin5" d="m408.57 223.27 2.05-7.16-1.91 4.2c-.69 1.07-2.31.45-2.06-.82l3.06-6.9c.31-.44.68-.54 1.2-.58 1.22-.08 3.27-.1 4.47 0 .44.04.76.18 1.01.55.9 2.12 1.97 4.17 2.85 6.3.16.39.31.63.25 1.08-.11.84-1.19 1.17-1.83.65-.19-.16-.26-.34-.37-.55-.65-1.26-1.14-2.7-1.77-3.99l-.22-.39 1.99 7.59h-1.72v6.54s-.11.24-.14.29c-.55 1.01-2.11.6-2.12-.62 0-.1.06-.21.06-.32-.01-1.92 0-3.84 0-5.76-.04-.24-.42-.1-.59-.13v6.59s-.14.29-.16.32c-.32.48-1.12.63-1.59.3-.14-.1-.46-.51-.46-.67v-6.46l-.08-.08h-1.91Z" />
                 <path id="b-sign2" d="M412.98 207.51c2.59-.12 2.78 3.9.14 3.97-2.56.07-2.73-3.85-.14-3.97" />
             </g>

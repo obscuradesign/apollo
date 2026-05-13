@@ -3,20 +3,26 @@ import React from 'react';
 export const AFloor2 = React.memo(function AFloor2({ getColor, onHover, onClick }) {
     const r = (id) => ({
         fill: getColor(id),
+        role: "button",
+        tabIndex: 0,
+        "aria-label": id,
         onMouseEnter: () => onHover(id, true),
         onMouseLeave: () => onHover(id, false),
+        onFocus: (e) => onHover(id, true, e),
+        onBlur: () => onHover(id, false),
         onClick: () => onClick(id),
+        onKeyDown: (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onClick(id); } },
         style: { cursor: "pointer", transition: "opacity 0.2s" }
     });
 
     return (
-<svg xmlns="http://www.w3.org/2000/svg" id="Floor_2" data-name="Floor 2" viewBox="0 0 720 720">
+<svg xmlns="http://www.w3.org/2000/svg" id="Floor_2" data-name="Floor 2" viewBox="0 0 720 720" role="img" aria-label="Art Building Floor 2 map">
     <path id="hallway" d="M531.26 160.93v12.55l-39.87 2.91v235.06l-44.94-14.04-10.99 10.23 6.28 27.46 9.37-2.17-4.88-21.05 4.97-.4 40.19 9.02v72.65h36.46v-18.19l56.8-3V191.85l-26.02-3v-27.92z" fill="#e5e5e5" />
     <path id="a-214" d="M584.65 471.96h-70.56V320h24.75v-19.76h45.81z" {...r("a-214")} />
     <path id="a-216" d="M514.09 300.24h21.75V317h-21.75z" {...r("a-216")} />
     <path id="a-218" d="M514.09 267.86h36.42v29.38h-36.42z" {...r("a-218")} />
     <path id="a-220" d="M514.09 191.85h70.56v105.39h-31.14v-32.38h-39.42z" {...r("a-220")} />
-    <g id="walls">
+    <g id="walls" aria-hidden="true">
         <path d="M529.35 473.46h36.13v21.2h-36.13zM561.63 190.35h-3v-29.42h-46.04v-3h49.04zM515.26 174.43h2v15.46h-2zM519.26 174.43h2v15.46h-2zM523.26 174.43h2v15.46h-2zM527.26 174.43h2v15.46h-2zM531.26 175.43h2v15.46h-2z" />
         <path d="M535.26 159.43h2v15.46h-2zM539.26 159.43h2v30.91h-2zM543.26 159.43h2v30.91h-2zM535.26 175.74h2v13.43h-2z" />
         <g>

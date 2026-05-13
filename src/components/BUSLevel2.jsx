@@ -4,6 +4,17 @@ export const BUSLevel2 = React.memo(function BUSLevel2({ getColor, onHover, onCl
 
     const r = (id) => ({
         fill: getColor(id),
+        role: "button", tabIndex: 0, "aria-label": id,
+        onMouseEnter: () => onHover(id, true),
+        onMouseLeave: () => onHover(id, false),
+        onFocus: (e) => onHover(id, true, e),
+        onBlur: () => onHover(id, false),
+        onClick: () => onClick(id),
+        onKeyDown: (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onClick(id); } },
+        style: { cursor: "pointer", transition: "opacity 0.2s" }
+    });
+    const d = (id) => ({
+        fill: getColor(id),
         onMouseEnter: () => onHover(id, true),
         onMouseLeave: () => onHover(id, false),
         onClick: () => onClick(id),
@@ -11,8 +22,8 @@ export const BUSLevel2 = React.memo(function BUSLevel2({ getColor, onHover, onCl
     });
 
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" id="Floor_2" data-name="Floor 2" viewBox="70 68 656 443">
-            <g id="hallways" fill="#e5e5e5">
+        <svg xmlns="http://www.w3.org/2000/svg" id="Floor_2" data-name="Floor 2" viewBox="70 68 656 443" role="img" aria-label="Business Building Floor 2 map">
+            <g id="hallways" fill="#e5e5e5" aria-hidden="true">
                 <path d="M620.99 428.42H544.6v-13.56H405.56v-10.35h-2v-6.39h2v-64.44h-2v-5.47h2V269.9h-2v-6.2h2v-16.15l-.05-6.17h-3.5v-8.11h22.31l.04 12.28v39.37h54.61v21.68h-32.11v92.52h56V306.6h-23.89v-21.68h54.61v-18.97h11.11v13.01h25.65v-2h6.07v16.64h-6.07v-2h-25.65v2.91h2v6.7h-2v13.78h2v6.56h-2v14.57h2v6.3h-2v15.09h2v6.31h-2v16.78h2v6.56h-2v16.13h20.35v3.18h2v6.39h-2v4h55.95z" />
                 <path d="M170.4 428.42h73.85v-65.65h2v-6.91h-2v-54.13h2v-6.26h-2l2-62.2h79.89v28.42h39.28v-28.42h21.83v8.11H400l26.31-8.11h23.63v32.67h96.7l19.42-5.62v-9.94l-19.42-19.18v-17.35h-34.43v2H399.76v-5.81h86.77v-8.47h-99.2v-18.59h-1.52l-1.83 29.05-3.35 3.81v-2h-7.96v2s-7.99.05-7.92 0c15.11-10.12.38-20.52.38-20.52h18.68v-12.35l-1.7-2v-32.24h-55.98v65.11h-48.54v2h-45v-2h-7.24v2h-2.13v15.41h3.13v14.3h-2v6.46h2v43.43h-2v6.26h2v34.63h-2v6.65h2v63h-2v6.46h2v4.39l-55.96.04v11.53Z" />
             </g>
@@ -27,7 +38,7 @@ export const BUSLevel2 = React.memo(function BUSLevel2({ getColor, onHover, onCl
             <path id="bus-259" d="M246.25 354.51h88.78v60.35h-88.78z" {...r("bus-259")} />
             <path id="bus-253" d="M163.36 233.27h61v89.17h-61z" {...r("bus-253")} />
             <path id="bus-255" d="M246.25 294.12v58.39h14.91v2h6.26v-2h67.61v-58.39h-11.45v-2h-7.05v2z" {...r("bus-255")} />
-            <path id="mechanical-room" d="M369.89 197.34h13.93v12.7l-1.83 3.82h-12l3.24-8.26z" {...r("mechanical-room")} />
+            <path id="mechanical-room" d="M369.89 197.34h13.93v12.7l-1.83 3.82h-12l3.24-8.26z" {...d("mechanical-room")} />
             <path id="bus-261" d="M163.36 324.45h61v27.94h-61z" {...r("bus-261")} />
             <path id="bus-263" d="M163.36 354.51h61v60.35h-61z" {...r("bus-263")} />
 
@@ -58,10 +69,10 @@ export const BUSLevel2 = React.memo(function BUSLevel2({ getColor, onHover, onCl
             <path id="bus-200d" d="M546.69 314.99h18.3v19.13h-18.3z" {...r("bus-200d")} />
             <path id="bus-200e" d="M546.64 293.6h18.35v19.39h-18.35z" {...r("bus-200e")} />
 
-            <path id="mech-room" d="M367.42 250.03h17.83v13.67h-6.3l-11.53-2z" {...r("mech-room")} />
-            <path id="mech-room-2" d="M367.42 233.27h17.83v14.76h-17.83z" {...r("mech-room-2")} />
+            <path id="mech-room" d="M367.42 250.03h17.83v13.67h-6.3l-11.53-2z" {...d("mech-room")} />
+            <path id="mech-room-2" d="M367.42 233.27h17.83v14.76h-17.83z" {...d("mech-room-2")} />
 
-            <g id="Walls">
+            <g id="Walls" aria-hidden="true">
                 <path d="M630.64 416.86h-65.65v-4h2v2h61.65V233.21h-82v15.18h1.06v2h-3.06v-19.18h86z" />
                 <path d="M566.99 406.47h-2V291.6h5.3v2h-3.3z" />
                 <path d="M565.99 353.95h63.65v2h-63.65zM565.99 403.29h-21.35v-16.13h2v14.13h19.35zM565.99 380.6h-21.35v-16.78h2v14.78h19.35zM565.99 357.51h-21.35v-15.09h2v13.09h19.35zM546.64 294.51h-2v-2.91h21.35v2h-19.35zM565.99 336.12h-21.35v-14.57h2v12.57h19.35zM565.99 314.99h-21.35v-13.78h2v11.78h19.35zM629.64 293.6H576.6v-14.64h-.24v-2h2.24v14.64h51.04zM570.29 278.96h-4.22v-46.75h2v44.75h2.22z" />
@@ -213,23 +224,23 @@ export const BUSLevel2 = React.memo(function BUSLevel2({ getColor, onHover, onCl
                 </g>
                 <path d="M387.25 243.38h16.26v18.31h-16.26zM401.76 212.04h84.77v1.81h-84.77zM389.34 197.86h97.2v1.72h-97.2z" />
             </g>
-            <g id="Bathroom-Sign-1" fill="#000000">
+            <g id="Bathroom-Sign-1" fill="#000000" aria-hidden="true">
                 <g id="Bathroom-Sign-2">
                     <path id="b-sign4" d="m335.51 160.79-.93 4.43c-.45 1.17-2.13.92-2.19-.36.48-1.96.68-4.12 1.21-6.05.29-1.06.93-1.59 2.04-1.67 1.31-.1 3.48-.1 4.79 0 .97.07 1.72.55 1.99 1.51.24 1.91 1 4.01 1.21 5.9.16 1.5-1.45 1.98-2.14.74l-.98-4.65v14.35l-.18.39c0 .01-.22.18-.26.2-.72.46-1.54.16-1.75-.67l-.02-8.21c-.05-.41-.5-.52-.54 0-.22 2.54.22 5.43 0 7.97-.07.81-.62 1.22-1.43 1.1-.29-.04-.59-.33-.7-.59-.02-.05-.13-.38-.13-.4v-13.97Z" />
                     <path id="b-sign1" d="M339.47 155.98c-1.81 1.88-4.71-.88-2.86-2.77s4.62.95 2.86 2.77" />
                 </g>
             </g>
-            <g id="Bathroom-Sign-3" fill="#000000">
+            <g id="Bathroom-Sign-3" fill="#000000" aria-hidden="true">
                 <path id="b-sin5" d="m363.93 168.39 2.05-7.16-1.91 4.2c-.69 1.07-2.31.45-2.06-.82l3.06-6.9c.31-.44.68-.54 1.2-.58 1.22-.08 3.27-.1 4.47 0 .44.04.76.18 1.01.55.9 2.12 1.97 4.17 2.85 6.3.16.39.31.63.25 1.08-.11.84-1.19 1.17-1.83.65-.19-.16-.26-.34-.37-.55-.65-1.26-1.14-2.7-1.77-3.99l-.22-.39 1.99 7.59h-1.72v6.54s-.11.24-.14.29c-.55 1.01-2.11.6-2.12-.62 0-.1.06-.21.06-.32-.01-1.92 0-3.84 0-5.76-.04-.24-.42-.1-.59-.13v6.59s-.14.29-.16.32c-.32.48-1.12.63-1.59.3-.14-.1-.46-.51-.46-.67v-6.46l-.08-.08h-1.91Z" />
                 <path id="b-sign2" d="M368.34 152.62c2.59-.12 2.78 3.9.14 3.97-2.56.07-2.73-3.85-.14-3.97" />
             </g>
-            <g id="Bathroom-Sign-1-2" data-name="Bathroom-Sign-1" fill="#000000">
+            <g id="Bathroom-Sign-1-2" data-name="Bathroom-Sign-1" fill="#000000" aria-hidden="true">
                 <g id="Bathroom-Sign-2-2" data-name="Bathroom-Sign-2">
                     <path id="b-sign4-2" d="m339.53 250.36-.55 2.62a.67.67 0 0 1-1.3-.22c.28-1.16.4-2.44.72-3.58.17-.63.55-.94 1.21-.99.78-.06 2.06-.06 2.84 0 .57.04 1.02.32 1.18.89.14 1.13.59 2.37.71 3.49.09.89-.86 1.17-1.26.44l-.58-2.75v8.49s-.1.22-.11.23c0 0-.13.11-.15.12-.42.27-.91.09-1.03-.39v-4.86c-.04-.24-.31-.31-.33 0-.13 1.5.13 3.21 0 4.72-.04.48-.37.72-.84.65-.17-.03-.35-.2-.42-.35-.01-.03-.08-.23-.08-.24v-8.27Z" data-name="b-sign4" />
                     <path id="b-sign1-2" d="M341.87 247.51c-1.07 1.11-2.79-.52-1.69-1.64s2.73.56 1.69 1.64" data-name="b-sign1" />
                 </g>
             </g>
-            <g id="Bathroom-Sign-3-2" data-name="Bathroom-Sign-3" fill="#000000">
+            <g id="Bathroom-Sign-3-2" data-name="Bathroom-Sign-3" fill="#000000" aria-hidden="true">
                 <path id="b-sin5-2" d="m355.35 254.85 1.21-4.24-1.13 2.49c-.41.63-1.37.27-1.22-.49l1.81-4.08c.18-.26.4-.32.71-.34.72-.05 1.94-.06 2.64 0 .26.02.45.11.6.33.53 1.25 1.17 2.47 1.69 3.73.1.23.19.37.15.64-.06.5-.7.69-1.08.39-.11-.09-.15-.2-.22-.32-.39-.75-.67-1.6-1.05-2.36l-.13-.23 1.18 4.49h-1.02v3.87s-.06.14-.08.17c-.33.6-1.25.36-1.26-.36 0-.06.03-.12.03-.19v-3.41c-.03-.14-.25-.06-.35-.08v3.9s-.08.17-.1.19c-.19.28-.66.37-.94.18-.08-.06-.27-.3-.27-.4v-3.82s-.04-.05-.05-.05h-1.13Z" data-name="b-sin5" />
                 <path id="b-sign2-2" d="M357.95 245.53c1.53-.07 1.64 2.31.09 2.35-1.51.04-1.62-2.28-.09-2.35" data-name="b-sign2" />
             </g>

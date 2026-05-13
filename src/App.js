@@ -23,18 +23,33 @@ function App() {
 
   return (
     <div className={`App ${darkMode ? 'dark' : ''}`}>
-      <div style={{ display: "flex", justifyContent: "center", margin: "20px 0" }}>
-        <ApolloLogo style={{ height: "120px", width: "auto", maxWidth: "100%", objectFit: "contain" }} />
-      </div>
+      {/* Site header — landmark for screen readers */}
+      <header role="banner">
+        {/* Visually-hidden h1 for screen readers (WCAG 2.4.6).
+            The ApolloLogo SVG serves as the visible heading. */}
+        <h1 className="visually-hidden">Apollo: Santa Monica College Real-Time Map</h1>
+        <div style={{ display: "flex", justifyContent: "center", margin: "20px 0" }}>
+          <ApolloLogo style={{ height: "120px", width: "auto", maxWidth: "100%", objectFit: "contain" }} />
+        </div>
+      </header>
 
-      {/* This renders your entire map project */}
-      <BuildingMap darkMode={darkMode} setDarkMode={setDarkMode} onOpenAbout={() => setIsAboutOpen(true)} />
+      {/* Main content — target for the skip-to-map link in index.html */}
+      <main id="map-content" role="main">
+        <BuildingMap
+          darkMode={darkMode}
+          setDarkMode={setDarkMode}
+          onOpenAbout={() => setIsAboutOpen(true)}
+        />
+      </main>
 
       {/* Vercel Analytics integration */}
       <Analytics />
 
       {/* About Modal */}
       {isAboutOpen && <AboutModal onClose={() => setIsAboutOpen(false)} />}
+
+      {/* Accessibility Menu — wired up in Phase 2 */}
+      {/* {isAccessibilityOpen && <AccessibilityMenu onClose={() => setIsAccessibilityOpen(false)} />} */}
 
     </div>
   );

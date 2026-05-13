@@ -4,19 +4,25 @@ import React from 'react';
 export const Level2 = React.memo(function Level2({ getColor, onHover, onClick }) {
     return (
 
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 546.96 436.26">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 546.96 436.26" role="img" aria-label="MSB Floor 2 map">
             <g id="Math_Dept" data-name="Mathematics Department">
                 <path
                     id="room-2-math-offices"
                     d="m133.49 283.1-3.41 51.25 60.72 26.72s16.98-40.76 63.39-61.79l-.43-3.32-10.43-29.18-17.82 5.82-39.29 14.06-13.4.14-11.32-2.01-28.02-1.69"
                     fill={getColor("room-2-math-offices")}
+                    role="button"
+                    tabIndex={0}
+                    aria-label="Mathematics Department"
                     onMouseEnter={() => onHover("room-2-math-offices", true)}
                     onMouseLeave={() => onHover("room-2-math-offices", false)}
+                    onFocus={(e) => onHover("room-2-math-offices", true, e)}
+                    onBlur={() => onHover("room-2-math-offices", false)}
                     onClick={() => onClick("room-2-math-offices")}
+                    onKeyDown={(e) => { if (e.key==="Enter"||e.key===" "){e.preventDefault();onClick("room-2-math-offices");} }}
                     style={{ cursor: "pointer", transition: "opacity 0.2s" }}
                 />
             </g>
-            <g id="Hallways" fill="#e5e5e5">
+            <g id="Hallways" fill="#e5e5e5" aria-hidden="true">
                 <path d="m111.68 98.8-6.65-5.46-27.9 17.81" />
                 <path d="m77.2 111.22 31.93 49.18 14.16 30.81 8.91 34.39 3.26 32.53-1.23 24.24 29.44 2.54 1.55-.94v1.64l7.25.29 13.14.33 41.22-14.19 6.36-2.12 10.65-3.76 10.42 33.2 19.43-10.41-2.59-32.01 30.61-10.57h15.3v-7.79l-14.14-.02 18.2 4.77 73.54-2.93 48.09-3.98-.64-31.19-73.56-.5-51.13-1.45-28.51-5.42-27.66-9.63-21.39-9.85-23.21-14.81-14.15-10.41-18.85-18.87-12.44-14.31-12.31-19.58-19.19-29.08L112 89.7l-6.26 4.33 3.13 4.85" />
                 <path id="white-space" fill="#ffffff" d="m166.73 186.73-.26 6.33 12.15 47.25-.73 26.6s-3.28 3.02 2.94 7.1 2.3 1.86 2.3 1.86l5.8.89 41.41-14.23.82-3.31-1.41-1.79h-2.13l-35.26 2.9-.79-23.56 49.38 4.65 3.77-1.51 5.85-8.4-1.13-2.71-20.4-6.81-16.23-1.11-18.2-13.76 4.03-4.51-22.22-17.39s-5.67-2.75-9.68 1.52" />
@@ -31,18 +37,30 @@ export const Level2 = React.memo(function Level2({ getColor, onHover, onClick })
                     id="room-2-math-offices-a"
                     d="m148.8 303.37-1.15 14.45-.31 3.25-.39 2.07 19.61 9.47.1-8.3.24-2.96 1.17-11.24.25-2.8.66-5.88-19.91-1.01"
                     fill={getColor("room-2-math-offices-a")}
+                    role="button"
+                    tabIndex={0}
+                    aria-label="Mathematics Department"
                     onMouseEnter={() => onHover("room-2-math-offices-a", true)}
                     onMouseLeave={() => onHover("room-2-math-offices-a", false)}
+                    onFocus={(e) => onHover("room-2-math-offices-a", true, e)}
+                    onBlur={() => onHover("room-2-math-offices-a", false)}
                     onClick={() => onClick("room-2-math-offices-a")}
+                    onKeyDown={(e) => { if (e.key==="Enter"||e.key===" "){e.preventDefault();onClick("room-2-math-offices-a");} }}
                     style={{ cursor: "pointer", transition: "opacity 0.2s" }}
                 />
                 <path
                     id="room-2-math-offices-b"
                     d="m173.88 301.96-.56 19.79-.35 3.02-.9 10.33 8.45 2.85 2.83 1.02 1.57.73 10.2-13.79 2.25-2.58s7.33-8.6 11.73-11.78 10.52-8.88 10.52-8.88l2.94-1.72 2.76-2.03 8.98-7.08-.73-3.64-2.81-.95-22.94 8.6-3.06 1.11-12.22 4.25-2.79 1.16-4.96.31-10.9-.71"
                     fill={getColor("room-2-math-offices-b")}
+                    role="button"
+                    tabIndex={0}
+                    aria-label="Mathematics Department"
                     onMouseEnter={() => onHover("room-2-math-offices-b", true)}
                     onMouseLeave={() => onHover("room-2-math-offices-b", false)}
+                    onFocus={(e) => onHover("room-2-math-offices-b", true, e)}
+                    onBlur={() => onHover("room-2-math-offices-b", false)}
                     onClick={() => onClick("room-2-math-offices-b")}
+                    onKeyDown={(e) => { if (e.key==="Enter"||e.key===" "){e.preventDefault();onClick("room-2-math-offices-b");} }}
                     style={{ cursor: "pointer", transition: "opacity 0.2s" }}
                 />
             </g>
@@ -52,125 +70,230 @@ export const Level2 = React.memo(function Level2({ getColor, onHover, onClick })
                         id="room-201"
                         fill={getColor("room-201")}
                         d="M164.67 280.67v3.23l-.5 1.07-29.9-2.15 1.21-16.47-.97-17.42 1.21-1.07 25.3-1.14 6.1 1.87-.01 2.37-.02 3.15v1h2l-2.07 24.56h-2.35z"
+                        role="button"
+                        tabIndex={0}
+                        aria-label="MSB 201"
                         onMouseEnter={() => onHover("room-201", true)}
                         onMouseLeave={() => onHover("room-201", false)}
+                        onFocus={(e) => onHover("room-201", true, e)}
+                        onBlur={() => onHover("room-201", false)}
+                        onClick={() => onClick("room-201")}
+                        onKeyDown={(e) => { if (e.key==="Enter"||e.key===" "){e.preventDefault();onClick("room-201");} }}
                         style={{ cursor: "pointer", transition: "opacity 0.2s" }}
                     />
                     <path
                         id="room-202"
                         fill={getColor("room-202")}
                         d="m165.65 234.36.64 2.97s.98 2.64.86 2.93-32.26 8.02-32.26 8.02l-5.49-36.07 27.98-7.28 1.28.89.72 3.09 2.36.46 5.66 23.5-2 .52zl.64 2.97"
+                        role="button"
+                        tabIndex={0}
+                        aria-label="MSB 202"
                         onMouseEnter={() => onHover("room-202", true)}
                         onMouseLeave={() => onHover("room-202", false)}
+                        onFocus={(e) => onHover("room-202", true, e)}
+                        onBlur={() => onHover("room-202", false)}
+                        onClick={() => onClick("room-202")}
+                        onKeyDown={(e) => { if (e.key==="Enter"||e.key===" "){e.preventDefault();onClick("room-202");} }}
                         style={{ cursor: "pointer", transition: "opacity 0.2s" }}
                     />
                     <path
                         id="room-203"
                         fill={getColor("room-203")}
                         d="m129.17 211.23-11.46-33.93 31.02-7.65.27.96.43-.11.9 3.21 2.36.46 5.67 23.5-2.01.52.26.97.74 3.51-.23 1.29z"
+                        role="button"
+                        tabIndex={0}
+                        aria-label="MSB 203"
                         onMouseEnter={() => onHover("room-203", true)}
                         onMouseLeave={() => onHover("room-203", false)}
+                        onFocus={(e) => onHover("room-203", true, e)}
+                        onBlur={() => onHover("room-203", false)}
+                        onClick={() => onClick("room-203")}
+                        onKeyDown={(e) => { if (e.key==="Enter"||e.key===" "){e.preventDefault();onClick("room-203");} }}
                         style={{ cursor: "pointer", transition: "opacity 0.2s" }}
                     />
                     <path
                         id="room-205"
                         fill={getColor("room-205")}
                         d="m124.46 128.42-1.68-2.42-1.6-1.57-24.26 17.21 18.21 30.11 26.64-16.87-.78-1.18-1.47-2.47 2.53-1.71-14.93-22.84z"
+                        role="button"
+                        tabIndex={0}
+                        aria-label="MSB 205"
                         onMouseEnter={() => onHover("room-205", true)}
                         onMouseLeave={() => onHover("room-205", false)}
+                        onFocus={(e) => onHover("room-205", true, e)}
+                        onBlur={() => onHover("room-205", false)}
+                        onClick={() => onClick("room-205")}
+                        onKeyDown={(e) => { if (e.key==="Enter"||e.key===" "){e.preventDefault();onClick("room-205");} }}
                         style={{ cursor: "pointer", transition: "opacity 0.2s" }}
                     />
                     <path
                         id="room-206"
                         fill={getColor("room-206")}
                         d="m103.41 95.39 3.27 4.78 2.04-.19 12.81 19.63-1.8 1.23 1.47 2.16-.02 1.43-24.72 16.31-19.33-29.59 25.83-16.48z"
+                        role="button"
+                        tabIndex={0}
+                        aria-label="MSB 206"
                         onMouseEnter={() => onHover("room-206", true)}
                         onMouseLeave={() => onHover("room-206", false)}
+                        onFocus={(e) => onHover("room-206", true, e)}
+                        onBlur={() => onHover("room-206", false)}
+                        onClick={() => onClick("room-206")}
+                        onKeyDown={(e) => { if (e.key==="Enter"||e.key===" "){e.preventDefault();onClick("room-206");} }}
                         style={{ cursor: "pointer", transition: "opacity 0.2s" }}
                     />
                     <path
                         id="room-207"
                         fill={getColor("room-207")}
                         d="m117.83 92.78-3.29-4.86 24.64-16.44s18.84 27.58 18.84 28.77l-23.96 15.81-.63-1-.65.41-1.49-2.29-.54-.84-1.74 1.11-12.37-18.65 1.74-1.19-.56-.83"
+                        role="button"
+                        tabIndex={0}
+                        aria-label="MSB 207"
                         onMouseEnter={() => onHover("room-207", true)}
                         onMouseLeave={() => onHover("room-207", false)}
+                        onFocus={(e) => onHover("room-207", true, e)}
+                        onBlur={() => onHover("room-207", false)}
+                        onClick={() => onClick("room-207")}
+                        onKeyDown={(e) => { if (e.key==="Enter"||e.key===" "){e.preventDefault();onClick("room-207");} }}
                         style={{ cursor: "pointer", transition: "opacity 0.2s" }}
                     />
                     <path
                         id="room-208"
                         fill={getColor("room-208")}
                         d="m158.57 101.09 3.04 3.45 11.54 17.81 6.12 7.71-25.78 16.8-.69-.83-1.62-2.25-.55-.84-1.83 1.2-13.84-21.18 1.71-1.16-.56-.83-1.72-2.52.85-.53-.65-1.01z"
+                        role="button"
+                        tabIndex={0}
+                        aria-label="MSB 208"
                         onMouseEnter={() => onHover("room-208", true)}
                         onMouseLeave={() => onHover("room-208", false)}
+                        onFocus={(e) => onHover("room-208", true, e)}
+                        onBlur={() => onHover("room-208", false)}
+                        onClick={() => onClick("room-208")}
+                        onKeyDown={(e) => { if (e.key==="Enter"||e.key===" "){e.preventDefault();onClick("room-208");} }}
                         style={{ cursor: "pointer", transition: "opacity 0.2s" }}
                     />
                     <path
                         id="room-209"
                         fill={getColor("room-209")}
                         d="m190.11 180.76 1.17.95 18.24-22.78-26.48-24.6-20.36 25.32 1.78.79 2.05 1.84.79.61-1.27 1.63 19.8 15.9 1.37-1.7.78.63z"
+                        role="button"
+                        tabIndex={0}
+                        aria-label="MSB 209"
                         onMouseEnter={() => onHover("room-209", true)}
                         onMouseLeave={() => onHover("room-209", false)}
+                        onFocus={(e) => onHover("room-209", true, e)}
+                        onBlur={() => onHover("room-209", false)}
+                        onClick={() => onClick("room-209")}
+                        onKeyDown={(e) => { if (e.key==="Enter"||e.key===" "){e.preventDefault();onClick("room-209");} }}
                         style={{ cursor: "pointer", transition: "opacity 0.2s" }}
                     />
                     <path
                         id="room-210"
                         fill={getColor("room-210")}
                         d="m210.07 159.2-18.09 23.08 1.1.9 2.25 1.98.79.62-1.27 1.63 19.8 15.9 1.38-1.7.78.63 2.37 1.61 1.21.52 20.31-25.35z"
+                        role="button"
+                        tabIndex={0}
+                        aria-label="MSB 210"
                         onMouseEnter={() => onHover("room-210", true)}
                         onMouseLeave={() => onHover("room-210", false)}
+                        onFocus={(e) => onHover("room-210", true, e)}
+                        onBlur={() => onHover("room-210", false)}
+                        onClick={() => onClick("room-210")}
+                        onKeyDown={(e) => { if (e.key==="Enter"||e.key===" "){e.preventDefault();onClick("room-210");} }}
                         style={{ cursor: "pointer", transition: "opacity 0.2s" }}
                     />
                     <path
                         id="room-211"
                         fill={getColor("room-211")}
                         d="m241.66 179.67 16.6 7.37 16.91 6.77-9.64 27.96-1.48-.06-2.09-.66-.94-.32-.82 2.36-25.19-8.77.74-2.48-.96-.29-2.51-.88-1.17-.61z"
+                        role="button"
+                        tabIndex={0}
+                        aria-label="MSB 211"
                         onMouseEnter={() => onHover("room-211", true)}
                         onMouseLeave={() => onHover("room-211", false)}
+                        onFocus={(e) => onHover("room-211", true, e)}
+                        onBlur={() => onHover("room-211", false)}
+                        onClick={() => onClick("room-211")}
+                        onKeyDown={(e) => { if (e.key==="Enter"||e.key===" "){e.preventDefault();onClick("room-211");} }}
                         style={{ cursor: "pointer", transition: "opacity 0.2s" }}
                     />
                     <path
                         id="room-212"
                         fill={getColor("room-212")}
                         d="m270.34 223.95-2.7-.86.18-.52-1.34-.47 9.64-27.98 35.25 8.26-11.13 31.72-1.14-.43-2.42-.84-.92-.4-.97 2.22-24.24-8.39.73-1.97z"
+                        role="button"
+                        tabIndex={0}
+                        aria-label="MSB 212"
                         onMouseEnter={() => onHover("room-212", true)}
                         onMouseLeave={() => onHover("room-212", false)}
+                        onFocus={(e) => onHover("room-212", true, e)}
+                        onBlur={() => onHover("room-212", false)}
+                        onClick={() => onClick("room-212")}
+                        onKeyDown={(e) => { if (e.key==="Enter"||e.key===" "){e.preventDefault();onClick("room-212");} }}
                         style={{ cursor: "pointer", transition: "opacity 0.2s" }}
                     />
                     <path
                         id="room-214"
                         fill={getColor("room-214")}
                         d="M316.47 202.63c.39.07 40.62 3.54 51.86 1.83l-1 30.32h-50.36z"
+                        role="button"
+                        tabIndex={0}
+                        aria-label="MSB 214"
                         onMouseEnter={() => onHover("room-214", true)}
                         onMouseLeave={() => onHover("room-214", false)}
+                        onFocus={(e) => onHover("room-214", true, e)}
+                        onBlur={() => onHover("room-214", false)}
+                        onClick={() => onClick("room-214")}
+                        onKeyDown={(e) => { if (e.key==="Enter"||e.key===" "){e.preventDefault();onClick("room-214");} }}
                         style={{ cursor: "pointer", transition: "opacity 0.2s" }}
                     />
                     <path
                         id="room-216"
                         fill={getColor("room-216")}
                         d="M389.25 204.65h52.34v30.12h-51.84z"
+                        role="button"
+                        tabIndex={0}
+                        aria-label="MSB 216"
                         onMouseEnter={() => onHover("room-216", true)}
                         onMouseLeave={() => onHover("room-216", false)}
+                        onFocus={(e) => onHover("room-216", true, e)}
+                        onBlur={() => onHover("room-216", false)}
+                        onClick={() => onClick("room-216")}
+                        onKeyDown={(e) => { if (e.key==="Enter"||e.key===" "){e.preventDefault();onClick("room-216");} }}
                         style={{ cursor: "pointer", transition: "opacity 0.2s" }}
                     />
                     <path
                         id="room-217"
                         fill={getColor("room-217")}
                         d="M441.59 279.59h-52.34v-30.12l1.47.1h48.52l1.85-.1z"
+                        role="button"
+                        tabIndex={0}
+                        aria-label="MSB 217"
                         onMouseEnter={() => onHover("room-217", true)}
                         onMouseLeave={() => onHover("room-217", false)}
+                        onFocus={(e) => onHover("room-217", true, e)}
+                        onBlur={() => onHover("room-217", false)}
+                        onClick={() => onClick("room-217")}
+                        onKeyDown={(e) => { if (e.key==="Enter"||e.key===" "){e.preventDefault();onClick("room-217");} }}
                         style={{ cursor: "pointer", transition: "opacity 0.2s" }}
                     />
                     <path
                         id="room-219"
                         fill={getColor("room-219")}
                         d="M366.55 249.57h-49.58v31.19l16.23-1.27 34.22-.5v-29.52z"
+                        role="button"
+                        tabIndex={0}
+                        aria-label="MSB 219"
                         onMouseEnter={() => onHover("room-219", true)}
                         onMouseLeave={() => onHover("room-219", false)}
+                        onFocus={(e) => onHover("room-219", true, e)}
+                        onBlur={() => onHover("room-219", false)}
+                        onClick={() => onClick("room-219")}
+                        onKeyDown={(e) => { if (e.key==="Enter"||e.key===" "){e.preventDefault();onClick("room-219");} }}
                         style={{ cursor: "pointer", transition: "opacity 0.2s" }}
                     />
                 </g>
             </g>
-            <g id="New_Background" data-name="New Background">
+            <g id="New_Background" data-name="New Background" aria-hidden="true">
                 <path d="m190.94 362.09-.45-.2-61.37-27.01.03-.36 4.43-51.52c.09-.69 8.42-67.19-27.58-125.83l-30.27-46.32 27.52-17.56.46.72 1.93-1.23.54.84-2.77 1.77-.46-.72-25.83 16.48 29.72 45.49c36.2 58.96 27.82 125.8 27.73 126.47l-4.4 51.14 60.27 26.53c19.96-42.84 59.58-62.8 89.35-72 32.33-9.99 60.36-9.78 60.64-9.79h114.54v-73.84h-2.34v-1h3.34v75.84H340.43c-.28 0-28.18-.2-60.37 9.75-29.67 9.17-69.19 29.09-88.92 71.9l-.21.45Z" />
                 <path d="M443.54 205.15h-94.89c-69.28 0-116.67-27.37-144.22-50.33-29.86-24.88-43.52-50.11-43.65-50.37L138.89 71.1l.84-.55 21.91 33.39c.16.29 13.75 25.38 43.47 50.14 27.42 22.84 74.59 50.07 143.55 50.07h94.89v1Z" />
                 <path d="m111.67 89.83-.56-.83 28.38-18.9.51.87zM119.73 120.84l-.57-.83 1.75-1.19-12.37-18.65-1.74 1.11-.54-.84 2.57-1.64 13.46 20.29zM139.52 151.23l-.56-.83 1.71-1.16-13.84-21.18-1.83 1.2-.54-.84 2.66-1.74 14.93 22.84zM148.51 145.52l-14.93-22.84 2.53-1.71.56.83-1.71 1.16 13.84 21.18 1.83-1.2.55.84zM128.73 114.82l-13.46-20.29 2.56-1.75.56.83-1.74 1.19 12.37 18.65 1.73-1.11.54.84zM165.17 285.54l-31.09-2.25.07-.99 30.02 2.16v-.56h1zM167.94 280.67h-3.27v-1h2.35l2.07-24.56h-2v-1h3.08z" />

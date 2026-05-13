@@ -7,17 +7,26 @@ export const DrescherLevel2 = React.memo(function DrescherLevel2({ getColor, onH
     // Helper to generate dynamic props: fill color + mouse events
     const r = (id) => ({
         fill: getColor(id),
+        role: "button",
+        tabIndex: 0,
+        "aria-label": id,
         onMouseEnter: () => onHover(id, true),
         onMouseLeave: () => onHover(id, false),
+        onFocus: (e) => onHover(id, true, e),
+        onBlur: () => onHover(id, false),
         onClick: () => onClick(id),
+        onKeyDown: (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onClick(id); } },
         style: { cursor: "pointer", transition: "opacity 0.2s" }
     });
+
+    // Non-navigable areas: hoverable but not in tab order
+
 
     // Shared wall stroke style for DRY-ness
     const wallStyle = { stroke: "#000", strokeMiterlimit: 10, strokeWidth: ".5px" };
 
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_2" data-name="Layer 2" viewBox="0 0 666.5 363.3">
+        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_2" data-name="Layer 2" viewBox="0 0 666.5 363.3" role="img" aria-label="Drescher Hall Floor 2 map">
             <path id="drschr-201" d="M366.6 109.79h-5.79v51.34h52.8v-54.61h-14.14v5.85h-22.7v-2.58z" {...r("drschr-201")} />
             <path id="drschr-202" d="M356.87 92.79h-22.63v2.38h-19.29v4.77h-7.41v61.19h51.7V92.79z" {...r("drschr-202")} />
             <path id="drschr-203" d="M256.42 89.06h5.89v10.88h45.23v6.2h-1.58v54.99h-51.63V89.06z" {...r("drschr-203")} shapeRendering="crispEdges" />
@@ -48,7 +57,7 @@ export const DrescherLevel2 = React.memo(function DrescherLevel2({ getColor, onH
             <path id="drschr-222" d="M565.6 114.94h-45.37v46.5h52.11v-46.5h-6.74" {...r("drschr-222")} />
             <path id="drschr-223" d="m460.43 132.5 5.26-.1 3.21-9.95-6.18-5.16 3.59-7.47 7.03-3.88 5.14-4.48 7.32-.51 6.46-2.2 1.4 9.49 6.29 2.5 4.27-.02 2.25-4.72 1.09-2.62 7.68 2.25 3.49 6.43v49.38h-51.47L465.68 146h-8.04v-13.92z" {...r("drschr-223")} />
 
-            <g id="Walls">
+            <g id="Walls" aria-hidden="true">
                 <path d="M19.89 121.48C.62 121.48 0 104.65 0 104.48V55.6h38.07V0h590.25v94.6H590.9v-2.43h1.58v.86h34.27V1.57H39.65v55.6H1.58v47.28c.02.61.6 15.44 18.32 15.44s18.16-14.84 18.18-15.47V71.17h1.57v33.28c0 .2-.86 17.02-19.76 17.02Z" style={wallStyle} />
                 <path d="M19.04 74.4h1.58v27.53h-1.58z" style={wallStyle} />
                 <path d="M38.86 52.25h33.28v1.57H38.86zM94.6 57.62H78.03v-3.8h-.96v-1.57h2.54v3.8h13.42V.79h1.57zM628.32 114.94h-48.04v-1.57h46.47v-4.73h38.17V51.87h1.58v58.35h-38.18z" style={wallStyle} />
@@ -83,23 +92,23 @@ export const DrescherLevel2 = React.memo(function DrescherLevel2({ getColor, onH
                 <path d="M628.37 89.61h36.5v.79h-36.5zM628.37 88.17h36.5v.79h-36.5zM628.37 86.4h36.5v.79h-36.5zM628.37 84.96h36.5v.79h-36.5zM628.37 83.36h36.5v.79h-36.5zM628.37 81.92h36.5v.79h-36.5zM628.37 80.15h36.5v.79h-36.5zM628.37 78.71h36.5v.79h-36.5zM628.38 76.73h36.5v.79h-36.5zM628.38 75.29h36.5v.79h-36.5zM628.37 73.52h36.5v.79h-36.5zM628.38 72.08h36.5v.79h-36.5zM628.37 70.47h36.5v.79h-36.5zM628.38 69.03h36.5v.79h-36.5zM628.37 67.26h36.5v.79h-36.5zM628.37 65.82h36.5v.79h-36.5z" style={wallStyle} />
                 <path d="M655.05 61.91h1.58v30.35h-1.58zM636.45 62.86h1.58v27.45h-1.58zM454.63 75.63h1.21l1.08 14.49h-3.34l-.2-3.91zM436.45 162.23h30.03v38.69s-2.09 10.52-11.54 13.12-16.98-4.58-16.98-4.58l-2.42-9.32h17.31v-17.87h-16.54l.14-20.03Z" style={wallStyle} />
             </g>
-            <g id="Bathroom-Sign-2">
+            <g id="Bathroom-Sign-2" aria-hidden="true">
                 <g id="Bathroom-Sign-2-2" data-name="Bathroom-Sign-2">
                     <path id="b-sign4" d="m316.95 24.76-.83 3.95c-.41 1.05-1.9.82-1.96-.33.42-1.75.61-3.68 1.08-5.41.26-.95.83-1.42 1.83-1.49 1.17-.09 3.11-.09 4.28 0 .87.07 1.53.49 1.78 1.34.22 1.71.9 3.58 1.08 5.27.14 1.34-1.3 1.77-1.91.66l-.88-4.15v12.81l-.16.35c0 .01-.2.16-.23.18-.64.41-1.37.14-1.56-.6l-.02-7.33c-.04-.37-.44-.47-.48 0-.19 2.27.2 4.85 0 7.12-.06.72-.55 1.09-1.27.98-.25-.04-.53-.3-.63-.53-.02-.04-.12-.34-.12-.36V24.75Z" />
                     <path id="b-sign1" d="M320.49 20.47c-1.62 1.68-4.21-.78-2.55-2.48s4.13.84 2.55 2.48" />
                 </g>
             </g>
-            <g id="Bathroom-Sign-4">
+            <g id="Bathroom-Sign-4" aria-hidden="true">
                 <path id="b-sin5" d="m343.55 31.52 1.83-6.39-1.7 3.75c-.62.95-2.06.4-1.84-.74l2.74-6.16c.28-.39.61-.48 1.07-.51 1.09-.07 2.92-.09 3.99 0 .39.03.68.16.9.49.8 1.89 1.76 3.73 2.55 5.62.14.35.28.56.23.97-.1.75-1.06 1.04-1.63.58-.17-.14-.23-.3-.33-.49-.58-1.13-1.02-2.41-1.58-3.56l-.2-.35 1.78 6.78h-1.54v5.84s-.1.21-.12.26c-.5.9-1.89.54-1.9-.55 0-.09.05-.18.05-.29-.01-1.72 0-3.43 0-5.15-.04-.21-.37-.09-.53-.12v5.89l-.14.29c-.29.43-1 .56-1.42.26-.13-.09-.41-.46-.41-.6v-5.77l-.07-.07h-1.71Z" />
                 <path id="b-sign2" d="M347.48 17.45c2.31-.11 2.48 3.48.13 3.55-2.28.07-2.44-3.44-.13-3.55" />
             </g>
-            <g id="Bathroom-Sign-1">
+            <g id="Bathroom-Sign-1" aria-hidden="true">
                 <g id="Bathroom-Sign-2-3" data-name="Bathroom-Sign-2">
                     <path id="b-sign4-2" d="m134.44 88.1-.58 2.77c-.28.73-1.33.57-1.37-.23.3-1.23.42-2.57.76-3.78.18-.66.58-.99 1.28-1.04.82-.06 2.17-.06 3 0 .61.05 1.07.34 1.25.94.15 1.2.63 2.51.75 3.69.1.94-.91 1.24-1.34.46l-.61-2.9v8.97s-.1.23-.11.24c0 0-.14.11-.16.13-.45.29-.96.1-1.09-.42V91.8c-.04-.26-.33-.33-.35 0-.14 1.59.14 3.39 0 4.98-.04.51-.39.77-.89.69-.18-.03-.37-.21-.44-.37-.01-.03-.08-.24-.08-.25v-8.73Z" data-name="b-sign4" />
                     <path id="b-sign1-2" d="M136.92 85.09c-1.13 1.17-2.94-.55-1.78-1.73s2.89.59 1.78 1.73" data-name="b-sign1" />
                 </g>
             </g>
-            <g id="Bathroom-Sign-3">
+            <g id="Bathroom-Sign-3" aria-hidden="true">
                 <path id="b-sin5-2" d="m112.76 92.88 1.28-4.47-1.19 2.63c-.43.67-1.45.28-1.29-.52l1.91-4.31c.2-.28.43-.34.75-.36.76-.05 2.04-.06 2.79 0 .27.02.48.11.63.35.56 1.32 1.23 2.61 1.78 3.94.1.24.2.39.16.68-.07.52-.74.73-1.14.41-.12-.1-.16-.21-.23-.34-.41-.79-.71-1.69-1.11-2.49l-.14-.25 1.24 4.74h-1.08v4.09s-.07.15-.09.18c-.35.63-1.32.38-1.33-.39 0-.06.04-.13.03-.2v-3.6c-.03-.15-.26-.06-.37-.08v4.12s-.08.18-.1.2c-.2.3-.7.39-.99.18-.09-.06-.29-.32-.29-.42v-4.04l-.05-.05h-1.19Z" data-name="b-sin5" />
                 <path id="b-sign2-2" d="M115.51 83.03c1.62-.08 1.74 2.44.09 2.48-1.6.05-1.71-2.41-.09-2.48" data-name="b-sign2" />
             </g>

@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { useFocusTrap } from "../hooks/useFocusTrap";
 import { motion } from "framer-motion";
 import { ROOM_SCHEDULES as STATIC_SCHEDULES } from "../data/roomSchedule.js";
 import LIVE_SCHEDULES from "../data/roomSchedule_LIVE.json";
@@ -9,6 +10,8 @@ import SI_SCHEDULES from "../data/siSchedule.json";
 const ROOM_SCHEDULES = { ...STATIC_SCHEDULES, ...LIVE_SCHEDULES };
 
 export const SearchModal = ({ onClose, onNavigate, starredItems, onToggleStar }) => {
+    const modalRef = useRef(null);
+    useFocusTrap(modalRef, onClose);
     const [query, setQuery] = useState("");
     const [debouncedQuery, setDebouncedQuery] = useState("");
     const [results, setResults] = useState([]);
@@ -158,6 +161,10 @@ export const SearchModal = ({ onClose, onNavigate, starredItems, onToggleStar })
             onClick={onClose}
         >
             <motion.div
+                ref={modalRef}
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="search-modal-title"
                 initial={{ y: -20, scale: 0.95 }}
                 animate={{ y: 0, scale: 1 }}
                 exit={{ y: -20, opacity: 0 }}
@@ -172,14 +179,15 @@ export const SearchModal = ({ onClose, onNavigate, starredItems, onToggleStar })
                     color: "var(--text-primary, white)"
                 }}
             >
+                <h2 id="search-modal-title" className="visually-hidden">Search Rooms</h2>
                 <div style={{ display: "flex", gap: "10px", alignItems: "center", marginBottom: "12px" }}>
-                    <span style={{ fontSize: "1.2rem" }}>🔍</span>
+                    <span aria-hidden="true" style={{ fontSize: "1.2rem" }}>🔍</span>
                     <input
-                        autoFocus
                         type="text"
                         placeholder="Search classes, rooms, professors..."
                         value={query}
                         onChange={e => setQuery(e.target.value.slice(0, 100))}
+                        aria-label="Search classes, rooms, professors"
                         style={{
                             flex: 1, padding: "10px", fontSize: "1rem",
                             borderRadius: "8px", border: "1px solid #4b5563",
@@ -188,14 +196,27 @@ export const SearchModal = ({ onClose, onNavigate, starredItems, onToggleStar })
                             outline: "none"
                         }}
                     />
-                    <button onClick={onClose} style={{ background: "none", border: "none", cursor: "pointer", fontSize: "1.2rem", color: "var(--text-secondary, #9ca3af)" }}>✕</button>
+                    <button onClick={onClose} aria-label="Close search dialog" style={{ background: "none", border: "none", cursor: "pointer", fontSize: "1.2rem", color: "var(--text-secondary, #9ca3af)" }}><span aria-hidden="true">✕</span></button>
                 </div>
 
-                <div style={{ maxHeight: "60vh", overflowY: "auto" }}>
+                <div
+                    role="status"
+                    aria-live="polite"
+                    aria-atomic="true"
+                >
                     {results.length === 0 && query && <div style={{ padding: "10px", color: "var(--text-secondary, #9ca3af)" }}>No results found.</div>}
+                    {results.length > 0 && query && <span className="visually-hidden">{results.length} result{results.length !== 1 ? "s" : ""} found.</span>}
+                </div>
+
+                <div
+                    role="list"
+                    aria-label="Search results list"
+                    style={{ maxHeight: "60vh", overflowY: "auto" }}
+                >
                     {results.map((r, i) => (
                         <div
                             key={i}
+                            role="listitem"
                             onClick={() => onNavigate(r.roomId)}
                             style={{
                                 padding: "12px",

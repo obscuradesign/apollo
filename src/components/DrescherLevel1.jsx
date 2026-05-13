@@ -5,6 +5,21 @@ import React from 'react';
 export const DrescherLevel1 = React.memo(function DrescherLevel1({ getColor, onHover, onClick }) {
     const r = (id) => ({
         fill: getColor(id),
+        role: "button",
+        tabIndex: 0,
+        "aria-label": id,
+        onMouseEnter: () => onHover(id, true),
+        onMouseLeave: () => onHover(id, false),
+        onFocus: (e) => onHover(id, true, e),
+        onBlur: () => onHover(id, false),
+        onClick: () => onClick(id),
+        onKeyDown: (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onClick(id); } },
+        style: { cursor: "pointer" }
+    });
+
+    // Non-navigable areas (custodial, service): hoverable but not in tab order
+    const d = (id) => ({
+        fill: getColor(id),
         onMouseEnter: () => onHover(id, true),
         onMouseLeave: () => onHover(id, false),
         onClick: () => onClick(id),
@@ -14,12 +29,12 @@ export const DrescherLevel1 = React.memo(function DrescherLevel1({ getColor, onH
     const wallStyle = { stroke: "#000", strokeMiterlimit: 10, strokeWidth: ".5px" };
 
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="-85 -55 850 590">
-            <g id="Hallways">
+        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="-85 -55 850 590" role="img" aria-label="Drescher Hall Floor 1 map">
+            <g id="Hallways" aria-hidden="true">
                 <path d="M41.51 192.51v-2.01h53.53v43.84H66.15v-33.39H41.51zM256.1 235.84h-6.95v41.06h-1.5v5.87h1.5v25.33h-23.08l-1.5 23.91v41.48l1.5 5.11h47.57l-5.44-52.46v-15.26l34.76-2.51v-48l-45.66-24.53zM421.59 288.54h30.46v18.85h-30.46zM461.5 308.89h14.41v16.37H461.5zM1.19 274.09h39.59v57H1.19zM383.01 379.36h60.29v41.15h-60.29zM638.14 271.35h40.21v55.86h-40.21z" style={{ fill: "#e5e5e5" }} />
             </g>
-            <path id="custodial-1" d="M41.51 1.75H96.8V93.9l.75 22.86h13.54v12.55h.62v20.38H96.1V189H41.51z" style={{ fill: "#3b3b3c" }} />
-            <path id="custodial-2" d="M367.2 202.19h52.89v105.2h-7.21v1.5h-6v-1.5H304.46v-48.52h-3.79v-23.03h66.27z" style={{ fill: "#3b3b3c" }} />
+            <path id="custodial-1" d="M41.51 1.75H96.8V93.9l.75 22.86h13.54v12.55h.62v20.38H96.1V189H41.51z" {...d("custodial-1")} />
+            <path id="custodial-2" d="M367.2 202.19h52.89v105.2h-7.21v1.5h-6v-1.5H304.46v-48.52h-3.79v-23.03h66.27z" {...d("custodial-2")} />
             <g id="photography-dept">
                 <path id="drschr-110" d="M96.61 308.1h52.34v70.5h-52.8v-27.42h-1.5v-5.77h1.5l-.13-16.1V308.1" {...r("drschr-110")} />
                 <path id="drschr-110b" d="M237.67 331.32h19.37v13.5h-3.55v1.5h-13.96v-1.5h-1.86v-13.5" {...r("drschr-110b")} />
@@ -66,7 +81,7 @@ export const DrescherLevel1 = React.memo(function DrescherLevel1({ getColor, onH
             <path id="drschr-128" d="M421.59 326.76h70.24v41.9h1.5v5.48h-1.5v4.46h-70.24z" {...r("drschr-128")} />
             <path id="drschr-122" d="M420.09 116.89v83.8h-25.08v1.5h-16.82v-1.5H367.2v-83.8z" {...r("drschr-122")} />
             <path id="drschr-103" d="M63.71 235.84v-1.5h.94v-31.89H41.51v31.89H53.4v1.5z" {...r("drschr-103")} />
-            <g id="walls">
+            <g id="walls" aria-hidden="true">
                 <g id="walls-2" data-name="walls">
                     <path d="M41.51 192.51h-1.5V.25H98.3v87.97h-1.5V1.75H41.51z" style={wallStyle} />
                     <path d="M97.6 190.5H40.76V189H96.1v-28.56h1.5zM97.6 153.57h-1.5v-36.81H40.76v-1.5H97.6z" style={wallStyle} />
@@ -142,21 +157,21 @@ export const DrescherLevel1 = React.memo(function DrescherLevel1({ getColor, onH
                 </g>
                 <path d="M41.51 322.65h6.55v1.5h-6.55z" style={wallStyle} />
             </g>
-            <g id="Bathroom-Sign-3">
+            <g id="Bathroom-Sign-3" aria-hidden="true">
                 <path id="b-sin5" d="m243.95 325.71.78-2.73-.73 1.6c-.26.41-.88.17-.79-.31l1.17-2.63c.12-.17.26-.21.46-.22.46-.03 1.25-.04 1.7 0 .17.01.29.07.38.21.34.81.75 1.59 1.09 2.4.06.15.12.24.1.41-.04.32-.45.45-.7.25-.07-.06-.1-.13-.14-.21-.25-.48-.43-1.03-.68-1.52l-.09-.15.76 2.89h-.66v2.49l-.05.11c-.21.39-.81.23-.81-.23 0-.04.02-.08.02-.12v-2.2c-.02-.09-.16-.04-.23-.05v2.51s-.05.11-.06.12c-.12.18-.43.24-.61.11-.05-.04-.17-.2-.17-.26v-2.46l-.03-.03h-.73Z" />
                 <path id="b-sign2" d="M245.63 319.7c.99-.05 1.06 1.48.05 1.51-.97.03-1.04-1.47-.05-1.51" />
             </g>
-            <g id="Bathroom-Sign-1">
+            <g id="Bathroom-Sign-1" aria-hidden="true">
                 <g id="Bathroom-Sign-2">
                     <path id="b-sign4" d="m290.25 293.81-.66 3.16c-.32.84-1.52.66-1.57-.26.34-1.4.49-2.94.87-4.32.21-.76.66-1.13 1.46-1.19.94-.07 2.48-.07 3.42 0 .69.05 1.23.39 1.42 1.08.17 1.37.72 2.87.86 4.22.11 1.07-1.04 1.41-1.53.53l-.7-3.32v10.25l-.13.28s-.16.13-.18.14c-.51.33-1.1.11-1.25-.48l-.02-5.87c-.03-.29-.35-.37-.39 0-.16 1.82.16 3.88 0 5.69-.05.58-.44.87-1.02.78-.2-.03-.42-.24-.5-.42-.02-.04-.1-.27-.1-.29v-9.98Z" />
                     <path id="b-sign1" d="M293.08 290.37c-1.29 1.34-3.37-.63-2.04-1.98s3.3.68 2.04 1.98" />
                 </g>
             </g>
-            <g id="Bathroom-Sign-3-2" data-name="Bathroom-Sign-3">
+            <g id="Bathroom-Sign-3-2" data-name="Bathroom-Sign-3" aria-hidden="true">
                 <path id="b-sin5-2" d="m466.77 318.29.97-3.41-.91 2c-.33.51-1.1.22-.98-.39l1.46-3.28c.15-.21.32-.26.57-.27.58-.04 1.56-.05 2.13 0 .21.02.36.09.48.26.43 1.01.94 1.99 1.36 3 .08.19.15.3.12.52-.05.4-.57.56-.87.31-.09-.07-.12-.16-.18-.26-.31-.6-.54-1.29-.85-1.9l-.11-.19.95 3.61h-.82v3.11s-.05.11-.07.14c-.26.48-1.01.29-1.01-.29 0-.05.03-.1.03-.15v-2.74c-.02-.11-.2-.05-.28-.06v3.14s-.06.14-.08.15c-.15.23-.53.3-.76.14-.07-.05-.22-.25-.22-.32v-3.08l-.04-.04h-.91Z" data-name="b-sin5" />
                 <path id="b-sign2-2" d="M468.87 310.78c1.23-.06 1.32 1.86.07 1.89-1.22.04-1.3-1.83-.07-1.89" data-name="b-sign2" />
             </g>
-            <g id="Bathroom-Sign-1-2" data-name="Bathroom-Sign-1">
+            <g id="Bathroom-Sign-1-2" data-name="Bathroom-Sign-1" aria-hidden="true">
                 <g id="Bathroom-Sign-2-2" data-name="Bathroom-Sign-2">
                     <path id="b-sign4-2" d="m436.55 295.83-.44 2.11a.535.535 0 0 1-1.04-.17c.23-.94.32-1.96.58-2.88.14-.51.44-.76.97-.8.63-.05 1.66-.05 2.28 0 .46.03.82.26.95.72.12.91.48 1.91.57 2.81.08.71-.69.94-1.02.35l-.47-2.21v6.83l-.08.18s-.11.09-.12.1c-.34.22-.73.08-.83-.32v-3.91c-.03-.2-.25-.25-.27 0-.1 1.21.11 2.59 0 3.8-.03.39-.3.58-.68.52-.14-.02-.28-.16-.34-.28-.01-.02-.06-.18-.06-.19v-6.65Z" data-name="b-sign4" />
                     <path id="b-sign1-2" d="M438.44 293.54c-.86.89-2.24-.42-1.36-1.32s2.2.45 1.36 1.32" data-name="b-sign1" />
@@ -172,7 +187,7 @@ export const DrescherLevel1 = React.memo(function DrescherLevel1({ getColor, onH
                 <path id="pv-177" d="M258.04 64.58h43.49v73.52h-43.49z" transform="rotate(90 279.78 101.34)" {...r("pv-177")} />
                 <path id="pv-178" d="M258.04 123.58h43.49v73.52h-43.49z" transform="rotate(90 279.78 160.34)" {...r("pv-178")} />
                 <path id="pv-179" d="M258.04 175.58h43.49v73.52h-43.49z" transform="rotate(90 279.78 212.34)" {...r("pv-179")} />
-                <g id="pv-walls">
+                <g id="pv-walls" aria-hidden="true">
                     <path d="M690.36 220.01H651.3v-2h37.06v-73.52h-43.49v73.52h.47v2h-2.47v-77.52h47.49zM593.87 220.01h39.05v-2h-37.05v-73.52h43.49v73.52h-.47v2h2.47v-77.52h-47.49zM544.87 220.01h39.05v-2h-37.05v-73.52h43.49v73.52h-.47v2h2.47v-77.52h-47.49zM614.54 125.09V86.03h-2v37.06h-73.52V79.6h73.52v.47h2V77.6h-77.52v47.49zM514.54 125.09V86.03h-2v37.06h-73.52V79.6h73.52v.47h2V77.6h-77.52v47.49zM416.54 125.09V86.03h-2v37.06h-73.52V79.6h73.52v.47h2V77.6h-77.52v47.49zM318.54 125.09V86.03h-2v37.06h-73.52V79.6h73.52v.47h2V77.6h-77.52v47.49zM318.54 184.09v-39.06h-2v37.06h-73.52V138.6h73.52v.47h2v-2.47h-77.52v47.49zM318.54 236.09v-39.06h-2v37.06h-73.52V190.6h73.52v.47h2v-2.47h-77.52v47.49z" />
                 </g>
             </g>

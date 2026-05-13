@@ -5,6 +5,17 @@ export const SSCLevel3 = React.memo(function SSCLevel3({ getColor, onHover, onCl
     // Helper to generate dynamic props: fill color + mouse events
     const r = (id) => ({
         fill: getColor(id),
+        role: "button", tabIndex: 0, "aria-label": id,
+        onMouseEnter: () => onHover(id, true),
+        onMouseLeave: () => onHover(id, false),
+        onFocus: (e) => onHover(id, true, e),
+        onBlur: () => onHover(id, false),
+        onClick: () => onClick(id),
+        onKeyDown: (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onClick(id); } },
+        style: { cursor: "pointer", transition: "opacity 0.2s" }
+    });
+    const d = (id) => ({
+        fill: getColor(id),
         onMouseEnter: () => onHover(id, true),
         onMouseLeave: () => onHover(id, false),
         onClick: () => onClick(id),
@@ -12,8 +23,8 @@ export const SSCLevel3 = React.memo(function SSCLevel3({ getColor, onHover, onCl
     });
 
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" id="floor_3" data-name="floor 3" viewBox="0 0 720 720">
-            <path id="hallway" d="M208.48 671.59h47.02l3-80.22 23.22-3v14.61l12.85 3h9.19v-35.09h-7.11v-29.67h37.05v13.95h8.08l6.85-3v-69l-3-2.93-36.59-3v-68.81l63.92-2.99 3-4.83h180.35l2.97 5.35v265.63h69.79V397.28h-69.79l-3-85.69 48.79-8.87 24-27.79V45.5H559.8l-3 229.43-13.04 3v30.66h-62.61V133.15l7.89-3v-14.22h-17.28V86.07h44.61V60.5h-61.44v71.41l.98 3v90.72l-.52 3.13v71.41l-70.63 3v4.44H179.85l-2.22 3v85.63H50.85v275.35h78.39v-62.81h76.24z" style={{ fill: "#d0d2d3" }} />
+        <svg xmlns="http://www.w3.org/2000/svg" id="floor_3" data-name="floor 3" viewBox="0 0 720 720" role="img" aria-label="Student Services Center Floor 3 map">
+            <path id="hallway" d="M208.48 671.59h47.02l3-80.22 23.22-3v14.61l12.85 3h9.19v-35.09h-7.11v-29.67h37.05v13.95h8.08l6.85-3v-69l-3-2.93-36.59-3v-68.81l63.92-2.99 3-4.83h180.35l2.97 5.35v265.63h69.79V397.28h-69.79l-3-85.69 48.79-8.87 24-27.79V45.5H559.8l-3 229.43-13.04 3v30.66h-62.61V133.15l7.89-3v-14.22h-17.28V86.07h44.61V60.5h-61.44v71.41l.98 3v90.72l-.52 3.13v71.41l-70.63 3v4.44H179.85l-2.22 3v85.63H50.85v275.35h78.39v-62.81h76.24z" style={{ fill: "#d0d2d3" }} aria-hidden="true" />
             <path id="ssc-301" d="M184.15 152.26h-6.78l-47.35 40.96v118.63h44.61l5.22-4.24h18.39l3-1.24v-8.41l-3-21.98-6-114.1-3-6.62z" {...r("ssc-301")} />
             <path id="ssc-302" d="M201.24 275.98h22.04v31.63h-22.04z" {...r("ssc-302")} />
             <path id="ssc-303" d="M223.28 272.98h-31.04v-35.74h31.04z" {...r("ssc-303")} />
@@ -46,7 +57,7 @@ export const SSCLevel3 = React.memo(function SSCLevel3({ getColor, onHover, onCl
             <path id="ssc-331" d="M226.28 275.98h21.26v31.63h-21.26z" {...r("ssc-331")} />
             <path id="ssc-336" d="M409.22 178.54h46.69v47.09l-3.52 3.13h-43.17z" {...r("ssc-336")} />
             <path id="ssc-337" d="m451.93 130.41 3.98 4.5v40.63h-46.69v-45.13z" {...r("ssc-337")} />
-            <path id="mech-room" d="M381.83 164.07h24.39v64.69h-17.74v-4.11h-6.65z" style={{ fill: "#58595b" }} />
+            <path id="mech-room" d="M381.83 164.07h24.39v64.69h-17.74v-4.11h-6.65z" {...d("mech-room")} />
             <path id="ssc-340" d="M540.76 308.59h-34.3v-22.96l.91-3V133.15h-8.54l-9.79-3v-14.22l6.39-3h8.61l15.33-16.43h8.28l29.15 3v37.57l-30.39 3v63.13h30.39v71.73h-16.04z" {...r("ssc-340")} />
             <path id="ssc-341" d="M481.15 285.63h25.3v22.96h-25.3z" {...r("ssc-341")} />
             <path id="ssc-342" d="M481.15 258.89h26.22v23.74h-26.22z" {...r("ssc-342")} />
@@ -71,8 +82,8 @@ export const SSCLevel3 = React.memo(function SSCLevel3({ getColor, onHover, onCl
             <path id="ssc-365" d="M356.26 630.5h25.37v41.09h-25.37z" {...r("ssc-365")} />
             <path id="ssc-366" d="M346.09 630.5h7.17v41.09H327.7V630.5z" {...r("ssc-366")} />
             <path id="ssc-367" d="M297.37 630.5h27.33v41.09h-27.33z" {...r("ssc-367")} />
-            <path id="mech-room2" d="M174.24 534.11v33.78l-18.39 3v14.22h20.31l3.43 3.26h19.82v-54.26z" style={{ fill: "#58595b" }} />
-            <path id="mech-room3" d="M258.5 591.37h23.22v11.61H258.5z" style={{ fill: "#58595b" }} />
+            <path id="mech-room2" d="M174.24 534.11v33.78l-18.39 3v14.22h20.31l3.43 3.26h19.82v-54.26z" {...d("mech-room2")} />
+            <path id="mech-room3" d="M258.5 591.37h23.22v11.61H258.5z" {...d("mech-room3")} />
             <path id="ssc-368" d="M258.5 630.5h35.87v41.09H258.5z" {...r("ssc-368")} />
             <path id="ssc-370" d="m464.2 438.53-3-37.92h-85.24v79.63h-27.33v18h28.83v50.22h65.21v-44.87l22.18-3v-8.09h-9.13l3-30h49.95l3-6.46v-7.5H461.2v-3h3z" {...r("ssc-370")} />
             <path id="ssc-370A" d="M464.2 400.61h73.3v44.94h-73.3z" {...r("ssc-370A")} />
@@ -92,7 +103,7 @@ export const SSCLevel3 = React.memo(function SSCLevel3({ getColor, onHover, onCl
             <path id="ssc-3-shower-1" d="M348.63 510.07v-8.83h25.83v14.54h-25.83z" {...r("ssc-3-shower-1")} />
             <path id="ssc-3-shower-2" d="M348.63 518.78h25.83v15.46h-25.83z" {...r("ssc-3-shower-2")} />
             <path id="ssc-3-shower-3" d="M333.7 555.17h40.76v12.72H333.7z" {...r("ssc-3-shower-3")} />
-            <g id="walls">
+            <g id="walls" aria-hidden="true">
                 <path d="M632.07 674.59H47.85V393.24h126.78v-78.39h-47.61V42.5h260.35v84.91h64.57V42.5h180.13v273.65h-72.78v78.13h72.78v280.3Zm-581.22-3h578.22v-274.3h-72.78v-84.13h72.78V45.5H454.94v84.91h-70.57V45.5H130.02v144.72h47.35v3h-47.35v118.63h47.61v84.39H50.85z" />
                 <path d="M544.61 311.59h-3.85v-36.66h16.04V44h3v233.93h-16.04v30.66h.85zM559.28 314.65h-3v-3.06h-2.54v-3h5.54z" />
                 <path d="M524.78 308.59h17.48v3h-17.48zM509.46 311.59h-31.31V130.15h20.68v3h-17.68v175.44h25.31v-15.85h3zM510.37 151.61h-3v-18.46h-.46v-3h3.46z" />
@@ -158,33 +169,33 @@ export const SSCLevel3 = React.memo(function SSCLevel3({ getColor, onHover, onCl
                 </g>
                 <path d="M434.71 313.71h2v14.87h-2zM431.71 313.71h2v14.87h-2zM428.71 313.71h2v14.87h-2zM425.71 313.71h2v14.87h-2zM446.71 313.71h2v14.87h-2zM443.71 313.71h2v14.87h-2zM440.71 313.71h2v14.87h-2zM437.71 313.71h2v14.87h-2zM452.71 313.71h2v14.87h-2zM449.71 313.71h2v14.87h-2zM409.71 313.71h2v14.87h-2zM353.26 627.43h3v44.15h-3zM272.2 541.54v12h2.02l.01 3-5.03.03v-18.03zM454.93 45.5h61.43v12h-61.43zM608.07 277.93h21v35.22h-69.79v-1.56h8.48v-5.87h40.31zM486.04 123.92h3v6.23h-3zM184.15 152.26h5.09v3h-5.09zM223.09 432.89V408.5h62.28v23.87h-59.28z" />
                 <path d="M486.13 74.2v11.87M583.07 292.18v10.54M241.15 636.98h10.24" style={{ fill: "none", stroke: "#000", strokeDasharray: 1, strokeMiterlimit: 10, strokeWidth: "2px" }} />
-                <g id="Bathroom-Sign-1">
-                    <g id="Bathroom-Sign-2">
+                <g id="Bathroom-Sign-1" aria-hidden="true">
+                    <g id="Bathroom-Sign-2" aria-hidden="true">
                         <path id="b-sign4" d="m247.23 447.19-.98 4.65c-.48 1.23-2.24.96-2.3-.38.5-2.06.71-4.32 1.27-6.36.31-1.11.98-1.67 2.15-1.75 1.38-.1 3.65-.1 5.03 0 1.02.08 1.8.58 2.09 1.58.25 2.01 1.05 4.21 1.27 6.2.17 1.58-1.52 2.08-2.24.77l-1.03-4.88v15.06s-.17.39-.19.41c-.01.01-.24.19-.27.21-.75.49-1.61.17-1.84-.7l-.02-8.62c-.05-.43-.52-.55-.57 0-.23 2.67.24 5.7 0 8.37-.07.85-.65 1.29-1.5 1.15-.3-.05-.62-.35-.74-.62-.02-.05-.14-.4-.14-.42v-14.67Z" />
                         <path id="b-sign1" d="M251.39 442.14c-1.9 1.97-4.95-.92-3-2.91s4.85.99 3 2.91" />
                     </g>
                 </g>
-                <g id="Bathroom-Sign-1-2" data-name="Bathroom-Sign-1">
-                    <g id="Bathroom-Sign-2-2" data-name="Bathroom-Sign-2">
+                <g id="Bathroom-Sign-1-2" aria-hidden="true" data-name="Bathroom-Sign-1">
+                    <g id="Bathroom-Sign-2-2" aria-hidden="true" data-name="Bathroom-Sign-2">
                         <path id="b-sign4-2" d="m247.23 518.19-.98 4.65c-.48 1.23-2.24.96-2.3-.38.5-2.06.71-4.32 1.27-6.36.31-1.11.98-1.67 2.15-1.75 1.38-.1 3.65-.1 5.03 0 1.02.08 1.8.58 2.09 1.58.25 2.01 1.05 4.21 1.27 6.2.17 1.58-1.52 2.08-2.24.77l-1.03-4.88v15.06s-.17.39-.19.41c-.01.01-.24.19-.27.21-.75.49-1.61.17-1.84-.7l-.02-8.62c-.05-.43-.52-.55-.57 0-.23 2.67.24 5.7 0 8.37-.07.85-.65 1.29-1.5 1.15-.3-.05-.62-.35-.74-.62-.02-.05-.14-.4-.14-.42v-14.67Z" data-name="b-sign4" />
                         <path id="b-sign1-2" d="M251.39 513.14c-1.9 1.97-4.95-.92-3-2.91s4.85.99 3 2.91" data-name="b-sign1" />
                     </g>
                 </g>
-                <g id="Bathroom-Sign-3">
+                <g id="Bathroom-Sign-3" aria-hidden="true">
                     <path id="b-sin5" d="m245.16 491.65 2.15-7.52-2 4.41c-.73 1.12-2.43.47-2.17-.87l3.22-7.24c.33-.46.72-.57 1.26-.6 1.28-.08 3.43-.11 4.69 0 .46.04.8.19 1.06.58.94 2.22 2.07 4.38 2.99 6.61.17.41.33.66.27 1.14-.11.88-1.25 1.23-1.92.68-.2-.17-.27-.35-.39-.57-.69-1.33-1.2-2.84-1.86-4.18l-.24-.41 2.09 7.97h-1.81v6.87s-.11.25-.14.31c-.58 1.06-2.22.63-2.23-.65 0-.11.06-.22.06-.34-.01-2.02 0-4.03 0-6.05-.05-.25-.44-.11-.62-.14v6.92s-.14.3-.17.34c-.34.5-1.17.66-1.67.31-.15-.1-.48-.54-.48-.71v-6.78l-.08-.08z" />
                     <path id="b-sign2" d="M249.78 475.1c2.72-.13 2.92 4.09.15 4.17-2.69.08-2.87-4.04-.15-4.17" />
                 </g>
-                <g id="Bathroom-Sign-3-2" data-name="Bathroom-Sign-3">
+                <g id="Bathroom-Sign-3-2" aria-hidden="true" data-name="Bathroom-Sign-3">
                     <path id="b-sin5-2" d="m245.16 562.65 2.15-7.52-2 4.41c-.73 1.12-2.43.47-2.17-.87l3.22-7.24c.33-.46.72-.57 1.26-.6 1.28-.08 3.43-.11 4.69 0 .46.04.8.19 1.06.58.94 2.22 2.07 4.38 2.99 6.61.17.41.33.66.27 1.14-.11.88-1.25 1.23-1.92.68-.2-.17-.27-.35-.39-.57-.69-1.33-1.2-2.84-1.86-4.18l-.24-.41 2.09 7.97h-1.81v6.87s-.11.25-.14.31c-.58 1.06-2.22.63-2.23-.65 0-.11.06-.22.06-.34-.01-2.02 0-4.03 0-6.05-.05-.25-.44-.11-.62-.14v6.92s-.14.3-.17.34c-.34.5-1.17.66-1.67.31-.15-.1-.48-.54-.48-.71v-6.78l-.08-.08z" data-name="b-sin5" />
                     <path id="b-sign2-2" d="M249.78 546.1c2.72-.13 2.92 4.09.15 4.17-2.69.08-2.87-4.04-.15-4.17" data-name="b-sign2" />
                 </g>
-                <g id="Bathroom-Sign-1-3" data-name="Bathroom-Sign-1">
-                    <g id="Bathroom-Sign-2-3" data-name="Bathroom-Sign-2">
+                <g id="Bathroom-Sign-1-3" aria-hidden="true" data-name="Bathroom-Sign-1">
+                    <g id="Bathroom-Sign-2-3" aria-hidden="true" data-name="Bathroom-Sign-2">
                         <path id="b-sign4-3" d="m325.88 514.47.59 2.79a.71.71 0 0 0 1.38-.23c-.3-1.24-.43-2.59-.76-3.81-.18-.67-.59-1-1.29-1.05-.83-.06-2.19-.06-3.02 0-.61.05-1.08.35-1.26.95-.15 1.21-.63 2.53-.76 3.72-.1.95.91 1.25 1.35.46l.62-2.93v9.04s.1.23.11.24c0 0 .14.11.16.13.45.29.97.1 1.1-.42v-5.17c.05-.26.33-.33.36 0 .14 1.6-.14 3.42 0 5.02.04.51.39.77.9.69.18-.03.37-.21.44-.37.01-.03.08-.24.08-.25v-8.8Z" data-name="b-sign4" />
                         <path id="b-sign1-3" d="M323.39 511.44c1.14 1.18 2.97-.55 1.8-1.75s-2.91.6-1.8 1.75" data-name="b-sign1" />
                     </g>
                 </g>
-                <g id="Bathroom-Sign-3-3" data-name="Bathroom-Sign-3">
+                <g id="Bathroom-Sign-3-3" aria-hidden="true" data-name="Bathroom-Sign-3">
                     <path id="b-sin5-3" d="m309.59 519.24-1.29-4.51 1.2 2.65c.44.67 1.46.28 1.3-.52l-1.93-4.34c-.2-.28-.43-.34-.76-.36-.77-.05-2.06-.07-2.82 0-.27.02-.48.12-.63.35-.57 1.33-1.24 2.63-1.8 3.97-.1.25-.2.4-.16.68.07.53.75.74 1.15.41.12-.1.16-.21.23-.34.41-.8.72-1.7 1.12-2.51l.14-.25-1.25 4.78h1.09v4.12s.07.15.09.18c.35.64 1.33.38 1.34-.39 0-.06-.04-.13-.04-.2v-3.63c.03-.15.26-.07.37-.08v4.15l.1.2c.2.3.7.39 1 .19.09-.06.29-.32.29-.42v-4.07l.05-.05h1.2Z" data-name="b-sin5" />
                     <path id="b-sign2-3" d="M306.82 509.31c-1.63-.08-1.75 2.46-.09 2.5 1.61.05 1.72-2.43.09-2.5" data-name="b-sign2" />
                 </g>

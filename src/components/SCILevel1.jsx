@@ -5,6 +5,21 @@ export const SCILevel1 = React.memo(function SCILevel1({ getColor, onHover, onCl
     // Helper to generate dynamic props: fill color + mouse events
     const r = (id) => ({
         fill: getColor(id),
+        role: "button",
+        tabIndex: 0,
+        "aria-label": id,
+        onMouseEnter: () => onHover(id, true),
+        onMouseLeave: () => onHover(id, false),
+        onFocus: (e) => onHover(id, true, e),
+        onBlur: () => onHover(id, false),
+        onClick: () => onClick(id),
+        onKeyDown: (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onClick(id); } },
+        style: { cursor: "pointer", transition: "opacity 0.2s" }
+    });
+
+    // Non-navigable areas (mechanical rooms, off-limits): hoverable but not in tab order
+    const d = (id) => ({
+        fill: getColor(id),
         onMouseEnter: () => onHover(id, true),
         onMouseLeave: () => onHover(id, false),
         onClick: () => onClick(id),
@@ -12,8 +27,8 @@ export const SCILevel1 = React.memo(function SCILevel1({ getColor, onHover, onCl
     });
 
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" id="Floor_1" data-name="Floor 1" viewBox="0 0 1616.36 908.75">
-            <g id="hallways" fill="#e5e5e5">
+        <svg xmlns="http://www.w3.org/2000/svg" id="Floor_1" data-name="Floor 1" viewBox="0 0 1616.36 908.75" role="img" aria-label="Science Building Floor 1 map">
+            <g id="hallways" fill="#e5e5e5" aria-hidden="true">
                 <path id="hallway-1" d="m614.64 446.31 4-8.35h38.26V309.09h9.91v-35.13l9.91-4v-56.52h-72.69v8.87h-36.87v-54.78h-76.35v102.43l11.48 5.66v38.17h56.35v132.52" />
                 <path id="hallway-2" d="M527.77 573.05v14.04h4v9.74h10.26v4h19.3v-4h19.18v4h13.69v-4h20.74v4h21.91v-4h6.22v-9.74h4v-9.74H632.9v-11.82h3.95v-2.26h-98.56v9.78z" />
             </g>
@@ -39,14 +54,14 @@ export const SCILevel1 = React.memo(function SCILevel1({ getColor, onHover, onCl
             <path id="sci-155" d="M1105.11 587.09v-4.78h-12.82l-21.39 21.39h-65.63v113.39h64.06l21.92 21.92h13.86v-24.33h12.92V605.99h-12.92z" {...r("sci-155")} />
             <path id="sci-157" d="M1168.48 587.62v-5.83h13.87l21.91 21.91h64.07v113.39h-65.63l-21.39 21.4h-12.83v-23.87h-11.54V605.99h11.54z" {...r("sci-157")} />
             <path id="sci-158" d="M1372.18 739.01h-13.87l-21.91-21.92h-64.07V603.7h65.64l21.39-21.39h12.82v24.39h12.8v108.7h-12.8z" {...r("sci-158")} />
-            <path id="off-limits-hallway" d="M570.29 600.83h34.13v22.61h-4v97.71l11.47 9.59 6.65 9.78 8.66 19.57h9.18v13.87h-26.61l-15.05-10.47h-12.78l-16.35 11.52-25.56 5.65.02 12.09h-76.89v-32.66h87.42l12.34-16.04-3.17-2.44 6.93-10.79 3.39 2.12 4.22-6.75v-62.05h-3.91z" {...r("off-limits-hallway")} />
-            <path id="mechanical-rooms" d="M618.64 313.79h38.26v124.17h-38.26z" {...r("mechanical-rooms")} />
-            <path id="mechanical-rooms-2" d="M1423.42 606.7h23v71.91h-23z" {...r("mechanical-rooms-2")} />
-            <path id="mechanical-rooms-3" d="M569.59 763.49h36.17v29.26h-36.17z" {...r("mechanical-rooms-3")} />
-            <path id="mech-room-4" d="M636.38 773.96v-13.87h55.55l6.56-12.41-3.53-1.87 6.64-10.54 3.56 1.82 7.04-13.75v69.41h-75.82z" {...r("mech-room-4")} />
-            <path id="mech-room-5" d="M1462.29 320.4h38.91v117.57h-38.91z" {...r("mech-room-5")} />
-            <path id="mech-room-6" d="M115.16 243.35V116.01h159.22v47.52h13.56v4h151.39v75.82z" {...r("mech-room-6")} />
-            <g id="Walls">
+            <path id="off-limits-hallway" d="M570.29 600.83h34.13v22.61h-4v97.71l11.47 9.59 6.65 9.78 8.66 19.57h9.18v13.87h-26.61l-15.05-10.47h-12.78l-16.35 11.52-25.56 5.65.02 12.09h-76.89v-32.66h87.42l12.34-16.04-3.17-2.44 6.93-10.79 3.39 2.12 4.22-6.75v-62.05h-3.91z" {...d("off-limits-hallway")} />
+            <path id="mechanical-rooms" d="M618.64 313.79h38.26v124.17h-38.26z" {...d("mechanical-rooms")} />
+            <path id="mechanical-rooms-2" d="M1423.42 606.7h23v71.91h-23z" {...d("mechanical-rooms-2")} />
+            <path id="mechanical-rooms-3" d="M569.59 763.49h36.17v29.26h-36.17z" {...d("mechanical-rooms-3")} />
+            <path id="mech-room-4" d="M636.38 773.96v-13.87h55.55l6.56-12.41-3.53-1.87 6.64-10.54 3.56 1.82 7.04-13.75v69.41h-75.82z" {...d("mech-room-4")} />
+            <path id="mech-room-5" d="M1462.29 320.4h38.91v117.57h-38.91z" {...d("mech-room-5")} />
+            <path id="mech-room-6" d="M115.16 243.35V116.01h159.22v47.52h13.56v4h151.39v75.82z" {...d("mech-room-6")} />
+            <g id="Walls" aria-hidden="true">
                 <path d="M575.94 450.31h-21.3V317.79H115.16v120.17h15.22v4h-19.22V313.79h447.48v132.52h17.3zM618.64 450.31h-21.83v-4h17.83v-8.35h58.34v4h-54.34z" />
                 <path d="M545.68 437.96h10.96v4h-10.96zM412.11 437.96h120.52v4H412.11zM310.38 437.96h89.22v4h-89.22zM278.55 437.96h18.78v4h-18.78zM143.42 437.96h118.96v4H143.42z" />
                 <path d="M285.94 315.79h4v124.17h-4zM385.59 432.14h4v7.83h-4zM385.59 315.79h4v102.26h-4zM498.29 290.22h4v25.57h-4zM545.68 273.96h-58.87V163.53h84.35v108.43h-4V167.53h-76.35v102.43h54.87zM680.72 273.96H618.2v-4h58.52v-56.52h-72.69v58.52h-4v-62.52h80.69z" />

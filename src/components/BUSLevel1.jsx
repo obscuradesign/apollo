@@ -5,15 +5,20 @@ export const BUSLevel1 = React.memo(function BUSLevel1({ getColor, onHover, onCl
     // Helper to generate dynamic props: fill color + mouse events
     const r = (id) => ({
         fill: getColor(id),
+        role: "button", tabIndex: 0, "aria-label": id,
         onMouseEnter: () => onHover(id, true),
         onMouseLeave: () => onHover(id, false),
+        onFocus: (e) => onHover(id, true, e),
+        onBlur: () => onHover(id, false),
         onClick: () => onClick(id),
+        onKeyDown: (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onClick(id); } },
         style: { cursor: "pointer", transition: "opacity 0.2s" }
     });
 
+
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" id="Floor_1" data-name="Floor 1" viewBox="70 68 656 443">
-            <g id="hallways" fill="#e5e5e5">
+        <svg xmlns="http://www.w3.org/2000/svg" id="Floor_1" data-name="Floor 1" viewBox="70 68 656 443" role="img" aria-label="Business Building Floor 1 map">
+            <g id="hallways" fill="#e5e5e5" aria-hidden="true">
                 <path d="M223.61 183.19V147.8h43.3v101.52-37h-53.87v-20.83l10.57-2" />
                 <path id="hallway" d="M354.1 242.49v-11h42.6v10.32h-12.03v17.08h.47v2h23.78v-8.13h5.61V231.5h44.13v2.61h14.48v2.48h26.83v-2.48h15v-2.61h7.65v3.61h-5.65v11.91h6.78v6.78h40.57v36.17h25.3v-56.48h-9.43v-18.52h-35.26v-2h-13.17v2h-35.04v-16.89H478.5v3.46h-18.83v8.3h18.83v7.74h-46.41v-14.51l-14.59-.1s-10.87-3.04-15.83 13.57h-14v-20.46h7.31v-12.67h-3.92V147.8h-24.87v13.7h-15.13v3.13h-14.87v51.52h-14.57v-2H309.1v2h-88.65v-3.83h-4.61v2h-12.7v17.17h67.56v17.17h-2v6.65h2v25.26h-36.53v14.6h18.88l2-1.82h13.65v7.48l2 11.55h12.19V309h-1.54v-2h3.54v-10.84h-2V282.5h33.65v-12.88h3.23v-7.78H295.9v-2l-11.02-4.91 1.11-9.05 12.69-12.08 13.95-1.74 15.38 8.41" />
             </g>
@@ -59,7 +64,7 @@ export const BUSLevel1 = React.memo(function BUSLevel1({ getColor, onHover, onCl
             <path id="bus-139" d="M333.79 262.7v8.8h5.95v2h-2.42v20.03h22.36v-6.48h4.4V273.5h-11.72v-2h1.74v-29.01h-24.7l-9.8-8.58s-17.62-3.34-25.48 2.41l-9.68 12.99.43 5.63 11.02 4.91h25.87v2.84h12.03Z" {...r("bus-139")} />
             <path id="bus-159" d="M531.99 384.54h45.84v31.26h-45.94z" {...r("bus-159")} />
 
-            <g id="Walls">
+            <g id="Walls" aria-hidden="true">
                 <path d="M642.04 417.8h-53.82v-2h51.82V233.49H557.7v-2h84.34zM579.83 417.8h-49.94v-11.96h2v9.96h45.94v-31.26h-50.46v-2h52.46z" />
                 <path d="m529.943 389.915.098-6.26 2 .032-.098 6.259zM508.78 382.54h12v2h-12z" />
                 <path d="M516.96 383.54h-2v-57.89h-6.18v-2h8.18zM579.83 376.89h-2v-86.92h-2.92v-2h4.92z" />
@@ -123,13 +128,13 @@ export const BUSLevel1 = React.memo(function BUSLevel1({ getColor, onHover, onCl
                 </g>
                 <path d="M458.65 404.06h14.65v2h-14.65z" />
             </g>
-            <g id="Bathroom-Sign-1" fill="#000000">
+            <g id="Bathroom-Sign-1" fill="#000000" aria-hidden="true">
                 <g id="Bathroom-Sign-2">
                     <path id="b-sign4" d="m348.27 173.86-.74 3.54c-.36.94-1.7.73-1.76-.29.38-1.57.54-3.29.97-4.84.23-.85.74-1.27 1.64-1.34 1.05-.08 2.78-.08 3.83 0 .78.06 1.37.44 1.59 1.21.19 1.53.8 3.21.96 4.72.13 1.2-1.16 1.58-1.71.59l-.78-3.72v11.48s-.13.3-.14.31c0 .01-.18.14-.2.16-.57.37-1.23.13-1.4-.53l-.02-6.57c-.04-.33-.4-.42-.43 0-.17 2.03.18 4.34 0 6.38-.06.65-.5.98-1.14.88-.23-.04-.47-.27-.56-.47-.02-.04-.11-.31-.11-.32v-11.18Z" />
                     <path id="b-sign1" d="M351.44 170.01c-1.45 1.5-3.77-.7-2.28-2.22s3.7.76 2.28 2.22" />
                 </g>
             </g>
-            <g id="Bathroom-Sign-3" fill="#000000">
+            <g id="Bathroom-Sign-3" fill="#000000" aria-hidden="true">
                 <path id="b-sin5" d="m374.71 168.37 2.05-7.16-1.91 4.2c-.69 1.07-2.31.45-2.06-.82l3.06-6.9c.31-.44.68-.54 1.2-.58 1.22-.08 3.27-.1 4.47 0 .44.04.76.18 1.01.55.9 2.12 1.97 4.17 2.85 6.3.16.39.31.63.25 1.08-.11.84-1.19 1.17-1.83.65-.19-.16-.26-.34-.37-.55-.65-1.26-1.14-2.7-1.77-3.99l-.22-.39 1.99 7.59h-1.72v6.54s-.11.24-.14.29c-.55 1.01-2.11.6-2.12-.62 0-.1.06-.21.06-.32-.01-1.92 0-3.84 0-5.76-.04-.24-.42-.1-.59-.13v6.59s-.14.29-.16.32c-.32.48-1.12.63-1.59.3-.14-.1-.46-.51-.46-.67v-6.46l-.08-.08h-1.91Z" />
                 <path id="b-sign2" d="M379.12 152.61c2.59-.12 2.78 3.9.14 3.97-2.56.07-2.73-3.85-.14-3.97" />
             </g>

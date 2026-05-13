@@ -8,6 +8,21 @@ export const DrescherLevel3 = React.memo(function DrescherLevel3({ getColor, onH
     // Helper to generate dynamic props: fill color + mouse events
     const r = (id) => ({
         fill: getColor(id),
+        role: "button",
+        tabIndex: 0,
+        "aria-label": id,
+        onMouseEnter: () => onHover(id, true),
+        onMouseLeave: () => onHover(id, false),
+        onFocus: (e) => onHover(id, true, e),
+        onBlur: () => onHover(id, false),
+        onClick: () => onClick(id),
+        onKeyDown: (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onClick(id); } },
+        style: { cursor: "pointer", transition: "opacity 0.2s" }
+    });
+
+    // Non-navigable areas (service/custodial): hoverable but not in tab order
+    const d = (id) => ({
+        fill: getColor(id),
         onMouseEnter: () => onHover(id, true),
         onMouseLeave: () => onHover(id, false),
         onClick: () => onClick(id),
@@ -18,15 +33,15 @@ export const DrescherLevel3 = React.memo(function DrescherLevel3({ getColor, onH
     //const wallStyle = { stroke: "#000", strokeMiterlimit: 10, strokeWidth: ".5px" };
 
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 677.54 363">
-            <g id="Layer_1-2" data-name="Layer 1" fill="#e5e5e5" transform="translate(5 15)">
+        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 677.54 363" role="img" aria-label="Drescher Hall Floor 3 map">
+            <g id="Layer_1-2" data-name="Layer 1" fill="#e5e5e5" transform="translate(5 15)" aria-hidden="true">
                 <path id="Hallways" d="m0 40.09 3.52 59.68 32.57-.72 17.19-33.64 61.51.76 137.35 2.51 105.91 8.53v62.76l17.31 7.09 1.58 38.89 54.67.79 22.37-39.68 16.45-1.58 159.95-45.26 36.74-1.58.78-23.45-6.68-34.96-30.84-.89-4.18 37.22-158.7-2.75L510.65 7.7 424.32 0 38.26 40.42z" />
             </g>
-            <g id="Bathroom-Sign-3">
+            <g id="Bathroom-Sign-3" aria-hidden="true">
                 <path id="b-sin5" d="m385.4 125.36 1.02-3.58-.95 2.1c-.35.53-1.16.23-1.03-.41l1.53-3.45c.16-.22.34-.27.6-.29.61-.04 1.64-.05 2.23 0 .22.02.38.09.5.28.45 1.06.99 2.09 1.43 3.15.08.2.16.32.13.54-.05.42-.6.58-.91.33-.1-.08-.13-.17-.18-.27-.33-.63-.57-1.35-.89-1.99l-.11-.2 1 3.8h-.86v3.27s-.05.12-.07.15c-.28.51-1.06.3-1.06-.31 0-.05.03-.1.03-.16v-2.88c-.02-.12-.21-.05-.3-.07v3.3l-.08.16c-.16.24-.56.31-.79.15-.07-.05-.23-.26-.23-.34v-3.23l-.04-.04h-.96Z" />
                 <path id="b-sign2" d="M387.6 117.48c1.3-.06 1.39 1.95.07 1.99-1.28.04-1.36-1.92-.07-1.99" />
             </g>
-            <g id="Bathroom-Sign-1">
+            <g id="Bathroom-Sign-1" aria-hidden="true">
                 <g id="Bathroom-Sign-2">
                     <path id="b-sign4" d="m386.38 101.45-.46 2.21a.566.566 0 0 1-1.1-.18c.24-.98.34-2.06.61-3.03.15-.53.47-.79 1.02-.84.66-.05 1.74-.05 2.4 0 .49.04.86.27 1 .75.12.96.5 2.01.6 2.95.08.75-.73.99-1.07.37l-.49-2.32v7.17s-.08.19-.09.19c0 0-.11.09-.13.1-.36.23-.77.08-.87-.33v-4.11c-.04-.21-.26-.26-.28 0-.11 1.27.11 2.71 0 3.99-.03.4-.31.61-.71.55-.14-.02-.29-.17-.35-.29-.01-.03-.07-.19-.07-.2v-6.99Z" />
                     <path id="b-sign1" d="M388.36 99.04c-.91.94-2.36-.44-1.43-1.39s2.31.47 1.43 1.39" />
@@ -38,7 +53,7 @@ export const DrescherLevel3 = React.memo(function DrescherLevel3({ getColor, onH
                 <path id="drschr-300b" d="M526.09 143.3v17.63h7.74v5.03h23.56V143.3h-31.3" {...r("drschr-300b")} />
                 <path id="drschr-300c" d="M605.32 128.23h-24.85v32.6h6.78v5.13h18.07z" {...r("drschr-300c")} />
                 <path id="drschr-300d" d="M612.41 128.23h21.95v26.43h-3.29v5.76h-8.01v5.54H606.9v-37.73z" {...r("drschr-300d")} />
-                <path id="drschr-300e" d="M508.82 118.68v-6.47h15.7v22.9h1.57v-22.9h6.37v29.51h-7.94v19.21h-7.77v4.72h-36.33v-4.82h-8.15v-49.31h10.2v9.45h26.35z" style={{ fill: "#3b3b3c" }} />
+                <path id="drschr-300e" d="M508.82 118.68v-6.47h15.7v22.9h1.57v-22.9h6.37v29.51h-7.94v19.21h-7.77v4.72h-36.33v-4.82h-8.15v-49.31h10.2v9.45h26.35z" {...d("drschr-300e")} />
                 <path id="drschr-300f" d="M552.12 111.42v-2.09h23.62v17.33h-23.62v-15.24" {...r("drschr-300f")} />
                 <path id="drschr-300g" d="M577.32 126.66h22.49v1.57h5.51v-.79h1.58v.79h5.51v-1.57h21.74v-12.67h-35.13v-4.66h-21.7z" {...r("drschr-300g")} />
                 <path id="drschr-300h" d="M550.54 128.23v-8.22h-16.5v21.71h16.5v-13.49" {...r("drschr-300h")} />
@@ -53,11 +68,11 @@ export const DrescherLevel3 = React.memo(function DrescherLevel3({ getColor, onH
                 <path id="drschr-301f" d="M533.39 24.07h6.33V2.5h-5.96v4.11h-15.47v17.46z" {...r("drschr-301f")} />
                 <path id="drschr-302" d="M575.54 94.2h17.05V34.11h-56.5v44.06h17.57v1.58h5.1v-3.77h9.93v17.36h6.85z" {...r("drschr-302")} />
                 <path id="drschr-302a" d="M553.49 93.34h5.27V79.75h-22.67v14.41h15.82v-.82z" {...r("drschr-302a")} />
-                <path id="drschr-303" d="M516.67 92.55h-6.19v-12.8h24.04V94.2h-7.95v-1.65z" style={{ fill: "#3b3b3c" }} />
+                <path id="drschr-303" d="M516.67 92.55h-6.19v-12.8h24.04V94.2h-7.95v-1.65z" {...d("drschr-303")} />
                 <path id="drschr-304" d="M517.5 35.51h17.02v42.66h-24.04V35.51z" {...r("drschr-304")} />
             </g>
             <path id="drschr-305" d="M501.89 91.87h7.02V35.51h-37.32v58.65h25.81v-2.29z" {...r("drschr-305")} />
-            <path id="drschr-307" d="M418.48 58.04h28.25V28.9h-35.27v29.14z" style={{ fill: "#3b3b3c" }} />
+            <path id="drschr-307" d="M418.48 58.04h28.25V28.9h-35.27v29.14z" {...d("drschr-307")} />
             <g id="English-department">
                 <path id="drschr-308" d="M403.69 58.04h6.2V6.15S406.94 3.19 397.17.6l-21.55 3-2.42 2.88h-7.07v51.56z" {...r("drschr-308")} />
                 <g id="drschr-309">
@@ -97,7 +112,7 @@ export const DrescherLevel3 = React.memo(function DrescherLevel3({ getColor, onH
                 <path id="drschr-311u" d="M229.99 39.48h19.11v18.56h-19.11z" {...r("drschr-311u")} />
                 <path id="drschr-311v" d="M283.96 26.37V5.52h2.46V2.5h11.85v29.38h-14.31z" {...r("drschr-311v")} />
             </g>
-            <path id="drschr-315a" d="M373.08 76.6h-6.95v16.64h52.52V76.6z" style={{ fill: "#3b3b3c" }} />
+            <path id="drschr-315a" d="M373.08 76.6h-6.95v16.64h52.52V76.6z" {...d("drschr-315a")} />
             <path id="drschr-315" d="M366.13 140.32v22.08h52.52v-18.97h-2.77v-11.64h-49.75z" {...r("drschr-315")} />
             <g id="writing-center">
                 <path id="drschr-312" d="M172.68 67.97s23.91-1.48 41.52 1.33l31.24 10.72h11.47v4.01h1.57v5.75h-1.57v9.28h-6.06l-11.61-1.58v33.69h-34.03v-4.38h-32.53z" {...r("drschr-312")} />
@@ -127,15 +142,15 @@ export const DrescherLevel3 = React.memo(function DrescherLevel3({ getColor, onH
             <path id="drschr-314r" d="M60.1 106.35v-8.93h-15v15.68h2.74v4.93h-4.52v3.15H60.1z" {...r("drschr-314r")} />
             <path id="drschr-314s" d="M58.05 82.66v-4.28H45.1v17.46h12.95z" {...r("drschr-314s")} />
             <path id="drschr-314t" d="M69.07 74.27h30.75v24.86H92.7v12.6H69.07z" {...r("drschr-314t")} />
-            <path id="drschr-313" d="M102.66 80.16h13.18s14.53-6.61 24.14-9.21c3.83-1.04 14.43-2.48 22.22-3.01 4.97-.34 8.9.04 8.9.04v58.82h-18.01v4.38H95.77v-11.23h-3.42v-6.64h1.92v-12.6h7.12V80.17h1.27Z" style={{ fill: "#3b3b3c" }} />
+            <path id="drschr-313" d="M102.66 80.16h13.18s14.53-6.61 24.14-9.21c3.83-1.04 14.43-2.48 22.22-3.01 4.97-.34 8.9.04 8.9.04v58.82h-18.01v4.38H95.77v-11.23h-3.42v-6.64h1.92v-12.6h7.12V80.17h1.27Z" {...d("drschr-313")} />
             <path id="drschr-306a" d="M433.44 21.54V5.52h-2.46V2.5h-3.63v3.98h-15.89v20.88h21.98z" style={{ fill: "#3b3b3c" }} />
             <path id="drschr-306b" d="M432.55 2.5v1.44h2.47v16.03h15.82V2.5z" style={{ fill: "#3b3b3c" }} />
             <path id="drschr-306c" d="M452.41 2.5v18.97h17.6V6.61h-6.44V2.5z" style={{ fill: "#3b3b3c" }} />
             <path id="drschr-306d" d="M471.59 6.61h8.62V2.5h6.1v21.57h-14.72z" style={{ fill: "#3b3b3c" }} />
             <path id="drschr-306e" d="M487.88 2.5h16.37v1.58h-2.6v19.99h-13.77z" style={{ fill: "#3b3b3c" }} />
             <path id="drschr-306f" d="M505.83 2.5h10.88v21.57h-13.49V5.65h2.61z" {...r("drschr-306f")} />
-            <path id="drschr-306g" d="M464.69 35.51h5.32v20.06h-13.47V35.51z" style={{ fill: "#3b3b3c" }} />
-            <g id="Walls">
+            <path id="drschr-306g" d="M464.69 35.51h5.32v20.06h-13.47V35.51z" {...d("drschr-306g")} />
+            <g id="Walls" aria-hidden="true">
                 <path d="M433.58 158.43h1.58v43.65h-1.58zM419.44 157.64h3.15v1.57h-3.15zM472.27 161.61h-1.57v-51.66h13.35v9.45h23.2v-.72h1.57v2.29h-26.35v-9.45h-10.2zM526.09 135.11h-1.57v-22.9h-16.49v-1.58h18.06zM526.09 161.72h-1.57v-20h26.02v-7.7h1.58v9.28h-26.03zM605.32 127.44h1.57v39.31h-1.57zM612.41 126.66h22.73v1.58h-22.73z" style={{ stroke: "#000", strokeMiterlimit: 10, strokeWidth: ".5px" }} />
                 <path d="M458.75 202.87h-78.62V162.4h38.52v-18.97h-2.77v-1.57h4.35v22.12h-38.52v37.32h75.46v-40.47h23.25v4.82h36.33v-4.72h17.08v5.03h36.02v-5.13h17.4v5.13h35.81v-5.54h8.01v-5.76h3.29v-40.67h-35.34v-4.66h-21.7v17.33h22.49v1.57h-24.07v-20.47h24.86v4.65h35.33v43.83h-3.28v5.75h-8.02v5.55h-38.96v-5.14h-14.24v5.14h-39.17v-5.04h-13.94v4.73h-39.48v-4.83h-20.09z" style={{ stroke: "#000", strokeMiterlimit: 10, strokeWidth: ".5px" }} />
                 <path d="M552.12 111.42h-1.58v-3.66h25.99v1.57h-24.41zM534.04 113.06h-1.58v-.85h-7.15v-1.58h8.73zM534.04 142.51h-1.58v-24.07h19.66v8.22h18.11v1.57h-19.69v-8.22h-16.5zM557.39 142.51h1.58v24.24h-1.58zM578.89 139.77h1.58v21.84h-1.58z" style={{ stroke: "#000", strokeMiterlimit: 10, strokeWidth: ".5px" }} />
@@ -203,7 +218,7 @@ export const DrescherLevel3 = React.memo(function DrescherLevel3({ getColor, onH
                 <path d="M638.57 67.79h27.42v.79h-27.42zM638.57 69.23h27.42v.79h-27.42zM638.57 71h27.42v.79h-27.42zM638.57 72.44h27.42v.79h-27.42zM638.57 74.05h27.42v.79h-27.42zM638.57 75.48h27.42v.79h-27.42zM638.57 77.26h27.42v.79h-27.42zM638.57 78.69h27.42v.79h-27.42zM638.57 80.68h27.42v.79h-27.42zM638.57 82.11h27.42v.79h-27.42zM638.57 83.89h27.42v.79h-27.42zM638.57 85.32h27.42v.79h-27.42zM638.57 86.93h27.42v.79h-27.42zM638.57 88.37h27.42v.79h-27.42zM638.57 90.14h27.42v.79h-27.42zM638.57 91.58h27.42v.79h-27.42z" />
                 <path d="M644.19 65.93h1.58v30.35h-1.58zM658.59 67.88h1.58v27.45h-1.58zM651.31 66.85h1.58v25.61h-1.58z" />
                 <path d="M337.3 28.94h-3.25v-3.39h1.57l1.75.07-.07 1.74z" style={{ stroke: "#000", strokeMiterlimit: 10, strokeWidth: ".5px" }} />
-                <path id="mechanical-room" d="M358.08 76.6h6.47v55.19h1.58v8.53h-1.58v22.08h-7.53v3.29h-36.36v-3.29h-8.63V76.6z" style={{ stroke: "#000", strokeWidth: "0.5px" }} />
+                <path id="mechanical-room" d="M358.08 76.6h6.47v55.19h1.58v8.53h-1.58v22.08h-7.53v3.29h-36.36v-3.29h-8.63V76.6z" {...d("mechanical-room")} />
                 <g>
                     <path d="M68.28 107.43v17.62M67.5 107.43h1.58v17.62H67.5z" style={{ stroke: "#000", strokeMiterlimit: 10, strokeWidth: ".5px" }} />
                 </g>

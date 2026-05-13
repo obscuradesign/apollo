@@ -3,17 +3,23 @@ import React from 'react';
 export const AFloor1 = React.memo(function AFloor1({ getColor, onHover, onClick }) {
     const r = (id) => ({
         fill: getColor(id),
+        role: "button",
+        tabIndex: 0,
+        "aria-label": id,
         onMouseEnter: () => onHover(id, true),
         onMouseLeave: () => onHover(id, false),
+        onFocus: (e) => onHover(id, true, e),
+        onBlur: () => onHover(id, false),
         onClick: () => onClick(id),
+        onKeyDown: (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onClick(id); } },
         style: { cursor: "pointer", transition: "opacity 0.2s" }
     });
 
     return (
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720" role="img" aria-label="Art Building Floor 1 map">
     
     <g id="Floor_11" data-name="Floor_1">
-        <path id="hallway" d="M480.6 129.4v70.5h33.5v-8.1h70.6V472H562v84.7h-47.9v-10.6h-27.6l-3 10.6h-285v-59.3h-32.3l-8.5-16.9 8.5-17.8-8.6-18.3 8.6-17.5-8.6-18.3 8.6-17.8-8.6-18.5 8.6-17-8.6-18.9 8.6-17.1-8.6-17.2 8.6-18-8.6-19.1 8.6-15.4h29.3l3-103.5v-16.7z" fill="#e5e5e5" />
+        <path id="hallway" d="M480.6 129.4v70.5h33.5v-8.1h70.6V472H562v84.7h-47.9v-10.6h-27.6l-3 10.6h-285v-59.3h-32.3l-8.5-16.9 8.5-17.8-8.6-18.3 8.6-17.5-8.6-18.3 8.6-17.8-8.6-18.5 8.6-17-8.6-18.9 8.6-17.1-8.6-17.2 8.6-18-8.6-19.1 8.6-15.4h29.3l3-103.5v-16.7z" fill="#e5e5e5" aria-hidden="true" />
         <path id="a-100" d="M198.5 475h120.3v81.7H198.5z" {...r("a-100")} />
         <path id="a-102" d="M321.8 475h92.9v81.7h-92.9z" {...r("a-102")} />
         <path id="a-102a" d="M414.7 475h26.2v54.3h-26.2z" {...r("a-102a")} />
@@ -31,7 +37,7 @@ export const AFloor1 = React.memo(function AFloor1({ getColor, onHover, onClick 
         <path id="a-125b" d="M198.5 129.4h49.9v58.3h-27.3v-23.6h-22.6z" {...r("a-125b")} />
         <path id="a-126" d="M237.2 190.7h143.6v78.4H237.2z" {...r("a-126")} />
         <path id="a-126a" d="M198.5 190.7h38.7v78.4h-38.7z" {...r("a-126a")} />
-        <g id="Walls">
+        <g id="Walls" aria-hidden="true">
             <path d="M198.5 138.1h-3v-11.7h73.9v3h-70.9zM483.6 142.2h-3v-12.8H278.4v-3h205.2zM483.6 190.7H195.5v-44.6h3v41.6h282.1v-1.3h3zM480.6 157.7h3v20.7h-3z" />
             <path d="M483.6 272.1h-81.9v-3h78.9v-79.9h3zM319.3 269.1H385v3h-65.7zM302.8 272.1H195.5v-82.9h3v79.9h104.3z" />
             <path d="M237.2 262.5h3v8h-3zM237.2 189.2h3v58.7h-3zM248.4 176.5h3v12.7h-3zM248.4 127.9h3v39.7h-3zM224.1 167.7h-3v-3.6H197v-3h27.1zM221.1 176.5h3v12.7h-3zM380.8 261.2h3v9.4h-3zM380.8 189.2h3v56.7h-3zM511.1 234h3v36.6h-3z" />
@@ -56,13 +62,13 @@ export const AFloor1 = React.memo(function AFloor1({ getColor, onHover, onClick 
             </g>
             <path d="M501.2 546.1h9.8v3h-9.8zM165 497.4h4.8v3H165zM191.9 497.4h3.6v3h-3.6z" />
         </g>
-        <g id="Bathroom-Sign-1">
+        <g id="Bathroom-Sign-1" aria-hidden="true">
             <g id="Bathroom-Sign-2">
                 <path id="b-sign4" d="m454.8 534.8-1 4.6c-.5 1.2-2.2 1-2.3-.4.5-2.1.7-4.3 1.3-6.4q.45-1.65 2.1-1.8c1.4-.1 3.7-.1 5 0s1.8.6 2.1 1.6c.3 2 1.1 4.2 1.3 6.2.2 1.6-1.5 2.1-2.2.8l-1-4.9v15.1l-.2.4s-.2.2-.3.2c-.8.5-1.6.2-1.8-.7v-8.6c0-.4-.5-.6-.6 0-.2 2.7.2 5.7 0 8.4 0 .8-.7 1.3-1.5 1.2s-.6-.4-.7-.6-.1-.4-.1-.4v-14.7Z" />
                 <path id="b-sign1" d="M459 529.7c-1.9 2-4.9-.9-3-2.9s4.9 1 3 2.9" />
             </g>
         </g>
-        <g id="Bathroom-Sign-3">
+        <g id="Bathroom-Sign-3" aria-hidden="true">
             <path id="b-sin5" d="m450.7 499.7 2.1-7.5-2 4.4c-.7 1.1-2.4.5-2.2-.9l3.2-7.2c.3-.5.7-.6 1.3-.6 1.3 0 3.4-.1 4.7 0s.8.2 1.1.6c.9 2.2 2.1 4.4 3 6.6.2.4.3.7.3 1.1-.1.9-1.2 1.2-1.9.7s-.3-.4-.4-.6c-.7-1.3-1.2-2.8-1.9-4.2l-.2-.4 2.1 8h-1.8v6.9l-.1.3c-.6 1.1-2.2.6-2.2-.6v-6.4c0-.2-.4-.1-.6-.1v6.9s-.1.3-.2.3c-.3.5-1.2.7-1.7.3s-.5-.5-.5-.7v-6.8h-2Z" />
             <path id="b-sign2" d="M455.4 483.2c2.7-.1 2.9 4.1.2 4.2-2.7 0-2.9-4-.2-4.2" />
         </g>

@@ -5,6 +5,21 @@ export const SCILevel2 = React.memo(function SCILevel2({ getColor, onHover, onCl
     // Helper to generate dynamic props: fill color + mouse events
     const r = (id) => ({
         fill: getColor(id),
+        role: "button",
+        tabIndex: 0,
+        "aria-label": id,
+        onMouseEnter: () => onHover(id, true),
+        onMouseLeave: () => onHover(id, false),
+        onFocus: (e) => onHover(id, true, e),
+        onBlur: () => onHover(id, false),
+        onClick: () => onClick(id),
+        onKeyDown: (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onClick(id); } },
+        style: { cursor: "pointer", transition: "opacity 0.2s" }
+    });
+
+    // Non-navigable areas: hoverable but not in tab order
+    const d = (id) => ({
+        fill: getColor(id),
         onMouseEnter: () => onHover(id, true),
         onMouseLeave: () => onHover(id, false),
         onClick: () => onClick(id),
@@ -12,7 +27,7 @@ export const SCILevel2 = React.memo(function SCILevel2({ getColor, onHover, onCl
     });
 
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" id="Floor_2" data-name="Floor 2" viewBox="0 0 1616.36 908.75">
+        <svg xmlns="http://www.w3.org/2000/svg" id="Floor_2" data-name="Floor 2" viewBox="0 0 1616.36 908.75" role="img" aria-label="Science Building Floor 2 map">
             <path id="sci-250-hallway" d="M719.48 525.43h39.96l27.76 27.76 47.5 1.2 19.19 28.86 4 4.44h528.29v-33.3h32.17v35.39l27.31 4v33.82h-22.87l-70.26-14v14.87h-46.09l-4-14.61H969.31v14.35h-45.83l-4-14.35H736.79v-4h-17.31v-84.43" {...r("sci-250-hallway")} />
             <path id="sci-251" d="M719.48 613.86h67.74v77.66h-24.69v-5.22h-24.79v-21.13h-18.26z" {...r("sci-251")} />
             <path id="sci-255" d="M885.83 613.86h-94.35v77.66h25.22v-6h25.31l4-20.61h39.82z" {...r("sci-255")} />
@@ -47,10 +62,10 @@ export const SCILevel2 = React.memo(function SCILevel2({ getColor, onHover, onCl
             <path id="sci-288" d="M1340.22 554.39h28.22v33.3h-28.22z" {...r("sci-288")} />
             <path id="sci-289" d="M1418.79 613.6h-28.61v51.31h28.61z" {...r("sci-289")} />
 
-            <path id="mechanical-room" d="M838.83 554.39h15.06v28.87h-15.06z" {...r("mechanical-room")} />
-            <path id="mech-room-2" d="M1445.66 554.39h-27.31v35.39l4.44 4h22.87z" {...r("mech-room-2")} />
-            <path id="mech-room-3" d="M1372.44 554.39h13.74v33.3h-13.74z" {...r("mech-room-3")} />
-            <g id="hallways" fill="#e5e5e5">
+            <path id="mechanical-room" d="M838.83 554.39h15.06v28.87h-15.06z" {...d("mechanical-room")} />
+            <path id="mech-room-2" d="M1445.66 554.39h-27.31v35.39l4.44 4h22.87z" {...d("mech-room-2")} />
+            <path id="mech-room-3" d="M1372.44 554.39h13.74v33.3h-13.74z" {...d("mech-room-3")} />
+            <g id="hallways" fill="#e5e5e5" aria-hidden="true">
                 <path id="Hallway-1" d="M115.31 493.78V385.06h442.96V259.25h-55.05v-44.08h-9.89v-48.62H678.7v49.66h-9.91v43.04h-13.05v125.81h849.31v34.24h-92.26v116.69h14.17V423.3h19v127.09h-31.17v4h-20.7v-63.48l-105.5-32.3 5.86-16.23 99.64 31.61V419.3H648.18v32.56h65.48v38h-65.48v32.7h71.3v36.96h-77.13v4h-30.38v-16.79h-45.05v16.79h-30.48v-4h-1.91v-40.96h-5.74v-100.7H155.14v75.92z" />
                 <path id="hallway-2" d="M463.83 712.99v29.66h78.44v-19.13h4v-10.79" />
             </g>
@@ -76,9 +91,9 @@ export const SCILevel2 = React.memo(function SCILevel2({ getColor, onHover, onCl
             <path id="sci-244a" d="M564.27 678.04h23.18v23.65h-23.18z" {...r("sci-244a")} />
             <path id="sci-244b" d="M591.45 678.04h23.34v23.65h-23.34z" {...r("sci-244b")} />
             <path id="sci-245" d="M467.57 559.52h12v4h87.35v27.3h-6.65v7.48h4v11.74h-4v68h4v27.65h25.26v19h-43.26v-21.96h-86.44v9.66h-17.65V610.73h21.65v-47.21h3.74z" {...r("sci-245")} />
-            <path id="mech-room-2-2" d="M655.74 263.25h-35.26v121.8h35.26s.67-121.8 0-121.8" data-name="mech-room-2" {...r("mech-room-2-2")} />
-            <path id="mech-room-1" d="M689.06 709.86h26.42v32.79h-77.91v-32.79z" {...r("mech-room-1")} />
-            <g id="Walls">
+            <path id="mech-room-2-2" d="M655.74 263.25h-35.26v121.8h35.26s.67-121.8 0-121.8" data-name="mech-room-2" {...d("mech-room-2-2")} />
+            <path id="mech-room-1" d="M689.06 709.86h26.42v32.79h-77.91v-32.79z" {...d("mech-room-1")} />
+            <g id="Walls" aria-hidden="true">
                 <path d="M577.01 397.08h-22.74V263.25H115.31v121.81h12.61v4h-16.61V259.25h446.96v133.83h18.74zM620.48 397.08h-21.95v-4h17.95v-14.04h4zM616.48 305.08h4v63h-4zM657.74 295.34h-41.26v-9.82h4v5.82h37.26z" />
                 <path d="M618.48 385.06h57.91v4h-57.91zM775.83 389.06h-90.48v-19.81h4v15.81h82.48v-15.81h4zM784.4 385.06h54.78v4H784.4zM850.53 385.06h88.83v4h-88.83zM1074.35 389.06H951.83v-19.28h4v15.28h118.52zM1085.7 385.06H1207v4h-121.3zM1285.66 385.06h18.78v4h-18.78zM1317.74 385.06h119.35v4h-119.35zM1426.96 535.99h-14.17v-116.7h92.26v4h-78.09zm-10.17-4h6.17v-108.7h-6.17z" />
                 <path d="M1505.05 389.06h-44.52V263.25H620.48v10.27h-4v-14.27h848.05v125.81h40.52z" />
@@ -137,7 +152,7 @@ export const SCILevel2 = React.memo(function SCILevel2({ getColor, onHover, onCl
                 </g>
                 <path d="M462.26 705.84h81.57v3.79h-81.57z" />
             </g>
-            <g id="Bathroom_Signs" data-name="Bathroom Signs">
+            <g id="Bathroom_Signs" data-name="Bathroom Signs" aria-hidden="true">
                 <g id="Bathroom-Sign-1">
                     <g id="Bathroom-Sign-2">
                         <path id="b-sign4" d="m639.36 185.33-1.39 6.64c-.68 1.76-3.19 1.38-3.29-.55.71-2.95 1.02-6.18 1.82-9.08.44-1.59 1.4-2.38 3.07-2.51 1.97-.15 5.22-.14 7.19 0 1.46.11 2.58.82 2.99 2.26.36 2.87 1.51 6.02 1.81 8.85.24 2.25-2.18 2.97-3.21 1.11l-1.47-6.97v21.52s-.25.56-.27.58c-.01.02-.34.27-.38.3-1.08.69-2.31.24-2.62-1l-.04-12.32c-.07-.62-.74-.79-.81 0-.33 3.81.34 8.14 0 11.96-.1 1.21-.93 1.84-2.14 1.65-.43-.07-.88-.5-1.06-.88-.03-.08-.2-.57-.2-.61v-20.96Z" />

@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useFocusTrap } from "../hooks/useFocusTrap";
 
 export const AboutModal = ({ onClose }) => {
+    const modalRef = useRef(null);
+    useFocusTrap(modalRef, onClose);
     return (
         <AnimatePresence>
             <motion.div
@@ -16,6 +19,10 @@ export const AboutModal = ({ onClose }) => {
                 onClick={onClose}
             >
                 <motion.div
+                    ref={modalRef}
+                    role="dialog"
+                    aria-modal="true"
+                    aria-labelledby="about-modal-title"
                     initial={{ y: 20, scale: 0.95 }}
                     animate={{ y: 0, scale: 1 }}
                     exit={{ y: 20, opacity: 0 }}
@@ -36,16 +43,17 @@ export const AboutModal = ({ onClose }) => {
                     }}
                 >
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                        <h2 style={{ margin: 0, fontSize: "1.5rem", fontWeight: "bold" }}>About Apollo</h2>
+                        <h2 id="about-modal-title" style={{ margin: 0, fontSize: "1.5rem", fontWeight: "bold" }}>About Apollo</h2>
                         <button
                             onClick={onClose}
+                            aria-label="Close About Apollo dialog"
                             style={{
                                 background: "none", border: "none", cursor: "pointer",
                                 fontSize: "1.2rem", color: "var(--text-secondary, #9ca3af)",
                                 padding: "4px"
                             }}
                         >
-                            ✕
+                            <span aria-hidden="true">✕</span>
                         </button>
                     </div>
 

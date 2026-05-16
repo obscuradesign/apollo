@@ -30,14 +30,31 @@ def normalize_room_id(raw_text):
     MSB rooms return 'room-{number}' for backward compatibility.
     Other buildings return '{building_lower}-{number}'.
     Returns None if no building/room pattern is found."""
+    # Clean up non-ASCII characters (like the \ue55f icon)
+    raw_text = re.sub(r'[^\x00-\x7F]+', '', raw_text).strip()
+    
+    # 1. Handle special named rooms (Theatre Arts specific)
+    NAMED_ROOMS = {
+        "TH ART STUDIO": "th_art-128",
+        "TH ART MAIN STAGE": "th_art-142",
+        "TH ART MAIN STG": "th_art-142", # Handle abbreviation
+    }
+    if raw_text in NAMED_ROOMS:
+        return NAMED_ROOMS[raw_text]
+
     # Map website abbreviations to app prefixes
     BUILDING_ALIASES = {
         "DH": "drschr",   # Drescher Hall
+        "TH ART": "th_art", # Theatre Arts (Separate building)
+        "ART": "a",       # Art
+        "A": "a",         # Art (short form)
     }
-    match = re.search(r"([A-Z]+)\s+(\d+[a-zA-Z]?)", raw_text)
+    # Match building (can have spaces) and room number
+    # Use (.+) to capture multi-word building names before the room number
+    match = re.search(r"(.+)\s+(\d+[a-zA-Z]?)", raw_text)
     if not match:
         return None
-    building = match.group(1)
+    building = match.group(1).strip()
     number = match.group(2)
     if building == "MSB":
         return f"room-{number}"
@@ -177,7 +194,9 @@ def scrape_si_sessions():
                             loc_str = loc_lines[i]
                         else:
                             continue 
-                        
+                        # Clean up non-ASCII characters (like the \ue55f icon) for both the key and the label
+                        loc_str = re.sub(r'[^\x00-\x7F]+', '', loc_str).strip()
+
                         # Filter Room (Must be MSB or SCI)
                         room_key = normalize_room_id(loc_str)
                         if not room_key: 

@@ -25,14 +25,33 @@ def normalize_room_id(raw_text):
     MSB rooms return 'room-{number}' for backward compatibility.
     Other buildings return '{building_lower}-{number}'.
     Returns None if no building/room pattern is found."""
+    # Clean up non-ASCII characters (like the \ue55f icon)
+    raw_text = re.sub(r'[^\x00-\x7F]+', '', raw_text).strip()
+    
+    # 1. Handle special named rooms (Theatre Arts specific)
+    NAMED_ROOMS = {
+        "TH ART STUDIO": "th_art-128",
+        "TH ART MAIN STAGE": "th_art-142",
+        "TH ART MAIN STG": "th_art-142", # Handle abbreviation
+    }
+    if raw_text in NAMED_ROOMS:
+        return NAMED_ROOMS[raw_text]
+
     # Map website abbreviations to app prefixes
     BUILDING_ALIASES = {
         "DH": "drschr",   # Drescher Hall
+        "TH ART": "th_art", # Theatre Arts (Separate building)
+        "ART": "a",       # Art
+        "A": "a",         # Art (short form)
+        "MALIBU": "malibu",
+        "BUNDY": "bundy"
     }
-    match = re.search(r"([A-Z]+)\s+(\d+[a-zA-Z]?)", raw_text)
+    # Match building (can have spaces) and room number
+    # Use (.+) to capture multi-word building names before the room number
+    match = re.search(r"(.+)\s+(\d+[a-zA-Z]?)", raw_text)
     if not match:
         return None
-    building = match.group(1)
+    building = match.group(1).strip()
     number = match.group(2)
     if building == "MSB":
         return f"room-{number}"
@@ -122,15 +141,22 @@ def scrape_smc_live():
         except:
             print("⚠️ Could not find Advanced toggle, continuing anyway...")
 
-        # Select "Main Campus" checkbox in the Location filter
-        print("📍 Selecting 'Main Campus' location...")
-        try:
-            main_campus_cb = wait.until(EC.element_to_be_clickable((By.ID, "P1_LOCATION_5")))
-            if not main_campus_cb.is_selected():
-                driver.execute_script("arguments[0].click();", main_campus_cb)
-            time.sleep(1)
-        except:
-            print("⚠️ Could not find 'Main Campus' checkbox, continuing anyway...")
+        # Select specific locations in the filter
+        locations = {
+            "Main Campus": "P1_LOCATION_5",
+            "Bundy Campus": "P1_LOCATION_1",
+            "Malibu Campus": "P1_LOCATION_6"
+        }
+
+        for loc_name, loc_id in locations.items():
+            print(f"📍 Selecting {loc_name!r} location...")
+            try:
+                cb = wait.until(EC.element_to_be_clickable((By.ID, loc_id)))
+                if not cb.is_selected():
+                    driver.execute_script("arguments[0].click();", cb)
+                time.sleep(0.5)
+            except:
+                print(f"⚠️ Could not find {loc_name!r} checkbox, skipping...")
 
         # No subject selected = all subjects. Just click Search.
         print("🔍 Searching ALL classes (no subject filter)...")
@@ -167,6 +193,9 @@ def scrape_smc_live():
                     course_title = cells[2].text.strip()
                     schedule_text = cells[5].text.strip()
                     location_text = cells[8].text.strip()
+                    # Clean up non-ASCII characters (like the \ue55f icon) for both the key and the label
+                    location_text = re.sub(r'[^\x00-\x7F]+', '', location_text).strip()
+                    
                     instructor = cells[9].text.strip()
                     
                     room_key = normalize_room_id(location_text)

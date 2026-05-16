@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
-import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
+import { TransformWrapper, TransformComponent, useControls } from "react-zoom-pan-pinch";
 import { Level1 } from "./Level1";
 import { Level2 } from "./Level2";
 import { Level3 } from "./Level3";
@@ -19,6 +19,9 @@ import { SSCLevel2 } from "./SSCLevel2";
 import { SSCLevel3 } from "./SSCLevel3";
 import { AFloor1 } from "./AFloor1";
 import { AFloor2 } from "./AFloor2";
+import { MalibuLevel1 } from "./MalibuLevel1";
+import { MalibuLevel2 } from "./MalibuLevel2";
+import { THART } from "./THART";
 import { CampusMap } from "./CampusMap";
 import { motion, AnimatePresence } from "framer-motion";
 import { ROOM_SCHEDULES as STATIC_SCHEDULES } from "../data/roomSchedule.js";
@@ -53,6 +56,8 @@ const BUILDINGS = {
   BUS: { label: "BUS", floors: 2 },
   SSC: { label: "SSC", floors: 3 },
   ART: { label: "Art", floors: 2 },
+  THART: { label: "Theatre Arts", floors: 1 },
+  MALIBU: { label: "Malibu", floors: 2 },
   PV: { label: "Pico Village", floors: 1 }
 };
 
@@ -61,6 +66,13 @@ const FLOOR_OFFSETS = {
   ART: {
     1: { x: 0, y: 0 },
     2: { x: 0, y: 0 }
+  },
+  THART: {
+    1: { x: 0, y: 0 }
+  },
+  MALIBU: {
+    1: { x: 0, y: 0 },
+    2: { x: 0, y: 0, scale: 1.3 }
   },
   MSB: {
     1: { x: 0, y: 0 },
@@ -114,7 +126,7 @@ const RoomTooltip = ({ info, position, starredItems, COLORS }) => {
   if (!info) return null;
 
   const isDepartment = info.roomType === "PROGRAM" || info.roomType === "OFFICE";
-  const skipSuffix = /(department|program|offices|office|center|tutoring|senate|stockroom|cosmetology|room|closet|services?|hall|admissions|lab)/i.test(info.roomLabel);
+  const skipSuffix = /(department|program|offices|office|center|tutoring|senate|stockroom|cosmetology|room|closet|services?|hall|admissions|lab|shop|stage|studio)/i.test(info.roomLabel);
   const displayLabel = isDepartment && !skipSuffix
     ? `${info.roomLabel} Department`
     : info.roomLabel;
@@ -178,6 +190,25 @@ const RoomTooltip = ({ info, position, starredItems, COLORS }) => {
   );
 };
 
+const DesktopZoomControls = () => {
+  const { zoomIn, zoomOut } = useControls();
+  return (
+    <div className="desktop-zoom-controls" aria-label="Zoom controls">
+      <button onClick={() => zoomIn()} className="zoom-btn" aria-label="Zoom In">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+        </svg>
+      </button>
+      <button onClick={() => zoomOut()} className="zoom-btn" aria-label="Zoom Out">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+        </svg>
+      </button>
+    </div>
+  );
+};
+
 const Legend = ({ COLORS }) => (
   <motion.div
     className="legend-container"
@@ -206,7 +237,7 @@ export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
   const [highlightedRoom, setHighlightedRoom] = useState(null);
   const transformRef = useRef(null);
   const [buildingDropdownOpen, setBuildingDropdownOpen] = useState(false);
-  
+
   const [highContrast, setHighContrast] = useState(() => {
     return localStorage.getItem("highContrast") === "true";
   });
@@ -722,6 +753,7 @@ export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
           }}
           key={`${currentBuilding}-${currentFloor}`}
         >
+          {!isMobile && <DesktopZoomControls />}
           <TransformComponent
             wrapperStyle={{ width: "100%", height: "100%", overflow: "hidden" }}
             contentStyle={{
@@ -757,6 +789,11 @@ export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
                   {/* Art Floors */}
                   {currentBuilding === "ART" && currentFloor === 1 && <AFloor1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
                   {currentBuilding === "ART" && currentFloor === 2 && <AFloor2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+                  {/* Malibu Floors */}
+                  {currentBuilding === "MALIBU" && currentFloor === 1 && <MalibuLevel1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+                  {currentBuilding === "MALIBU" && currentFloor === 2 && <MalibuLevel2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+                  {/* Theatre Arts */}
+                  {currentBuilding === "THART" && currentFloor === 1 && <THART getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
                   {/* MSB Floors */}
                   {currentBuilding === "MSB" && currentFloor === 1 && <Level1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
                   {currentBuilding === "MSB" && currentFloor === 2 && <Level2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
@@ -876,7 +913,7 @@ export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
           >
             <span aria-hidden="true" style={{ color: "var(--text-primary)" }}>{darkMode ? "☀️" : "🌙"}</span>
           </button>
-          
+
           {/* HIGH CONTRAST TOGGLE */}
           <button
             onClick={() => setHighContrast(!highContrast)}

@@ -763,5 +763,55 @@ export const ROOM_SCHEDULES = {
   "a-214": { type: "CLASSROOM", label: "Art 214", events: [] },
   "a-216": { type: "OFFICE", label: "Art Adjunct Office", clickable: false },
   "a-218": { type: "OFFICE", label: "Storage Closet", clickable: false },
-  "a-220": { type: "CLASSROOM", label: "Art 220", events: [] }
+  "a-220": { type: "CLASSROOM", label: "Art 220", events: [] },
+
+  // =============================================
+  // THART (Theatre Arts)
+  // =============================================
+
+  // --- Theatre Arts Department ---
+  "th_art-116": { type: "OFFICE", label: "Theatre Faculty Work Room", group: "THEATRE_DEPT", url: "https://www.smc.edu/academics/academic-departments/theatre-arts/" },
+  "th_art-117": { type: "OFFICE", label: "Theatre Arts Department", group: "THEATRE_DEPT", url: "https://www.smc.edu/academics/academic-departments/theatre-arts/" },
+  "th_art-118": { type: "OFFICE", label: "Theatre Arts Department", group: "THEATRE_DEPT", url: "https://www.smc.edu/academics/academic-departments/theatre-arts/" },
+  "th_art-119": { type: "OFFICE", label: "Theatre Arts Department", group: "THEATRE_DEPT", url: "https://www.smc.edu/academics/academic-departments/theatre-arts/" },
+  "th_art-120": { type: "OFFICE", label: "Theatre Arts Department", group: "THEATRE_DEPT", url: "https://www.smc.edu/academics/academic-departments/theatre-arts/" },
+  "th_art-121": { type: "OFFICE", label: "Theatre Arts Department", group: "THEATRE_DEPT", url: "https://www.smc.edu/academics/academic-departments/theatre-arts/" },
+  "th_art-122": { type: "OFFICE", label: "Theatre Arts Department", group: "THEATRE_DEPT", url: "https://www.smc.edu/academics/academic-departments/theatre-arts/" },
+  "th_art-123": { type: "OFFICE", label: "Theatre Arts Department", group: "THEATRE_DEPT", url: "https://www.smc.edu/academics/academic-departments/theatre-arts/" },
+
+  // --- Classrooms ---
+  "th_art-101": { type: "CLASSROOM", label: "Theatre Arts 101", events: [] },
+  "th_art-102": { type: "CLASSROOM", label: "Theatre Arts 102", events: [] },
+  "th_art-110": { type: "CLASSROOM", label: "Theatre Arts 110", events: [] },
+  "th_art-127": { type: "CLASSROOM", label: "Theatre Arts 127", events: [] },
+  "th_art-132": { type: "CLASSROOM", label: "Theatre Arts 132", events: [] },
+  "th_art-137": { type: "CLASSROOM", label: "Theatre Arts 137", events: [] },
+
+  // --- Performance & Shop Spaces ---
+  "th_art-128": { type: "PROGRAM", label: "Theatre Arts Studio", group: "THEATRE_DEPT", url: "https://www.smc.edu/academics/academic-departments/theatre-arts/" },
+  "th_art-130": { type: "PROGRAM", label: "Scene Shop", group: "THEATRE_DEPT", url: "https://www.smc.edu/academics/academic-departments/theatre-arts/" },
+  "th_art-138": { type: "PROGRAM", label: "Costume Shop", group: "THEATRE_DEPT", url: "https://www.smc.edu/academics/academic-departments/theatre-arts/" },
+  "th_art-139": { type: "PROGRAM", label: "Costume Shop", group: "THEATRE_DEPT", url: "https://www.smc.edu/academics/academic-departments/theatre-arts/" },
+  "th_art-142": { type: "PROGRAM", label: "Theatre Arts Main Stage", group: "THEATRE_DEPT", url: "https://www.smc.edu/academics/academic-departments/theatre-arts/" },
+
+  // =============================================
+  // MALIBU (Malibu Campus)
+  // =============================================
+
+  // --- FLOOR 1 ---
+  "malibu-103": { type: "CLASSROOM", label: "Malibu 103", events: [] },
+  "malibu-110": { type: "CLASSROOM", label: "Malibu 110", events: [] },
+  "malibu-110a": { type: "CLASSROOM", label: "Malibu 110A", events: [] },
+  "malibu-110b": { type: "CLASSROOM", label: "Malibu 110B", events: [] },
+  "malibu-112": { type: "CLASSROOM", label: "Malibu 112", events: [] },
+  "malibu-116": { type: "STUDY_ROOM", label: "Lactation Room", url: "https://www.smc.edu/student-support/health-wellbeing/basic-needs/lactation-rooms.php" },
+  "malibu-118": { type: "CLASSROOM", label: "Malibu 118", events: [] },
+  "malibu-119": { type: "CLASSROOM", label: "Malibu 119", events: [] },
+  "sheriff-station": { type: "PROGRAM", label: "Sheriff's Station", clickable: false },
+
+  // --- FLOOR 2 ---
+  "malibu-202a": { type: "CLASSROOM", label: "Malibu 202A", events: [] },
+  "malibu-203": { type: "CLASSROOM", label: "Malibu 203", events: [] },
+  "malibu-219": { type: "CLASSROOM", label: "Malibu 219", events: [] },
+  "malibu-220": { type: "CLASSROOM", label: "Malibu 220", events: [] }
 };

@@ -151,7 +151,7 @@ This document tracks Apollo's conformance to the [Web Content Accessibility Guid
 
 | Criterion | Level | Status | Implementation Notes |
 |-----------|-------|--------|----------------------|
-| [4.1.2 Name, Role, Value](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value) | A | ✅ | **SVG floor maps: complete.** All interactive room `<path>` elements across all 7 buildings (20 floors total) have `role="button"`, `aria-label`, `tabIndex={0}`, and keyboard handlers. **Modals: complete.** `AboutModal` and `SearchModal` have `role="dialog"`, `aria-modal="true"`, `aria-labelledby`. **Controls: complete.** Building dropdown has `aria-haspopup="listbox"` + `aria-expanded`; dropdown items have `role="option"` + `aria-selected`; floor buttons have `aria-pressed`; search and dark mode buttons have `aria-label`. |
+| [4.1.2 Name, Role, Value](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value) | A | ✅ | **SVG floor maps: complete.** All interactive room `<path>` elements across all 9 buildings (22 floors total) have `role="button"`, `aria-label`, `tabIndex={0}`, and keyboard handlers. **Modals: complete.** `AboutModal` and `SearchModal` have `role="dialog"`, `aria-modal="true"`, `aria-labelledby`. **Controls: complete.** Building dropdown has `aria-haspopup="listbox"` + `aria-expanded`; dropdown items have `role="option"` + `aria-selected`; floor buttons have `aria-pressed`; search and dark mode buttons have `aria-label`. |
 | [4.1.3 Status Messages](https://www.w3.org/WAI/WCAG22/Understanding/status-messages) | AA | ✅ | LIVE/TIME MACHINE badge wrapped in `aria-live="polite"` + `aria-atomic="true"` — screen readers announce mode changes. Search results container has `role="status"` + `aria-live="polite"` — announces "No results found" and a visually-hidden result count when results appear. |
 
 ---
@@ -181,6 +181,8 @@ All interactive floor map components have been retrofitted for WCAG 2.2 AA compl
 | **HSS** (Humanities & Social Sciences) | ✅ | ✅ | ✅ |
 | **BUS** (Business) | ✅ | ✅ | ⬜ |
 | **SSC** (Student Services Center) | ✅ | ✅ | ✅ |
+| **MALIBU** | ✅ | ✅ | ⬜ |
+| **TH_ART** (Theatre Arts) | ✅ | ⬜ | ⬜ |
 
 ### What was implemented on each floor component
 
@@ -208,7 +210,7 @@ All interactive floor map components have been retrofitted for WCAG 2.2 AA compl
 | 2026-05-12 | Retrofitted `HSSLevel1.jsx`, `HSSLevel2.jsx`, `HSSLevel3.jsx` — converted inline props to `r()`/`d()` helpers | 1.1.1 ✅, 2.1.1 (partial), 4.1.2 (partial) |
 | 2026-05-12 | Retrofitted `BUSLevel1.jsx`, `BUSLevel2.jsx` — upgraded existing `r()` to full WCAG version, added `d()` for mech rooms | 1.1.1 ✅, 2.1.1 ✅, 2.4.3 ✅, 4.1.2 (partial) |
 | 2026-05-12 | Retrofitted `SSCLevel1.jsx`, `SSCLevel2.jsx`, `SSCLevel3.jsx` — upgraded `r()`, added `d()`, hid hallways/tables/walls/bathrooms | 1.1.1 ✅, 2.1.1 ✅, 2.4.3 ✅, 4.1.2 (partial) |
-| 2026-05-12 | **SVG floor map retrofit complete** — all 20 floor components across 7 buildings now compliant | 1.1.1 ✅, 2.1.1 ✅, 2.4.3 ✅, 4.1.2 (partial — modals/controls remain) |
+| 2026-05-12 | **SVG floor map retrofit complete** — all 22 floor components across 9 buildings now compliant | 1.1.1 ✅, 2.1.1 ✅, 2.4.3 ✅, 4.1.2 (partial — modals/controls remain) |
 | 2026-05-12 | Added `aria-haspopup`, `aria-expanded`, `aria-label` to building dropdown trigger; `role="listbox"` + `role="option"` + `aria-selected` to dropdown menu; `aria-pressed` + `aria-label` to floor buttons; `aria-label` to search and dark mode buttons; emoji decorations wrapped in `aria-hidden="true"` | 2.5.3 ✅, 4.1.2 ✅ |
 | 2026-05-12 | Wrapped LIVE/TIME MACHINE badge in `aria-live="polite"` + `aria-atomic="true"`; added `role="status"` + `aria-live="polite"` to `SearchModal` results container; visually-hidden result count announcement | 4.1.3 ✅ |
 | 2026-05-12 | Added global `*:focus-visible` styles to `App.css` — 3px blue ring, pill-radius overrides for floor/search/dropdown buttons, skip link yellow ring preserved | 2.4.7 ✅ |

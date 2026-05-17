@@ -1,12 +1,12 @@
 {
-  "bus-253": {
+  "bus-263": {
     "type": "CLASSROOM",
-    "label": "BUS 253",
+    "label": "BUS 263",
     "events": [
       {
-        "day": "Tue",
-        "start": "15:00",
-        "end": "16:00",
+        "day": "Wed",
+        "start": "16:00",
+        "end": "17:00",
         "title": "SI Session",
         "courseName": "SI: ACCTG 1",
         "professor": "Leader: Maggie (Brookins)",
@@ -23,9 +23,9 @@
       }
     ]
   },
-  "bus-250": {
+  "bus-254": {
     "type": "CLASSROOM",
-    "label": "BUS 250",
+    "label": "BUS 254",
     "events": [
       {
         "day": "Mon",
@@ -47,53 +47,17 @@
       }
     ]
   },
-  "room-206": {
+  "room-307": {
     "type": "CLASSROOM",
-    "label": "MSB 206",
+    "label": "MSB 307",
     "events": [
       {
-        "day": "Tue",
-        "start": "12:00",
-        "end": "13:00",
+        "day": "Mon",
+        "start": "15:00",
+        "end": "16:00",
         "title": "SI Session",
         "courseName": "SI: ANATOMY 1",
         "professor": "Leader: Lilly (Grant)",
-        "status": "SI_SESSION"
-      },
-      {
-        "day": "Tue",
-        "start": "14:00",
-        "end": "15:00",
-        "title": "SI Session",
-        "courseName": "SI: Chem 19",
-        "professor": "Leader: Tina (Kelsey)",
-        "status": "SI_SESSION"
-      },
-      {
-        "day": "Fri",
-        "start": "17:30",
-        "end": "18:30",
-        "title": "SI Session",
-        "courseName": "SI: Chem 19",
-        "professor": "Leader: Tina (Kelsey)",
-        "status": "SI_SESSION"
-      },
-      {
-        "day": "Tue",
-        "start": "08:15",
-        "end": "09:15",
-        "title": "SI Session",
-        "courseName": "SI: MATH 2",
-        "professor": "Leader: Kimberly (Quevedo)",
-        "status": "SI_SESSION"
-      },
-      {
-        "day": "Thu",
-        "start": "11:30",
-        "end": "12:30",
-        "title": "SI Session",
-        "courseName": "SI: MATH 2",
-        "professor": "Leader: Kimberly (Quevedo)",
         "status": "SI_SESSION"
       }
     ]
@@ -166,15 +130,6 @@
     "label": "SCI 159",
     "events": [
       {
-        "day": "Mon",
-        "start": "16:45",
-        "end": "17:45",
-        "title": "SI Session",
-        "courseName": "SI: Chem 11",
-        "professor": "Leader: Sirabi (McClure)",
-        "status": "SI_SESSION"
-      },
-      {
         "day": "Fri",
         "start": "10:00",
         "end": "11:00",
@@ -199,6 +154,48 @@
         "title": "SI Session",
         "courseName": "SI: Chem 12",
         "professor": "Leader: Sirabi (Hunter)",
+        "status": "SI_SESSION"
+      }
+    ]
+  },
+  "room-206": {
+    "type": "CLASSROOM",
+    "label": "MSB 206",
+    "events": [
+      {
+        "day": "Tue",
+        "start": "14:00",
+        "end": "15:00",
+        "title": "SI Session",
+        "courseName": "SI: Chem 19",
+        "professor": "Leader: Tina (Kelsey)",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Fri",
+        "start": "17:30",
+        "end": "18:30",
+        "title": "SI Session",
+        "courseName": "SI: Chem 19",
+        "professor": "Leader: Tina (Kelsey)",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Tue",
+        "start": "08:15",
+        "end": "09:15",
+        "title": "SI Session",
+        "courseName": "SI: MATH 2",
+        "professor": "Leader: Kimberly (Quevedo)",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Thu",
+        "start": "11:30",
+        "end": "12:30",
+        "title": "SI Session",
+        "courseName": "SI: MATH 2",
+        "professor": "Leader: Kimberly (Quevedo)",
         "status": "SI_SESSION"
       }
     ]
@@ -265,15 +262,6 @@
         "status": "SI_SESSION"
       },
       {
-        "day": "Thu",
-        "start": "14:15",
-        "end": "15:15",
-        "title": "SI Session",
-        "courseName": "SI: CS 20A",
-        "professor": "Leader: Vanessa",
-        "status": "SI_SESSION"
-      },
-      {
         "day": "Mon",
         "start": "11:00",
         "end": "12:00",
@@ -298,6 +286,30 @@
         "title": "SI Session",
         "courseName": "SI: CS 52",
         "professor": "Leader: Dara",
+        "status": "SI_SESSION"
+      }
+    ]
+  },
+  "drescher-111": {
+    "type": "CLASSROOM",
+    "label": "Drescher 111",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "11:15",
+        "end": "12:15",
+        "title": "SI Session",
+        "courseName": "SI: ENGR 11",
+        "professor": "Leader: Vicente",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Fri",
+        "start": "16:15",
+        "end": "17:15",
+        "title": "SI Session",
+        "courseName": "SI: ENGR 11",
+        "professor": "Leader: Vicente",
         "status": "SI_SESSION"
       }
     ]
@@ -556,6 +568,30 @@
         "title": "SI Session",
         "courseName": "SI: PHYSCS 22",
         "professor": "Leader: Jaxon (Strohmaier)",
+        "status": "SI_SESSION"
+      }
+    ]
+  },
+  "drescher-203": {
+    "type": "CLASSROOM",
+    "label": "Drescher 203",
+    "events": [
+      {
+        "day": "Mon",
+        "start": "11:30",
+        "end": "12:30",
+        "title": "SI Session",
+        "courseName": "SI: SPAN 1",
+        "professor": "Leader: Gabriel",
+        "status": "SI_SESSION"
+      },
+      {
+        "day": "Wed",
+        "start": "17:15",
+        "end": "18:15",
+        "title": "SI Session",
+        "courseName": "SI: SPAN 1",
+        "professor": "Leader: Gabriel",
         "status": "SI_SESSION"
       }
     ]

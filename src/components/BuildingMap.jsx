@@ -126,7 +126,7 @@ const RoomTooltip = ({ info, position, starredItems, COLORS }) => {
   if (!info) return null;
 
   const isDepartment = info.roomType === "PROGRAM" || info.roomType === "OFFICE";
-  const skipSuffix = /(department|program|offices|office|center|tutoring|senate|stockroom|cosmetology|room|closet|services?|hall|admissions|lab|shop|stage|studio)/i.test(info.roomLabel);
+  const skipSuffix = /(department|program|offices|office|center|tutoring|senate|station|stockroom|cosmetology|room|closet|services?|hall|admissions|lab|shop|stage|studio)/i.test(info.roomLabel);
   const displayLabel = isDepartment && !skipSuffix
     ? `${info.roomLabel} Department`
     : info.roomLabel;

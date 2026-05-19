@@ -26,7 +26,6 @@
    so this never clutters the UI for pointer users. */
 *:focus {
   outline: none;
-  /* Remove browser default everywhere… */
 }
 
 *:focus-visible {
@@ -98,9 +97,7 @@
   align-items: center;
   gap: 12px;
   padding: 0 4px;
-  /* Align visually with map rounded corners */
   margin-bottom: 4px;
-  /* Small gap before the map starts */
 }
 
 .back-btn {
@@ -111,7 +108,6 @@
   height: 30px;
   background: var(--bg-header);
   border-radius: 50%;
-  /* Perfect Circle */
   color: var(--text-secondary);
   text-decoration: none;
   border: 1px solid var(--border-color);
@@ -123,7 +119,6 @@
   background: var(--bg-app);
   color: var(--text-primary);
   transform: translateX(-2px);
-  /* Subtle slide effect */
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
@@ -171,13 +166,11 @@ body {
   border-radius: 16px;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 
-  /* Allow dropdowns to spill out */
   overflow: visible;
   position: relative;
   display: flex;
   flex-direction: column;
   padding-bottom: 50px;
-  /* Space for the absolutely-positioned legend */
 }
 
 .map-card.compact {
@@ -226,7 +219,6 @@ body {
   left: 50%;
   transform: translateX(-50%);
   z-index: 20;
-  /* High z-index ensures it's clickable */
 
   display: flex;
   flex-wrap: nowrap;
@@ -237,14 +229,11 @@ body {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   border: 1px solid #e5e7eb;
   z-index: 150;
-  /* Always above legend and map */
 
-  /* FIX: Prevents clipping of dropdowns */
   max-width: 95%;
   overflow: visible;
 
   align-items: center;
-  /* Vertically center items */
 }
 
 .search-btn-inline {
@@ -253,7 +242,6 @@ body {
   border: 1px solid transparent;
   background: transparent;
   color: #1f2937;
-  /* Gray-900 */
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -284,7 +272,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   white-space: nowrap;
-  /* ADDED to prevent text breaking */
   justify-content: center;
   gap: 6px 12px;
   background: rgba(255, 255, 255, 0.95);

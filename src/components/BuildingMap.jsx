@@ -23,6 +23,9 @@ import { MalibuLevel1 } from "./MalibuLevel1";
 import { MalibuLevel2 } from "./MalibuLevel2";
 import { THART } from "./THART";
 import { CampusMap } from "./CampusMap";
+import { CPCFloor1 } from "./CPCFloor1";
+import { CPCFloor2 } from "./CPCFloor2";
+import { CPCFloor3 } from "./CPCFloor3";
 import { motion, AnimatePresence } from "framer-motion";
 import { ROOM_SCHEDULES as STATIC_SCHEDULES } from "../data/roomSchedule.js";
 import LIVE_SCHEDULES from "../data/roomSchedule_LIVE.json";
@@ -58,11 +61,17 @@ const BUILDINGS = {
   ART: { label: "Art", floors: 2 },
   THART: { label: "Theatre Arts", floors: 1 },
   MALIBU: { label: "Malibu", floors: 2 },
-  PV: { label: "Pico Village", floors: 1 }
+  PV: { label: "Pico Village", floors: 1 },
+  CPC: { label: "CPC", floors: 3 }
 };
 
 // Manual offsets (x,y) to visually center each floor's SVG shape within the viewport
 const FLOOR_OFFSETS = {
+  CPC: {
+    1: { x: 0, y: 0 },
+    2: { x: 0, y: 0 },
+    3: { x: 0, y: 0 }
+  },
   ART: {
     1: { x: 0, y: 0 },
     2: { x: 0, y: 0 }
@@ -126,7 +135,7 @@ const RoomTooltip = ({ info, position, starredItems, COLORS }) => {
   if (!info) return null;
 
   const isDepartment = info.roomType === "PROGRAM" || info.roomType === "OFFICE";
-  const skipSuffix = /(department|program|offices|office|center|tutoring|senate|station|stockroom|cosmetology|room|closet|services?|hall|admissions|lab|shop|stage|studio)/i.test(info.roomLabel);
+  const skipSuffix = /(department|program|offices|office|storage|center|tutoring|senate|station|stockroom|cosmetology|room|closet|services?|hall|admissions|lab|shop|stage|studio)/i.test(info.roomLabel);
   const displayLabel = isDepartment && !skipSuffix
     ? `${info.roomLabel} Department`
     : info.roomLabel;
@@ -329,7 +338,13 @@ export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
     setHighlightedRoom(roomId);
 
     // Auto-switch building and floor based on room ID prefix
-    if (roomId.startsWith("a-")) {
+    if (roomId.startsWith("cpc-")) {
+      setCurrentBuilding("CPC");
+      const num = roomId.replace("cpc-", "");
+      if (num.startsWith("1")) setCurrentFloor(1);
+      else if (num.startsWith("2")) setCurrentFloor(2);
+      else if (num.startsWith("3")) setCurrentFloor(3);
+    } else if (roomId.startsWith("a-")) {
       setCurrentBuilding("ART");
       const num = roomId.replace("a-", "");
       if (num.startsWith("1")) setCurrentFloor(1);
@@ -789,6 +804,10 @@ export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
                   {/* Art Floors */}
                   {currentBuilding === "ART" && currentFloor === 1 && <AFloor1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
                   {currentBuilding === "ART" && currentFloor === 2 && <AFloor2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+                  {/* CPC Floors */}
+                  {currentBuilding === "CPC" && currentFloor === 1 && <CPCFloor1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+                  {currentBuilding === "CPC" && currentFloor === 2 && <CPCFloor2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+                  {currentBuilding === "CPC" && currentFloor === 3 && <CPCFloor3 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
                   {/* Malibu Floors */}
                   {currentBuilding === "MALIBU" && currentFloor === 1 && <MalibuLevel1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
                   {currentBuilding === "MALIBU" && currentFloor === 2 && <MalibuLevel2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}

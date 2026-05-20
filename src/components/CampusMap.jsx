@@ -11,7 +11,7 @@ export const CampusMap = ({ onBuildingClick, ...props }) => {
         tabIndex: 0,
         role: "button",
         "aria-label": `View ${label} map`,
-        style: { cursor: "pointer", transition: "opacity 0.2s" },
+        style: { cursor: "pointer" },
         className: "clickable-building",
         onMouseEnter: (e) => { e.currentTarget.style.opacity = 0.7; },
         onMouseLeave: (e) => { e.currentTarget.style.opacity = 1; }
@@ -31,6 +31,10 @@ export const CampusMap = ({ onBuildingClick, ...props }) => {
             <style>{`
                 .clickable-building path, path.clickable-building {
                     fill: #002855 !important;
+                    cursor: pointer;
+                }
+                .clickable-building {
+                    cursor: pointer;
                 }
                 .clickable-building:focus {
                     outline: 3px solid #1d4ed8;
@@ -2881,7 +2885,7 @@ export const CampusMap = ({ onBuildingClick, ...props }) => {
                     }}
                 />
                 <path
-                    id="CPC"
+                    id="CPC" {...b("CPC", "Core Performance Center")}
                     d="M466.06 279.29h-5.22v-4.03h-10.2v-7.58h.64v-8h-9.83v.58l-31.31-.25v10.5h2.41v3.82h-2.41v6.01h1.15v4.21h-1.15v6.53h3.58v14.87h9.83v-5.36h1.88v-11.22h7.71v4.58h33.27v-14.66z"
                     style={{
                         fill: "#231f20",
@@ -3467,7 +3471,7 @@ export const CampusMap = ({ onBuildingClick, ...props }) => {
                     />
                 </g>
             </g>
-            <g id="CPC_Text" data-name="CPC Text">
+            <g id="CPC_Text" data-name="CPC Text" style={{ pointerEvents: "none" }}>
                 <g>
                     <path
                         d="m428.27 271.98.67.07c-.04.4-.2.73-.46.99q-.405.39-1.05.39c-.37 0-.66-.09-.89-.28-.23-.18-.4-.43-.53-.75s-.18-.66-.18-1.04c0-.61.14-1.1.43-1.49s.69-.57 1.19-.57c.4 0 .73.12.99.37s.43.59.5 1.05l-.67.07c-.12-.6-.39-.91-.81-.91-.27 0-.48.13-.63.38s-.22.61-.22 1.09.08.85.24 1.1.37.37.64.37c.21 0 .39-.08.54-.25s.23-.36.25-.59ZM430.87 273.43c-.44 0-.77-.16-1-.47s-.35-.67-.35-1.08c0-.44.13-.8.38-1.09s.59-.44 1.01-.44c.4 0 .72.14.98.42.25.28.38.65.38 1.1s-.13.84-.4 1.13-.6.43-1.01.43Zm.02-.55c.45 0 .67-.33.67-1 0-.3-.05-.54-.16-.72s-.27-.26-.5-.26-.4.09-.51.27-.17.42-.17.72c0 .32.06.57.18.74s.28.25.48.25ZM433.79 273.37h-.67v-2.96h.6v.71c.09-.28.2-.48.35-.6s.3-.19.46-.19h.09v.72c-.34 0-.57.11-.68.33s-.17.43-.17.63v1.37ZM437.23 272.42l.6.08c-.08.27-.23.49-.46.66s-.51.26-.85.26c-.41 0-.74-.14-.99-.41s-.38-.65-.38-1.12.13-.82.38-1.11.59-.44 1.03-.44.75.14.98.43.35.66.35 1.11v.08h-2.03q0 .3.06.48a.658.658 0 0 0 .65.45c.33 0 .55-.16.67-.48Zm-.04-.88c0-.21-.07-.39-.19-.52s-.28-.2-.47-.2-.34.06-.46.19-.2.3-.22.53z"

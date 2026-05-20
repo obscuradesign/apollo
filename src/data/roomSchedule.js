@@ -813,5 +813,39 @@ export const ROOM_SCHEDULES = {
   "malibu-202a": { type: "CLASSROOM", label: "Malibu 202A", events: [] },
   "malibu-203": { type: "CLASSROOM", label: "Malibu 203", events: [] },
   "malibu-219": { type: "CLASSROOM", label: "Malibu 219", events: [] },
-  "malibu-220": { type: "CLASSROOM", label: "Malibu 220", events: [] }
+  "malibu-220": { type: "CLASSROOM", label: "Malibu 220", events: [] },
+
+  // =============================================
+  // CPC (Core Performance Center)
+  // =============================================
+
+  // --- FLOOR 1 ---
+  "cpc-104": { type: "CLASSROOM", label: "CPC 104", events: [] },
+  "cpc-106": { type: "PROGRAM", label: "Women's Athlete Locker Room", group: "ATHLETICS", url: "https://www.smc.edu/academics/academic-departments/kinesiology-athletics/athletics.php" },
+  "cpc-110": { type: "PROGRAM", label: "Men's Athlete Locker Room", group: "ATHLETICS", url: "https://www.smc.edu/academics/academic-departments/kinesiology-athletics/athletics.php" },
+  "cpc-112": { type: "OFFLINE", label: "Equipment Storage", clickable: false },
+
+  // --- FLOOR 2 ---
+  "cpc-201": { type: "CLASSROOM", label: "CPC 201", events: [] },
+  "cpc-206": { type: "PROGRAM", label: "Men's Locker Room", group: "ATHLETICS", url: "https://www.smc.edu/academics/academic-departments/kinesiology-athletics/facilities.php" },
+  "cpc-207": { type: "CLASSROOM", label: "CPC 207", events: [] },
+  "cpc-214": { type: "PROGRAM", label: "Women's Locker Room", group: "ATHLETICS", url: "https://www.smc.edu/academics/academic-departments/kinesiology-athletics/facilities.php" },
+  "cpc-216": { type: "CLASSROOM", label: "CPC 216", events: [] },
+  "cpc-218": { type: "CLASSROOM", label: "CPC 218", events: [] },
+
+  // --- FLOOR 3 ---
+  "cpc-306": { type: "CLASSROOM", label: "CPC 306", events: [] },
+  "cpc-308": { type: "CLASSROOM", label: "CPC 308", events: [] },
+  "cpc-310": { type: "CLASSROOM", label: "CPC 310", events: [] },
+  "cpc-314": { type: "CLASSROOM", label: "CPC 314", events: [] },
+
+  // --- Offices ---
+  "cpc-307": { type: "OFFICE", label: "Dance", group: "DANCE_DEPT", url: "https://www.smc.edu/academics/academic-departments/dance/" },
+  "cpc-307d": { type: "OFFICE", label: "Dance Office", group: "DANCE_DEPT", url: "https://www.smc.edu/academics/academic-departments/dance/" },
+  "cpc-307e": { type: "OFFICE", label: "Dance Office", group: "DANCE_DEPT", url: "https://www.smc.edu/academics/academic-departments/dance/" },
+  "cpc-307f": { type: "OFFICE", label: "Dance Office", group: "DANCE_DEPT", url: "https://www.smc.edu/academics/academic-departments/dance/" },
+  "cpc-307g": { type: "OFFICE", label: "Dance Office", group: "DANCE_DEPT", url: "https://www.smc.edu/academics/academic-departments/dance/" },
+  "cpc-307h": { type: "OFFICE", label: "Dance Office", group: "DANCE_DEPT", url: "https://www.smc.edu/academics/academic-departments/dance/" },
+  "cpc-307k": { type: "OFFLINE", label: "Dance Storage", group: "DANCE_DEPT", url: "https://www.smc.edu/academics/academic-departments/dance/" },
+  "cpc-307l": { type: "OFFICE", label: "Dance Dept Restroom", group: "DANCE_DEPT", url: "https://www.smc.edu/academics/academic-departments/dance/" }
 };

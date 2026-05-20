@@ -379,16 +379,16 @@ export const ROOM_SCHEDULES = {
 
 
   // --- Fashion Department ---
-  "bus-120": { type: "OFFICE", label: "Fashion Department", group: "FASHION_DEPT", url: "https://www.smc.edu/academics/academic-departments/photography-fashion/fashion/" },
-  "bus-120a": { type: "OFFICE", label: "Fashion Department Offices", group: "FASHION_DEPT", url: "https://www.smc.edu/academics/academic-departments/photography-fashion/fashion/" },
-  "bus-120b": { type: "OFFICE", label: "Fashion Department Offices", group: "FASHION_DEPT", url: "https://www.smc.edu/academics/academic-departments/photography-fashion/fashion/" },
-  "bus-120c": { type: "OFFICE", label: "Fashion Department Offices", group: "FASHION_DEPT", url: "https://www.smc.edu/academics/academic-departments/photography-fashion/fashion/" },
-  "bus-120d": { type: "OFFICE", label: "Fashion Department Offices", group: "FASHION_DEPT", url: "https://www.smc.edu/academics/academic-departments/photography-fashion/fashion/" },
-  "bus-120e": { type: "OFFICE", label: "Fashion Department Offices", group: "FASHION_DEPT", url: "https://www.smc.edu/academics/academic-departments/photography-fashion/fashion/" },
-  "bus-120f": { type: "OFFICE", label: "Fashion Department Offices", group: "FASHION_DEPT", url: "https://www.smc.edu/academics/academic-departments/photography-fashion/fashion/" },
-  "bus-120g": { type: "OFFICE", label: "Fashion Department Offices", group: "FASHION_DEPT", url: "https://www.smc.edu/academics/academic-departments/photography-fashion/fashion/" },
-  "bus-120h": { type: "OFFICE", label: "Fashion Department Offices", group: "FASHION_DEPT", url: "https://www.smc.edu/academics/academic-departments/photography-fashion/fashion/" },
-  "bus-120j": { type: "OFFICE", label: "Fashion Department Offices", group: "FASHION_DEPT", url: "https://www.smc.edu/academics/academic-departments/photography-fashion/fashion/" },
+  "bus-120": { type: "OFFICE", label: "Fashion Department", group: "FASHION_DEPT", url: "https://www.smc.edu/academics/academic-departments/photography-fashion/fashion-design/" },
+  "bus-120a": { type: "OFFICE", label: "Fashion Department Offices", group: "FASHION_DEPT", url: "https://www.smc.edu/academics/academic-departments/photography-fashion/fashion-design/" },
+  "bus-120b": { type: "OFFICE", label: "Fashion Department Offices", group: "FASHION_DEPT", url: "https://www.smc.edu/academics/academic-departments/photography-fashion/fashion-design/" },
+  "bus-120c": { type: "OFFICE", label: "Fashion Department Offices", group: "FASHION_DEPT", url: "https://www.smc.edu/academics/academic-departments/photography-fashion/fashion-design/" },
+  "bus-120d": { type: "OFFICE", label: "Fashion Department Offices", group: "FASHION_DEPT", url: "https://www.smc.edu/academics/academic-departments/photography-fashion/fashion-design/" },
+  "bus-120e": { type: "OFFICE", label: "Fashion Department Offices", group: "FASHION_DEPT", url: "https://www.smc.edu/academics/academic-departments/photography-fashion/fashion-design/" },
+  "bus-120f": { type: "OFFICE", label: "Fashion Department Offices", group: "FASHION_DEPT", url: "https://www.smc.edu/academics/academic-departments/photography-fashion/fashion-design/" },
+  "bus-120g": { type: "OFFICE", label: "Fashion Department Offices", group: "FASHION_DEPT", url: "https://www.smc.edu/academics/academic-departments/photography-fashion/fashion-design/" },
+  "bus-120h": { type: "OFFICE", label: "Fashion Department Offices", group: "FASHION_DEPT", url: "https://www.smc.edu/academics/academic-departments/photography-fashion/fashion-design/" },
+  "bus-120j": { type: "OFFICE", label: "Fashion Department Offices", group: "FASHION_DEPT", url: "https://www.smc.edu/academics/academic-departments/photography-fashion/fashion-design/" },
 
   // --- Cosmetology Department ---
   "bus-149a": { type: "OFFICE", label: "Cosmetology Offices", group: "COSMETOLOGY", url: "https://www.smc.edu/academics/academic-departments/cosmetology/" },

@@ -376,7 +376,6 @@ export const PATH_GRAPHS = {
       "SCI-1:exit-1to2-node": "Exit 1to2 (Stairs) (Floor 1)",
       "SCI-1:building-exit-to-msb-only-node": "Exit to MSB (Floor 1)",
       "SCI-1:building-exit-6-node": "Exit 6 (Floor 1)",
-      "SCI-1:building-exit-6-node": "Exit 6 (Floor 1)",
       "SCI-1:building-exit-5-node": "Exit 5 (Floor 1)",
       "SCI-1:building-exit-4-node": "Exit 4 (Floor 1)",
       "SCI-1:building-exit-3-node": "Exit 3 (Floor 1)",

@@ -27,7 +27,6 @@ export const DrescherLevel2 = React.memo(function DrescherLevel2({ getColor, onH
     });
 
     const wallStyle = { stroke: "#000", strokeMiterlimit: 10, strokeWidth: ".5px" };
-    const subWallStyle = { stroke: "#000", strokeMiterlimit: 10, strokeWidth: ".25px" };
 
     return (
         <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 792 576" role="img" aria-label="Drescher Hall Floor 2 map">

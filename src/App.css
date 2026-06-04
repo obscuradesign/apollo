@@ -207,7 +207,9 @@ body {
 .map-card.crisp svg [id^="Bathroom-Sign"],
 .map-card.crisp svg [id^="Bathroom-Sign"] *,
 .map-card.crisp svg #tables,
-.map-card.crisp svg #tables * {
+.map-card.crisp svg #tables *,
+.map-card.crisp svg #Pathing,
+.map-card.crisp svg #Pathing * {
   shape-rendering: geometricPrecision;
 }
 
@@ -573,4 +575,135 @@ body {
   .search-text {
     display: none;
   }
+}
+
+/* --- NAVIGATE BAR (Wayfinding) --- */
+.navigate-bar {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: var(--bg-header, white);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-color, #e5e7eb);
+  margin-bottom: 8px;
+}
+
+.nav-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-secondary, #6b7280);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.navigate-bar select {
+  flex: 1;
+  min-width: 120px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color, #d1d5db);
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: var(--bg-app, #f9fafb);
+  color: var(--text-primary, #1f2937);
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.navigate-bar select:focus {
+  outline: 2px solid var(--text-primary, #111827);
+  outline-offset: 2px;
+}
+
+.navigate-bar select optgroup {
+  font-weight: 700;
+  color: var(--text-secondary, #6b7280);
+  background: var(--bg-header, white);
+}
+
+.navigate-bar select option {
+  font-weight: 500;
+  color: var(--text-primary, #1f2937);
+  background: var(--bg-app, #f9fafb);
+}
+
+.navigate-bar button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.nav-go-btn {
+  background: #16a34a;
+  color: white;
+}
+.nav-go-btn:hover:not(:disabled) { background: #15803d; }
+.nav-go-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.nav-reset-btn {
+  background: var(--bg-app, #f3f4f6);
+  color: var(--text-primary, #4b5563);
+  border: 1px solid var(--border-color, #d1d5db) !important;
+}
+.nav-reset-btn:hover { opacity: 0.8; }
+
+@media (max-width: 599px) {
+  .navigate-bar {
+    padding: 8px 12px;
+    gap: 6px;
+  }
+  .navigate-bar select {
+    min-width: 0;
+    flex-basis: calc(50% - 30px);
+    font-size: 0.8rem;
+    padding: 6px 8px;
+  }
+  .nav-label {
+    display: none;
+  }
+}
+
+/* Multi-floor container and stair tip */
+.navigate-bar-container {
+  width: 100%;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.navigate-bar-container .navigate-bar {
+  margin-bottom: 0;
+}
+
+.nav-stair-tip {
+  width: 100%;
+  padding: 10px 16px;
+  background: rgba(22, 163, 74, 0.1);
+  border-left: 4px solid #16a34a;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary, #15803d);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.dark-mode .nav-stair-tip {
+  background: rgba(22, 163, 74, 0.2);
+  color: #4ade80;
 }

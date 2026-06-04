@@ -1,6 +1,5 @@
 import React from 'react';
-
-export const HSSLevel1 = React.memo(function HSSLevel1({ getColor, onHover, onClick }) {
+export const HSSLevel1 = React.memo(function HSSLevel1({ getColor, onHover, onClick, activeSegments = new Set() }) {
     const r = (id) => ({
         fill: getColor(id),
         role: "button",
@@ -14,6 +13,11 @@ export const HSSLevel1 = React.memo(function HSSLevel1({ getColor, onHover, onCl
         onKeyDown: (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onClick(id); } },
         style: { cursor: "pointer", transition: "opacity 0.2s" }
     });
+
+    // Check if a junction should be visible (hidden by default)
+    const jVis = (junctionId) => activeSegments.has("HSS-1:" + junctionId.toLowerCase()) ? 0 : 0;
+    const sVis = (segId) => activeSegments.has("HSS-1:" + segId) ? 1 : 0;
+
     return (
         <svg xmlns="http://www.w3.org/2000/svg" id="Floor_1" data-name="Floor 1" viewBox="0 0 792 576" role="img" aria-label="HSS Building Floor 1 map">
             <path id="electrical-room" fill="#3b3b3c" d="M579.11 334.78h-38.5v29.89h11.3v-9.78h27.2z" />
@@ -128,6 +132,72 @@ export const HSSLevel1 = React.memo(function HSSLevel1({ getColor, onHover, onCl
             <g id="Bathroom-Sign-3" fill="#000000" aria-hidden="true">
                 <path id="b-sin5" d="m408.57 223.27 2.05-7.16-1.91 4.2c-.69 1.07-2.31.45-2.06-.82l3.06-6.9c.31-.44.68-.54 1.2-.58 1.22-.08 3.27-.1 4.47 0 .44.04.76.18 1.01.55.9 2.12 1.97 4.17 2.85 6.3.16.39.31.63.25 1.08-.11.84-1.19 1.17-1.83.65-.19-.16-.26-.34-.37-.55-.65-1.26-1.14-2.7-1.77-3.99l-.22-.39 1.99 7.59h-1.72v6.54s-.11.24-.14.29c-.55 1.01-2.11.6-2.12-.62 0-.1.06-.21.06-.32-.01-1.92 0-3.84 0-5.76-.04-.24-.42-.1-.59-.13v6.59s-.14.29-.16.32c-.32.48-1.12.63-1.59.3-.14-.1-.46-.51-.46-.67v-6.46l-.08-.08h-1.91Z" />
                 <path id="b-sign2" d="M412.98 207.51c2.59-.12 2.78 3.9.14 3.97-2.56.07-2.73-3.85-.14-3.97" />
+            </g>
+            <g id="Pathing">
+                {/* Junctions */}
+                <circle id="Junction_1" cx="599.97" cy="284.37" r="4" data-name="Junction 1" style={{ fill: "#16a34a", transition: "opacity 0.2s", opacity: jVis("Junction_1") }} />
+                <circle id="Junction_2" cx="599.97" cy="341.13" r="4" data-name="Junction 2" style={{ fill: "#16a34a", transition: "opacity 0.2s", opacity: jVis("Junction_2") }} />
+                <circle id="Junction_3" cx="502.97" cy="284.37" r="4" data-name="Junction 3" style={{ fill: "#16a34a", transition: "opacity 0.2s", opacity: jVis("Junction_3") }} />
+                <circle id="Junction_4" cx="369" cy="259.37" r="4" data-name="Junction 4" style={{ fill: "#16a34a", transition: "opacity 0.2s", opacity: jVis("Junction_4") }} />
+                <circle id="Junction_5" cx="369" cy="189.05" r="4" data-name="Junction 5" style={{ fill: "#16a34a", transition: "opacity 0.2s", opacity: jVis("Junction_5") }} />
+                <circle id="Junction_6" cx="194.87" cy="236.35" r="4" data-name="Junction 6" style={{ fill: "#16a34a", transition: "opacity 0.2s", opacity: jVis("Junction_6") }} />
+                <circle id="Junction_7" cx="194.87" cy="280.57" r="4" data-name="Junction 7" style={{ fill: "#16a34a", transition: "opacity 0.2s", opacity: jVis("Junction_7") }} />
+                <circle id="Junction_8" cx="194.87" cy="298.66" r="4" data-name="Junction 8" style={{ fill: "#16a34a", transition: "opacity 0.2s", opacity: jVis("Junction_8") }} />
+                <circle id="Junction_9" cx="194.87" cy="316.32" r="4" data-name="Junction 9" style={{ fill: "#16a34a", transition: "opacity 0.2s", opacity: jVis("Junction_9") }} />
+                <circle id="Junction_10" cx="194.87" cy="386.8" r="4" data-name="Junction 10" style={{ fill: "#16a34a", transition: "opacity 0.2s", opacity: jVis("Junction_10") }} />
+                <circle id="Junction_11" cx="278.41" cy="189.05" r="4" data-name="Junction 11" style={{ fill: "#16a34a", transition: "opacity 0.2s", opacity: jVis("Junction_11") }} />
+                <circle id="Junction_12" cx="267.35" cy="189.05" r="4" data-name="Junction 12" style={{ fill: "#16a34a", transition: "opacity 0.2s", opacity: jVis("Junction_12") }} />
+                <circle id="Junction_13" cx="390.13" cy="189.05" r="4" data-name="Junction 13" style={{ fill: "#16a34a", transition: "opacity 0.2s", opacity: jVis("Junction_13") }} />
+                <circle id="Junction_14" cx="464.27" cy="189.05" r="4" data-name="Junction 14" style={{ fill: "#16a34a", transition: "opacity 0.2s", opacity: jVis("Junction_14") }} />
+                <circle id="Junction_15" cx="476.6" cy="189.05" r="4" data-name="Junction 15" style={{ fill: "#16a34a", transition: "opacity 0.2s", opacity: jVis("Junction_15") }} />
+                <circle id="Junction_16" cx="464.58" cy="284.37" r="4" data-name="Junction 16" style={{ fill: "#16a34a", transition: "opacity 0.2s", opacity: jVis("Junction_16") }} />
+                <circle id="Junction_17" cx="502.97" cy="326.12" r="4" data-name="Junction 17" style={{ fill: "#16a34a", transition: "opacity 0.2s", opacity: jVis("Junction_17") }} />
+                <circle id="Junction_18" cx="194.87" cy="189.05" r="4" data-name="Junction 18" style={{ fill: "#16a34a", transition: "opacity 0.2s", opacity: jVis("Junction_18") }} />
+                <circle id="Junction_19" cx="502.97" cy="189.05" r="4" data-name="Junction 19" style={{ fill: "#16a34a", transition: "opacity 0.2s", opacity: jVis("Junction_19") }} />
+
+                {/* Segments */}
+                <path id="hss-106-seg" d="M599.97 341.13v15.76" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("hss-106-seg") }} />
+                <path id="hss-103-seg" d="M599.97 264.5v19.87" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("hss-103-seg") }} />
+                <path id="hss-104-seg" d="M599.97 284.37h19.88" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("hss-104-seg") }} />
+                <path id="hss-105-seg" d="M599.97 341.13h19.88" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("hss-105-seg") }} />
+                <path id="hss-150-seg" d="M176.85 236.35h18.02" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("hss-150-seg") }} />
+                <path id="hss-151-seg" d="M176.85 298.66h18.02" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("hss-151-seg") }} />
+                <path id="hss-152-seg" d="M176.85 316.32h18.02" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("hss-152-seg") }} />
+                <path id="hss-154-seg" d="M194.87 280.57h18.02" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("hss-154-seg") }} />
+                <path id="hss-153-seg" d="M267.35 189.05v17.19" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("hss-153-seg") }} />
+                <path id="hss-155-seg" d="M278.41 189.05v17.19" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("hss-155-seg") }} />
+                <path id="hss-156-seg" d="M336.11 287.01H369v-27.64" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("hss-156-seg") }} />
+                <path id="hss-165-seg" d="M464.61 284.37v25.76" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("hss-165-seg") }} />
+                <path id="Segment_1" d="M599.97 341.13v-56.76" data-name="Segment 1" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("Segment_1") }} />
+                <path id="Segment_2" d="M599.97 284.37h-97" data-name="Segment 2" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("Segment_2") }} />
+                <path id="Segment_3" d="M464.58 284.37h38.39" data-name="Segment 3" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("Segment_3") }} />
+                <path id="Segment_4" d="M369 259.37h95.58v25" data-name="Segment 4" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("Segment_4") }} />
+                <path id="Segment_5" d="M502.97 326.12v-41.75" data-name="Segment 5" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("Segment_5") }} />
+                <path id="Segment_6" d="M502.97 189.05v95.32" data-name="Segment 6" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("Segment_6") }} />
+                <path id="Segment_7" d="M369 189.05v70.32" data-name="Segment 7" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("Segment_7") }} />
+                <path id="Segment_8" d="M369 189.05h21.13" data-name="Segment 8" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("Segment_8") }} />
+                <path id="Segment_9" d="M464.27 189.05h-74.14" data-name="Segment 9" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("Segment_9") }} />
+                <path id="Segment_10" d="M476.6 189.05h-12.33" data-name="Segment 10" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("Segment_10") }} />
+                <path id="Segment_11" d="M476.6 189.05h26.37" data-name="Segment 11" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("Segment_11") }} />
+                <path id="Segment_12" d="M369 189.05h-90.59" data-name="Segment 12" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("Segment_12") }} />
+                <path id="Segment_13" d="M267.35 189.05h11.06" data-name="Segment 13" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("Segment_13") }} />
+                <path id="Segment_14" d="M267.35 189.05h-72.48" data-name="Segment 14" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("Segment_14") }} />
+                <path id="Segment_15" d="M194.87 189.05v47.3" data-name="Segment 15" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("Segment_15") }} />
+                <path id="Segment_16" d="M194.87 280.57v-44.22" data-name="Segment 16" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("Segment_16") }} />
+                <path id="Segment_17" d="M194.87 280.57v18.09" data-name="Segment 17" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("Segment_17") }} />
+                <path id="Segment_18" d="M194.87 316.32v-17.66" data-name="Segment 18" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("Segment_18") }} />
+                <path id="Segment_19" d="M194.87 316.32v70.48" data-name="Segment 19" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("Segment_19") }} />
+                <path id="exit-1to2-only" d="M464.58 284.37h-66.51" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("exit-1to2-only") }} />
+                <path id="exit-1to2-only-2" d="M502.97 326.12h63.38" data-name="exit-1to2-only" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("exit-1to2-only-2") }} />
+                <path id="southeast-building-exit" d="M194.87 402.94V386.8" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("southeast-building-exit") }} />
+                <path id="left-stairs" d="M194.87 386.8h43.43v-13.46h-17.82" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("left-stairs") }} />
+                <path id="northeast-building-exit" d="M502.97 326.12v98.27" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("northeast-building-exit") }} />
+                <path id="hss-level1-womens-restroom" d="M390.13 218.17v-29.12" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("hss-level1-womens-restroom") }} />
+                <path id="hss-level1-mens-restroom" d="M464.27 214.26v-25.21" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("hss-level1-mens-restroom") }} />
+                <path id="center-stairs" d="M476.6 189.05v-29.58h-20.06" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("center-stairs") }} />
+                <path id="southwest-building-exit" d="M194.87 189.05V174.3" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("southwest-building-exit") }} />
+                <path id="west-building-exit" d="M502.97 189.05v-37.44" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("west-building-exit") }} />
+                <path id="northwest-building-exit" d="M686.57 189.05h-183.6" style={{ fill: "none", stroke: "#16a34a", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", transition: "opacity 0.2s", opacity: sVis("northwest-building-exit") }} />
             </g>
         </svg>
     );

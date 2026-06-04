@@ -17,20 +17,23 @@ import { BUSLevel2 } from "./BUSLevel2";
 import { SSCLevel1 } from "./SSCLevel1";
 import { SSCLevel2 } from "./SSCLevel2";
 import { SSCLevel3 } from "./SSCLevel3";
-import { AFloor1 } from "./AFloor1";
-import { AFloor2 } from "./AFloor2";
+import { ALevel1 } from "./ALevel1";
+import { ALevel2 } from "./ALevel2";
 import { MalibuLevel1 } from "./MalibuLevel1";
 import { MalibuLevel2 } from "./MalibuLevel2";
 import { THART } from "./THART";
 import { CampusMap } from "./CampusMap";
-import { CPCFloor1 } from "./CPCFloor1";
-import { CPCFloor2 } from "./CPCFloor2";
-import { CPCFloor3 } from "./CPCFloor3";
+import { CPCLevel1 } from "./CPCLevel1";
+import { CPCLevel2 } from "./CPCLevel2";
+import { CPCLevel3 } from "./CPCLevel3";
+import { NavigateBar } from "./NavigateBar";
 import { motion, AnimatePresence } from "framer-motion";
 import { ROOM_SCHEDULES as STATIC_SCHEDULES } from "../data/roomSchedule.js";
 import LIVE_SCHEDULES from "../data/roomSchedule_LIVE.json";
 import SI_SCHEDULES_RAW from "../data/siSchedule.json";
 import OFFICE_HOURS from "../data/officeHours.json";
+import { PATH_GRAPHS } from "../data/pathGraphs.js";
+import { buildAdjacency, findPath } from "../utils/pathfinding.js";
 import "../App.css";
 import { SearchModal } from "./SearchModal";
 
@@ -90,7 +93,7 @@ const FLOOR_OFFSETS = {
   },
   DRSCHR: {
     1: { x: 0, y: 0 },
-    2: { x: 0, y: 100, scale: 0.8 },
+    2: { x: 0, y: 0 },
     3: { x: 0, y: 100, scale: 0.8 }
   },
   HSS: {
@@ -246,6 +249,9 @@ export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
   const [highlightedRoom, setHighlightedRoom] = useState(null);
   const transformRef = useRef(null);
   const [buildingDropdownOpen, setBuildingDropdownOpen] = useState(false);
+
+  // --- Wayfinding state ---
+  const [activeSegments, setActiveSegments] = useState(new Set());
 
   const [highContrast, setHighContrast] = useState(() => {
     return localStorage.getItem("highContrast") === "true";
@@ -485,7 +491,7 @@ export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
   // Logic: SI Sessions take visual priority over regular classes.
   // Priority Check: SI_SESSION -> STUDY_ROOM -> OCCUPIED -> OFFLINE
   const getRoomStatus = useCallback((roomId) => {
-    const siData = SI_SCHEDULES[roomId];
+    const siData = SI_SCHEDULES[roomId] || SI_SCHEDULES[roomId.toLowerCase()] || SI_SCHEDULES[roomId.toUpperCase()];
     if (siData && siData.events) {
       const activeSI = siData.events.find(event => {
         return event.day === simulationState.day &&
@@ -497,7 +503,7 @@ export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
       }
     }
 
-    let roomData = ROOM_SCHEDULES[roomId];
+    let roomData = ROOM_SCHEDULES[roomId] || ROOM_SCHEDULES[roomId.toLowerCase()] || ROOM_SCHEDULES[roomId.toUpperCase()];
 
     if (["room-107b", "room-107c", "room-107d"].includes(roomId)) {
       if (!roomData) roomData = { label: "Study Room" };
@@ -596,12 +602,12 @@ export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
   const getColorProp = useCallback((roomId) => {
     // 1. Search Highlight
     if (highlightedRoom) {
-      return highlightedRoom === roomId ? "#16a34a" : "rgba(200, 200, 200, 0.1)";
+      return highlightedRoom.toLowerCase() === roomId.toLowerCase() ? "#16a34a" : "rgba(200, 200, 200, 0.1)";
     }
 
     // 2. Starred Item Active?
     const activeStarred = starredItems.find(item => {
-      if (item.roomId !== roomId) return false;
+      if (item.roomId?.toLowerCase() !== roomId.toLowerCase()) return false;
       // Check for time match
       if (item.day && item.start && item.end) {
         return item.day === simulationState.day &&
@@ -658,6 +664,31 @@ export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
 
 
       </motion.div>
+
+      {/* Navigate Bar — always global so users can route from anywhere to anywhere */}
+      <NavigateBar
+        building={"CAMPUS"}
+        currentFloor={currentFloor}
+        activeSegments={activeSegments}
+        onNavigate={(graphKey, from, to) => {
+          const graph = PATH_GRAPHS[graphKey];
+          if (!graph) return;
+
+          // Redirect BUS 145 and BUS 149A to BUS 143F on the wayfinding backend
+          let finalFrom = from;
+          let finalTo = to;
+          const redirects = ["bus-1:bus-145", "bus-1:bus-149a"];
+          if (redirects.includes(from?.toLowerCase())) finalFrom = "BUS-1:bus-143F";
+          if (redirects.includes(to?.toLowerCase())) finalTo = "BUS-1:bus-143F";
+
+          const adj = buildAdjacency(graph.segments);
+          const segments = findPath(adj, finalFrom, finalTo);
+          if (segments) {
+            setActiveSegments(new Set(segments));
+          }
+        }}
+        onReset={() => setActiveSegments(new Set())}
+      />
 
       {/* Map Card */}
       <motion.div
@@ -802,12 +833,12 @@ export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
                   }}
                 >
                   {/* Art Floors */}
-                  {currentBuilding === "ART" && currentFloor === 1 && <AFloor1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
-                  {currentBuilding === "ART" && currentFloor === 2 && <AFloor2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+                  {currentBuilding === "ART" && currentFloor === 1 && <ALevel1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} activeSegments={activeSegments} />}
+                  {currentBuilding === "ART" && currentFloor === 2 && <ALevel2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} activeSegments={activeSegments} />}
                   {/* CPC Floors */}
-                  {currentBuilding === "CPC" && currentFloor === 1 && <CPCFloor1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
-                  {currentBuilding === "CPC" && currentFloor === 2 && <CPCFloor2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
-                  {currentBuilding === "CPC" && currentFloor === 3 && <CPCFloor3 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+                  {currentBuilding === "CPC" && currentFloor === 1 && <CPCLevel1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} activeSegments={activeSegments} />}
+                  {currentBuilding === "CPC" && currentFloor === 2 && <CPCLevel2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} activeSegments={activeSegments} />}
+                  {currentBuilding === "CPC" && currentFloor === 3 && <CPCLevel3 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} activeSegments={activeSegments} />}
                   {/* Malibu Floors */}
                   {currentBuilding === "MALIBU" && currentFloor === 1 && <MalibuLevel1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
                   {currentBuilding === "MALIBU" && currentFloor === 2 && <MalibuLevel2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
@@ -819,27 +850,27 @@ export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
                   {currentBuilding === "MSB" && currentFloor === 3 && <Level3 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
                   {/* Drescher Floors */}
                   {currentBuilding === "DRSCHR" && currentFloor === 1 && <DrescherLevel1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
-                  {currentBuilding === "DRSCHR" && currentFloor === 2 && <DrescherLevel2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
-                  {currentBuilding === "DRSCHR" && currentFloor === 3 && <DrescherLevel3 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+                  {currentBuilding === "DRSCHR" && currentFloor === 2 && <DrescherLevel2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} activeSegments={activeSegments} />}
+                  {currentBuilding === "DRSCHR" && currentFloor === 3 && <DrescherLevel3 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} activeSegments={activeSegments} />}
                   {/* Pico Village (shares Drescher 1 unified view) */}
                   {currentBuilding === "PV" && currentFloor === 1 && <DrescherLevel1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
                   {/* HSS Floors */}
-                  {currentBuilding === "HSS" && currentFloor === 1 && <HSSLevel1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
-                  {currentBuilding === "HSS" && currentFloor === 2 && <HSSLevel2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
-                  {currentBuilding === "HSS" && currentFloor === 3 && <HSSLevel3 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+                  {currentBuilding === "HSS" && currentFloor === 1 && <HSSLevel1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} activeSegments={activeSegments} />}
+                  {currentBuilding === "HSS" && currentFloor === 2 && <HSSLevel2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} activeSegments={activeSegments} />}
+                  {currentBuilding === "HSS" && currentFloor === 3 && <HSSLevel3 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} activeSegments={activeSegments} />}
                   {/* SCI Floors */}
-                  {currentBuilding === "SCI" && currentFloor === 1 && <SCILevel1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
-                  {currentBuilding === "SCI" && currentFloor === 2 && <SCILevel2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
-                  {currentBuilding === "SCI" && currentFloor === 3 && <SCILevel3 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+                  {currentBuilding === "SCI" && currentFloor === 1 && <SCILevel1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} activeSegments={activeSegments} />}
+                  {currentBuilding === "SCI" && currentFloor === 2 && <SCILevel2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} activeSegments={activeSegments} />}
+                  {currentBuilding === "SCI" && currentFloor === 3 && <SCILevel3 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} activeSegments={activeSegments} />}
                   {/* BUS Floors */}
-                  {currentBuilding === "BUS" && currentFloor === 1 && <BUSLevel1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
-                  {currentBuilding === "BUS" && currentFloor === 2 && <BUSLevel2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+                  {currentBuilding === "BUS" && currentFloor === 1 && <BUSLevel1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} activeSegments={activeSegments} />}
+                  {currentBuilding === "BUS" && currentFloor === 2 && <BUSLevel2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} activeSegments={activeSegments} />}
                   {/* SSC Floors */}
-                  {currentBuilding === "SSC" && currentFloor === 1 && <SSCLevel1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+                  {currentBuilding === "SSC" && currentFloor === 1 && <SSCLevel1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} activeSegments={activeSegments} />}
                   {currentBuilding === "SSC" && currentFloor === 2 && <SSCLevel2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
                   {currentBuilding === "SSC" && currentFloor === 3 && <SSCLevel3 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
                   {/* Campus Map */}
-                  {currentBuilding === "CAMPUS" && <CampusMap onBuildingClick={(id) => { setCurrentBuilding(id); setCurrentFloor(1); }} />}
+                  {currentBuilding === "CAMPUS" && <CampusMap onBuildingClick={(id) => { setCurrentBuilding(id); setCurrentFloor(1); }} activeSegments={activeSegments} />}
                 </motion.div>
               </AnimatePresence>
             </div>

@@ -1,5 +1,6 @@
 import * as React from "react";
-export const CampusMap = ({ onBuildingClick, ...props }) => {
+export const CampusMap = ({ onBuildingClick, activeSegments = new Set(), ...props }) => {
+    const sVis = (segId) => activeSegments.has("CAMPUS:" + segId) ? 1 : 0;
     const b = (id, label) => ({
         onClick: () => onBuildingClick(id),
         onKeyDown: (e) => {
@@ -4217,6 +4218,9 @@ export const CampusMap = ({ onBuildingClick, ...props }) => {
                         }}
                     />
                 </g>
+            </g>
+            <g id="Pathing" data-name="Pathing">
+                <path id="a-to-sci" d="m645.88 239.39 2.2 11.43 8.75-1.81 1.07 4.71" fill="none" stroke="#16a34a" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: sVis("a-to-sci"), transition: "opacity 0.3s" }} />
             </g>
         </svg>
     );

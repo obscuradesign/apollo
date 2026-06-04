@@ -279,14 +279,26 @@ export const ROOM_SCHEDULES = {
   // =============================================
 
   // --- FLOOR 1 ---
+  "sci-101": { type: "CLASSROOM", label: "SCI 101", events: [] },
   "sci-103": { type: "CLASSROOM", label: "SCI 103 (Prep Lab)", events: [] },
   "sci-104": { type: "CLASSROOM", label: "SCI 104 (Prep Lab)", events: [] },
+  "sci-106": { type: "CLASSROOM", label: "SCI 106", events: [] },
+  "sci-122": { type: "CLASSROOM", label: "SCI 122", events: [] },
   "sci-123": { type: "CLASSROOM", label: "SCI 123 (Prep Lab)", events: [] },
+  "sci-124": { type: "CLASSROOM", label: "SCI 124", events: [] },
   "sci-125": { type: "CLASSROOM", label: "SCI 125 (Prep Lab)", events: [] },
   "sci-130": { type: "CLASSROOM", label: "SCI 130 (Biology Student Projects Lab)", events: [] },
   "sci-131": { type: "CLASSROOM", label: "SCI 131 (Prep Lab)", events: [] },
   "sci-132": { type: "CLASSROOM", label: "SCI 132 (Zoological Collections)", events: [] },
   "sci-133": { type: "CLASSROOM", label: "SCI 133 (Prep Lab)", events: [] },
+  "sci-134": { type: "CLASSROOM", label: "SCI 134", events: [] },
+  "sci-140": { type: "CLASSROOM", label: "SCI 140", events: [] },
+  "sci-145": { type: "CLASSROOM", label: "SCI 145", events: [] },
+  "sci-151": { type: "CLASSROOM", label: "SCI 151", events: [] },
+  "sci-153": { type: "CLASSROOM", label: "SCI 153", events: [] },
+  "sci-155": { type: "CLASSROOM", label: "SCI 155", events: [] },
+  "sci-157": { type: "CLASSROOM", label: "SCI 157", events: [] },
+  "sci-158": { type: "CLASSROOM", label: "SCI 158", events: [] },
 
   // --- FLOOR 2 ---
   // Classrooms

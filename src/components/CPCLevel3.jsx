@@ -1,6 +1,9 @@
 import React from 'react';
-
-export const CPCFloor3 = React.memo(function CPCFloor3({ getColor, onHover, onClick }) {
+export const CPCLevel3 = React.memo(function CPCLevel3({ getColor, onHover, onClick, activeSegments = new Set() }) {
+    // Check if a junction should be visible (hidden by default)
+    const jVis = (junctionId) => activeSegments.has("CPC-3:" + junctionId.toLowerCase()) ? 0 : 0;
+    // Check if a path segment should be visible
+    const sVis = (segId) => activeSegments.has("CPC-3:" + segId) ? 1 : 0;
     const r = (id) => ({
         fill: getColor(id),
         role: "button",
@@ -77,8 +80,33 @@ export const CPCFloor3 = React.memo(function CPCFloor3({ getColor, onHover, onCl
             <g id="Bathroom-Sign-4" aria-hidden="true">
                 <path d="m509.3 430.12 1.02-3.57-.95 2.09c-.35.53-1.15.23-1.03-.41l1.53-3.44c.16-.22.34-.27.6-.29.61-.04 1.63-.05 2.23 0 .22.02.38.09.5.28.45 1.06.98 2.08 1.42 3.14.08.19.16.31.13.54-.05.42-.59.58-.91.32-.1-.08-.13-.17-.18-.27-.33-.63-.57-1.35-.88-1.99l-.11-.2.99 3.78h-.86v3.26s-.05.12-.07.15c-.28.5-1.05.3-1.06-.31 0-.05.03-.1.03-.16v-2.87c-.02-.12-.21-.05-.3-.07v3.29l-.08.16c-.16.24-.56.31-.79.15-.07-.05-.23-.26-.23-.34v-3.22l-.04-.04h-.95ZM518.72 426.34l-.46 2.21a.56.56 0 0 1-1.09-.18c.24-.98.34-2.05.6-3.02.15-.53.46-.79 1.02-.83.66-.05 1.73-.05 2.39 0 .48.04.86.27.99.75.12.95.5 2 .6 2.94.08.75-.72.99-1.07.37l-.49-2.32v7.15s-.08.18-.09.19c0 0-.11.09-.13.1-.36.23-.77.08-.87-.33v-4.09c-.04-.2-.26-.26-.28 0-.11 1.27.11 2.71 0 3.97-.03.4-.31.61-.71.55-.14-.02-.29-.17-.35-.29-.01-.03-.07-.19-.07-.2v-6.96ZM515.34 422.34h.87v11.46h-.87zM511.5 422.26c1.29-.06 1.38 1.94.07 1.98s-1.36-1.92-.07-1.98M520.7 423.94c-.9.94-2.35-.44-1.42-1.38s2.3.47 1.42 1.38" />
             </g>
+            <g id="Pathing" aria-hidden="true">
+                <path id="Segment_1" d="M373.5 366.5h-89.2" fill="none" stroke="#16a34a" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: sVis("Segment_1"), transition: "opacity 0.3s" }} />
+                <path id="Segment_2" d="M458 366.5h-84.5" fill="none" stroke="#16a34a" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: sVis("Segment_2"), transition: "opacity 0.3s" }} />
+                <path id="Segment_3" d="M284.3 366.5H234" fill="none" stroke="#16a34a" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: sVis("Segment_3"), transition: "opacity 0.3s" }} />
+                <path id="Segment_4" d="M234 366.5h-49.3" fill="none" stroke="#16a34a" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: sVis("Segment_4"), transition: "opacity 0.3s" }} />
+                <path id="Segment_5" d="M373.5 434.1v-13.9" fill="none" stroke="#16a34a" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: sVis("Segment_5"), transition: "opacity 0.3s" }} />
+                <path id="Segment_6" d="M373.5 366.5v53.7" fill="none" stroke="#16a34a" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: sVis("Segment_6"), transition: "opacity 0.3s" }} />
+                <path id="Exit_2" d="M458 366.5h40.2V329h125.7v-17.6h-54.4" fill="none" stroke="#16a34a" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: sVis("Exit_2"), transition: "opacity 0.3s" }} />
+                <path id="Exit_1" d="M310.5 520.4v12.9h19.4v-66.7h-45.6V366.5" fill="none" stroke="#16a34a" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: sVis("Exit_1"), transition: "opacity 0.3s" }} />
+                <path id="cpc-306-seg" d="M458 335.6v30.9" fill="none" stroke="#16a34a" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: sVis("cpc-306-seg"), transition: "opacity 0.3s" }} />
+                <path id="cpc-308-seg" d="M234 336.3v30.2" fill="none" stroke="#16a34a" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: sVis("cpc-308-seg"), transition: "opacity 0.3s" }} />
+                <path id="cpc-310-seg" d="M184 366.5v-30.2" fill="none" stroke="#16a34a" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: sVis("cpc-310-seg"), transition: "opacity 0.3s" }} />
+                <path id="cpc-312-seg" d="M184.7 366.5h-19.9" fill="none" stroke="#16a34a" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: sVis("cpc-312-seg"), transition: "opacity 0.3s" }} />
+                <path id="cpc-314-seg" d="M184 366.5v35.3" fill="none" stroke="#16a34a" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: sVis("cpc-314-seg"), transition: "opacity 0.3s" }} />
+                <path id="cpc-level3-mens-restroom" d="M373.5 420.2h12.8" fill="none" stroke="#16a34a" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: sVis("cpc-level3-mens-restroom"), transition: "opacity 0.3s" }} />
+                <path id="cpc-level3-womens-restroom" d="M386.3 434.1h-12.8" fill="none" stroke="#16a34a" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: sVis("cpc-level3-womens-restroom"), transition: "opacity 0.3s" }} />
+                <path id="cpc-307-seg" d="M373.5 434.1v23.1" fill="none" stroke="#16a34a" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: sVis("cpc-307-seg"), transition: "opacity 0.3s" }} />
+                <circle id="Junction_1" cx="184" cy="366.5" r="4" fill="#16a34a" style={{ opacity: jVis("Junction_1"), transition: "opacity 0.3s" }} />
+                <circle id="Junction_2" cx="234" cy="366.5" r="4" fill="#16a34a" style={{ opacity: jVis("Junction_2"), transition: "opacity 0.3s" }} />
+                <circle id="Junction_3" cx="284.3" cy="366.5" r="4" fill="#16a34a" style={{ opacity: jVis("Junction_3"), transition: "opacity 0.3s" }} />
+                <circle id="Junction_4" cx="458" cy="366.5" r="4" fill="#16a34a" style={{ opacity: jVis("Junction_4"), transition: "opacity 0.3s" }} />
+                <circle id="Junction_5" cx="373.5" cy="366.5" r="4" fill="#16a34a" style={{ opacity: jVis("Junction_5"), transition: "opacity 0.3s" }} />
+                <circle id="Junction_6" cx="373.5" cy="420.2" r="4" fill="#16a34a" style={{ opacity: jVis("Junction_6"), transition: "opacity 0.3s" }} />
+                <circle id="Junction_7" cx="373.5" cy="434.1" r="4" fill="#16a34a" style={{ opacity: jVis("Junction_7"), transition: "opacity 0.3s" }} />
+            </g>
         </svg>
     );
 });
 
-export default CPCFloor3;
+export default CPCLevel3;

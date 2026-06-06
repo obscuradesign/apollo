@@ -304,7 +304,13 @@ def scrape_smc_live():
         driver.quit()
         
     if scraped_data:
-        print(f"💾 Saving {len(scraped_data)} rooms to {OUTPUT_PATH}...")
+        # Add metadata so developers can easily see what semester this data belongs to
+        scraped_data["_metadata"] = {
+            "semester": selected_term,
+            "last_updated": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        }
+        
+        print(f"💾 Saving {len(scraped_data) - 1} rooms to {OUTPUT_PATH}...")
         with open(OUTPUT_PATH, "w") as f:
             json.dump(scraped_data, f, indent=2)
         print("✅ Done!")

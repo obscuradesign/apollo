@@ -1,6 +1,7 @@
 import json
 import time
 import re
+import datetime
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
@@ -126,6 +127,8 @@ def parse_si_time(time_str):
 
 def scrape_si_sessions():
     options = webdriver.ChromeOptions()
+    options.add_argument("--headless=new")
+    options.add_argument("--disable-gpu")
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
     
     si_data = {}
@@ -248,7 +251,13 @@ def scrape_si_sessions():
     finally:
         driver.quit()
 
-    print(f"💾 Saving SI Sessions for {len(si_data)} rooms to {OUTPUT_PATH}...")
+    # Add metadata so developers can easily see when this data was last updated
+    si_data["_metadata"] = {
+        "semester": "Current Active (from main page)",
+        "last_updated": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    }
+
+    print(f"💾 Saving SI Sessions for {len(si_data) - 1} rooms to {OUTPUT_PATH}...")
     with open(OUTPUT_PATH, "w") as f:
         json.dump(si_data, f, indent=2)
     print("✅ Done!")

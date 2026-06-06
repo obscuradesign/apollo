@@ -1,6 +1,7 @@
 import json
 import time
 import re
+import datetime
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
@@ -109,6 +110,24 @@ def parse_schedule(schedule_text):
 
     return active_days, to_24h(time_match.group(1)), to_24h(time_match.group(2))
 
+def get_target_term():
+    """Determine the correct semester based on the current date, respecting transition cutoffs."""
+    now = datetime.datetime.now()
+    month = now.month
+    day = now.day
+    year = now.year
+
+    if month == 1 or (month == 2 and day <= 15):
+        term = "Winter"
+    elif (month == 2 and day > 15) or month in [3, 4, 5] or (month == 6 and day <= 15):
+        term = "Spring"
+    elif (month == 6 and day > 15) or month == 7 or (month == 8 and day <= 15):
+        term = "Summer"
+    else:
+        term = "Fall"
+        
+    return f"{term} {year}"
+
 def scrape_smc_live():
     options = webdriver.ChromeOptions()
     options.add_argument("--headless=new")
@@ -125,7 +144,23 @@ def scrape_smc_live():
 
         print("📅 Selecting Semester...")
         term_select = Select(driver.find_element(By.ID, SEMESTER_DROPDOWN_ID))
-        term_select.select_by_index(0)
+        
+        target_term = get_target_term()
+        print(f"   🎯 Looking for target semester: {target_term!r}")
+        
+        # Try to select the specific target term based on the current date
+        found = False
+        for option in term_select.options:
+            if option.text == target_term:
+                term_select.select_by_visible_text(target_term)
+                found = True
+                break
+                
+        # If the target term isn't an option (e.g., schedule not out yet), fallback to index 0
+        if not found:
+            print(f"   ⚠️ Target term {target_term!r} not found in dropdown. Falling back to default.")
+            term_select.select_by_index(0)
+            
         selected_term = term_select.first_selected_option.text
         print(f"   ✓ Selected semester: {selected_term!r}")
         time.sleep(1)

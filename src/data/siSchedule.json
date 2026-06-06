@@ -101,63 +101,6 @@
       }
     ]
   },
-  "room-211": {
-    "type": "CLASSROOM",
-    "label": "MSB 211",
-    "events": [
-      {
-        "day": "Tue",
-        "start": "11:30",
-        "end": "12:30",
-        "title": "SI Session",
-        "courseName": "SI: Chem 10",
-        "professor": "Leader: Luna (Schmidt)",
-        "status": "SI_SESSION"
-      },
-      {
-        "day": "Thu",
-        "start": "11:30",
-        "end": "12:30",
-        "title": "SI Session",
-        "courseName": "SI: Chem 10",
-        "professor": "Leader: Luna (Schmidt)",
-        "status": "SI_SESSION"
-      }
-    ]
-  },
-  "sci-159": {
-    "type": "CLASSROOM",
-    "label": "SCI 159",
-    "events": [
-      {
-        "day": "Fri",
-        "start": "10:00",
-        "end": "11:00",
-        "title": "SI Session",
-        "courseName": "SI: Chem 11",
-        "professor": "Leader: Sirabi (McClure)",
-        "status": "SI_SESSION"
-      },
-      {
-        "day": "Wed",
-        "start": "16:45",
-        "end": "17:45",
-        "title": "SI Session",
-        "courseName": "SI: Chem 12",
-        "professor": "Leader: Sirabi (Hunter)",
-        "status": "SI_SESSION"
-      },
-      {
-        "day": "Fri",
-        "start": "11:00",
-        "end": "12:00",
-        "title": "SI Session",
-        "courseName": "SI: Chem 12",
-        "professor": "Leader: Sirabi (Hunter)",
-        "status": "SI_SESSION"
-      }
-    ]
-  },
   "room-206": {
     "type": "CLASSROOM",
     "label": "MSB 206",
@@ -595,5 +538,9 @@
         "status": "SI_SESSION"
       }
     ]
+  },
+  "_metadata": {
+    "semester": "Current Active (from main page)",
+    "last_updated": "2026-06-06 19:14:46"
   }
 }

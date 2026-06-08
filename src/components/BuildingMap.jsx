@@ -845,7 +845,7 @@ export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
                   {/* Theatre Arts */}
                   {currentBuilding === "THART" && currentFloor === 1 && <THART getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
                   {/* MSB Floors */}
-                  {currentBuilding === "MSB" && currentFloor === 1 && <Level1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+                  {currentBuilding === "MSB" && currentFloor === 1 && <Level1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} activeSegments={activeSegments} />}
                   {currentBuilding === "MSB" && currentFloor === 2 && <Level2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
                   {currentBuilding === "MSB" && currentFloor === 3 && <Level3 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
                   {/* Drescher Floors */}
@@ -867,8 +867,8 @@ export function BuildingMap({ darkMode, setDarkMode, onOpenAbout }) {
                   {currentBuilding === "BUS" && currentFloor === 2 && <BUSLevel2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} activeSegments={activeSegments} />}
                   {/* SSC Floors */}
                   {currentBuilding === "SSC" && currentFloor === 1 && <SSCLevel1 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} activeSegments={activeSegments} />}
-                  {currentBuilding === "SSC" && currentFloor === 2 && <SSCLevel2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
-                  {currentBuilding === "SSC" && currentFloor === 3 && <SSCLevel3 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} />}
+                  {currentBuilding === "SSC" && currentFloor === 2 && <SSCLevel2 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} activeSegments={activeSegments} />}
+                  {currentBuilding === "SSC" && currentFloor === 3 && <SSCLevel3 getColor={getColorProp} onHover={handleRoomHover} onClick={handleRoomClick} activeSegments={activeSegments} />}
                   {/* Campus Map */}
                   {currentBuilding === "CAMPUS" && <CampusMap onBuildingClick={(id) => { setCurrentBuilding(id); setCurrentFloor(1); }} activeSegments={activeSegments} />}
                 </motion.div>

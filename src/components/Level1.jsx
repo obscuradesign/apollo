@@ -1,7 +1,8 @@
 import React from 'react';
 
 // Wrapped with React.memo for performance optimization
-export const Level1 = React.memo(function Level1({ getColor, onHover, onClick }) {
+export const Level1 = React.memo(function Level1({ getColor, onHover, onClick, activeSegments = new Set() }) {
+  const sVis = (segId) => activeSegments.has("MSB-1:" + segId) ? 1 : 0;
   return (
 
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 548.17 436.26" role="img" aria-label="MSB Floor 1 map">
@@ -40,7 +41,7 @@ export const Level1 = React.memo(function Level1({ getColor, onHover, onClick })
           <path
             id="room-107"
             fill={getColor("room-107")}
-            d="m101.77 108.78-3.64-5.09-.1-1.13L128.4 82.8l2.55-1.69 27.51 41-27.03 17.63-.82.57-3.18-4.59-1.56-2.1-6.84 3.17-17.66-26.57z"
+            d="m101.77 108.78-3.48-5.19-.26-1.03 9.5-6.31L128.4 82.8l2.55-1.69 27.51 41-27.03 17.63-.82.57-3.18-4.59-1.56-2.1-6.84 3.17-17.66-26.57z"
             role="button"
             tabIndex={0}
             aria-label="Math Lab"
@@ -209,9 +210,100 @@ export const Level1 = React.memo(function Level1({ getColor, onHover, onClick })
           <path id="room-107b" fill={getColor("room-107b")} d="m92.29 93.64 5.74 8.92 6.82-4.48 2.68-1.83.88-.58-5.68-8.7z" role="button" tabIndex={0} aria-label="Group Study 107B" onMouseEnter={() => onHover("room-107b", true)} onMouseLeave={() => onHover("room-107b", false)} onFocus={(e) => onHover("room-107b", true, e)} onBlur={() => onHover("room-107b", false)} onClick={() => onClick("room-107b")} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onClick("room-107b"); } }} style={{ cursor: "pointer" }} />
           <path id="room-107c" fill={getColor("room-107c")} d="m114 79.77-10.43 6.66 5.68 8.7.88-.58 2.47-1.52 7.09-4.59z" role="button" tabIndex={0} aria-label="Group Study 107C" onMouseEnter={() => onHover("room-107c", true)} onMouseLeave={() => onHover("room-107c", false)} onFocus={(e) => onHover("room-107c", true, e)} onBlur={() => onHover("room-107c", false)} onClick={() => onClick("room-107c")} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onClick("room-107c"); } }} style={{ cursor: "pointer" }} />
           <path id="room-107d" fill={getColor("room-107d")} d="m114.84 79.23 5.69 8.66 7.87-5.09 2.59-1.62-5.73-8.61z" role="button" tabIndex={0} aria-label="Group Study 107D" onMouseEnter={() => onHover("room-107d", true)} onMouseLeave={() => onHover("room-107d", false)} onFocus={(e) => onHover("room-107d", true, e)} onBlur={() => onHover("room-107d", false)} onClick={() => onClick("room-107d")} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onClick("room-107d"); } }} style={{ cursor: "pointer" }} />
+          <g id="Pathing">
+            <path id="Segment_2" d="m94.45 109.84 10.13 15.31" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("Segment_2"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="Segment_1" d="M94.45 109.84 82.4 91.63l-10.68 3.76-5.83-9.92" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("Segment_1"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="Segment_3" d="m118.87 146.75-14.29-21.6" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("Segment_3"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="Segment_4" d="m118.87 146.75 4.53 6.84" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("Segment_4"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="Segment_5" d="m123.4 153.59 8.63 31.89" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("Segment_5"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="Segment_6" d="m106.34 187.73 25.69-2.25" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("Segment_6"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="Segment_7" d="m106.34 187.73 6 90" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("Segment_7"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="Segment_8" d="m112.34 277.73 35.76-5.72" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("Segment_8"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="Segment_9" d="m152.48 256.39-4.38 15.62" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("Segment_9"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="Segment_10" d="m106.34 187.73 46.14 68.66" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("Segment_10"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="Segment_11" d="m132.03 185.48 28.99 35.17" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("Segment_11"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="Segment_12" d="m152.48 256.39 8.54-35.74" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("Segment_12"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="Segment_13" d="m217.1 196.13-56.08 24.52" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("Segment_13"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="Segment_14" d="m217.1 196.13-85.07-10.65" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("Segment_14"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="Segment_15" d="m217.1 196.13 27.27 21.71" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("Segment_15"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="Segment_16" d="m244.37 217.84 31.03 24.72" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("Segment_16"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="Segment_17" d="m187.3 293.9 57.07-76.06" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("Segment_17"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="Segment_18" d="m187.3 293.9 45.76-3.01" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("Segment_18"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="Segment_19" d="m233.06 290.89-9.61-27.74 29.29-12.56" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("Segment_19"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="Segment_20" d="m275.4 242.56-22.66 8.03" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("Segment_20"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="Segment_21" d="M295.59 242.56H275.4" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("Segment_21"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="Segment_22" d="M295.59 242.56h55.19" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("Segment_22"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="Segment_23" d="M378.81 242.56h-28.03" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("Segment_23"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="Segment_24" d="M378.81 242.56h57.32" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("Segment_24"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="Segment_25" d="m187.3 293.9-39.2-21.89" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("Segment_25"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="msb-101-seg" d="m187.3 293.9-14.55 18.16 2.33 8.84" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("msb-101-seg"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="msb-102-seg" d="m138.36 285.11 9.74-13.1" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("msb-102-seg"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="msb-103-seg" d="m113.84 149.77 5.03-3.02" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("msb-103-seg"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="msb-106-seg" d="m99.73 128.07 4.85-2.92" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("msb-106-seg"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="msb-107-seg" d="m100.01 106.17-5.56 3.67" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("msb-107-seg"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="msb-108-seg" d="m123.4 153.59 5.61-3.37" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("msb-108-seg"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="msb-112-seg" d="M295.59 242.56v-4.81" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("msb-112-seg"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="msb-113-seg" d="M350.78 242.56v-7.54" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("msb-113-seg"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="msb-116-seg" d="M378.81 242.56v-7.54" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("msb-116-seg"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="msb-117-seg" d="M378.81 242.56v7.54" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("msb-117-seg"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="msb-119-seg" d="M350.78 242.56v7.54" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("msb-119-seg"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="exit-to-msb-only" d="M436.13 207.16v35.4" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("exit-to-msb-only"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="msb-level1-restroom" d="m252.74 250.59 4.21 11.47" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("msb-level1-restroom"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="exit-1to2-only" d="m152.48 256.39 50.14-3.55" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("exit-1to2-only"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="building-exit-6" d="m106.34 187.73-20.59-28.61" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("building-exit-6"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="building-exit-5" d="m110.95 301.82 1.39-24.09" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("building-exit-5"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="building-exit-4" d="m61.13 82.21 4.76 3.26" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("building-exit-4"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="building-exit-3" d="m217.1 196.13-6.82-36.26" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("building-exit-3"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="building-exit-2" d="m217.1 196.13 18.32-29.07" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("building-exit-2"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="building-exit-1" d="m217.1 196.13 39.85-14.38" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("building-exit-1"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="msb-staircase-1" d="m84.37 79.96-18.48 5.51" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("msb-staircase-1"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+            <path id="msb-planetarium-seg" d="m240.14 311.32-7.08-20.43" fill="none" stroke="#16a34a" strokeMiterlimit="10" strokeWidth="1.5px" style={{ opacity: sVis("msb-planetarium-seg"), transition: "opacity 0.3s" }} strokeLinecap="round" strokeLinejoin="round" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </g>
         </g>
       </g>
       <g id="New_Background" data-name="New Background" aria-hidden="true">
+        <g id="NEW_STAIRCASE_" data-name="NEW STAIRCASE!">
+          <g>
+            <path d="M202.75 258.15c-.63-.55-1.63-.44-1.64-.44l-36.74 2.61-.07-1 36.72-2.61s1.42-.16 2.39.67M205.23 241.15c-2.67 0-39.77-4.04-41.67-4.24l.1-.99c.47.05 38.92 4.23 41.54 4.23" />
+          </g>
+          <path d="m165.807 250.99.749-.048.55 8.652-.748.048zM167.205 251.036l.748-.06.686 8.603-.748.06zM168.724 251.044l.749-.048.55 8.653-.748.047zM170.1 251.108l.747-.06.684 8.603-.747.06zM171.541 250.536l.748-.06.703 8.833-.748.06zM173.071 250.548l.748-.055.65 8.846-.748.055zM174.408 250.654l.748-.06.713 8.8-.748.061zM175.838 250.813l.747-.067.78 8.645-.747.067z" />
+          <path d="m164.12 251.52-.05-1 38.76-1.93-.41-7.82.99-.06.47 8.83z" />
+          <path d="m191.742 249.748.748-.053.551 7.881-.748.053zM193.102 249.827l.747-.066.685 7.84-.747.066zM194.668 249.794l.748-.052.551 7.88-.748.053zM196.016 249.865l.747-.065.686 7.84-.747.066zM197.457 249.353l.747-.066.704 8.05-.747.065zM199.014 249.345l.748-.06.65 8.054-.747.06zM200.335 249.451l.748-.066.714 8.018-.747.066zM177.388 250.627l.748-.052.551 7.88-.748.053zM178.733 250.703l.747-.065.685 7.84-.747.065zM180.295 250.674l.748-.052.55 7.88-.747.053zM190.219 250.17l.747-.06.651 8.054-.747.06zM188.802 250.141l.747-.066.714 8.018-.747.067zM187.29 250.15l.745-.074.782 7.881-.747.074z" />
+          <g>
+            <path d="m187.316 238.808.748-.053.782 11.042-.749.053zM194.254 239.888l.748-.053.671 9.476-.748.053zM198.166 239.687l.748-.047.594 9.341-.748.048zM179.425 238.229l.748-.046.719 11.647-.749.047zM173.703 237.854l.749-.042.696 12.34-.749.043zM167.866 236.808l.749-.037.676 13.733-.749.037zM190.533 239.591l.748-.053.697 9.846-.748.053zM176.49 238.22l.749-.052.85 12-.748.053zM170.677 237.402l.749-.053.908 12.828-.748.053z" />
+          </g>
+          <g>
+            <path d="m201.595 249.481.747-.062.03.369-.747.062zM202.18 256.27l-.07-.8.75-.06.07.8zm-.14-1.61-.07-.8.75-.06.07.8zm-.13-1.6-.07-.8.75-.06.07.8zm-.13-1.61-.07-.8.75-.06.07.8zM202.26 257.06l.747-.063.031.368-.747.064z" />
+          </g>
+        </g>
+        <g id="New_Stair" data-name="New Stair">
+          <path d="m73.13 88.24-.28-.96 13.51-4.02 10.94-7.89.58.81-11.15 8.02zM70.88 80.67l-.29-.95 12.14-3.7 10.28-6.83.55.83-10.47 6.94z" />
+          <path d="m73.97 87.47-2.25-7.58.72-.21 2.25 7.58zM75.36 87.06l-2.26-7.59.72-.21 2.26 7.58zM74.49 79.056l.717-.219 2.308 7.577-.718.218zM75.858 78.635l.717-.219 2.31 7.586-.717.219zM77.184 78.238l.717-.219 2.308 7.577-.717.218zM78.606 77.807l.718-.219 2.337 7.672-.718.219zM82.21 85.02l-2.27-7.63.72-.21 2.26 7.63zM83.52 84.63l-2.27-7.64.72-.21 2.27 7.64z" />
+          <g>
+            <path d="m82.575 76.583.72-.214.07.24-.718.213zM84.64 83.51l-.14-.48.72-.21.14.48zm-.28-.95-.14-.48.72-.21.14.48zm-.29-.96-.14-.48.72-.21.14.48zm-.28-.95-.14-.48.72-.21.14.48zm-.28-.96-.14-.48.72-.21.14.48zm-.29-.95-.14-.48.72-.21.14.48zm-.28-.96-.14-.48.72-.21.14.48zM84.78 83.996l.718-.214.072.24-.72.214z" />
+          </g>
+        </g>
         <path d="M115.49 182.73c-5.54 0-10.18-6.26-10.38-6.53l-42.02-64.74 19.06-12.67.55.83-18.24 12.12 41.47 63.89s4.53 6.1 9.56 6.1c5.09 0 11.29-1.66 11.35-1.68l.26.97c-.26.07-6.38 1.71-11.61 1.71M133.36 179.33l-.24-.97 39.33-9.85c.09-.02 8.42-2 10.53-9.95 2.13-8.03-4.15-13.59-4.21-13.65-.21-.2-18.44-18.38-28.59-34.35-9.36-14.73-22.82-34.89-24.9-38L88.84 95.84 88.3 95l37.26-23.81.27.41c.15.22 15.06 22.49 25.18 38.42 10.09 15.88 28.25 33.97 28.43 34.15.04.04 6.79 6.01 4.5 14.64-2.27 8.54-11.17 10.64-11.26 10.66l-39.31 9.84Z" />
         <path d="m97.74 103.95-6.57-10.19.85-.54 6.01 9.34 6.82-4.48.55.83zM108.07 97.09l-.54-.84.88-.58-5.95-9.11.83-.55 6.51 9.96z" />
         <path d="m108.83 95.392 1.304-.856.549.836-1.304.856zM112.598 93.034l15.805-10.217.543.84-15.805 10.216z" />

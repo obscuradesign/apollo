@@ -20,6 +20,12 @@ export const NavigateBar = ({ building, currentFloor, activeSegments = new Set()
   // Group destinations by building and floor for `<optgroup>` separators
   const groups = {};
   for (const [id, label] of Object.entries(destinations)) {
+    // Filter out stairs and exits from the user-facing dropdown
+    const lowerLabel = label.toLowerCase();
+    if (lowerLabel.includes("exit") || lowerLabel.includes("stair")) {
+      continue;
+    }
+
     const parts = id.split(":");
     let groupLabel = "Other";
     if (parts.length > 1) {

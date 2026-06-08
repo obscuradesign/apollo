@@ -125,13 +125,41 @@ def parse_si_time(time_str):
         
     return day_short, convert(start_raw, start_meridiem), convert(end_raw, end_meridiem)
 
+def get_current_term():
+    """Determine the active semester based on the current date cutoffs."""
+    now = datetime.datetime.now()
+    month = now.month
+    day = now.day
+
+    if month == 1 or (month == 2 and day <= 15):
+        return "Winter"
+    elif (month == 2 and day > 15) or month in [3, 4, 5] or (month == 6 and day <= 15):
+        return "Spring"
+    elif (month == 6 and day > 15) or month == 7 or (month == 8 and day <= 15):
+        return "Summer"
+    else:
+        return "Fall"
+
 def scrape_si_sessions():
+    si_data = {}
+    term = get_current_term()
+    
+    if term in ["Winter", "Summer"]:
+        print(f"❄️☀️ It's {term} term! SI Sessions are not offered. Skipping scrape.")
+        si_data["_metadata"] = {
+            "semester": term,
+            "last_updated": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            "note": "SI Sessions are not offered in Summer or Winter."
+        }
+        with open(OUTPUT_PATH, "w") as f:
+            json.dump(si_data, f, indent=2)
+        print("✅ Done!")
+        return
+
     options = webdriver.ChromeOptions()
     options.add_argument("--headless=new")
     options.add_argument("--disable-gpu")
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-    
-    si_data = {}
     
     try:
         print(f"🌍 Navigating to Main SI Page...")
@@ -253,7 +281,7 @@ def scrape_si_sessions():
 
     # Add metadata so developers can easily see when this data was last updated
     si_data["_metadata"] = {
-        "semester": "Current Active (from main page)",
+        "semester": term,
         "last_updated": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     }
 

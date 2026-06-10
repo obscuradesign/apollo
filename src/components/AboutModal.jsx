@@ -84,7 +84,7 @@ export const AboutModal = ({ onClose }) => {
                     <div style={{ marginTop: "8px", paddingTop: "16px", borderTop: "1px solid var(--border-color, #374151)" }}>
                         <h3 style={{ margin: "0 0 8px 0", fontSize: "1.1rem", color: "var(--text-primary, #9ca3af)" }}>Disclaimer & Privacy</h3>
                         <p style={{ margin: 0, fontSize: "0.85rem", color: "var(--text-primary, #9ca3af)", lineHeight: "1.5" }}>
-                            Apollo is an independent project and is not officially affiliated with Santa Monica College. All scheduling and map data is provided "as-is" for informational purposes. Apollo does not collect personal data; your starred items and theme preferences are stored locally on your device. Anonymous usage metrics are collected via Vercel Analytics to improve the app.
+                            Apollo is an independent student project and is not affiliated with, maintained by, or officially endorsed by Santa Monica College. All scheduling and map data is provided "as-is" for informational purposes. Apollo does not collect personal data; your starred items and theme preferences are stored locally on your device. Anonymous usage metrics are collected via Vercel Analytics to improve the app.
                         </p>
                     </div>
 
